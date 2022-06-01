@@ -89,14 +89,15 @@ public class loginPetugas extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
         langkop = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         PanelLoginPetugas21552011235 = new javax.swing.JPanel();
         BtnLoginBarista21552011235 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -169,6 +170,10 @@ public class loginPetugas extends javax.swing.JFrame {
         jLabel7.setText("____________________________________________________________");
         jpanelPetugas21552011235.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 420, 30));
 
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/colorRED1234.png"))); // NOI18N
+        jpanelPetugas21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 400, 330, 40));
+
         disable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/eyewhite20.png"))); // NOI18N
         disable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -188,9 +193,6 @@ public class loginPetugas extends javax.swing.JFrame {
         langkop.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         langkop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/map-majalaya-logo-FIKS.png"))); // NOI18N
         jpanelPetugas21552011235.add(langkop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 290, 260));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
-        jpanelPetugas21552011235.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 440));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -225,12 +227,15 @@ public class loginPetugas extends javax.swing.JFrame {
 
         jpanelPetugas21552011235.add(PanelLoginPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 140, 40));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
+        jpanelPetugas21552011235.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 440));
+
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
         jpanelPetugas21552011235.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 510, 440));
 
         getContentPane().add(jpanelPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
-        setSize(new java.awt.Dimension(813, 437));
+        setSize(new java.awt.Dimension(813, 436));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -325,6 +330,7 @@ public class loginPetugas extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

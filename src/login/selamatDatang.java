@@ -52,10 +52,10 @@ public class selamatDatang extends javax.swing.JFrame {
         LoadingValue = new javax.swing.JLabel();
         LoadingBar = new javax.swing.JProgressBar();
         Developed1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         LoadingLabel = new javax.swing.JLabel();
         hexa = new javax.swing.JLabel();
         image = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -187,6 +187,10 @@ public class selamatDatang extends javax.swing.JFrame {
         Developed1.setText("Developed By © Kelompok II  2022");
         jpanelBarista21552011235.add(Developed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 240, 36));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/colorRED1234.png"))); // NOI18N
+        jpanelBarista21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 290, 40));
+
         LoadingLabel.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         LoadingLabel.setForeground(new java.awt.Color(255, 255, 255));
         LoadingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -200,9 +204,6 @@ public class selamatDatang extends javax.swing.JFrame {
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
         jpanelBarista21552011235.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 440));
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jpanelBarista21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 90, 60));
 
         getContentPane().add(jpanelBarista21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
