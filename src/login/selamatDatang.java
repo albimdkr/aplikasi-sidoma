@@ -55,6 +55,7 @@ public class selamatDatang extends javax.swing.JFrame {
         LoadingLabel = new javax.swing.JLabel();
         hexa = new javax.swing.JLabel();
         image = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -106,13 +107,13 @@ public class selamatDatang extends javax.swing.JFrame {
         Login.setForeground(new java.awt.Color(255, 255, 255));
         Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Login.setText("LOGIN ");
-        jpanelBarista21552011235.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 70, 36));
+        jpanelBarista21552011235.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 60, 36));
 
         line.setBackground(new java.awt.Color(255, 255, 255));
         line.setForeground(new java.awt.Color(255, 255, 255));
         line.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         line.setText("____________");
-        jpanelBarista21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 90, 20));
+        jpanelBarista21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 100, 20));
 
         panelPetugas21552011235.setBackground(new java.awt.Color(17, 43, 60));
         panelPetugas21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -199,6 +200,9 @@ public class selamatDatang extends javax.swing.JFrame {
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
         jpanelBarista21552011235.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 440));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jpanelBarista21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 90, 60));
 
         getContentPane().add(jpanelBarista21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
@@ -324,6 +328,7 @@ public class selamatDatang extends javax.swing.JFrame {
     private javax.swing.JLabel hexa;
     private javax.swing.JLabel image;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jpanelBarista21552011235;
     private javax.swing.JLabel line;
     private javax.swing.JPanel panelAdmin21552011235;
