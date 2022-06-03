@@ -52,8 +52,8 @@ public class dashboardPetugas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BtnHome21552011235 = new javax.swing.JLabel();
         daftarMenuPanel21552011235 = new javax.swing.JPanel();
-        BtnData21552011235 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        BtnData21552011235 = new javax.swing.JLabel();
         transaksiPane21552011235 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         BtnTransaksi77174757 = new javax.swing.JLabel();
@@ -100,7 +100,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusTraversalPolicyProvider(true);
 
-        header21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        header21552011235.setBackground(new java.awt.Color(32, 83, 117));
         header21552011235.setPreferredSize(new java.awt.Dimension(800, 50));
         header21552011235.setLayout(new java.awt.BorderLayout());
 
@@ -134,12 +134,12 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         iconMenu.add(PanelLogout21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 90, -1));
 
-        BtnMax21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        BtnMax21552011235.setBackground(new java.awt.Color(32, 83, 117));
         BtnMax21552011235.setPreferredSize(new java.awt.Dimension(50, 50));
         BtnMax21552011235.setLayout(new java.awt.BorderLayout());
         iconMenu.add(BtnMax21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
 
-        BtnMin21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        BtnMin21552011235.setBackground(new java.awt.Color(32, 83, 117));
         BtnMin21552011235.setPreferredSize(new java.awt.Dimension(50, 50));
         BtnMin21552011235.setLayout(new java.awt.BorderLayout());
         iconMenu.add(BtnMin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -148,14 +148,15 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         getContentPane().add(header21552011235, java.awt.BorderLayout.PAGE_START);
 
+        menu21552011235.setBackground(new java.awt.Color(32, 83, 117));
         menu21552011235.setPreferredSize(new java.awt.Dimension(270, 450));
         menu21552011235.setLayout(new java.awt.BorderLayout());
 
-        sidebar21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        sidebar21552011235.setBackground(new java.awt.Color(32, 83, 117));
         sidebar21552011235.setMinimumSize(new java.awt.Dimension(200, 210));
         sidebar21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        homePanel21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        homePanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
         homePanel21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 homePanel21552011235MouseClicked(evt);
@@ -189,8 +190,12 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         sidebar21552011235.add(homePanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 270, 50));
 
-        daftarMenuPanel21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        daftarMenuPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
         daftarMenuPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-coffee-to-go-20.png"))); // NOI18N
+        daftarMenuPanel21552011235.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
         BtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
@@ -209,13 +214,9 @@ public class dashboardPetugas extends javax.swing.JFrame {
         });
         daftarMenuPanel21552011235.add(BtnData21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-coffee-to-go-20.png"))); // NOI18N
-        daftarMenuPanel21552011235.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
-
         sidebar21552011235.add(daftarMenuPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
 
-        transaksiPane21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        transaksiPane21552011235.setBackground(new java.awt.Color(32, 83, 117));
         transaksiPane21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -241,7 +242,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         sidebar21552011235.add(transaksiPane21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
 
-        riwayatPanel21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        riwayatPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
         riwayatPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -267,7 +268,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         sidebar21552011235.add(riwayatPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 270, 50));
 
-        tentangPanel21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        tentangPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
         tentangPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -298,20 +299,20 @@ public class dashboardPetugas extends javax.swing.JFrame {
         sidebar21552011235.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 100));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/beansHorizonUp.png"))); // NOI18N
-        sidebar21552011235.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 270, 170));
+        sidebar21552011235.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 270, 170));
 
         menu21552011235.add(sidebar21552011235, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(menu21552011235, java.awt.BorderLayout.LINE_START);
 
-        Dashboardview21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        Dashboardview21552011235.setBackground(new java.awt.Color(17, 43, 60));
         Dashboardview21552011235.setLayout(new java.awt.GridLayout(1, 0));
 
-        jTabbedPanel21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        jTabbedPanel21552011235.setBackground(new java.awt.Color(17, 43, 60));
         jTabbedPanel21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33)));
-        jTabbedPanel21552011235.setForeground(new java.awt.Color(64, 49, 33));
+        jTabbedPanel21552011235.setForeground(new java.awt.Color(17, 43, 60));
 
-        HomeTabbed21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        HomeTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         HomeTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
         IconUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-96.png"))); // NOI18N
@@ -326,7 +327,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         UserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         UserName.setForeground(new java.awt.Color(255, 255, 255));
-        UserName.setText("Barista");
+        UserName.setText("Petugas");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
@@ -336,7 +337,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(50, 14, 0, 0);
         HomeTabbed21552011235.add(UserName, gridBagConstraints);
 
-        TabHomePanelData21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        TabHomePanelData21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TabHomePanelData21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         TabHomePanelData21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -371,7 +372,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(81, 46, 96, 0);
         HomeTabbed21552011235.add(TabHomePanelData21552011235, gridBagConstraints);
 
-        TabHomePanelTransaksi21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        TabHomePanelTransaksi21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TabHomePanelTransaksi21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         TabHomePanelTransaksi21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -405,7 +406,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(81, 69, 96, 0);
         HomeTabbed21552011235.add(TabHomePanelTransaksi21552011235, gridBagConstraints);
 
-        TabHomePanelRiwayat21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        TabHomePanelRiwayat21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TabHomePanelRiwayat21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         TabHomePanelRiwayat21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -439,7 +440,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(81, 28, 96, 0);
         HomeTabbed21552011235.add(TabHomePanelRiwayat21552011235, gridBagConstraints);
 
-        TabHomePanelTentang21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        TabHomePanelTentang21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TabHomePanelTentang21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         TabHomePanelTentang21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -488,7 +489,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         jTabbedPanel21552011235.addTab("", HomeTabbed21552011235);
 
-        DaftarMenuTabbed21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        DaftarMenuTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         DaftarMenuTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
         PanelDaftarmenu21552011235.setBackground(new java.awt.Color(64, 49, 33));
@@ -523,10 +524,10 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         jTabbedPanel21552011235.addTab("", DaftarMenuTabbed21552011235);
 
-        TransaksiTabbed21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        TransaksiTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TransaksiTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
-        PanelTransaksi21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        PanelTransaksi21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelTransaksi21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelTransaksi21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -558,10 +559,10 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         jTabbedPanel21552011235.addTab("", TransaksiTabbed21552011235);
 
-        RiwayatTabbed21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        RiwayatTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         RiwayatTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
-        PanelRiwayat21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        PanelRiwayat21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelRiwayat21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelRiwayat21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -593,10 +594,10 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         jTabbedPanel21552011235.addTab("", RiwayatTabbed21552011235);
 
-        TentangTabbed21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        TentangTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TentangTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
-        PanelTentang21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        PanelTentang21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelTentang21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelTentang21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
