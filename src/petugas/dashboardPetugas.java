@@ -344,7 +344,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         TabHomeBtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TabHomeBtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
         TabHomeBtnData21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabHomeBtnData21552011235.setText("Daftar Menu");
+        TabHomeBtnData21552011235.setText("Form");
         TabHomeBtnData21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabHomeBtnData21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -360,8 +360,8 @@ public class dashboardPetugas extends javax.swing.JFrame {
         TabHomePanelData21552011235.add(TabHomeBtnData21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 4, 100, 160));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-coffee-to-go-96.png"))); // NOI18N
-        TabHomePanelData21552011235.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 60, -1));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-96.png"))); // NOI18N
+        TabHomePanelData21552011235.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 70, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -377,13 +377,13 @@ public class dashboardPetugas extends javax.swing.JFrame {
         TabHomePanelTransaksi21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-credit-card-96.png"))); // NOI18N
-        TabHomePanelTransaksi21552011235.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 90, 60));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-health-book-96.png"))); // NOI18N
+        TabHomePanelTransaksi21552011235.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 80, 80));
 
         TabHomeBtnTransaksi21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TabHomeBtnTransaksi21552011235.setForeground(new java.awt.Color(255, 255, 255));
         TabHomeBtnTransaksi21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabHomeBtnTransaksi21552011235.setText("Transaksi");
+        TabHomeBtnTransaksi21552011235.setText("Transfusi");
         TabHomeBtnTransaksi21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TabHomeBtnTransaksi21552011235MouseClicked(evt);
