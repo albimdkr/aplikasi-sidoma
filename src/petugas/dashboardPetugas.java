@@ -108,7 +108,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         iconMenu.setPreferredSize(new java.awt.Dimension(150, 50));
         iconMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelLogout21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        PanelLogout21552011235.setBackground(new java.awt.Color(32, 83, 117));
         PanelLogout21552011235.setPreferredSize(new java.awt.Dimension(50, 50));
         PanelLogout21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -200,7 +200,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnData21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnData21552011235.setText("Daftar Menu");
+        BtnData21552011235.setText("Data");
         BtnData21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnData21552011235MouseClicked(evt);
@@ -226,7 +226,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnTransaksi77174757.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnTransaksi77174757.setForeground(new java.awt.Color(255, 255, 255));
         BtnTransaksi77174757.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnTransaksi77174757.setText("Transaksi");
+        BtnTransaksi77174757.setText("Donor");
         BtnTransaksi77174757.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnTransaksi77174757MouseClicked(evt);
@@ -296,10 +296,10 @@ public class dashboardPetugas extends javax.swing.JFrame {
 
         Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/langkop120px.png"))); // NOI18N
-        sidebar21552011235.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 100));
+        sidebar21552011235.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 270, 100));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/beansHorizonUp.png"))); // NOI18N
-        sidebar21552011235.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 270, 170));
+        sidebar21552011235.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 270, 170));
 
         menu21552011235.add(sidebar21552011235, java.awt.BorderLayout.CENTER);
 
@@ -492,7 +492,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         DaftarMenuTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         DaftarMenuTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
-        PanelDaftarmenu21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        PanelDaftarmenu21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelDaftarmenu21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelDaftarmenu21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -684,51 +684,51 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_homePanel21552011235MouseClicked
 
     private void BtnHome21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseEntered
-        changecolor(homePanel21552011235, new Color (72,59,43));
+        changecolor(homePanel21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnHome21552011235MouseEntered
 
     private void BtnHome21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseExited
-        changecolor(homePanel21552011235, new Color (45,35,23));
+        changecolor(homePanel21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnHome21552011235MouseExited
 
     private void BtnLaporan21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporan21552011235MouseEntered
-        changecolor(riwayatPanel21552011235, new Color (72,59,43));
+        changecolor(riwayatPanel21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnLaporan21552011235MouseEntered
 
     private void BtnLaporan21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporan21552011235MouseExited
-        changecolor(riwayatPanel21552011235, new Color (45,35,23));
+        changecolor(riwayatPanel21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnLaporan21552011235MouseExited
 
     private void BtnData21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnData21552011235MouseEntered
-       changecolor(daftarMenuPanel21552011235, new Color (72,59,43));
+       changecolor(daftarMenuPanel21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnData21552011235MouseEntered
 
     private void BtnData21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnData21552011235MouseExited
-        changecolor(daftarMenuPanel21552011235, new Color (45,35,23));
+        changecolor(daftarMenuPanel21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnData21552011235MouseExited
 
     private void BtnTransaksi77174757MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTransaksi77174757MouseEntered
-        changecolor(transaksiPane21552011235, new Color (72,59,43));
+        changecolor(transaksiPane21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnTransaksi77174757MouseEntered
 
     private void BtnTransaksi77174757MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTransaksi77174757MouseExited
-        changecolor(transaksiPane21552011235, new Color (45,35,23));
+        changecolor(transaksiPane21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnTransaksi77174757MouseExited
 
     private void BtnTentang21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseEntered
-        changecolor(tentangPanel21552011235, new Color (72,59,43));
+        changecolor(tentangPanel21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnTentang21552011235MouseEntered
 
     private void BtnTentang21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseExited
-        changecolor(tentangPanel21552011235, new Color (45,35,23));
+        changecolor(tentangPanel21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnTentang21552011235MouseExited
 
     private void BtnLogout21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseExited
-        changecolor(PanelLogout21552011235, new Color (20,15,10));
+        changecolor(PanelLogout21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnLogout21552011235MouseExited
 
     private void BtnLogout21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseEntered
-        changecolor(PanelLogout21552011235, new Color (255,24,24));
+        changecolor(PanelLogout21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnLogout21552011235MouseEntered
 
     private void BtnLogout21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseClicked
@@ -737,7 +737,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 
     private void TabHomeBtnData21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnData21552011235MouseEntered
-        changecolor(TabHomePanelData21552011235, new Color (45,35,23));
+        changecolor(TabHomePanelData21552011235, new Color (32,108,151));
     }//GEN-LAST:event_TabHomeBtnData21552011235MouseEntered
 
     private void TabHomeBtnData21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnData21552011235MouseExited
