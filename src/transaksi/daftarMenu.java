@@ -317,7 +317,7 @@ public class daftarMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
-        new petugas.dashboardBarista().setVisible(true);
+        new petugas.dashboardPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBack21552011235MouseClicked
 

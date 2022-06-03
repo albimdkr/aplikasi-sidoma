@@ -222,12 +222,12 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/colorRED1234.png"/>
+              <Image iconType="3" name="/img/clrredLOGIN.png"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-20" y="400" width="330" height="40"/>
+              <AbsoluteConstraints x="0" y="400" width="300" height="40"/>
             </Constraint>
           </Constraints>
         </Component>

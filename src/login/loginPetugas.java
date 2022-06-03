@@ -5,7 +5,7 @@
  */
 package login;
 
-import static petugas.dashboardBarista.UserNameBarista21552011235;
+import static petugas.dashboardPetugas.UserNameBarista21552011235;
 import com.mysql.jdbc.Connection;
 import koneksi.*;
 import transaksi.*;
@@ -59,7 +59,7 @@ public class loginPetugas extends javax.swing.JFrame {
             if(rs.next()){
                 JOptionPane.showMessageDialog(null, "Login Success");
                 UserNameBarista21552011235.setText(rs.getString(2));
-                new petugas.dashboardBarista().setVisible(true);
+                new petugas.dashboardPetugas().setVisible(true);
                 dispose();
             }else{
                 JOptionPane.showMessageDialog(null, "Username atau Password Salah");
@@ -171,8 +171,8 @@ public class loginPetugas extends javax.swing.JFrame {
         jpanelPetugas21552011235.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 420, 30));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/colorRED1234.png"))); // NOI18N
-        jpanelPetugas21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 400, 330, 40));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clrredLOGIN.png"))); // NOI18N
+        jpanelPetugas21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 300, 40));
 
         disable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/eyewhite20.png"))); // NOI18N
         disable.addMouseListener(new java.awt.event.MouseAdapter() {

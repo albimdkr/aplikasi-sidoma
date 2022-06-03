@@ -18,13 +18,13 @@ import javax.swing.SwingUtilities;
  *
  * @author albi mudakar
  */
-public class dashboardBarista extends javax.swing.JFrame {
+public class dashboardPetugas extends javax.swing.JFrame {
 
     /**
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardBarista() {
+    public dashboardPetugas() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
     }
@@ -61,8 +61,8 @@ public class dashboardBarista extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         BtnLaporan21552011235 = new javax.swing.JLabel();
         tentangPanel21552011235 = new javax.swing.JPanel();
-        BtnTentang21552011235 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        BtnTentang21552011235 = new javax.swing.JLabel();
         Logo = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         Dashboardview21552011235 = new javax.swing.JPanel();
@@ -167,7 +167,7 @@ public class dashboardBarista extends javax.swing.JFrame {
         homePanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-home-20.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-home-24.png"))); // NOI18N
         homePanel21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
         BtnHome21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -270,6 +270,10 @@ public class dashboardBarista extends javax.swing.JFrame {
         tentangPanel21552011235.setBackground(new java.awt.Color(45, 35, 23));
         tentangPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-24.png"))); // NOI18N
+        tentangPanel21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+
         BtnTentang21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnTentang21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnTentang21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -286,10 +290,6 @@ public class dashboardBarista extends javax.swing.JFrame {
             }
         });
         tentangPanel21552011235.add(BtnTentang21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
-
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-20.png"))); // NOI18N
-        tentangPanel21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
         sidebar21552011235.add(tentangPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 270, 50));
 
@@ -872,14 +872,18 @@ public class dashboardBarista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dashboardBarista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dashboardBarista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dashboardBarista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dashboardBarista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(dashboardPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -888,7 +892,7 @@ public class dashboardBarista extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dashboardBarista().setVisible(true);
+                new dashboardPetugas().setVisible(true);
             }
         });
     }

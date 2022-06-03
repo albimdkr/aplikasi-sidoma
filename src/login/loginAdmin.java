@@ -97,6 +97,7 @@ public class loginAdmin extends javax.swing.JFrame {
         langkop1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         PanelLogin21552011235 = new javax.swing.JPanel();
         BtnLogin21552011235 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -200,6 +201,10 @@ public class loginAdmin extends javax.swing.JFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-24.png"))); // NOI18N
         jpanelAdmin21552011235.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 180, -1, 28));
+
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clrredLOGIN.png"))); // NOI18N
+        jpanelAdmin21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 300, 40));
 
         PanelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelLogin21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -328,6 +333,7 @@ public class loginAdmin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
