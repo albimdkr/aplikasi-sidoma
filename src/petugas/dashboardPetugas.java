@@ -200,7 +200,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnData21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnData21552011235.setText("Data");
+        BtnData21552011235.setText("Form");
         BtnData21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnData21552011235MouseClicked(evt);
@@ -344,7 +344,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         TabHomeBtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TabHomeBtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
         TabHomeBtnData21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabHomeBtnData21552011235.setText("Form");
+        TabHomeBtnData21552011235.setText("Pendonor");
         TabHomeBtnData21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabHomeBtnData21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

@@ -722,7 +722,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_TabDataMenuBtn21552011235MouseEntered
 
     private void TabDataMenuBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabDataMenuBtn21552011235MouseClicked
-        new admin.dataMenu().setVisible(true);
+        new admin.dataPendonor().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabDataMenuBtn21552011235MouseClicked
 
