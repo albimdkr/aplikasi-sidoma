@@ -154,18 +154,20 @@ public class dataPendonor extends javax.swing.JFrame {
     
     private void tambahData(){
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal = date.format(txtTanggalDaftar21552011235.getDate());
+        String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
         //String no_pendonor = 
         String nama = txtFieldNamaPendonor21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
-        //String tanggal_lahir = jDateChooserTanggalLahir.getText();
+        SimpleDateFormat tgl_lahir = new SimpleDateFormat("d  MMM, yyyy");
+        String tanggal_lahir = date.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
         String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
         String usia = txtFieldUsia21552011235.getText();
         String berat_badan = txtFieldBeratBadan21552011235.getText();
         String jumlah_transfusi = txtFieldJumlahTransfusi21552011235.getText();
-        //String tanggal_terakhir_transfusi =
+        SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_terakhir_transfusi = date.format(jDateChooserTerakhirTransfusi.getDate());
         String alamat = txtFieldAlamat21552011235.getText();
         String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
         
@@ -174,10 +176,10 @@ public class dataPendonor extends javax.swing.JFrame {
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
-        String query = "INSERT INTO `tb_menu` (kode_menu, `nama_menu`, `harga`, `stok`, `tanggal`) "
-                     + "VALUES (NULL, '"+nama+"', '"+harga+"', '"+stok+"', '"+tanggal+"')";
+        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar` ,no_pendonor, `nama`, `gmail`, `tanggal_lahir`, `no_telp`, `riwayat_penyakit`,`golongan_darah`,`usia`,`berat_badan`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`,`alamat`,`hemoglobin`) "
+                     + "VALUES ('"+tanggal_daftar+"',NULL, '"+nama+"', '"+gmail+"', '"+tgl_lahir+"', '"+no_telp+"','"+riwayat_penyakit+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+jumlah_transfusi+"','"+tgl_tt+"','"+alamat+"','"+hemoglobin+"')";
         
-        try{
+        try{ 
             //menyiapkan statement untuk di eksekusi
             PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
             ps.executeUpdate(query);
@@ -343,7 +345,6 @@ public class dataPendonor extends javax.swing.JFrame {
         kondisi1 = new javax.swing.JLabel();
         jComboBoxGolDarah = new javax.swing.JComboBox<>();
         golDarah1 = new javax.swing.JLabel();
-        jDateChooserTerakhirTransfusi = new com.toedter.calendar.JDateChooser();
         line11 = new javax.swing.JLabel();
         txtFieldJumlahTransfusi21552011235 = new javax.swing.JTextField();
         jumlahTransfusi = new javax.swing.JLabel();
@@ -356,8 +357,9 @@ public class dataPendonor extends javax.swing.JFrame {
         line15 = new javax.swing.JLabel();
         txtFieldBeratBadan21552011235 = new javax.swing.JTextField();
         BeartBadan = new javax.swing.JLabel();
-        jDateChooserTanggalLahir = new com.toedter.calendar.JDateChooser();
+        jDateChooserTerakhirTransfusi = new com.toedter.calendar.JDateChooser();
         tanggalLahir = new javax.swing.JLabel();
+        jDateChooserTanggalLahir = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -611,6 +613,7 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 1320, 130));
 
+        txtTanggalDaftar21552011235.setDateFormatString("yyyy-MM-dd");
         txtTanggalDaftar21552011235.setEnabled(false);
         txtTanggalDaftar21552011235.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtTanggalDaftar21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -716,7 +719,6 @@ public class dataPendonor extends javax.swing.JFrame {
         golDarah1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         golDarah1.setText("Golongan Darah");
         jPanel3.add(golDarah1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 120, 30));
-        jPanel3.add(jDateChooserTerakhirTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 240, 40));
 
         line11.setBackground(new java.awt.Color(255, 255, 255));
         line11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -802,13 +804,20 @@ public class dataPendonor extends javax.swing.JFrame {
         BeartBadan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         BeartBadan.setText("Berat Badan *Kg");
         jPanel3.add(BeartBadan, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 110, 40));
-        jPanel3.add(jDateChooserTanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 240, 40));
+
+        jDateChooserTerakhirTransfusi.setDateFormatString("yyyy-MM-dd");
+        jDateChooserTerakhirTransfusi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel3.add(jDateChooserTerakhirTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 240, 40));
 
         tanggalLahir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tanggalLahir.setForeground(new java.awt.Color(255, 255, 255));
         tanggalLahir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         tanggalLahir.setText("Tanggal Lahir");
         jPanel3.add(tanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 80, 120, 30));
+
+        jDateChooserTanggalLahir.setDateFormatString("d  MMM, yyyy");
+        jDateChooserTanggalLahir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel3.add(jDateChooserTanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 240, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
