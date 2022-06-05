@@ -47,12 +47,21 @@ public class dataPendonor extends javax.swing.JFrame {
         
         
         tableDataPendonor21552011235.setModel(table);
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Stok");
-        table.addColumn("Tanggal Masuk");
-            
+        table.addColumn("Tanggal Daftar");
+        table.addColumn("No. Pendonor");
+        table.addColumn("Nama");
+        table.addColumn("Gmail");
+        table.addColumn("Tanggal Lahir");
+        table.addColumn("No.Telp");
+        table.addColumn("Riwayat Penyakit");
+        table.addColumn("Golongan Darah");
+        table.addColumn("Usia");
+        table.addColumn("Berat Badan");
+        table.addColumn("Jumlah Transfusi");
+        table.addColumn("Tanggal terakhir transfusi");
+        table.addColumn("Alamat");
+        table.addColumn("Hemoglobin");
+         
         tampilData();
     }
     
@@ -64,7 +73,7 @@ public class dataPendonor extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `tb_menu`";
+        String query = "SELECT * FROM `data_pendonor`";
         
         try{
             java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -73,15 +82,22 @@ public class dataPendonor extends javax.swing.JFrame {
             
             while (rslt.next()){
                 //menampung data sementara
-                   
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String stok = rslt.getString("stok");
-                    String tanggal = rslt.getString("tanggal");
-                    
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    String no_pendonor = rslt.getString("no_pendonor");
+                    String nama = rslt.getString("nama");
+                    String gmail = rslt.getString("gmail");
+                    String tanggal_lahir = rslt.getString("tanggal_lahir");
+                    String no_telp = rslt.getString("no_telp");
+                    String riwayat_penyakit = rslt.getString("riwayat_penyakit");
+                    String golongan_darah = rslt.getString("golongan_darah");
+                    String usia = rslt.getString("usia");
+                    String berat_badan = rslt.getString("berat_badan");
+                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
+                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String alamat = rslt.getString("alamat");
+                    String hemoglobin = rslt.getString("hemoglobin");
                 //masukan semua data kedalam array
-                String[] data = {kode,nama,harga,stok,tanggal};
+                String[] data = {tanggal_daftar,no_pendonor,nama,gmail,tanggal_lahir,no_telp,riwayat_penyakit,golongan_darah,usia,berat_badan,jumlah_transfusi,tanggal_terakhir_transfusi,alamat,hemoglobin};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -94,22 +110,95 @@ public class dataPendonor extends javax.swing.JFrame {
        
     }
     
+    
+//    String tanggal_daftar = 
+//    String no_pendonor = 
+//    String nama = 
+//    String gmail = 
+//    String tanggal_lahir = 
+//    String no_telp = 
+//    String riwayat_penyakit = 
+//    String golongan_darah = 
+//    String usia = 
+//    String berat_badan = 
+//    String jumlah_transfusi = 
+//    String tanggal_terakhir_transfusi = 
+//    String alamat = 
+//    String hemoglobin = 
+    
     private void clear(){
-
-        txtFieldNamaPendonor21552011235.setText(null);
-        
-        
+          //txtTanggalDaftar21552011235.setText(null);
+          //*no_pendonor
+          txtFieldNamaPendonor21552011235.setText(null);
+          txtFieldAkunGmail21552011235.setText(null);
+          //jDateChooserTanggalLahir.setText(null);
+          txtFieldNoTelp21552011235.setText(null);
+          txtFieldRiwayatPenyakit21552011235.setText(null);
+          //gol darah
+          txtFieldUsia21552011235.setText(null);
+          txtFieldBeratBadan21552011235.setText(null);
+          txtFieldJumlahTransfusi21552011235.setText(null);
+          //tanggal_terakhir_transfusi
+          txtFieldAlamat21552011235.setText(null);
+          //hemoglobin
     }
+    
+//     pilihJurusan = jComboBoxJurusan21552011235.getSelectedIndex();
+//        switch (pilihJurusan){
+//            case 0 : jurusan ="Teknik Informatika";break;
+//            case 1 : jurusan ="Teknik Industri";break;
+//            case 2 : jurusan ="Design Komunikasi Visual";break;
+//            case 3 : jurusan ="Bisnis Digital";break;   
+//        }
     
     
     private void tambahData(){
-//        String kode = txt_kodebarang.getText();
-        String nama = txtFieldNamaMenu21552011235.getText();
+//        String nama = txtFieldNamaMenu21552011235.getText();
         String harga = txtFieldHarga21552011235.getText();
         String stok = txtFieldStok21552011235.getText();
         
+        //String tanggal_daftar = 
+        //String no_pendonor = 
+        String nama = txtFieldNamaPendonor21552011235.getText();
+        String gmail = txtFieldAkunGmail21552011235.getText();
+        //String tanggal_lahir = jDateChooserTanggalLahir.getText();
+        String no_telp = txtFieldNoTelp21552011235.getText();
+        String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
+        String golongan_darah = 
+        String golongan_darah = jComboBoxGolDarah.getSelectedIndex();
+        switch (golongan_darah){
+            case 0 : jurusan ="O+";break;
+            case 1 : jurusan ="A+";break;
+            case 2 : jurusan ="Design Komunikasi Visual";break;
+            case 3 : jurusan ="Bisnis Digital";break;   
+        }        
+        
+                
+        String usia = 
+        String berat_badan = 
+        String jumlah_transfusi = 
+        String tanggal_terakhir_transfusi = 
+        String alamat = 
+        String hemoglobin =
+        
+        
+          //txtTanggalDaftar21552011235.setText(null);
+          //*no_pendonor
+          txtFieldNamaPendonor21552011235.setText(null);
+          txtFieldAkunGmail21552011235.setText(null);
+          //jDateChooserTanggalLahir.setText(null);
+          txtFieldNoTelp21552011235.setText(null);
+          txtFieldRiwayatPenyakit21552011235.setText(null);
+          //gol darah
+          txtFieldUsia21552011235.setText(null);
+          txtFieldBeratBadan21552011235.setText(null);
+          txtFieldJumlahTransfusi21552011235.setText(null);
+          //tanggal_terakhir_transfusi
+          txtFieldAlamat21552011235.setText(null);
+          //hemoglobin
+        
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal = date.format(txtTanggal21552011235.getDate());
+        String tanggal = date.format(txtTanggalDaftar21552011235.getDate());
         
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
@@ -136,7 +225,7 @@ public class dataPendonor extends javax.swing.JFrame {
     
     public void tanggal(){
         Date now = new Date();  
-        txtTanggal21552011235.setDate(now);    
+        txtTanggalDaftar21552011235.setDate(now);    
     }
     
     private void hapusData(){
@@ -172,7 +261,7 @@ public class dataPendonor extends javax.swing.JFrame {
         String stok = txtFieldStok21552011235.getText();
         
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal = String.valueOf(date.format(txtTanggal21552011235.getDate()));
+        String tanggal = String.valueOf(date.format(txtTanggalDaftar21552011235.getDate()));
         
         java.sql.Connection connect = koneksi.getKoneksi();
         
@@ -268,7 +357,7 @@ public class dataPendonor extends javax.swing.JFrame {
         BtnEdit21552011235 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableDataPendonor21552011235 = new javax.swing.JTable();
-        txtTanggal21552011235 = new com.toedter.calendar.JDateChooser();
+        txtTanggalDaftar21552011235 = new com.toedter.calendar.JDateChooser();
         jComboBox1 = new javax.swing.JComboBox<>();
         txtFieldNamaPendonor21552011235 = new javax.swing.JTextField();
         line9 = new javax.swing.JLabel();
@@ -281,7 +370,7 @@ public class dataPendonor extends javax.swing.JFrame {
         txtFieldAkunGmail21552011235 = new javax.swing.JTextField();
         kondisi = new javax.swing.JLabel();
         kondisi1 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxGolDarah = new javax.swing.JComboBox<>();
         golDarah1 = new javax.swing.JLabel();
         jDateChooserTerakhirTransfusi = new com.toedter.calendar.JDateChooser();
         line11 = new javax.swing.JLabel();
@@ -406,8 +495,8 @@ public class dataPendonor extends javax.swing.JFrame {
         NamaPendonor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         NamaPendonor.setForeground(new java.awt.Color(255, 255, 255));
         NamaPendonor.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        NamaPendonor.setText("Nama Pendonor");
-        jPanel3.add(NamaPendonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 120, 40));
+        NamaPendonor.setText("Nama");
+        jPanel3.add(NamaPendonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 50, 40));
 
         line8.setBackground(new java.awt.Color(255, 255, 255));
         line8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -419,8 +508,8 @@ public class dataPendonor extends javax.swing.JFrame {
         golDarah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah.setForeground(new java.awt.Color(255, 255, 255));
         golDarah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah.setText("Terakhir Transfusi");
-        jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 120, 30));
+        golDarah.setText("Terakhir Transfusi *opsional");
+        jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 290, 190, 30));
 
         TotalHarga.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalHarga.setForeground(new java.awt.Color(255, 255, 255));
@@ -551,14 +640,14 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 1320, 130));
 
-        txtTanggal21552011235.setEnabled(false);
-        txtTanggal21552011235.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        txtTanggal21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtTanggalDaftar21552011235.setEnabled(false);
+        txtTanggalDaftar21552011235.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        txtTanggalDaftar21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtTanggal21552011235MouseClicked(evt);
+                txtTanggalDaftar21552011235MouseClicked(evt);
             }
         });
-        jPanel3.add(txtTanggal21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 110, 290, 40));
+        jPanel3.add(txtTanggalDaftar21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 110, 290, 40));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Baik", "Cukup", "Kurang" }));
@@ -633,7 +722,7 @@ public class dataPendonor extends javax.swing.JFrame {
         kondisi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         kondisi.setForeground(new java.awt.Color(255, 255, 255));
         kondisi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        kondisi.setText("Akun Gmail");
+        kondisi.setText("Gmail");
         jPanel3.add(kondisi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 120, 40));
 
         kondisi1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -642,14 +731,14 @@ public class dataPendonor extends javax.swing.JFrame {
         kondisi1.setText("Hemoglobin");
         jPanel3.add(kondisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 390, 130, 30));
 
-        jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "O+", "A+", "B+", "AB+", "O-", "A-", "B-", "Rh-null-" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxGolDarah.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBoxGolDarah.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "O+", "A+", "B+", "AB+", "O-", "A-", "B-", "Rh-null-" }));
+        jComboBoxGolDarah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jComboBoxGolDarahActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 240, 40));
+        jPanel3.add(jComboBoxGolDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 240, 40));
 
         golDarah1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah1.setForeground(new java.awt.Color(255, 255, 255));
@@ -675,8 +764,8 @@ public class dataPendonor extends javax.swing.JFrame {
         jumlahTransfusi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jumlahTransfusi.setForeground(new java.awt.Color(255, 255, 255));
         jumlahTransfusi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jumlahTransfusi.setText("Jumlah Transfusi");
-        jPanel3.add(jumlahTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 120, 40));
+        jumlahTransfusi.setText("Jumlah Transfusi *opsional");
+        jPanel3.add(jumlahTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 200, 40));
 
         line13.setBackground(new java.awt.Color(255, 255, 255));
         line13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -873,20 +962,20 @@ public class dataPendonor extends javax.swing.JFrame {
         }catch(ParseException e){
             System.out.println(e);
         }
-        txtTanggal21552011235.setDate(convert);
+        txtTanggalDaftar21552011235.setDate(convert);
     }//GEN-LAST:event_tableDataPendonor21552011235MouseClicked
 
-    private void txtTanggal21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTanggal21552011235MouseClicked
+    private void txtTanggalDaftar21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTanggalDaftar21552011235MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTanggal21552011235MouseClicked
+    }//GEN-LAST:event_txtTanggalDaftar21552011235MouseClicked
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jComboBoxGolDarahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxGolDarahActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jComboBoxGolDarahActionPerformed
 
     private void txtFieldRiwayatPenyakit21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldRiwayatPenyakit21552011235ActionPerformed
         // TODO add your handling code here:
@@ -985,7 +1074,7 @@ public class dataPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel golDarah;
     private javax.swing.JLabel golDarah1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBoxGolDarah;
     private com.toedter.calendar.JDateChooser jDateChooserTanggalLahir;
     private com.toedter.calendar.JDateChooser jDateChooserTerakhirTransfusi;
     private javax.swing.JPanel jPanel2;
@@ -1014,7 +1103,7 @@ public class dataPendonor extends javax.swing.JFrame {
     private javax.swing.JTextField txtFieldNoTelp21552011235;
     private javax.swing.JTextField txtFieldRiwayatPenyakit21552011235;
     private javax.swing.JTextField txtFieldUsia21552011235;
-    private com.toedter.calendar.JDateChooser txtTanggal21552011235;
+    private com.toedter.calendar.JDateChooser txtTanggalDaftar21552011235;
     // End of variables declaration//GEN-END:variables
 
    
