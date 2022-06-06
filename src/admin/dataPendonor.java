@@ -100,7 +100,7 @@ public class dataPendonor extends javax.swing.JFrame {
                     
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,gmail,tanggal_lahir,no_telp,riwayat_penyakit,golongan_darah,usia,berat_badan,jumlah_transfusi,tanggal_terakhir_transfusi,alamat,hemoglobin};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamat,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -161,7 +161,12 @@ public class dataPendonor extends javax.swing.JFrame {
         String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
         //String no_pendonor = 
         String nama = txtFieldNamaPendonor21552011235.getText();
-        //jenis kelamin
+        String jk;
+        if (jRadioButtonLakiLaki21552011235.isSelected()){
+            jk = "Laki-Laki";
+        }else {
+            jk = "Perempuan";
+        }
         SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
@@ -177,16 +182,11 @@ public class dataPendonor extends javax.swing.JFrame {
         String tanggal_terakhir_transfusi = tgl_tt.format(jDateChooserTerakhirTransfusi.getDate());
         
         
-        
-        
-        
-        
-        
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
-        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar` ,no_pendonor, `nama`, `gmail`, `tanggal_lahir`, `no_telp`, `riwayat_penyakit`,`golongan_darah`,`usia`,`berat_badan`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`,`alamat`,`hemoglobin`) "
-                     + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"', '"+gmail+"', '"+tanggal_lahir+"', '"+no_telp+"','"+riwayat_penyakit+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"','"+alamatpendonor+"','"+hemoglobin+"')";
+        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar` ,no_pendonor,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`) " 
+                     + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"','"+jk+"','"+tanggal_lahir+"','"+no_telp+"','"+gmail+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+alamatpendonor+"','"+hemoglobin+"','"+riwayat_penyakit+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"')"; 
         
         try{ 
             //menyiapkan statement untuk di eksekusi
@@ -313,6 +313,7 @@ public class dataPendonor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         Navbar = new javax.swing.JPanel();
         PanelBack21552011235 = new javax.swing.JPanel();
@@ -373,8 +374,8 @@ public class dataPendonor extends javax.swing.JFrame {
         txtFieldCari21552011235 = new javax.swing.JTextField();
         PanelCari21552011235 = new javax.swing.JPanel();
         BtnCari21552011235 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButtonLakiLaki21552011235 = new javax.swing.JRadioButton();
+        jRadioButtonPerempuan21552011235 = new javax.swing.JRadioButton();
         NamaPendonor1 = new javax.swing.JLabel();
         NamaPendonor2 = new javax.swing.JLabel();
 
@@ -498,8 +499,8 @@ public class dataPendonor extends javax.swing.JFrame {
         golDarah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah.setForeground(new java.awt.Color(255, 255, 255));
         golDarah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah.setText("Terakhir Transfusi *opsional");
-        jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 190, 30));
+        golDarah.setText("Terakhir Tangga Transfusi *opsional");
+        jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 250, 30));
 
         TotalHarga.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalHarga.setForeground(new java.awt.Color(255, 255, 255));
@@ -630,6 +631,7 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 1320, 130));
 
+        txtTanggalDaftar21552011235.setDateFormatString("d MMM, yyyy");
         txtTanggalDaftar21552011235.setEnabled(false);
         txtTanggalDaftar21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtTanggalDaftar21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -821,6 +823,7 @@ public class dataPendonor extends javax.swing.JFrame {
         BeartBadan.setText("Berat Badan *Kg");
         jPanel3.add(BeartBadan, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 110, 40));
 
+        jDateChooserTerakhirTransfusi.setDateFormatString("d MMM, yyyy");
         jDateChooserTerakhirTransfusi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel3.add(jDateChooserTerakhirTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 240, 40));
 
@@ -874,27 +877,30 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(PanelCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
 
-        jRadioButton1.setBackground(new java.awt.Color(32, 83, 117));
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Laki-laki");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButtonLakiLaki21552011235.setBackground(new java.awt.Color(32, 83, 117));
+        buttonGroup1.add(jRadioButtonLakiLaki21552011235);
+        jRadioButtonLakiLaki21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButtonLakiLaki21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonLakiLaki21552011235.setSelected(true);
+        jRadioButtonLakiLaki21552011235.setText("Laki-laki");
+        jRadioButtonLakiLaki21552011235.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jRadioButtonLakiLaki21552011235ActionPerformed(evt);
             }
         });
-        jPanel3.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
+        jPanel3.add(jRadioButtonLakiLaki21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
 
-        jRadioButton2.setBackground(new java.awt.Color(32, 83, 117));
-        jRadioButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Perempuan");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        jRadioButtonPerempuan21552011235.setBackground(new java.awt.Color(32, 83, 117));
+        buttonGroup1.add(jRadioButtonPerempuan21552011235);
+        jRadioButtonPerempuan21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButtonPerempuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonPerempuan21552011235.setText("Perempuan");
+        jRadioButtonPerempuan21552011235.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                jRadioButtonPerempuan21552011235ActionPerformed(evt);
             }
         });
-        jPanel3.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+        jPanel3.add(jRadioButtonPerempuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
 
         NamaPendonor1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         NamaPendonor1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1062,13 +1068,13 @@ public class dataPendonor extends javax.swing.JFrame {
         changecolor(PanelCari21552011235, new Color (17,43,60));
     }//GEN-LAST:event_BtnCari21552011235MouseExited
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jRadioButtonLakiLaki21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonLakiLaki21552011235ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jRadioButtonLakiLaki21552011235ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void jRadioButtonPerempuan21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPerempuan21552011235ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_jRadioButtonPerempuan21552011235ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1164,6 +1170,7 @@ public class dataPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel alamat;
     private javax.swing.JLabel alamat1;
     private javax.swing.JLabel alamat2;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel golDarah;
     private javax.swing.JLabel golDarah1;
     private javax.swing.JComboBox<String> jComboBoxGolDarah;
@@ -1172,8 +1179,8 @@ public class dataPendonor extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateChooserTerakhirTransfusi;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButtonLakiLaki21552011235;
+    private javax.swing.JRadioButton jRadioButtonPerempuan21552011235;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jumlahTransfusi;
     private javax.swing.JLabel kondisi;
