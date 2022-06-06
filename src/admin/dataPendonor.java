@@ -501,7 +501,7 @@ public class dataPendonor extends javax.swing.JFrame {
         golDarah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah.setForeground(new java.awt.Color(255, 255, 255));
         golDarah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah.setText("Terakhir Tangga Transfusi *opsional");
+        golDarah.setText("Terakhir Tanggal Transfusi *opsional");
         jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 250, 30));
 
         TotalHarga.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -760,8 +760,8 @@ public class dataPendonor extends javax.swing.JFrame {
         jumlahTransfusi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jumlahTransfusi.setForeground(new java.awt.Color(255, 255, 255));
         jumlahTransfusi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jumlahTransfusi.setText("Jumlah Transfusi *opsional");
-        jPanel3.add(jumlahTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 200, 40));
+        jumlahTransfusi.setText("Jumlah Transfusi ");
+        jPanel3.add(jumlahTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 240, 40));
 
         line13.setBackground(new java.awt.Color(255, 255, 255));
         line13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
