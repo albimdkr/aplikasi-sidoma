@@ -620,7 +620,6 @@
             </Container>
             <Component class="com.toedter.calendar.JDateChooser" name="txtTanggalDaftar21552011235">
               <Properties>
-                <Property name="dateFormatString" type="java.lang.String" value="yyyy-MM-dd"/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
@@ -1198,7 +1197,6 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserTerakhirTransfusi">
               <Properties>
-                <Property name="dateFormatString" type="java.lang.String" value="yyyy-MM-dd"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
                 </Property>

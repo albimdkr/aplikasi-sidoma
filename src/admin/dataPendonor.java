@@ -153,13 +153,12 @@ public class dataPendonor extends javax.swing.JFrame {
     
     
     private void tambahData(){
-        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
+        
         //String no_pendonor = 
         String nama = txtFieldNamaPendonor21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
-        SimpleDateFormat tgl_lahir = new SimpleDateFormat("d  MMM, yyyy");
-        String tanggal_lahir = date.format(jDateChooserTanggalLahir.getDate());
+        SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
         String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
@@ -167,17 +166,20 @@ public class dataPendonor extends javax.swing.JFrame {
         String berat_badan = txtFieldBeratBadan21552011235.getText();
         String jumlah_transfusi = txtFieldJumlahTransfusi21552011235.getText();
         SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_terakhir_transfusi = date.format(jDateChooserTerakhirTransfusi.getDate());
-        String alamat = txtFieldAlamat21552011235.getText();
+        String tanggal_terakhir_transfusi = tgl_tt.format(jDateChooserTerakhirTransfusi.getDate());
+        String alamatpendonor = txtFieldAlamat21552011235.getText();
         String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
         
+        
+        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
         
         
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
         String query = "INSERT INTO `data_pendonor` (`tanggal_daftar` ,no_pendonor, `nama`, `gmail`, `tanggal_lahir`, `no_telp`, `riwayat_penyakit`,`golongan_darah`,`usia`,`berat_badan`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`,`alamat`,`hemoglobin`) "
-                     + "VALUES ('"+tanggal_daftar+"',NULL, '"+nama+"', '"+gmail+"', '"+tgl_lahir+"', '"+no_telp+"','"+riwayat_penyakit+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+jumlah_transfusi+"','"+tgl_tt+"','"+alamat+"','"+hemoglobin+"')";
+                     + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"', '"+gmail+"', '"+tanggal_lahir+"', '"+no_telp+"','"+riwayat_penyakit+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"','"+alamatpendonor+"','"+hemoglobin+"')";
         
         try{ 
             //menyiapkan statement untuk di eksekusi
@@ -613,7 +615,6 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 1320, 130));
 
-        txtTanggalDaftar21552011235.setDateFormatString("yyyy-MM-dd");
         txtTanggalDaftar21552011235.setEnabled(false);
         txtTanggalDaftar21552011235.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         txtTanggalDaftar21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -805,7 +806,6 @@ public class dataPendonor extends javax.swing.JFrame {
         BeartBadan.setText("Berat Badan *Kg");
         jPanel3.add(BeartBadan, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 110, 40));
 
-        jDateChooserTerakhirTransfusi.setDateFormatString("yyyy-MM-dd");
         jDateChooserTerakhirTransfusi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel3.add(jDateChooserTerakhirTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 240, 40));
 
