@@ -378,6 +378,7 @@ public class dataPendonor extends javax.swing.JFrame {
         jRadioButtonPerempuan21552011235 = new javax.swing.JRadioButton();
         NamaPendonor1 = new javax.swing.JLabel();
         NamaPendonor2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -462,6 +463,7 @@ public class dataPendonor extends javax.swing.JFrame {
         PanelAdd21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelAdd21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        BtnAdd21552011235.setBackground(new java.awt.Color(255, 255, 255));
         BtnAdd21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnAdd21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnAdd21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -513,6 +515,7 @@ public class dataPendonor extends javax.swing.JFrame {
         PanelClear21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelClear21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        BtnClear21552011235.setBackground(new java.awt.Color(255, 255, 255));
         BtnClear21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnClear21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnClear21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -563,6 +566,7 @@ public class dataPendonor extends javax.swing.JFrame {
         PanelDelete21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelDelete21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        BtnDelete21552011235.setBackground(new java.awt.Color(255, 255, 255));
         BtnDelete21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnDelete21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnDelete21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -588,6 +592,7 @@ public class dataPendonor extends javax.swing.JFrame {
         PanelEdit21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelEdit21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        BtnEdit21552011235.setBackground(new java.awt.Color(255, 255, 255));
         BtnEdit21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnEdit21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnEdit21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -914,6 +919,10 @@ public class dataPendonor extends javax.swing.JFrame {
         NamaPendonor2.setText("Nama");
         jPanel3.add(NamaPendonor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 50, 40));
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1390, -1));
+
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -949,7 +958,7 @@ public class dataPendonor extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnEdit21552011235MouseClicked
 
     private void BtnEdit21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEdit21552011235MouseEntered
-        changecolor(PanelEdit21552011235, new Color (45,35,23));
+        changecolor(PanelEdit21552011235, new Color (255,209,36));
     }//GEN-LAST:event_BtnEdit21552011235MouseEntered
 
     private void BtnEdit21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEdit21552011235MouseExited
@@ -985,7 +994,7 @@ public class dataPendonor extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnClear21552011235MouseClicked
 
     private void BtnClear21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClear21552011235MouseEntered
-      changecolor(PanelClear21552011235, new Color (224,77,1));
+      changecolor(PanelClear21552011235, new Color (246,107,14));
     }//GEN-LAST:event_BtnClear21552011235MouseEntered
 
     private void BtnClear21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClear21552011235MouseExited
@@ -1177,6 +1186,7 @@ public class dataPendonor extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxHemoglobin;
     private com.toedter.calendar.JDateChooser jDateChooserTanggalLahir;
     private com.toedter.calendar.JDateChooser jDateChooserTerakhirTransfusi;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButtonLakiLaki21552011235;
