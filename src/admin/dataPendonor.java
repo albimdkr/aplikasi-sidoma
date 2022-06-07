@@ -26,6 +26,20 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.view.JasperViewer;
 import laporan.*;
+//    String tanggal_daftar = 
+//    String no_pendonor = 
+//    String nama = 
+//    String gmail = 
+//    String tanggal_lahir = 
+//    String no_telp = 
+//    String riwayat_penyakit = 
+//    String golongan_darah = 
+//    String usia = 
+//    String berat_badan = 
+//    String jumlah_transfusi = 
+//    String tanggal_terakhir_transfusi = 
+//    String alamat = 
+//    String hemoglobin = 
 
 /**
  *
@@ -111,23 +125,8 @@ public class dataPendonor extends javax.swing.JFrame {
             System.out.println(e);
         }
        
-    }
-    
-    
-//    String tanggal_daftar = 
-//    String no_pendonor = 
-//    String nama = 
-//    String gmail = 
-//    String tanggal_lahir = 
-//    String no_telp = 
-//    String riwayat_penyakit = 
-//    String golongan_darah = 
-//    String usia = 
-//    String berat_badan = 
-//    String jumlah_transfusi = 
-//    String tanggal_terakhir_transfusi = 
-//    String alamat = 
-//    String hemoglobin = 
+    }  
+
     
     private void clear(){
           //*no_pendonor
@@ -275,24 +274,30 @@ public class dataPendonor extends javax.swing.JFrame {
         }   
     }
         
-//        java.sql.Connection connect = koneksi.getKoneksi();
-        
-        //String query = "INSERT INTO `data_pendonor` (`tanggal_daftar`,no_pendonor,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`) " 
-        //             + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"','"+jk+"','"+tanggal_lahir+"','"+no_telp+"','"+gmail+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+alamatpendonor+"','"+hemoglobin+"','"+riwayat_penyakit+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"')";
-        
-        
-
-        
-    
+       
     private void cari(){
         int row = tableDataPendonor21552011235.getRowCount();
         for(int a = 0 ; a < row ; a++){
             table.removeRow(0);
         }
         
-        String cari = txtFieldCari21552011235.getText();
-        
-        String query = "SELECT * FROM `data_pendonor` WHERE `data_pendonor`  LIKE '%"+cari+"%' OR `nama_menu` LIKE '%"+cari+"%' ";
+      String cari = txtFieldCari21552011235.getText();
+      String query = "SELECT * FROM `data_pendonor` WHERE "
+                + "`tanggal_daftar` LIKE '%"+cari+"%' OR"
+                + "`no_pendonor`  LIKE '%"+cari+"%' OR "
+                + "`nama` LIKE '%"+cari+"%' OR"
+                + "`jenis_kelamin` LIKE '%"+cari+"%' OR"
+                + "`tanggal_lahir` LIKE '%"+cari+"%' OR"
+                + "`no_telp` LIKE '%"+cari+"%' OR"
+                + "`gmail` LIKE '%"+cari+"%' OR"
+                + "`golongan_darah` LIKE '%"+cari+"%' OR"
+                + "`usia` LIKE '%"+cari+"%' OR"
+                + "`berat_badan` LIKE '%"+cari+"%' OR"
+                + "`alamat` LIKE '%"+cari+"%' OR"
+                + "`hemoglobin` LIKE '%"+cari+"%' OR"
+                + "`riwayat_penyakit` LIKE '%"+cari+"%' OR"
+                + "`jumlah_transfusi` LIKE '%"+cari+"%' OR"
+                + "`tanggal_terakhir_transfusi` LIKE '%"+cari+"%' ";
                 
        try{
            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -301,26 +306,70 @@ public class dataPendonor extends javax.swing.JFrame {
            
            while (rslt.next()){
                 //menampung data sementara
-                   
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String stok = rslt.getString("stok");
-                    String tanggal = rslt.getString("tanggal");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    String no_pendonor = rslt.getString("no_pendonor");
+                    String nama = rslt.getString("nama");
+                    String jenis_kelamin = rslt.getString("jenis_kelamin");
+                    String tanggal_lahir = rslt.getString("tanggal_lahir");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmail = rslt.getString("gmail");
+                    String golongan_darah = rslt.getString("golongan_darah");
+                    String usia = rslt.getString("usia");
+                    String berat_badan = rslt.getString("berat_badan");
+                    String alamat = rslt.getString("alamat");
+                    String hemoglobin = rslt.getString("hemoglobin");
+                    String riwayat_penyakit = rslt.getString("riwayat_penyakit");
+                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
+                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
                     
                 //masukan semua data kedalam array
-                String[] data = {kode,nama,harga,stok,tanggal};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamat,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
-                tableMenu21552011235.setModel(table);
+                tableDataPendonor21552011235.setModel(table);
            
         
     }catch(Exception e){
            System.out.println(e);
     }
     }
+    
+//    String cari = txtFieldCari21552011235.getText();
+//        
+//        String query = "SELECT * FROM `transaksi` WHERE "
+//                + "`kode_menu`  LIKE '%"+cari+"%' OR "
+//                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
+//                + "`id_transaksi` LIKE '%"+cari+"%' OR"
+//                + "`nama_menu` LIKE '%"+cari+"%' ";
+//                
+//       try{
+//           Connection connect = koneksi.getKoneksi();//memanggil koneksi
+//           Statement sttmnt = connect.createStatement();//membuat statement
+//           ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
+//           
+//           while (rslt.next()){
+//                //menampung data sementara
+//                   
+//                    String tanggal = rslt.getString("tgl_transaksi");
+//                    String id = rslt.getString("id_transaksi");
+//                    String kode = rslt.getString("kode_menu");
+//                    String nama = rslt.getString("nama_menu");
+//                    String harga = rslt.getString("harga");
+//                    String jumlah = rslt.getString("jumlah_menu");
+//                    String total = rslt.getString("total_harga");
+//                    
+//                //masukan semua data kedalam array
+//                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+//                //menambahakan baris sesuai dengan data yang tersimpan diarray
+//                table.addRow(data);
+//            }
+//                //mengeset nilai yang ditampung agar muncul di table
+//                tableLaporanRiwayat21552011235.setModel(table);
+//    }catch(SQLException e){
+//           System.out.println(e);
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
