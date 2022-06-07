@@ -130,9 +130,9 @@ public class dataPendonor extends javax.swing.JFrame {
 //    String hemoglobin = 
     
     private void clear(){
-          //txtTanggalDaftar21552011235.setText(null);
           //*no_pendonor
           txtFieldNamaPendonor21552011235.setText(null);
+           //txtTanggalDaftar21552011235.setText(null);
           //jenis kelamin
           //jDateChooserTanggalLahir.setText(null);
           txtFieldNoTelp21552011235.setText(null);
@@ -157,18 +157,18 @@ public class dataPendonor extends javax.swing.JFrame {
     
     
     private void tambahData(){
-        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
+        SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         //String no_pendonor = 
         String nama = txtFieldNamaPendonor21552011235.getText();
+        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
         String jk;
         if (jRadioButtonLakiLaki21552011235.isSelected()){
             jk = "Laki-Laki";
         }else {
             jk = "Perempuan";
         }
-        SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
         String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
@@ -185,7 +185,7 @@ public class dataPendonor extends javax.swing.JFrame {
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
-        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar` ,no_pendonor,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`) " 
+        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar`,no_pendonor,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`) " 
                      + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"','"+jk+"','"+tanggal_lahir+"','"+no_telp+"','"+gmail+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+alamatpendonor+"','"+hemoglobin+"','"+riwayat_penyakit+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"')"; 
         
         try{ 
@@ -213,24 +213,40 @@ public class dataPendonor extends javax.swing.JFrame {
     private void hapusData(){
         //ambill data no pendaftaran
         int i = tableDataPendonor21552011235.getSelectedRow();
+        int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
+            + "Menghapus Data","Konfirmasi Dialog", JOptionPane.YES_NO_OPTION);
         
-        String kode = table.getValueAt(i, 0).toString();
-        
-        java.sql.Connection connect = koneksi.getKoneksi();
-        
-        String query = "DELETE FROM `tb_menu` WHERE `tb_menu`.`kode_menu` = "+kode+" ";
-        try{
-            PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
-            ps.execute();
-            JOptionPane.showMessageDialog(null , "Data Berhasil Dihapus");
-        }catch(SQLException | HeadlessException e){
-            System.out.println(e);
-            JOptionPane.showMessageDialog(null, "Data Gagal Dihapus");
-        }finally{
-            tampilData();
-            clear();
+        if (ok==0){
+            String no_pendonor = table.getValueAt(i, 1).toString();
+            java.sql.Connection connect = koneksi.getKoneksi();
+            String query = "DELETE FROM `data_pendonor` WHERE `data_pendonor`.`no_pendonor` = "+no_pendonor+" ";
+            //String sql="delete from tb_barang where kode_part='"+txtKodePart.getText()+"'";
+            try {
+                PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
+                ps.execute();
+                JOptionPane.showMessageDialog(null , "Data Berhasil Dihapus");
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Data Gagal Dihapus"+e);
+            }finally{
+                tampilData();
+                clear();
+            }
         }
         
+        
+        
+//        String query = "DELETE FROM `data_pendonor` WHERE `data_pendonor`.`no_pendonor` = "+no_pendonor+" ";
+//        try{
+//            PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
+//            ps.execute();
+//            JOptionPane.showMessageDialog(null , "Data Berhasil Dihapus");
+//        }catch(SQLException | HeadlessException e){
+//            System.out.println(e);
+//            JOptionPane.showMessageDialog(null, "Data Gagal Dihapus");
+//        }finally{
+//            tampilData();
+//            clear();
+//        }
     }
     
     
@@ -614,6 +630,7 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(PanelEdit21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 340, 290, 50));
 
+        tableDataPendonor21552011235.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         tableDataPendonor21552011235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1027,26 +1044,26 @@ public class dataPendonor extends javax.swing.JFrame {
 
     private void tableDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableDataPendonor21552011235MouseClicked
         // TODO add your handling code here:
-        int baris = tableDataPendonor21552011235.getSelectedRow();
-        
-        String nama = table.getValueAt(baris,1).toString();
-        txtFieldNamaMenu21552011235.setText(nama);
-        
-        String harga = table.getValueAt(baris, 2).toString();
-        txtFieldHarga21552011235.setText(harga);
-        
-        String stok = table.getValueAt(baris, 3).toString();
-        txtFieldStok21552011235.setText(stok);
-        
-        String tanggal = table.getValueAt(baris, 4).toString();
-        
-        Date convert = null;
-        try{
-            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal);   
-        }catch(ParseException e){
-            System.out.println(e);
-        }
-        txtTanggalDaftar21552011235.setDate(convert);
+//        int baris = tableDataPendonor21552011235.getSelectedRow();
+//        
+//        String nama = table.getValueAt(baris,1).toString();
+//        txtFieldNamaMenu21552011235.setText(nama);
+//        
+//        String harga = table.getValueAt(baris, 2).toString();
+//        txtFieldHarga21552011235.setText(harga);
+//        
+//        String stok = table.getValueAt(baris, 3).toString();
+//        txtFieldStok21552011235.setText(stok);
+//        
+//        String tanggal = table.getValueAt(baris, 4).toString();
+//        
+//        Date convert = null;
+//        try{
+//            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal);   
+//        }catch(ParseException e){
+//            System.out.println(e);
+//        }
+//        txtTanggalDaftar21552011235.setDate(convert);
     }//GEN-LAST:event_tableDataPendonor21552011235MouseClicked
 
     private void txtTanggalDaftar21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTanggalDaftar21552011235MouseClicked
