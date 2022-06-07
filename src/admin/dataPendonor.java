@@ -925,7 +925,6 @@ public class dataPendonor extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButtonLakiLaki21552011235);
         jRadioButtonLakiLaki21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButtonLakiLaki21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonLakiLaki21552011235.setSelected(true);
         jRadioButtonLakiLaki21552011235.setText("Laki-laki");
         jRadioButtonLakiLaki21552011235.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1067,15 +1066,26 @@ public class dataPendonor extends javax.swing.JFrame {
     private void tableDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableDataPendonor21552011235MouseClicked
         // TODO add your handling code here:
           int baris = tableDataPendonor21552011235.getSelectedRow();
-          String tanggal_daftar = table.getValueAt(baris,0).toString();   
+          String tanggal_daftar = table.getValueAt(baris,0).toString(); 
+          
           //String no_pendonor = table.getValueAt(baris,1).toString();
           
           String nama = table.getValueAt(baris,2).toString();
           txtFieldNamaPendonor21552011235.setText(nama);
           
-          String jenis_kelamin = table.getValueAt(baris,3).toString();
-//          jRadioButtonLakiLaki21552011235.setText(jenis_kelamin);
-//          jRadioButtonPerempuan21552011235.setText(jenis_kelamin);
+//          String jenis_kelamin = table.getValueAt(baris,3).toString();
+//          if (jenis_kelamin.equals("Laki-laki")){
+//              jRadioButtonLakiLaki21552011235.setSelected(true);
+//          } else if (jenis_kelamin.equals("Perempuan")){
+//              jRadioButtonPerempuan21552011235.setSelected(true);
+//          }
+//          
+//        String jenis_kelamin = table.getValueAt(baris,3).toString();
+//        if (jRadioButtonLakiLaki21552011235){
+//            jenis_kelamin = "Laki-Laki";
+//        }else {
+//            jenis_kelamin = "Perempuan";
+//        }
           
           String tanggal_lahir = table.getValueAt(baris,4).toString();
           
@@ -1086,6 +1096,9 @@ public class dataPendonor extends javax.swing.JFrame {
           txtFieldAkunGmail21552011235.setText(gmail);
           
           String golongan_darah = table.getValueAt(baris,7).toString();
+//          jComboBoxGolDarah.setText(golongan_darah);
+          
+          
           
           String usia = table.getValueAt(baris,8).toString();
           txtFieldUsia21552011235.setText(usia);
@@ -1155,7 +1168,8 @@ public class dataPendonor extends javax.swing.JFrame {
     private void jDateTanggalDaftar21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftar21552011235MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jDateTanggalDaftar21552011235MouseClicked
-
+    
+   
     /**
      * @param args the command line arguments
      */
@@ -1304,4 +1318,6 @@ public class dataPendonor extends javax.swing.JFrame {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
+    
+   
 }
