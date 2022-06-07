@@ -147,28 +147,20 @@ public class dataPendonor extends javax.swing.JFrame {
           //tanggal_terakhir_transfusi
     }
     
-//     pilihJurusan = jComboBoxJurusan21552011235.getSelectedIndex();
-//        switch (pilihJurusan){
-//            case 0 : jurusan ="Teknik Informatika";break;
-//            case 1 : jurusan ="Teknik Industri";break;
-//            case 2 : jurusan ="Design Komunikasi Visual";break;
-//            case 3 : jurusan ="Bisnis Digital";break;   
-//        }
-    
     
     private void tambahData(){
-        SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
-        //String no_pendonor = 
-        String nama = txtFieldNamaPendonor21552011235.getText();
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
+        //String no_pendonor = 
+        String nama = txtFieldNamaPendonor21552011235.getText();
         String jk;
         if (jRadioButtonLakiLaki21552011235.isSelected()){
             jk = "Laki-Laki";
         }else {
             jk = "Perempuan";
         }
+        SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
         String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
@@ -232,90 +224,103 @@ public class dataPendonor extends javax.swing.JFrame {
                 clear();
             }
         }
-        
-        
-        
-//        String query = "DELETE FROM `data_pendonor` WHERE `data_pendonor`.`no_pendonor` = "+no_pendonor+" ";
-//        try{
-//            PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
-//            ps.execute();
-//            JOptionPane.showMessageDialog(null , "Data Berhasil Dihapus");
-//        }catch(SQLException | HeadlessException e){
-//            System.out.println(e);
-//            JOptionPane.showMessageDialog(null, "Data Gagal Dihapus");
-//        }finally{
-//            tampilData();
-//            clear();
-//        }
     }
     
     
     private void editData(){
         int i = tableDataPendonor21552011235.getSelectedRow();
-        
-        String kode = table.getValueAt(i, 0).toString();
-        String nama = txtFieldNamaMenu21552011235.getText();
-        String harga =txtFieldHarga21552011235.getText();
-        String stok = txtFieldStok21552011235.getText();
+        int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
+            + "Mengedit Data","Konfirmasi Dialog", JOptionPane.YES_NO_OPTION);
         
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal = String.valueOf(date.format(txtTanggalDaftar21552011235.getDate()));
-        
-        java.sql.Connection connect = koneksi.getKoneksi();
-        
-        String query = "UPDATE `tb_menu` SET `nama_menu` = '"+nama+"', `harga` = '"+harga+"', `stok` = '"+stok+"', `tanggal` = '"+tanggal+"' "
-                + "WHERE `tb_menu`.`kode_menu` = '"+kode+"';";
-
-        try{
-            PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
-            ps.executeUpdate(query);
-            JOptionPane.showMessageDialog(null , "Data Update");
-        }catch(SQLException | HeadlessException e){
-            System.out.println(e);
-            JOptionPane.showMessageDialog(null, "Gagal Update");
-        }finally{
-            tampilData();
-            clear();
+        String tanggal_daftar = date.format(txtTanggalDaftar21552011235.getDate());
+        //String no_pendonor = table.getValueAt(i, 1).toString();
+        String nama = txtFieldNamaPendonor21552011235.getText();
+        String jk;
+        if (jRadioButtonLakiLaki21552011235.isSelected()){
+            jk = "Laki-Laki";
+        }else {
+            jk = "Perempuan";
         }
+        SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
+        String no_telp = txtFieldNoTelp21552011235.getText();
+        String gmail = txtFieldAkunGmail21552011235.getText();
+        String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
+        String usia = txtFieldUsia21552011235.getText();
+        String berat_badan = txtFieldBeratBadan21552011235.getText();
+        String alamatpendonor = txtFieldAlamat21552011235.getText();
+        String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
+        String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
+        String jumlah_transfusi = txtFieldJumlahTransfusi21552011235.getText();
+        SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal_terakhir_transfusi = tgl_tt.format(jDateChooserTerakhirTransfusi.getDate());
+        
+        if (ok==0){
+            String no_pendonor = table.getValueAt(i, 1).toString();
+            java.sql.Connection connect = koneksi.getKoneksi();
+            String query = "UPDATE `data_pendonor` SET `nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`golongan_darah` = '"+golongan_darah+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`hemoglobin` = '"+hemoglobin+"',`riwayat_penyakit` = '"+riwayat_penyakit+"',`jumlah_transfusi` = '"+jumlah_transfusi+"',`tanggal_terakhir_transfusi` = '"+tgl_tt+"'"
+                + "WHERE `data_pendonor`.`no_pendonor` = '"+no_pendonor+"';";
+            //String sql="delete from tb_barang where kode_part='"+txtKodePart.getText()+"'";
+            try {
+                PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
+                ps.execute(query);
+                JOptionPane.showMessageDialog(null , "Data Berhasil Di Edit");
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Data Gagal Di Edit!!!"+e);
+            }finally{
+                tampilData();
+                clear();
+            }
+        }   
     }
+        
+//        java.sql.Connection connect = koneksi.getKoneksi();
+        
+        //String query = "INSERT INTO `data_pendonor` (`tanggal_daftar`,no_pendonor,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`) " 
+        //             + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"','"+jk+"','"+tanggal_lahir+"','"+no_telp+"','"+gmail+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+alamatpendonor+"','"+hemoglobin+"','"+riwayat_penyakit+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"')";
+        
+        
+
+        
     
-//    private void cari(){
-//        int row = tableMenu21552011235.getRowCount();
-//        for(int a = 0 ; a < row ; a++){
-//            table.removeRow(0);
-//        }
-//        
-//        String cari = txtFieldCari21552011235.getText();
-//        
-//        String query = "SELECT * FROM `tb_menu` WHERE `kode_menu`  LIKE '%"+cari+"%' OR `nama_menu` LIKE '%"+cari+"%' ";
-//                
-//       try{
-//           java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
-//           Statement sttmnt = connect.createStatement();//membuat statement
-//           ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
-//           
-//           while (rslt.next()){
-//                //menampung data sementara
-//                   
-//                    String kode = rslt.getString("kode_menu");
-//                    String nama = rslt.getString("nama_menu");
-//                    String harga = rslt.getString("harga");
-//                    String stok = rslt.getString("stok");
-//                    String tanggal = rslt.getString("tanggal");
-//                    
-//                //masukan semua data kedalam array
-//                String[] data = {kode,nama,harga,stok,tanggal};
-//                //menambahakan baris sesuai dengan data yang tersimpan diarray
-//                table.addRow(data);
-//            }
-//                //mengeset nilai yang ditampung agar muncul di table
-//                tableMenu21552011235.setModel(table);
-//           
-//        
-//    }catch(Exception e){
-//           System.out.println(e);
-//    }
-//    }
+    private void cari(){
+        int row = tableDataPendonor21552011235.getRowCount();
+        for(int a = 0 ; a < row ; a++){
+            table.removeRow(0);
+        }
+        
+        String cari = txtFieldCari21552011235.getText();
+        
+        String query = "SELECT * FROM `data_pendonor` WHERE `data_pendonor`  LIKE '%"+cari+"%' OR `nama_menu` LIKE '%"+cari+"%' ";
+                
+       try{
+           java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
+           Statement sttmnt = connect.createStatement();//membuat statement
+           ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
+           
+           while (rslt.next()){
+                //menampung data sementara
+                   
+                    String kode = rslt.getString("kode_menu");
+                    String nama = rslt.getString("nama_menu");
+                    String harga = rslt.getString("harga");
+                    String stok = rslt.getString("stok");
+                    String tanggal = rslt.getString("tanggal");
+                    
+                //masukan semua data kedalam array
+                String[] data = {kode,nama,harga,stok,tanggal};
+                //menambahakan baris sesuai dengan data yang tersimpan diarray
+                table.addRow(data);
+            }
+                //mengeset nilai yang ditampung agar muncul di table
+                tableMenu21552011235.setModel(table);
+           
+        
+    }catch(Exception e){
+           System.out.println(e);
+    }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
