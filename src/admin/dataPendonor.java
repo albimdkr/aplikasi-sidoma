@@ -874,6 +874,7 @@ public class dataPendonor extends javax.swing.JFrame {
         jDateChooserTanggalLahir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel3.add(jDateChooserTanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 240, 40));
 
+        jDateTanggalDaftar21552011235.setDateFormatString("d MMM, yyyy");
         jDateTanggalDaftar21552011235.setEnabled(false);
         jDateTanggalDaftar21552011235.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jDateTanggalDaftar21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1097,7 +1098,12 @@ public class dataPendonor extends javax.swing.JFrame {
           txtFieldAkunGmail21552011235.setText(gmail);
           
           String golongan_darah = table.getValueAt(baris,7).toString();
-//          jComboBoxGolDarah.setText(golongan_darah);
+          for (int i = 0; i <jComboBoxGolDarah.getItemCount(); i++ ){
+              if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){
+                  jComboBoxGolDarah.setSelectedIndex(i);
+                  
+              }
+          }
           
           String usia = table.getValueAt(baris,8).toString();
           txtFieldUsia21552011235.setText(usia);
@@ -1108,7 +1114,14 @@ public class dataPendonor extends javax.swing.JFrame {
           String alamatpendonor =  table.getValueAt(baris,10).toString();
           txtFieldAlamat21552011235.setText(alamatpendonor);
           
-          String hemoglobin =  table.getValueAt(baris,11).toString();
+          //String hemoglobin =  table.getValueAt(baris,11).toString();
+          String hemoglobin = table.getValueAt(baris,11).toString();
+          for (int i = 0; i <jComboBoxHemoglobin.getItemCount(); i++ ){
+              if (jComboBoxHemoglobin.getItemAt(i).equalsIgnoreCase(hemoglobin)){
+                  jComboBoxHemoglobin.setSelectedIndex(i);
+                  
+              }
+          }
           
           String riwayat_penyakit =  table.getValueAt(baris,12).toString();
           txtFieldRiwayatPenyakit21552011235.setText(riwayat_penyakit);
@@ -1126,8 +1139,6 @@ public class dataPendonor extends javax.swing.JFrame {
             convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_daftar);
             tanggal_lahir = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,4));
             tanggal_terakhir_transfusi = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,14));
-//            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_lahir);
-//            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_terakhir_transfusi);
         }catch(ParseException e){  
             System.out.println(e);
             Logger.getLogger(dataPendonor.class.getName()).log(Level.SEVERE, null, ex);
@@ -1322,6 +1333,12 @@ public class dataPendonor extends javax.swing.JFrame {
 
         private Object getConnection() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
+
+    private static class model {
+
+        public model() {
         }
     }
     

@@ -1243,6 +1243,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jDateTanggalDaftar21552011235">
               <Properties>
+                <Property name="dateFormatString" type="java.lang.String" value="d MMM, yyyy"/>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
