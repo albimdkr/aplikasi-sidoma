@@ -1068,6 +1068,7 @@ public class dataPendonor extends javax.swing.JFrame {
     private void tableDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableDataPendonor21552011235MouseClicked
         // TODO add your handling code here:
           int baris = tableDataPendonor21552011235.getSelectedRow();
+          
           String tanggal_daftar = table.getValueAt(baris,0).toString(); 
           
           //String no_pendonor = table.getValueAt(baris,1).toString();
@@ -1081,18 +1082,13 @@ public class dataPendonor extends javax.swing.JFrame {
           } else if (jenis_kelamin.equals("Perempuan")){
               jRadioButtonPerempuan21552011235.setSelected(true);
           }
-//          
+ 
 //        String jenis_kelamin = table.getValueAt(baris,3).toString();
 //        if (jRadioButtonLakiLaki21552011235){
 //            jenis_kelamin = "Laki-Laki";
 //        }else {
 //            jenis_kelamin = "Perempuan";
 //        }
-          
-          
-         
-          
-          
           
           String no_telp = table.getValueAt(baris,5).toString();
           txtFieldNoTelp21552011235.setText(no_telp);
@@ -1119,26 +1115,28 @@ public class dataPendonor extends javax.swing.JFrame {
           
           String jumlah_transfusi = table.getValueAt(baris,13).toString();
           txtFieldJumlahTransfusi21552011235.setText(jumlah_transfusi);
-          
-          String tanggal_terakhir_transfusi = table.getValueAt(baris,14).toString();
+         
 
        
         Date convert = null;
         Date tanggal_lahir = null;
+        Object tanggal_terakhir_transfusi = null;
         Object ex = null;
         try{
             convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_daftar);
             tanggal_lahir = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,4));
+            tanggal_terakhir_transfusi = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,14));
 //            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_lahir);
 //            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_terakhir_transfusi);
         }catch(ParseException e){  
             System.out.println(e);
             Logger.getLogger(dataPendonor.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(dataPendonor.class.getName()).log(Level.SEVERE, null, ex);
         }
         jDateTanggalDaftar21552011235.setDate(convert);
         jDateChooserTanggalLahir.setDate(tanggal_lahir);
-        //jDateChooserTanggalLahir.setDate(convert);
-        //jDateChooserTerakhirTransfusi.setDate(convert);
+        jDateChooserTerakhirTransfusi.setDate((Date) tanggal_terakhir_transfusi);
+   
     }//GEN-LAST:event_tableDataPendonor21552011235MouseClicked
 
     private void jComboBoxHemoglobinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHemoglobinActionPerformed
