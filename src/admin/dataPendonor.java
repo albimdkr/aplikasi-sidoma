@@ -133,21 +133,21 @@ public class dataPendonor extends javax.swing.JFrame {
 
     
     private void clear(){
+          //txtTanggalDaftar21552011235.setCalendar(null);
           //*no_pendonor
           txtFieldNamaPendonor21552011235.setText(null);
-//          txtTanggalDaftar21552011235.setDate(null);
-          //jenis kelamin
-          jDateChooserTanggalLahir.setDate(null);
+          buttonGroup2.clearSelection();
+          jDateChooserTanggalLahir.setCalendar(null);
           txtFieldNoTelp21552011235.setText(null);
           txtFieldAkunGmail21552011235.setText(null);
-          //gol darah
+          jComboBoxGolDarah.setSelectedIndex(0);
           txtFieldUsia21552011235.setText(null);
           txtFieldBeratBadan21552011235.setText(null);
           txtFieldAlamat21552011235.setText(null);
-          //hemoglobin
+          jComboBoxHemoglobin.setSelectedIndex(0);
           txtFieldRiwayatPenyakit21552011235.setText(null);
           txtFieldJumlahTransfusi21552011235.setText(null);
-          jDateChooserTerakhirTransfusi.setDate(null);
+          jDateChooserTerakhirTransfusi.setCalendar(null);
     }
     
     
@@ -354,7 +354,7 @@ public class dataPendonor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         Navbar = new javax.swing.JPanel();
         PanelBack21552011235 = new javax.swing.JPanel();
@@ -415,11 +415,11 @@ public class dataPendonor extends javax.swing.JFrame {
         txtFieldCari21552011235 = new javax.swing.JTextField();
         PanelCari21552011235 = new javax.swing.JPanel();
         BtnCari21552011235 = new javax.swing.JLabel();
-        jRadioButtonLakiLaki21552011235 = new javax.swing.JRadioButton();
-        jRadioButtonPerempuan21552011235 = new javax.swing.JRadioButton();
         NamaPendonor1 = new javax.swing.JLabel();
         NamaPendonor2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jRadioButtonLakiLaki21552011235 = new javax.swing.JRadioButton();
+        jRadioButtonPerempuan21552011235 = new javax.swing.JRadioButton();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -924,30 +924,6 @@ public class dataPendonor extends javax.swing.JFrame {
 
         jPanel3.add(PanelCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
 
-        jRadioButtonLakiLaki21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        buttonGroup1.add(jRadioButtonLakiLaki21552011235);
-        jRadioButtonLakiLaki21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButtonLakiLaki21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonLakiLaki21552011235.setText("Laki-laki");
-        jRadioButtonLakiLaki21552011235.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonLakiLaki21552011235ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jRadioButtonLakiLaki21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
-
-        jRadioButtonPerempuan21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        buttonGroup1.add(jRadioButtonPerempuan21552011235);
-        jRadioButtonPerempuan21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButtonPerempuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonPerempuan21552011235.setText("Perempuan");
-        jRadioButtonPerempuan21552011235.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonPerempuan21552011235ActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jRadioButtonPerempuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
-
         NamaPendonor1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         NamaPendonor1.setForeground(new java.awt.Color(255, 255, 255));
         NamaPendonor1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -960,9 +936,24 @@ public class dataPendonor extends javax.swing.JFrame {
         NamaPendonor2.setText("Nama");
         jPanel3.add(NamaPendonor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 50, 40));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1390, -1));
+        jRadioButtonLakiLaki21552011235.setBackground(new java.awt.Color(32, 83, 117));
+        buttonGroup2.add(jRadioButtonLakiLaki21552011235);
+        jRadioButtonLakiLaki21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButtonLakiLaki21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonLakiLaki21552011235.setText("Laki-laki");
+        jPanel3.add(jRadioButtonLakiLaki21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
+
+        jRadioButtonPerempuan21552011235.setBackground(new java.awt.Color(32, 83, 117));
+        buttonGroup2.add(jRadioButtonPerempuan21552011235);
+        jRadioButtonPerempuan21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButtonPerempuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonPerempuan21552011235.setText("Perempuan");
+        jRadioButtonPerempuan21552011235.setActionCommand("Perempuan");
+        jPanel3.add(jRadioButtonPerempuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+
+        background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
+        jPanel3.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 60, 1390, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -1077,19 +1068,20 @@ public class dataPendonor extends javax.swing.JFrame {
           String nama = table.getValueAt(baris,2).toString();
           txtFieldNamaPendonor21552011235.setText(nama);
           
-          String jenis_kelamin = table.getValueAt(baris,3).toString();
-          if (jenis_kelamin.equals("Laki-laki")){
+          String jk = table.getValueAt(baris,3).toString();
+          if (jk.equals("Laki-laki")){
               jRadioButtonLakiLaki21552011235.setSelected(true);
-          } else if (jenis_kelamin.equals("Perempuan")){
+          } else {
               jRadioButtonPerempuan21552011235.setSelected(true);
-          }
+            }
+        
  
-//        String jenis_kelamin = table.getValueAt(baris,3).toString();
-//        if (jRadioButtonLakiLaki21552011235){
+//          String jenis_kelamin = table.getValueAt(baris,3).toString();
+//          if (jRadioButtonLakiLaki21552011235){
 //            jenis_kelamin = "Laki-Laki";
-//        }else {
+//          }else {
 //            jenis_kelamin = "Perempuan";
-//        }
+//          }
           
           String no_telp = table.getValueAt(baris,5).toString();
           txtFieldNoTelp21552011235.setText(no_telp);
@@ -1173,14 +1165,6 @@ public class dataPendonor extends javax.swing.JFrame {
     private void BtnCari21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseExited
         changecolor(PanelCari21552011235, new Color (17,43,60));
     }//GEN-LAST:event_BtnCari21552011235MouseExited
-
-    private void jRadioButtonLakiLaki21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonLakiLaki21552011235ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonLakiLaki21552011235ActionPerformed
-
-    private void jRadioButtonPerempuan21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonPerempuan21552011235ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButtonPerempuan21552011235ActionPerformed
 
     private void jDateTanggalDaftar21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftar21552011235MouseClicked
         // TODO add your handling code here:
@@ -1279,7 +1263,8 @@ public class dataPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel alamat;
     private javax.swing.JLabel alamat1;
     private javax.swing.JLabel alamat2;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel background;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel golDarah;
     private javax.swing.JLabel golDarah1;
     private javax.swing.JComboBox<String> jComboBoxGolDarah;
@@ -1287,7 +1272,6 @@ public class dataPendonor extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jDateChooserTanggalLahir;
     private com.toedter.calendar.JDateChooser jDateChooserTerakhirTransfusi;
     private com.toedter.calendar.JDateChooser jDateTanggalDaftar21552011235;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButtonLakiLaki21552011235;
@@ -1338,7 +1322,17 @@ public class dataPendonor extends javax.swing.JFrame {
 
     private static class model {
 
+        private static Object getValueAt(int baris, int i) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
         public model() {
+        }
+    }
+
+    private static class txtTanggalDaftar21552011235 {
+
+        public txtTanggalDaftar21552011235() {
         }
     }
     
