@@ -209,7 +209,7 @@ public class dataPendonor extends javax.swing.JFrame {
         //ambill data no pendaftaran
         int i = tableDataPendonor21552011235.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Menghapus Data","Konfirmasi Dialog", JOptionPane.YES_NO_OPTION);
+            + "Menghapus Data ?","Konfirmasi Hapus Data Pendonor ", JOptionPane.YES_NO_OPTION);
         
         if (ok==0){
             String no_pendonor = table.getValueAt(i, 1).toString();
@@ -233,7 +233,7 @@ public class dataPendonor extends javax.swing.JFrame {
     private void editData(){
         int i = tableDataPendonor21552011235.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Mengedit Data","Konfirmasi Dialog", JOptionPane.YES_NO_OPTION);
+            + "Mengedit Data ?","Konfirmasi Edit Pendonor", JOptionPane.YES_NO_OPTION);
         
         //SimpleDateFormat tgl_daftar = new SimpleDateFormat("yyyy-MM-dd");
        // String tanggal_daftar = tgl_daftar.format(jDateTanggalDaftar21552011235.getDate());
@@ -941,6 +941,7 @@ public class dataPendonor extends javax.swing.JFrame {
         jRadioButtonLakiLaki21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButtonLakiLaki21552011235.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonLakiLaki21552011235.setText("Laki-laki");
+        jRadioButtonLakiLaki21552011235.setActionCommand("");
         jPanel3.add(jRadioButtonLakiLaki21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
 
         jRadioButtonPerempuan21552011235.setBackground(new java.awt.Color(32, 83, 117));
@@ -948,7 +949,7 @@ public class dataPendonor extends javax.swing.JFrame {
         jRadioButtonPerempuan21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jRadioButtonPerempuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonPerempuan21552011235.setText("Perempuan");
-        jRadioButtonPerempuan21552011235.setActionCommand("Perempuan");
+        jRadioButtonPerempuan21552011235.setActionCommand("");
         jPanel3.add(jRadioButtonPerempuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1068,13 +1069,20 @@ public class dataPendonor extends javax.swing.JFrame {
           String nama = table.getValueAt(baris,2).toString();
           txtFieldNamaPendonor21552011235.setText(nama);
           
-          String jk = table.getValueAt(baris,3).toString();
-          if (jk.equals("Laki-laki")){
-              jRadioButtonLakiLaki21552011235.setSelected(true);
-          } else {
-              jRadioButtonPerempuan21552011235.setSelected(true);
-            }
+//          String jenis_kelamin = table.getValueAt(baris,3).toString();
+//          if (jenis_kelamin.equals("L")){
+//              jRadioButtonPerempuan21552011235.setSelected(true);
+//          } else {
+//              jRadioButtonLakiLaki21552011235.setSelected(true);
+//          }
           
+            String jenis_kelamin = table.getValueAt(baris,3).toString();
+            if (jenis_kelamin.equals("Laki-laki")) {
+                jRadioButtonPerempuan21552011235.setSelected(true);
+            } else if (jenis_kelamin.equals("Perempuan")) {
+                jRadioButtonLakiLaki21552011235.setSelected(true);
+            }
+            
           String no_telp = table.getValueAt(baris,5).toString();
           txtFieldNoTelp21552011235.setText(no_telp);
           
@@ -1084,8 +1092,7 @@ public class dataPendonor extends javax.swing.JFrame {
           String golongan_darah = table.getValueAt(baris,7).toString();
           for (int i = 0; i < jComboBoxGolDarah.getItemCount(); i++ ){
               if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){
-                  jComboBoxGolDarah.setSelectedIndex(i);
-                  
+                  jComboBoxGolDarah.setSelectedIndex(i);   
               }
           }
           
@@ -1103,7 +1110,6 @@ public class dataPendonor extends javax.swing.JFrame {
           for (int i = 0; i <jComboBoxHemoglobin.getItemCount(); i++ ){
               if (jComboBoxHemoglobin.getItemAt(i).equalsIgnoreCase(hemoglobin)){
                   jComboBoxHemoglobin.setSelectedIndex(i);
-                  
               }
           }
           
@@ -1312,15 +1318,7 @@ public class dataPendonor extends javax.swing.JFrame {
         }
     }
 
-    private static class model {
-
-        private static Object getValueAt(int baris, int i) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public model() {
-        }
-    }
+    
 
     private static class txtTanggalDaftar21552011235 {
 
