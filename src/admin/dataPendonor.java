@@ -235,8 +235,8 @@ public class dataPendonor extends javax.swing.JFrame {
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
             + "Mengedit Data","Konfirmasi Dialog", JOptionPane.YES_NO_OPTION);
         
-        SimpleDateFormat tgl_daftar = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_daftar = tgl_daftar.format(jDateTanggalDaftar21552011235.getDate());
+        //SimpleDateFormat tgl_daftar = new SimpleDateFormat("yyyy-MM-dd");
+       // String tanggal_daftar = tgl_daftar.format(jDateTanggalDaftar21552011235.getDate());
         //String no_pendonor = table.getValueAt(i, 1).toString();
         String nama = txtFieldNamaPendonor21552011235.getText();
         String jk;
@@ -262,7 +262,7 @@ public class dataPendonor extends javax.swing.JFrame {
         if (ok==0){
             String no_pendonor = table.getValueAt(i, 1).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_pendonor` SET `tanggal_daftar` = '"+tanggal_daftar+"',`nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`golongan_darah` = '"+golongan_darah+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`hemoglobin` = '"+hemoglobin+"',`riwayat_penyakit` = '"+riwayat_penyakit+"',`jumlah_transfusi` = '"+jumlah_transfusi+"',`tanggal_terakhir_transfusi` = '"+tanggal_terakhir_transfusi+"'"
+            String query = "UPDATE `data_pendonor` SET `nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`golongan_darah` = '"+golongan_darah+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`hemoglobin` = '"+hemoglobin+"',`riwayat_penyakit` = '"+riwayat_penyakit+"',`jumlah_transfusi` = '"+jumlah_transfusi+"',`tanggal_terakhir_transfusi` = '"+tanggal_terakhir_transfusi+"'"
                 + "WHERE `data_pendonor`.`no_pendonor` = '"+no_pendonor+"';";
             //String sql="delete from tb_barang where kode_part='"+txtKodePart.getText()+"'";
             try {
@@ -548,9 +548,9 @@ public class dataPendonor extends javax.swing.JFrame {
         TotalHarga.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalHarga.setForeground(new java.awt.Color(255, 255, 255));
         TotalHarga.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        TotalHarga.setText("Tanggal daftar");
+        TotalHarga.setText("Tanggal");
         TotalHarga.setToolTipText("");
-        jPanel3.add(TotalHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 110, 40));
+        jPanel3.add(TotalHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 60, 40));
 
         PanelClear21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelClear21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -667,8 +667,8 @@ public class dataPendonor extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableDataPendonor21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        tableDataPendonor21552011235.setSelectionBackground(new java.awt.Color(64, 49, 33));
+        tableDataPendonor21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tableDataPendonor21552011235.setSelectionBackground(new java.awt.Color(32, 83, 117));
         tableDataPendonor21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tableDataPendonor21552011235MouseClicked(evt);
@@ -882,7 +882,7 @@ public class dataPendonor extends javax.swing.JFrame {
                 jDateTanggalDaftar21552011235MouseClicked(evt);
             }
         });
-        jPanel3.add(jDateTanggalDaftar21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 140, 40));
+        jPanel3.add(jDateTanggalDaftar21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 180, 40));
 
         line16.setBackground(new java.awt.Color(255, 255, 255));
         line16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1061,7 +1061,7 @@ public class dataPendonor extends javax.swing.JFrame {
         // TODO add your handling code here:
           int baris = tableDataPendonor21552011235.getSelectedRow();
           
-          String tanggal_daftar = table.getValueAt(baris,0).toString(); 
+          //String tanggal_daftar = table.getValueAt(baris,0).toString(); 
           
           //String no_pendonor = table.getValueAt(baris,1).toString();
           
@@ -1074,14 +1074,6 @@ public class dataPendonor extends javax.swing.JFrame {
           } else {
               jRadioButtonPerempuan21552011235.setSelected(true);
             }
-        
- 
-//          String jenis_kelamin = table.getValueAt(baris,3).toString();
-//          if (jRadioButtonLakiLaki21552011235){
-//            jenis_kelamin = "Laki-Laki";
-//          }else {
-//            jenis_kelamin = "Perempuan";
-//          }
           
           String no_telp = table.getValueAt(baris,5).toString();
           txtFieldNoTelp21552011235.setText(no_telp);
@@ -1090,7 +1082,7 @@ public class dataPendonor extends javax.swing.JFrame {
           txtFieldAkunGmail21552011235.setText(gmail);
           
           String golongan_darah = table.getValueAt(baris,7).toString();
-          for (int i = 0; i <jComboBoxGolDarah.getItemCount(); i++ ){
+          for (int i = 0; i < jComboBoxGolDarah.getItemCount(); i++ ){
               if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){
                   jComboBoxGolDarah.setSelectedIndex(i);
                   
@@ -1123,12 +1115,12 @@ public class dataPendonor extends javax.swing.JFrame {
          
 
        
-        Date convert = null;
+        //Date convert = null;
         Date tanggal_lahir = null;
         Object tanggal_terakhir_transfusi = null;
         Object ex = null;
         try{
-            convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_daftar);
+            //convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_daftar);
             tanggal_lahir = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,4));
             tanggal_terakhir_transfusi = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,14));
         }catch(ParseException e){  
@@ -1136,7 +1128,7 @@ public class dataPendonor extends javax.swing.JFrame {
             Logger.getLogger(dataPendonor.class.getName()).log(Level.SEVERE, null, ex);
             Logger.getLogger(dataPendonor.class.getName()).log(Level.SEVERE, null, ex);
         }
-        jDateTanggalDaftar21552011235.setDate(convert);
+        //jDateTanggalDaftar21552011235.setDate(convert);
         jDateChooserTanggalLahir.setDate(tanggal_lahir);
         jDateChooserTerakhirTransfusi.setDate((Date) tanggal_terakhir_transfusi);
    

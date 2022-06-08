@@ -357,12 +357,12 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="text" type="java.lang.String" value="Tanggal daftar"/>
+                <Property name="text" type="java.lang.String" value="Tanggal"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="30" y="80" width="110" height="40"/>
+                  <AbsoluteConstraints x="30" y="80" width="60" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -625,10 +625,10 @@
                       </Table>
                     </Property>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="21" green="31" red="40" type="rgb"/>
+                      <Color blue="75" green="53" red="20" type="rgb"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -1254,7 +1254,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="140" y="80" width="140" height="40"/>
+                  <AbsoluteConstraints x="100" y="80" width="180" height="40"/>
                 </Constraint>
               </Constraints>
             </Component>
