@@ -65,15 +65,10 @@ public class dashboardAdmin extends javax.swing.JFrame {
         HomeTabbed21552011235 = new javax.swing.JPanel();
         IconUser = new javax.swing.JLabel();
         UserName = new javax.swing.JLabel();
-        TabHomePanelData21552011235 = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        TabHomeBtnData21552011235 = new javax.swing.JLabel();
-        TabHomePanelRiwayat21552011235 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        TabHomeBtnRiwayat21552011235 = new javax.swing.JLabel();
-        TabHomePanelTentang21552011235 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        TabHomeBtnTentang21552011235 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         DataTabbed21552011235 = new javax.swing.JPanel();
         PanelDataBarista21552011235 = new javax.swing.JPanel();
         TabDataBarista21552011235 = new javax.swing.JLabel();
@@ -92,7 +87,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusTraversalPolicyProvider(true);
 
-        header21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        header21552011235.setBackground(new java.awt.Color(32, 83, 117));
         header21552011235.setPreferredSize(new java.awt.Dimension(800, 50));
         header21552011235.setLayout(new java.awt.BorderLayout());
 
@@ -100,11 +95,11 @@ public class dashboardAdmin extends javax.swing.JFrame {
         iconMenu.setPreferredSize(new java.awt.Dimension(150, 50));
         iconMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelLogout21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        PanelLogout21552011235.setBackground(new java.awt.Color(32, 83, 117));
         PanelLogout21552011235.setPreferredSize(new java.awt.Dimension(50, 50));
         PanelLogout21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnLogout21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        BtnLogout21552011235.setBackground(new java.awt.Color(32, 83, 117));
         BtnLogout21552011235.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         BtnLogout21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnLogout21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -126,12 +121,12 @@ public class dashboardAdmin extends javax.swing.JFrame {
 
         iconMenu.add(PanelLogout21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 90, -1));
 
-        BtnMax21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        BtnMax21552011235.setBackground(new java.awt.Color(32, 83, 117));
         BtnMax21552011235.setPreferredSize(new java.awt.Dimension(50, 50));
         BtnMax21552011235.setLayout(new java.awt.BorderLayout());
         iconMenu.add(BtnMax21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
 
-        BtnMin21552011235.setBackground(new java.awt.Color(30, 23, 15));
+        BtnMin21552011235.setBackground(new java.awt.Color(32, 83, 117));
         BtnMin21552011235.setPreferredSize(new java.awt.Dimension(50, 50));
         BtnMin21552011235.setLayout(new java.awt.BorderLayout());
         iconMenu.add(BtnMin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -143,7 +138,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         menu21552011235.setPreferredSize(new java.awt.Dimension(270, 450));
         menu21552011235.setLayout(new java.awt.BorderLayout());
 
-        sidebar21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        sidebar21552011235.setBackground(new java.awt.Color(32, 83, 117));
         sidebar21552011235.setMinimumSize(new java.awt.Dimension(200, 210));
         sidebar21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -159,7 +154,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         homePanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-home-20.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-home-24.png"))); // NOI18N
         homePanel21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
         BtnHome21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -273,20 +268,20 @@ public class dashboardAdmin extends javax.swing.JFrame {
         Dashboardview21552011235.setBackground(new java.awt.Color(64, 49, 33));
         Dashboardview21552011235.setLayout(new java.awt.GridLayout(1, 0));
 
-        jTabbedPanel21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        jTabbedPanel21552011235.setBackground(new java.awt.Color(17, 43, 60));
         jTabbedPanel21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33)));
-        jTabbedPanel21552011235.setForeground(new java.awt.Color(64, 49, 33));
+        jTabbedPanel21552011235.setForeground(new java.awt.Color(32, 83, 117));
 
-        HomeTabbed21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        HomeTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         HomeTabbed21552011235.setLayout(new java.awt.GridBagLayout());
 
         IconUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-96.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(60, 34, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(60, 267, 0, 0);
         HomeTabbed21552011235.add(IconUser, gridBagConstraints);
 
         UserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -294,131 +289,74 @@ public class dashboardAdmin extends javax.swing.JFrame {
         UserName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         UserName.setText("Admin");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridwidth = 4;
         gridBagConstraints.ipadx = 50;
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(80, 4, 0, 0);
         HomeTabbed21552011235.add(UserName, gridBagConstraints);
 
-        TabHomePanelData21552011235.setBackground(new java.awt.Color(64, 49, 33));
-        TabHomePanelData21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelData21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-coffee-to-go-96.png"))); // NOI18N
-        TabHomePanelData21552011235.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 60, -1));
-
-        TabHomeBtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabHomeBtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabHomeBtnData21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabHomeBtnData21552011235.setText("Data");
-        TabHomeBtnData21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabHomeBtnData21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabHomeBtnData21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabHomeBtnData21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabHomeBtnData21552011235MouseExited(evt);
-            }
-        });
-        TabHomePanelData21552011235.add(TabHomeBtnData21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(44, 130, 101, 0);
-        HomeTabbed21552011235.add(TabHomePanelData21552011235, gridBagConstraints);
-
-        TabHomePanelRiwayat21552011235.setBackground(new java.awt.Color(64, 49, 33));
-        TabHomePanelRiwayat21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelRiwayat21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-96.png"))); // NOI18N
-        TabHomePanelRiwayat21552011235.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 100, 100));
-
-        TabHomeBtnRiwayat21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabHomeBtnRiwayat21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabHomeBtnRiwayat21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabHomeBtnRiwayat21552011235.setText("Laporan");
-        TabHomeBtnRiwayat21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabHomeBtnRiwayat21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabHomeBtnRiwayat21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabHomeBtnRiwayat21552011235MouseExited(evt);
-            }
-        });
-        TabHomePanelRiwayat21552011235.add(TabHomeBtnRiwayat21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(44, 64, 101, 0);
-        HomeTabbed21552011235.add(TabHomePanelRiwayat21552011235, gridBagConstraints);
-
-        TabHomePanelTentang21552011235.setBackground(new java.awt.Color(64, 49, 33));
-        TabHomePanelTentang21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelTentang21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
-        TabHomePanelTentang21552011235.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -16, 87, 90));
-
-        TabHomeBtnTentang21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabHomeBtnTentang21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabHomeBtnTentang21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabHomeBtnTentang21552011235.setText("Tentang");
-        TabHomeBtnTentang21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabHomeBtnTentang21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabHomeBtnTentang21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabHomeBtnTentang21552011235MouseExited(evt);
-            }
-        });
-        TabHomePanelTentang21552011235.add(TabHomeBtnTentang21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(44, 0, 101, 0);
-        HomeTabbed21552011235.add(TabHomePanelTentang21552011235, gridBagConstraints);
-
         userName.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         userName.setForeground(new java.awt.Color(255, 255, 255));
         userName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.gridwidth = 8;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 210;
         gridBagConstraints.ipady = 60;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(80, 4, 0, 100);
+        gridBagConstraints.insets = new java.awt.Insets(80, 4, 0, 103);
         HomeTabbed21552011235.add(userName, gridBagConstraints);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("___________________");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 270, 0, 0);
+        HomeTabbed21552011235.add(jLabel3, gridBagConstraints);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("dan memberi perijinan terhadap kegiatan");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 171, 143, 0);
+        HomeTabbed21552011235.add(jLabel4, gridBagConstraints);
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Dashboard Admin");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 67;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(24, 226, 0, 0);
+        HomeTabbed21552011235.add(jLabel6, gridBagConstraints);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Anda bisa mengakses laporan, menambah user ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(28, 154, 0, 0);
+        HomeTabbed21552011235.add(jLabel7, gridBagConstraints);
 
         jTabbedPanel21552011235.addTab("", HomeTabbed21552011235);
 
@@ -739,42 +677,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_TabDataBarista21552011235MouseClicked
 
-    private void TabHomeBtnTentang21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnTentang21552011235MouseExited
-        changecolor(TabHomePanelTentang21552011235, new Color (64,49,33));
-    }//GEN-LAST:event_TabHomeBtnTentang21552011235MouseExited
-
-    private void TabHomeBtnTentang21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnTentang21552011235MouseEntered
-        changecolor(TabHomePanelTentang21552011235, new Color (45,35,23));
-    }//GEN-LAST:event_TabHomeBtnTentang21552011235MouseEntered
-
-    private void TabHomeBtnTentang21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnTentang21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(3);
-    }//GEN-LAST:event_TabHomeBtnTentang21552011235MouseClicked
-
-    private void TabHomeBtnRiwayat21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnRiwayat21552011235MouseExited
-        changecolor(TabHomePanelRiwayat21552011235, new Color (64,49,33));
-    }//GEN-LAST:event_TabHomeBtnRiwayat21552011235MouseExited
-
-    private void TabHomeBtnRiwayat21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnRiwayat21552011235MouseEntered
-        changecolor(TabHomePanelRiwayat21552011235, new Color (45,35,23));
-    }//GEN-LAST:event_TabHomeBtnRiwayat21552011235MouseEntered
-
-    private void TabHomeBtnRiwayat21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnRiwayat21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(2);
-    }//GEN-LAST:event_TabHomeBtnRiwayat21552011235MouseClicked
-
-    private void TabHomeBtnData21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnData21552011235MouseExited
-        changecolor(TabHomePanelData21552011235, new Color (64,49,33));
-    }//GEN-LAST:event_TabHomeBtnData21552011235MouseExited
-
-    private void TabHomeBtnData21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnData21552011235MouseEntered
-        changecolor(TabHomePanelData21552011235, new Color (45,35,23));
-    }//GEN-LAST:event_TabHomeBtnData21552011235MouseEntered
-
-    private void TabHomeBtnData21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHomeBtnData21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(1);
-    }//GEN-LAST:event_TabHomeBtnData21552011235MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -838,12 +740,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel RiwayatTabbed21552011235;
     private javax.swing.JLabel TabDataBarista21552011235;
     private javax.swing.JLabel TabDataMenuBtn21552011235;
-    private javax.swing.JLabel TabHomeBtnData21552011235;
-    private javax.swing.JLabel TabHomeBtnRiwayat21552011235;
-    private javax.swing.JLabel TabHomeBtnTentang21552011235;
-    private javax.swing.JPanel TabHomePanelData21552011235;
-    private javax.swing.JPanel TabHomePanelRiwayat21552011235;
-    private javax.swing.JPanel TabHomePanelTentang21552011235;
     private javax.swing.JLabel TabRiwayatBtn21552011235;
     private javax.swing.JLabel TabTentangBtn21552011235;
     private javax.swing.JPanel TentangTabbed21552011235;
@@ -853,13 +749,14 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel homePanel21552011235;
     private javax.swing.JPanel iconMenu;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPanel21552011235;

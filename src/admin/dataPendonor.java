@@ -423,7 +423,7 @@ public class dataPendonor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(64, 49, 33));
+        jPanel2.setBackground(new java.awt.Color(32, 83, 117));
         jPanel2.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
