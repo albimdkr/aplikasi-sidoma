@@ -5,7 +5,7 @@
  */
 package login;
 
-import static petugas.dashboardPetugas.UserNameBarista21552011235;
+//import static petugas.dashboardPetugas.UserNamePetugas21552011235;
 import com.mysql.jdbc.Connection;
 import koneksi.*;
 import transaksi.*;
@@ -58,7 +58,7 @@ public class loginPetugas extends javax.swing.JFrame {
             ResultSet rs = sttmnt.executeQuery(query);
             if(rs.next()){
                 JOptionPane.showMessageDialog(null, "Login Success");
-                UserNameBarista21552011235.setText(rs.getString(2));
+                //UserNamePetugas21552011235.setText(rs.getString(2));
                 new petugas.dashboardPetugas().setVisible(true);
                 dispose();
             }else{

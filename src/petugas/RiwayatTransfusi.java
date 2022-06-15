@@ -21,13 +21,13 @@ import koneksi.koneksi;
  *
  * @author albin
  */
-public class riwayatTransaksi extends javax.swing.JFrame {
+public class RiwayatTransfusi extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public riwayatTransaksi() {
+    public RiwayatTransfusi() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         
@@ -157,7 +157,6 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         BtnCari21552011235 = new javax.swing.JLabel();
         line = new javax.swing.JLabel();
-        txtFieldCari21552011235 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         Navbar1 = new javax.swing.JPanel();
         PanelBack77174756 = new javax.swing.JPanel();
@@ -174,6 +173,7 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         BtnRefresh21552011235 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableRiwayatTransaksi21552011235 = new javax.swing.JTable();
+        txtFieldCari21552011235 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -181,10 +181,10 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Navbar.setBackground(new java.awt.Color(45, 35, 23));
+        Navbar.setBackground(new java.awt.Color(32, 83, 117));
         Navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelBack21552011235.setBackground(new java.awt.Color(45, 35, 23));
+        PanelBack21552011235.setBackground(new java.awt.Color(32, 83, 117));
         PanelBack21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BtnBack21552011235.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -210,16 +210,16 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Riwayat Transaksi");
+        DaftarMenu.setText("Riwayat Transfusi");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
 
-        PanelCari21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        PanelCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelCari21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelCari21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanelTranskasi.setBackground(new java.awt.Color(64, 49, 33));
+        jPanelTranskasi.setBackground(new java.awt.Color(17, 43, 60));
         jPanelTranskasi.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         jPanelTranskasi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -264,14 +264,7 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         line.setText("____________________________");
         jPanel2.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 270, 20));
 
-        txtFieldCari21552011235.setBackground(new java.awt.Color(64, 49, 33));
-        txtFieldCari21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        txtFieldCari21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldCari21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldCari21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel2.add(txtFieldCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 250, 50));
-
-        jPanel3.setBackground(new java.awt.Color(64, 49, 33));
+        jPanel3.setBackground(new java.awt.Color(17, 43, 60));
         jPanel3.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -355,14 +348,15 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         line6.setText("____________________________");
         jPanel3.add(line6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 270, 20));
 
-        txtFieldCari77174756.setBackground(new java.awt.Color(64, 49, 33));
+        txtFieldCari77174756.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldCari77174756.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtFieldCari77174756.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldCari77174756.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFieldCari77174756.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldCari77174756.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel3.add(txtFieldCari77174756, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 250, 50));
 
-        PanelRefresh21552011235.setBackground(new java.awt.Color(64, 49, 33));
+        PanelRefresh21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelRefresh21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelRefresh21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -403,6 +397,13 @@ public class riwayatTransaksi extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 340));
 
+        txtFieldCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldCari21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtFieldCari21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldCari21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldCari21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 250, 50));
+
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -430,7 +431,7 @@ public class riwayatTransaksi extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBack21552011235MouseEntered
 
     private void BtnBack21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseExited
-        changecolor(PanelBack21552011235, new Color (45,35,23));
+        changecolor(PanelBack21552011235, new Color (17,43,60));
     }//GEN-LAST:event_BtnBack21552011235MouseExited
 
     private void BtnCari21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseClicked
@@ -438,19 +439,19 @@ public class riwayatTransaksi extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCari21552011235MouseClicked
 
     private void BtnCari21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseEntered
-        changecolor(PanelCari21552011235, new Color (45,35,23));
+        changecolor(PanelCari21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnCari21552011235MouseEntered
 
     private void BtnCari21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseExited
-        changecolor(PanelCari21552011235, new Color (64,49,33));
+        changecolor(PanelCari21552011235, new Color (17,43,60));
     }//GEN-LAST:event_BtnCari21552011235MouseExited
 
     private void BtnRefresh21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseExited
-        changecolor(PanelRefresh21552011235, new Color (64,49,33));
+        changecolor(PanelRefresh21552011235, new Color (17,43,60));
     }//GEN-LAST:event_BtnRefresh21552011235MouseExited
 
     private void BtnRefresh21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseEntered
-        changecolor(PanelRefresh21552011235, new Color (32,83,117));
+        changecolor(PanelRefresh21552011235, new Color (32,108,151));
     }//GEN-LAST:event_BtnRefresh21552011235MouseEntered
 
     private void BtnRefresh21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseClicked
@@ -498,14 +499,22 @@ public class riwayatTransaksi extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(riwayatTransaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(riwayatTransaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(riwayatTransaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(riwayatTransaksi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -518,7 +527,7 @@ public class riwayatTransaksi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new riwayatTransaksi().setVisible(true);
+                new RiwayatTransfusi().setVisible(true);
             }
         });
     }
