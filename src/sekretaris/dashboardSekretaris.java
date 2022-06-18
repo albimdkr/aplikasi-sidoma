@@ -304,7 +304,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(51, 270, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(51, 282, 0, 0);
         HomeTabbed21552011235.add(IconUser, gridBagConstraints);
 
         UserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -336,25 +336,25 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("dan Print");
+        jLabel4.setText("Petugas PDDM, dan mencetak setiap laporan");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 8;
-        gridBagConstraints.ipadx = 217;
+        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.ipadx = 29;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 196, 133, 121);
+        gridBagConstraints.insets = new java.awt.Insets(11, 200, 143, 94);
         HomeTabbed21552011235.add(jLabel4, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Anda bisa mengelola data kegiatan donor ");
+        jLabel7.setText("Anda bisa mengelola data kegiatan donor ,");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(28, 196, 0, 121);
+        gridBagConstraints.insets = new java.awt.Insets(18, 225, 0, 0);
         HomeTabbed21552011235.add(jLabel7, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -365,7 +365,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 312, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 316, 0, 0);
         HomeTabbed21552011235.add(jLabel3, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -378,7 +378,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.ipadx = 55;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(43, 270, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(43, 264, 0, 0);
         HomeTabbed21552011235.add(jLabel6, gridBagConstraints);
 
         jTabbedPanel21552011235.addTab("", HomeTabbed21552011235);
