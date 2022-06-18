@@ -845,7 +845,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabKegiatan21552011235MouseEntered
 
     private void TabKegiatan21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKegiatan21552011235MouseClicked
-        new petugas.FormPendonor().setVisible(true);
+        new sekretaris.FormKegiatan().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabKegiatan21552011235MouseClicked
 

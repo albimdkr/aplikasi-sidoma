@@ -36,22 +36,23 @@ public class PrintKegiatan extends javax.swing.JFrame {
     public PrintKegiatan() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        //tanggal();
         
-        //koneksi DB
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
-        
+         
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Transaksi");
-        table.addColumn("ID Transaksi");
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Jumlah");
-        table.addColumn("Total Harga");
-        
+        table.addColumn("No. Kegiatan");
+        table.addColumn("Nama Kegiatan");
+        table.addColumn("Tanggal Kegiatan");
+        table.addColumn("Lokasi");
+        table.addColumn("Keterangan");
+        table.addColumn("Kuota Pendonor");
+        table.addColumn("Jumlah Petugas");
+        table.addColumn("Perijinan Ketua");
         tampilData();
     }
+    
     
     private void tampilData(){
         //untuk mengahapus baris setelah input
@@ -60,26 +61,27 @@ public class PrintKegiatan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `transaksi` ";
+        String query = "SELECT * FROM `data_kegiatan`";
         
         try{
-            Connection connect = koneksi.getKoneksi();//memanggil koneksi
+            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
             Statement sttmnt = connect.createStatement();//membuat statement
             ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
             
             while (rslt.next()){
                 //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                
+                    String no_kegiatan = rslt.getString("no_kegiatan");
+                    String nama_kegiatan = rslt.getString("nama_kegiatan");
+                    String tanggal_kegiatan = rslt.getString("tanggal_kegiatan");
+                    String lokasi = rslt.getString("lokasi");
+                    String keterangan = rslt.getString("keterangan");
+                    String kuota_pendonor = rslt.getString("kuota_pendonor");
+                    String jumlah_petugas = rslt.getString("jumlah_petugas");
+                    String perijinan_ketua = rslt.getString("perijinan_ketua");
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {no_kegiatan,nama_kegiatan,tanggal_kegiatan,lokasi,keterangan,kuota_pendonor,jumlah_petugas,perijinan_ketua};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -89,6 +91,7 @@ public class PrintKegiatan extends javax.swing.JFrame {
         }catch(SQLException e){
             System.out.println(e);
         }
+       
     }
     
     private void cari(){
@@ -97,49 +100,44 @@ public class PrintKegiatan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String cari = txtFieldCari21552011235.getText();
-        
-        String query = "SELECT * FROM `transaksi` WHERE "
-                + "`kode_menu`  LIKE '%"+cari+"%' OR "
-                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
-                + "`id_transaksi` LIKE '%"+cari+"%' OR"
-                + "`nama_menu` LIKE '%"+cari+"%' ";
+      String cari = txtFieldCari21552011235.getText();
+      String query = "SELECT * FROM `data_kegiatan` WHERE "
+                + "`no_kegiatan` LIKE '%"+cari+"%' OR"
+                + "`nama_kegiatan`  LIKE '%"+cari+"%' OR "
+                + "`tanggal_kegiatan` LIKE '%"+cari+"%' OR"
+                + "`lokasi` LIKE '%"+cari+"%' OR"
+                + "`keterangan` LIKE '%"+cari+"%' OR"
+                + "`kuota_pendonor` LIKE '%"+cari+"%' OR"
+                + "`jumlah_petugas` LIKE '%"+cari+"%' OR"
+                + "`perijinan_ketua` LIKE '%"+cari+"%'  ";
                 
        try{
-           Connection connect = koneksi.getKoneksi();//memanggil koneksi
+           java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
            Statement sttmnt = connect.createStatement();//membuat statement
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
-                //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String no_kegiatan = rslt.getString("no_kegiatan");
+                    String nama_kegiatan = rslt.getString("nama_kegiatan");
+                    String tanggal_kegiatan = rslt.getString("tanggal_kegiatan");
+                    String lokasi = rslt.getString("lokasi");
+                    String keterangan = rslt.getString("keterangan");
+                    String kuota_pendonor = rslt.getString("kuota_pendonor");
+                    String jumlah_petugas = rslt.getString("jumlah_petugas");
+                    String perijinan_ketua = rslt.getString("perijinan_ketua");
                     
-                //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {no_kegiatan,tanggal_kegiatan,nama_kegiatan,lokasi,keterangan,kuota_pendonor,jumlah_petugas,perijinan_ketua};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
                 tableData21552011235.setModel(table);
-           
-        
+                
     }catch(SQLException e){
            System.out.println(e);
     }
-    }
+  }
     
-    
-    
-    
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
