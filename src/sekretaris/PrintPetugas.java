@@ -36,22 +36,23 @@ public class PrintPetugas extends javax.swing.JFrame {
     public PrintPetugas() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        //tanggal();
         
-        //koneksi DB
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
-        
+         
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Transaksi");
-        table.addColumn("ID Transaksi");
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Jumlah");
-        table.addColumn("Total Harga");
-        
+        table.addColumn("Id Petugas");
+        table.addColumn("Nama");
+        table.addColumn("Jenis Kelamin");
+        table.addColumn("No Telp");
+        table.addColumn("Gmail");
+        table.addColumn("Alamat");
+        table.addColumn("Jabatan");
+        table.addColumn("Tanggal Daftar");
         tampilData();
     }
+    
     
     private void tampilData(){
         //untuk mengahapus baris setelah input
@@ -60,26 +61,27 @@ public class PrintPetugas extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `transaksi` ";
+        String query = "SELECT * FROM `data_petugas`";
         
         try{
-            Connection connect = koneksi.getKoneksi();//memanggil koneksi
+            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
             Statement sttmnt = connect.createStatement();//membuat statement
             ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
             
             while (rslt.next()){
                 //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String id_petugas = rslt.getString("id_petugas");
+                    String nama = rslt.getString("nama");
+                    String jk = rslt.getString("jenis_kelamin");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmail = rslt.getString("gmail");
+                    String alamatpetugas = rslt.getString("alamat");
+                    String jabatan = rslt.getString("jabatan");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {id_petugas,nama,jk,no_telp,gmail,alamatpetugas,jabatan,tanggal_daftar};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -89,6 +91,7 @@ public class PrintPetugas extends javax.swing.JFrame {
         }catch(SQLException e){
             System.out.println(e);
         }
+       
     }
     
     private void cari(){
@@ -97,43 +100,43 @@ public class PrintPetugas extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String cari = txtFieldCari21552011235.getText();
-        
-        String query = "SELECT * FROM `transaksi` WHERE "
-                + "`kode_menu`  LIKE '%"+cari+"%' OR "
-                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
-                + "`id_transaksi` LIKE '%"+cari+"%' OR"
-                + "`nama_menu` LIKE '%"+cari+"%' ";
+      String cari = txtFieldCari21552011235.getText();
+      String query = "SELECT * FROM `data_petugas` WHERE "
+                + "`id_petugas` LIKE '%"+cari+"%' OR"
+                + "`nama`  LIKE '%"+cari+"%' OR "
+                + "`jenis_kelamin` LIKE '%"+cari+"%' OR"
+                + "`no_telp` LIKE '%"+cari+"%' OR"
+                + "`gmail` LIKE '%"+cari+"%' OR"
+                + "`alamat` LIKE '%"+cari+"%' OR"
+                + "`jabatan` LIKE '%"+cari+"%' OR"
+                + "`tanggal_daftar` LIKE '%"+cari+"%'  ";
                 
        try{
-           Connection connect = koneksi.getKoneksi();//memanggil koneksi
+           java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
            Statement sttmnt = connect.createStatement();//membuat statement
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
-                //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String id_petugas = rslt.getString("id_petugas");
+                    String nama = rslt.getString("nama");
+                    String jk = rslt.getString("jenis_kelamin");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmail = rslt.getString("gmail");
+                    String alamatpetugas = rslt.getString("alamat");
+                    String jabatan = rslt.getString("jabatan");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
                     
-                //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {id_petugas,nama,jk,no_telp,gmail,alamatpetugas,jabatan,tanggal_daftar};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
                 tableData21552011235.setModel(table);
-           
-        
+                
     }catch(SQLException e){
            System.out.println(e);
     }
-    }
+  }
     
     
     
@@ -212,7 +215,7 @@ public class PrintPetugas extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Keuangan");
+        DaftarMenu.setText("Print Data Petugas");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));

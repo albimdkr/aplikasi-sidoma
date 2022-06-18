@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package petugas;
+package sekretaris;
 
+import petugas.*;
 import transaksi.*;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,12 +16,12 @@ import javax.swing.JPanel;
  *
  * @author albin
  */
-public class TentangPetugas extends javax.swing.JFrame {
+public class TentangSekretaris extends javax.swing.JFrame {
 
     /**
      * Creates new form daftarMenu
      */
-    public TentangPetugas() {
+    public TentangSekretaris() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
     }
@@ -118,13 +119,13 @@ public class TentangPetugas extends javax.swing.JFrame {
         txt11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt11.setForeground(new java.awt.Color(255, 255, 255));
         txt11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt11.setText("Akses Role Petugas");
+        txt11.setText("Akses Role Sekretaris");
         jPanel3.add(txt11, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 190, 60));
 
         txt10.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt10.setForeground(new java.awt.Color(255, 255, 255));
         txt10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt10.setText("1. Menambahkan Form Data Pendonor, pasien dan transfusi.");
+        txt10.setText("1. Menambahkan Form Data Kegiatan, Data Petugas.");
         jPanel3.add(txt10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 410, 40));
 
         txt9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -143,7 +144,7 @@ public class TentangPetugas extends javax.swing.JFrame {
         txt8.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt8.setForeground(new java.awt.Color(255, 255, 255));
         txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt8.setText("2. Monitoring Riwayat Transfusi.");
+        txt8.setText("2. Print Laporan - laporan.");
         jPanel3.add(txt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 270, 40));
 
         txt6.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -156,7 +157,7 @@ public class TentangPetugas extends javax.swing.JFrame {
         txt5.setForeground(new java.awt.Color(255, 255, 255));
         txt5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt5.setText("yang di rancang untuk mengelola data Lembaga Swadaya Masyarakat Persaudaraan Donor Darah Majalaya (PDDM).");
-        jPanel3.add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 820, 40));
+        jPanel3.add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 790, 40));
 
         txt4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt4.setForeground(new java.awt.Color(255, 255, 255));
@@ -207,7 +208,7 @@ public class TentangPetugas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
-        new petugas.dashboardPetugas().setVisible(true);
+        new sekretaris.dashboardSekretaris().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBack21552011235MouseClicked
 
@@ -236,14 +237,142 @@ public class TentangPetugas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TentangPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TentangPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TentangPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TentangPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -376,7 +505,7 @@ public class TentangPetugas extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TentangPetugas().setVisible(true);
+                new TentangSekretaris().setVisible(true);
             }
         });
     }

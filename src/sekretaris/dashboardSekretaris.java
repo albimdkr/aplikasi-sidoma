@@ -832,7 +832,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabTentangBtn21552011235MouseEntered
 
     private void TabTentangBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseClicked
-        new petugas.TentangPetugas().setVisible(true);
+        new sekretaris.TentangSekretaris().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabTentangBtn21552011235MouseClicked
 
@@ -961,7 +961,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabPetugas21552011235MouseEntered
 
     private void TabPetugas21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabPetugas21552011235MouseClicked
-        new petugas.FormPasien().setVisible(true);
+        new sekretaris.FormPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabPetugas21552011235MouseClicked
 
