@@ -36,20 +36,19 @@ public class PrintKeuangan extends javax.swing.JFrame {
     public PrintKeuangan() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        //TimeJSpinner();
+        //tanggal();
         
-        //koneksi DB
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
-        
+         
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Transaksi");
-        table.addColumn("ID Transaksi");
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Jumlah");
-        table.addColumn("Total Harga");
-        
+        table.addColumn("No. Uang");
+        table.addColumn("Tanggal");
+        table.addColumn("Nominal Uang");
+        table.addColumn("Keterangan");
+        table.addColumn("Status");
+        //table.addColumn("Waktu");
         tampilData();
     }
     
@@ -60,26 +59,23 @@ public class PrintKeuangan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `transaksi` ";
+        String query = "SELECT * FROM `data_keuangan`";
         
         try{
-            Connection connect = koneksi.getKoneksi();//memanggil koneksi
+            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
             Statement sttmnt = connect.createStatement();//membuat statement
             ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
             
             while (rslt.next()){
                 //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
-                    
+                    String no_uang = rslt.getString("no_uang");
+                    String tanggal = rslt.getString("tanggal");
+                    String nominal_uang = rslt.getString("nominal_uang");
+                    String keterangan_uang = rslt.getString("keterangan");
+                    String status_uang = rslt.getString("status");
+                    //String waktu_uang = rslt.getString("waktu");
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang}; //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -89,6 +85,7 @@ public class PrintKeuangan extends javax.swing.JFrame {
         }catch(SQLException e){
             System.out.println(e);
         }
+       
     }
     
     private void cari(){
