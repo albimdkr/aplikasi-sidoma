@@ -7,8 +7,8 @@ package login;
 
 //import static petugas.dashboardPetugas.UserNamePetugas21552011235;
 import com.mysql.jdbc.Connection;
-import koneksi.*;
-import transaksi.*;
+//import koneksi.*;
+//import transaksi.*;
 import java.awt.Color;
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
@@ -23,12 +23,12 @@ import koneksi.koneksi;
  *
  * @author albi mudakar
  */
-public class loginPetugas extends javax.swing.JFrame {
+public class loginUser extends javax.swing.JFrame {
 
     /**
      * Creates new form login
      */
-    public loginPetugas() {
+    public loginUser() {
         initComponents();
         txtusernamePetugas21552011235.setBackground(new java.awt.Color(0,0,0,1));
         txtpasswordPetugas21552011235.setBackground(new java.awt.Color(0,0,0,1));
@@ -93,12 +93,12 @@ public class loginPetugas extends javax.swing.JFrame {
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
         langkop = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         PanelLoginPetugas21552011235 = new javax.swing.JPanel();
         BtnLoginBarista21552011235 = new javax.swing.JLabel();
+        jComboBoxRoleUser = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        Background = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -157,8 +157,9 @@ public class loginPetugas extends javax.swing.JFrame {
         jLabel3.setText("Username");
         jpanelPetugas21552011235.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 360, 36));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-24.png"))); // NOI18N
-        jpanelPetugas21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, -1, 28));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-32.png"))); // NOI18N
+        jpanelPetugas21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 40, 30));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -194,12 +195,6 @@ public class loginPetugas extends javax.swing.JFrame {
         langkop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/map-majalaya-logo-FIKS.png"))); // NOI18N
         jpanelPetugas21552011235.add(langkop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 290, 260));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Petugas");
-        jpanelPetugas21552011235.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, 60, 30));
-
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-24.png"))); // NOI18N
         jpanelPetugas21552011235.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 180, -1, 28));
 
@@ -227,11 +222,15 @@ public class loginPetugas extends javax.swing.JFrame {
 
         jpanelPetugas21552011235.add(PanelLoginPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 140, 40));
 
+        jComboBoxRoleUser.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jComboBoxRoleUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- pilih --", "Admin", "Sekretaris", "Bendahara", "Petugas" }));
+        jpanelPetugas21552011235.add(jComboBoxRoleUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 130, 30));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
         jpanelPetugas21552011235.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 440));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
-        jpanelPetugas21552011235.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 510, 440));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
+        jpanelPetugas21552011235.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 510, 440));
 
         getContentPane().add(jpanelPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
@@ -303,31 +302,31 @@ public class loginPetugas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(loginUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new loginPetugas().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new loginUser().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Background;
     private javax.swing.JLabel BtnBack21552011235;
     private javax.swing.JLabel BtnLoginBarista21552011235;
     private javax.swing.JPanel PanelLoginPetugas21552011235;
     private javax.swing.JLabel disable;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBoxRoleUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -337,8 +336,6 @@ public class loginPetugas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jpanelPetugas21552011235;
     private javax.swing.JLabel langkop;
     private javax.swing.JLabel show;
@@ -350,3 +347,12 @@ public class loginPetugas extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
+
+   
+
+
+    
+
+    
+
+    

@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 public class selamatDatang extends javax.swing.JFrame {
 
     /**
-     * Creates new form login
+     * Creates new form loginUser
      */
     public selamatDatang() {
         initComponents();
@@ -39,22 +39,21 @@ public class selamatDatang extends javax.swing.JFrame {
         jpanelBarista21552011235 = new javax.swing.JPanel();
         CloseBtn21552011235 = new javax.swing.JLabel();
         SelamatDatang = new javax.swing.JLabel();
-        IconLangkop = new javax.swing.JLabel();
+        line = new javax.swing.JLabel();
         Sistem = new javax.swing.JLabel();
         sidoma = new javax.swing.JLabel();
-        Login = new javax.swing.JLabel();
-        line = new javax.swing.JLabel();
-        panelPetugas21552011235 = new javax.swing.JPanel();
-        BtnPetugas21552011235 = new javax.swing.JLabel();
-        panelAdmin21552011235 = new javax.swing.JPanel();
-        BtnAdmin21552011235 = new javax.swing.JLabel();
+        panelLogin21552011235 = new javax.swing.JPanel();
+        BtnLogin21552011235 = new javax.swing.JLabel();
+        panelBantuan21552011235 = new javax.swing.JPanel();
+        BtnBantuan21552011235 = new javax.swing.JLabel();
         versi = new javax.swing.JLabel();
         LoadingValue = new javax.swing.JLabel();
         LoadingBar = new javax.swing.JProgressBar();
         Developed1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         LoadingLabel = new javax.swing.JLabel();
-        hexa = new javax.swing.JLabel();
+        hexaBackgorund = new javax.swing.JLabel();
+        Map = new javax.swing.JLabel();
         image = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -86,8 +85,11 @@ public class selamatDatang extends javax.swing.JFrame {
         SelamatDatang.setText("Selamat Datang");
         jpanelBarista21552011235.add(SelamatDatang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
 
-        IconLangkop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/map-majalaya-logo-FIKS.png"))); // NOI18N
-        jpanelBarista21552011235.add(IconLangkop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 250));
+        line.setBackground(new java.awt.Color(255, 255, 255));
+        line.setForeground(new java.awt.Color(255, 255, 255));
+        line.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        line.setText("___________");
+        jpanelBarista21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 80, -1));
 
         Sistem.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         Sistem.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,69 +104,56 @@ public class selamatDatang extends javax.swing.JFrame {
         sidoma.setText("SIDOMA");
         jpanelBarista21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
 
-        Login.setBackground(new java.awt.Color(255, 255, 255));
-        Login.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        Login.setForeground(new java.awt.Color(255, 255, 255));
-        Login.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Login.setText("LOGIN ");
-        jpanelBarista21552011235.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 60, 36));
+        panelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        panelLogin21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        panelLogin21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        line.setBackground(new java.awt.Color(255, 255, 255));
-        line.setForeground(new java.awt.Color(255, 255, 255));
-        line.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        line.setText("____________");
-        jpanelBarista21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 100, 20));
-
-        panelPetugas21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        panelPetugas21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        panelPetugas21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        BtnPetugas21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        BtnPetugas21552011235.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        BtnPetugas21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnPetugas21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnPetugas21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-24.png"))); // NOI18N
-        BtnPetugas21552011235.setText("Petugas");
-        BtnPetugas21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnPetugas21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnLogin21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnLogin21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        BtnLogin21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnLogin21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-login-24.png"))); // NOI18N
+        BtnLogin21552011235.setText("Login");
+        BtnLogin21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnLogin21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnPetugas21552011235MouseClicked(evt);
+                BtnLogin21552011235MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnPetugas21552011235MouseEntered(evt);
+                BtnLogin21552011235MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnPetugas21552011235MouseExited(evt);
+                BtnLogin21552011235MouseExited(evt);
             }
         });
-        panelPetugas21552011235.add(BtnPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 40));
+        panelLogin21552011235.add(BtnLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
 
-        jpanelBarista21552011235.add(panelPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 120, 40));
+        jpanelBarista21552011235.add(panelLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 280, 50));
 
-        panelAdmin21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        panelAdmin21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        panelAdmin21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelBantuan21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        panelBantuan21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        panelBantuan21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnAdmin21552011235.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        BtnAdmin21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnAdmin21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnAdmin21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-24.png"))); // NOI18N
-        BtnAdmin21552011235.setText("Admin");
-        BtnAdmin21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnAdmin21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnBantuan21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        BtnBantuan21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnBantuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBantuan21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnBantuan21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-help-24.png"))); // NOI18N
+        BtnBantuan21552011235.setText("Bantuan");
+        BtnBantuan21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnBantuan21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnAdmin21552011235MouseClicked(evt);
+                BtnBantuan21552011235MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnAdmin21552011235MouseEntered(evt);
+                BtnBantuan21552011235MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnAdmin21552011235MouseExited(evt);
+                BtnBantuan21552011235MouseExited(evt);
             }
         });
-        panelAdmin21552011235.add(BtnAdmin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 40));
+        panelBantuan21552011235.add(BtnBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
 
-        jpanelBarista21552011235.add(panelAdmin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 120, 40));
+        jpanelBarista21552011235.add(panelBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 280, 50));
 
         versi.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         versi.setForeground(new java.awt.Color(255, 255, 255));
@@ -197,9 +186,12 @@ public class selamatDatang extends javax.swing.JFrame {
         LoadingLabel.setText("Loading...");
         jpanelBarista21552011235.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 280, 36));
 
-        hexa.setBackground(new java.awt.Color(255, 255, 255));
-        hexa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
-        jpanelBarista21552011235.add(hexa, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 520, 440));
+        hexaBackgorund.setBackground(new java.awt.Color(255, 255, 255));
+        hexaBackgorund.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
+        jpanelBarista21552011235.add(hexaBackgorund, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 520, 440));
+
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/map-majalaya-logo-FIKS.png"))); // NOI18N
+        jpanelBarista21552011235.add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 250));
 
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
@@ -224,31 +216,31 @@ public class selamatDatang extends javax.swing.JFrame {
        
     }//GEN-LAST:event_CloseBtn21552011235MouseEntered
 
-    private void BtnAdmin21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAdmin21552011235MouseClicked
-        new login.loginAdmin().setVisible(true);
+    private void BtnLogin21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogin21552011235MouseClicked
+        new login.loginUser().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnAdmin21552011235MouseClicked
+    }//GEN-LAST:event_BtnLogin21552011235MouseClicked
 
-    private void BtnAdmin21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAdmin21552011235MouseEntered
-       changecolor(panelAdmin21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnAdmin21552011235MouseEntered
+    private void BtnLogin21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogin21552011235MouseEntered
+       changecolor(panelLogin21552011235, new Color (32,83,117));
+    }//GEN-LAST:event_BtnLogin21552011235MouseEntered
 
-    private void BtnAdmin21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAdmin21552011235MouseExited
-        changecolor(panelAdmin21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnAdmin21552011235MouseExited
+    private void BtnLogin21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogin21552011235MouseExited
+        changecolor(panelLogin21552011235, new Color (17,43,60));
+    }//GEN-LAST:event_BtnLogin21552011235MouseExited
 
-    private void BtnPetugas21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPetugas21552011235MouseClicked
-        new login.loginPetugas().setVisible(true);
+    private void BtnBantuan21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuan21552011235MouseClicked
+        new login.bantuan().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnPetugas21552011235MouseClicked
+    }//GEN-LAST:event_BtnBantuan21552011235MouseClicked
 
-    private void BtnPetugas21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPetugas21552011235MouseEntered
-        changecolor(panelPetugas21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnPetugas21552011235MouseEntered
+    private void BtnBantuan21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuan21552011235MouseEntered
+        changecolor(panelBantuan21552011235, new Color (32,83,117));
+    }//GEN-LAST:event_BtnBantuan21552011235MouseEntered
 
-    private void BtnPetugas21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPetugas21552011235MouseExited
-         changecolor(panelPetugas21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnPetugas21552011235MouseExited
+    private void BtnBantuan21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuan21552011235MouseExited
+         changecolor(panelBantuan21552011235, new Color (17,43,60));
+    }//GEN-LAST:event_BtnBantuan21552011235MouseExited
 
     /**
      * @param args the command line arguments
@@ -266,14 +258,8 @@ public class selamatDatang extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(loginAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(loginUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -315,25 +301,24 @@ public class selamatDatang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnAdmin21552011235;
-    private javax.swing.JLabel BtnPetugas21552011235;
+    private javax.swing.JLabel BtnBantuan21552011235;
+    private javax.swing.JLabel BtnLogin21552011235;
     private javax.swing.JLabel CloseBtn21552011235;
     private javax.swing.JLabel Developed1;
-    private javax.swing.JLabel IconLangkop;
     private javax.swing.JProgressBar LoadingBar;
     private javax.swing.JLabel LoadingLabel;
     private javax.swing.JLabel LoadingValue;
-    private javax.swing.JLabel Login;
+    private javax.swing.JLabel Map;
     private javax.swing.JLabel SelamatDatang;
     private javax.swing.JLabel Sistem;
-    private javax.swing.JLabel hexa;
+    private javax.swing.JLabel hexaBackgorund;
     private javax.swing.JLabel image;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jpanelBarista21552011235;
     private javax.swing.JLabel line;
-    private javax.swing.JPanel panelAdmin21552011235;
-    private javax.swing.JPanel panelPetugas21552011235;
+    private javax.swing.JPanel panelBantuan21552011235;
+    private javax.swing.JPanel panelLogin21552011235;
     private javax.swing.JLabel sidoma;
     private javax.swing.JLabel versi;
     // End of variables declaration//GEN-END:variables

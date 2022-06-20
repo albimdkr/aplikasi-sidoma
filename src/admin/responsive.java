@@ -15,7 +15,7 @@ public class responsive {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new dashboardAdmin().setVisible(true);
+        new dashboardAdmin2().setVisible(true);
     }
     
 }
