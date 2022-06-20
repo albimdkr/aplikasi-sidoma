@@ -36,7 +36,7 @@ public class selamatDatang extends javax.swing.JFrame {
     private void initComponents() {
 
         jComboBox1 = new javax.swing.JComboBox<>();
-        jpanelBarista21552011235 = new javax.swing.JPanel();
+        jpanelLogin21552011235 = new javax.swing.JPanel();
         CloseBtn21552011235 = new javax.swing.JLabel();
         SelamatDatang = new javax.swing.JLabel();
         line = new javax.swing.JLabel();
@@ -62,8 +62,8 @@ public class selamatDatang extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpanelBarista21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        jpanelBarista21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpanelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        jpanelLogin21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         CloseBtn21552011235.setBackground(new java.awt.Color(0, 0, 0));
         CloseBtn21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-close-32.png"))); // NOI18N
@@ -76,33 +76,33 @@ public class selamatDatang extends javax.swing.JFrame {
                 CloseBtn21552011235MouseEntered(evt);
             }
         });
-        jpanelBarista21552011235.add(CloseBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
+        jpanelLogin21552011235.add(CloseBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
 
         SelamatDatang.setBackground(new java.awt.Color(255, 255, 255));
         SelamatDatang.setFont(new java.awt.Font("Segoe UI", 1, 42)); // NOI18N
         SelamatDatang.setForeground(new java.awt.Color(255, 255, 255));
         SelamatDatang.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SelamatDatang.setText("Selamat Datang");
-        jpanelBarista21552011235.add(SelamatDatang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
+        jpanelLogin21552011235.add(SelamatDatang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
 
         line.setBackground(new java.awt.Color(255, 255, 255));
         line.setForeground(new java.awt.Color(255, 255, 255));
         line.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         line.setText("___________");
-        jpanelBarista21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 80, -1));
+        jpanelLogin21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 80, -1));
 
         Sistem.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         Sistem.setForeground(new java.awt.Color(255, 255, 255));
         Sistem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Sistem.setText("Di Sistem Informasi Donor Darah Majalaya");
-        jpanelBarista21552011235.add(Sistem, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 330, 36));
+        jpanelLogin21552011235.add(Sistem, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 330, 36));
 
         sidoma.setBackground(new java.awt.Color(0, 0, 0));
         sidoma.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sidoma.setForeground(new java.awt.Color(255, 255, 255));
         sidoma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sidoma.setText("SIDOMA");
-        jpanelBarista21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
+        jpanelLogin21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
 
         panelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
         panelLogin21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -127,7 +127,7 @@ public class selamatDatang extends javax.swing.JFrame {
         });
         panelLogin21552011235.add(BtnLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
 
-        jpanelBarista21552011235.add(panelLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 280, 50));
+        jpanelLogin21552011235.add(panelLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 280, 50));
 
         panelBantuan21552011235.setBackground(new java.awt.Color(17, 43, 60));
         panelBantuan21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -153,51 +153,51 @@ public class selamatDatang extends javax.swing.JFrame {
         });
         panelBantuan21552011235.add(BtnBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
 
-        jpanelBarista21552011235.add(panelBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 280, 50));
+        jpanelLogin21552011235.add(panelBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 280, 50));
 
         versi.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         versi.setForeground(new java.awt.Color(255, 255, 255));
         versi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         versi.setText("v1.0");
-        jpanelBarista21552011235.add(versi, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 80, 30));
+        jpanelLogin21552011235.add(versi, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 80, 30));
 
         LoadingValue.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         LoadingValue.setForeground(new java.awt.Color(255, 255, 255));
         LoadingValue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoadingValue.setText("0%");
-        jpanelBarista21552011235.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 40, 36));
+        jpanelLogin21552011235.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 40, 36));
 
         LoadingBar.setBackground(new java.awt.Color(255, 0, 0));
-        jpanelBarista21552011235.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 530, 10));
+        jpanelLogin21552011235.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 530, 10));
 
         Developed1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         Developed1.setForeground(new java.awt.Color(255, 255, 255));
         Developed1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Developed1.setText("Developed By © Kelompok II  2022");
-        jpanelBarista21552011235.add(Developed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 240, 36));
+        jpanelLogin21552011235.add(Developed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 240, 36));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/colorRED1234.png"))); // NOI18N
-        jpanelBarista21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 290, 40));
+        jpanelLogin21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 290, 40));
 
         LoadingLabel.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         LoadingLabel.setForeground(new java.awt.Color(255, 255, 255));
         LoadingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         LoadingLabel.setText("Loading...");
-        jpanelBarista21552011235.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 280, 36));
+        jpanelLogin21552011235.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 280, 36));
 
         hexaBackgorund.setBackground(new java.awt.Color(255, 255, 255));
         hexaBackgorund.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
-        jpanelBarista21552011235.add(hexaBackgorund, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 520, 440));
+        jpanelLogin21552011235.add(hexaBackgorund, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 520, 440));
 
         Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/map-majalaya-logo-FIKS.png"))); // NOI18N
-        jpanelBarista21552011235.add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 250));
+        jpanelLogin21552011235.add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 250));
 
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
-        jpanelBarista21552011235.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 440));
+        jpanelLogin21552011235.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 440));
 
-        getContentPane().add(jpanelBarista21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
+        getContentPane().add(jpanelLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
         setSize(new java.awt.Dimension(813, 438));
         setLocationRelativeTo(null);
@@ -315,7 +315,7 @@ public class selamatDatang extends javax.swing.JFrame {
     private javax.swing.JLabel image;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jpanelBarista21552011235;
+    private javax.swing.JPanel jpanelLogin21552011235;
     private javax.swing.JLabel line;
     private javax.swing.JPanel panelBantuan21552011235;
     private javax.swing.JPanel panelLogin21552011235;

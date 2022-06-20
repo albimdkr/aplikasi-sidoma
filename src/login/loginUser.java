@@ -6,11 +6,13 @@
 package login;
 
 //import static petugas.dashboardPetugas.UserNamePetugas21552011235;
+import admin.dashboardAdmin;
 import com.mysql.jdbc.Connection;
 //import koneksi.*;
 //import transaksi.*;
 import java.awt.Color;
 import java.awt.HeadlessException;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,19 +20,31 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import koneksi.koneksi;
+import sekretaris.dashboardSekretaris;
+import bendahara.dashboardBendahara;
+import petugas.dashboardPetugas;
 
 /**
  *
  * @author albi mudakar
  */
 public class loginUser extends javax.swing.JFrame {
-
+    
+        
+    
     /**
      * Creates new form login
      */
+    
+        Connection con;
+        PreparedStatement pst;
+        ResultSet rs;
+    
+        
+
     public loginUser() {
         initComponents();
-        txtusernamePetugas21552011235.setBackground(new java.awt.Color(0,0,0,1));
+        txtusername21552011235.setBackground(new java.awt.Color(0,0,0,1));
         txtpasswordPetugas21552011235.setBackground(new java.awt.Color(0,0,0,1));
         koneksi.getKoneksi();
     }
@@ -43,35 +57,89 @@ public class loginUser extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     
     private void login(){
-       
-        try{
-            Connection connect = (Connection) koneksi.getKoneksi();
-            Statement sttmnt = connect.createStatement();
-            String query = "SELECT * FROM `petugas` WHERE `username` = '"+txtusernamePetugas21552011235.getText()+"' && `password`= '"+txtpasswordPetugas21552011235.getText()+"' ";
-            
-           
-            
-//            int row = 0;
-//            while(rs.next()){
-//                row = rs.getRow();
+//        try{
+//            java.sql.Connection connect = koneksi.getKoneksi();
+//            Statement sttmnt = connect.createStatement();
+//            String query = "SELECT * FROM `admin` WHERE `username` = '"+txtusernameAdmin21552011235.getText()+"' && `password`= '"+txtpasswordAdmin21552011235.getText()+"' ";
+//
+//            ResultSet rs = sttmnt.executeQuery(query);
+//            if(rs.next()){
+//                JOptionPane.showMessageDialog(null, "Login Success");
+//                userName.setText(rs.getString(2));
+//                new admin.dashboardAdmin().setVisible(true);
+//                dispose();
+//            }else{
+//                JOptionPane.showMessageDialog(null, "Username atau Password Salah");
+//                txtusernameAdmin21552011235.setText(null);
+//                txtpasswordAdmin21552011235.setText(null);
 //            }
-            ResultSet rs = sttmnt.executeQuery(query);
+//            
+//        }catch(SQLException | HeadlessException e ){
+//            System.out.println(e);
+//        }
+        
+        
+        String username = txtusername21552011235.getText();
+        String password = txtpasswordPetugas21552011235.getText();
+        String role = jComboBoxRoleUser21552011235.getSelectedItem().toString();
+        
+        if (username.equals("")|| password.equals("")||role.equals("Select")){
+            JOptionPane.showMessageDialog(null, "Username atau Password Salah");
+        } else {
+            try{
+            con = (Connection) koneksi.getKoneksi();
+            pst = con.prepareStatement ("select * from data_user where username=? and password=?");
+            pst.setString(1,username);
+            pst.setString(2, password);
+            
+            rs = pst.executeQuery();
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "Login Success");
-                //UserNamePetugas21552011235.setText(rs.getString(2));
-                new petugas.dashboardPetugas().setVisible(true);
-                dispose();
-            }else{
-                JOptionPane.showMessageDialog(null, "Username atau Password Salah");
-                txtusernamePetugas21552011235.setText(null);
+                String s1 = rs.getString("role");
+                String un = rs.getString("username");
+                if(role.equalsIgnoreCase("Admin")&& s1.equalsIgnoreCase("Admin")){
+                    dashboardAdmin adm = new admin.dashboardAdmin(un);
+                    adm.setVisible(true);
+                    //setVisible(false);
+                    dispose();
+                    }
+                if(role.equalsIgnoreCase("Sekretaris")&& s1.equalsIgnoreCase("Sekretaris")){
+                    dashboardSekretaris skr = new sekretaris.dashboardSekretaris(un);
+                    skr.setVisible(true);
+                    //setVisible(false);
+                    dispose();
+                    }
+                if(role.equalsIgnoreCase("Bendahara")&& s1.equalsIgnoreCase("Bendahara")){
+                    dashboardBendahara bdr = new bendahara.dashboardBendahara(un);
+                    bdr.setVisible(true);
+                    //setVisible(false);
+                    dispose();
+                    }
+                if(role.equalsIgnoreCase("Petugas")&& s1.equalsIgnoreCase("Petugas")){
+                    dashboardPetugas ptgs = new petugas.dashboardPetugas(un);
+                    ptgs.setVisible(true);
+                    //setVisible(false);
+                    dispose();
+                    }
+                } else {
+                JOptionPane.showMessageDialog(null, "Username atau Password Salah!!!");
+                txtusername21552011235.setText(null);
                 txtpasswordPetugas21552011235.setText(null);
+                jComboBoxRoleUser21552011235.setSelectedIndex(0);
             }
             
         }catch(SQLException | HeadlessException e ){
             System.out.println(e);
         }
+      }
     }
-    
+       
+       
+            
+//    catch(SQLException | HeadlessException e ){
+//            System.out.println(e);
+//        }
+//    }
+//    
     public void changecolor(JPanel hover, Color rand){
         hover.setBackground(rand);
     }
@@ -81,7 +149,7 @@ public class loginUser extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jpanelPetugas21552011235 = new javax.swing.JPanel();
         BtnBack21552011235 = new javax.swing.JLabel();
-        txtusernamePetugas21552011235 = new javax.swing.JTextField();
+        txtusername21552011235 = new javax.swing.JTextField();
         txtpasswordPetugas21552011235 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -96,7 +164,7 @@ public class loginUser extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         PanelLoginPetugas21552011235 = new javax.swing.JPanel();
         BtnLoginBarista21552011235 = new javax.swing.JLabel();
-        jComboBoxRoleUser = new javax.swing.JComboBox<>();
+        jComboBoxRoleUser21552011235 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
@@ -121,15 +189,15 @@ public class loginUser extends javax.swing.JFrame {
         });
         jpanelPetugas21552011235.add(BtnBack21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
 
-        txtusernamePetugas21552011235.setFont(txtusernamePetugas21552011235.getFont().deriveFont(txtusernamePetugas21552011235.getFont().getSize()+2f));
-        txtusernamePetugas21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtusernamePetugas21552011235.setBorder(null);
-        txtusernamePetugas21552011235.addActionListener(new java.awt.event.ActionListener() {
+        txtusername21552011235.setFont(txtusername21552011235.getFont().deriveFont(txtusername21552011235.getFont().getSize()+2f));
+        txtusername21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        txtusername21552011235.setBorder(null);
+        txtusername21552011235.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusernamePetugas21552011235ActionPerformed(evt);
+                txtusername21552011235ActionPerformed(evt);
             }
         });
-        jpanelPetugas21552011235.add(txtusernamePetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 350, 40));
+        jpanelPetugas21552011235.add(txtusername21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 350, 40));
 
         txtpasswordPetugas21552011235.setFont(txtpasswordPetugas21552011235.getFont().deriveFont(txtpasswordPetugas21552011235.getFont().getSize()+2f));
         txtpasswordPetugas21552011235.setForeground(new java.awt.Color(255, 255, 255));
@@ -222,9 +290,9 @@ public class loginUser extends javax.swing.JFrame {
 
         jpanelPetugas21552011235.add(PanelLoginPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 140, 40));
 
-        jComboBoxRoleUser.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jComboBoxRoleUser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- pilih --", "Admin", "Sekretaris", "Bendahara", "Petugas" }));
-        jpanelPetugas21552011235.add(jComboBoxRoleUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 130, 30));
+        jComboBoxRoleUser21552011235.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jComboBoxRoleUser21552011235.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- pilih --", "Admin", "Sekretaris", "Bendahara", "Petugas" }));
+        jpanelPetugas21552011235.add(jComboBoxRoleUser21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 130, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
         jpanelPetugas21552011235.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 440));
@@ -265,9 +333,9 @@ public class loginUser extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpasswordPetugas21552011235ActionPerformed
 
-    private void txtusernamePetugas21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernamePetugas21552011235ActionPerformed
+    private void txtusername21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusername21552011235ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusernamePetugas21552011235ActionPerformed
+    }//GEN-LAST:event_txtusername21552011235ActionPerformed
 
     private void BtnBack21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseEntered
        
@@ -326,7 +394,7 @@ public class loginUser extends javax.swing.JFrame {
     private javax.swing.JPanel PanelLoginPetugas21552011235;
     private javax.swing.JLabel disable;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBoxRoleUser;
+    private javax.swing.JComboBox<String> jComboBoxRoleUser21552011235;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -340,7 +408,7 @@ public class loginUser extends javax.swing.JFrame {
     private javax.swing.JLabel langkop;
     private javax.swing.JLabel show;
     private javax.swing.JPasswordField txtpasswordPetugas21552011235;
-    private javax.swing.JTextField txtusernamePetugas21552011235;
+    private javax.swing.JTextField txtusername21552011235;
     // End of variables declaration//GEN-END:variables
 
     private void changecolor(JLabel CloseBtn21552011235, Color color) {

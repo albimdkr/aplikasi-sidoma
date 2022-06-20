@@ -6,8 +6,6 @@
 package admin;
 import petugas.*;
 import java.awt.Color;
-import transaksi.pageTransaksi;
-import transaksi.stokMenu;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -25,10 +23,17 @@ public class dashboardAdmin extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardAdmin() {
+    public dashboardAdmin(String username) {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        usernameAdmin21552011235.setText(username);
     }
+
+    public dashboardAdmin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -67,7 +72,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         jTabbedPanel21552011235 = new javax.swing.JTabbedPane();
         HomeTabbed21552011235 = new javax.swing.JPanel();
         IconUser = new javax.swing.JLabel();
-        UserName = new javax.swing.JLabel();
+        jLabelAdmin = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -293,9 +298,9 @@ public class dashboardAdmin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(51, 270, 0, 0);
         HomeTabbed21552011235.add(IconUser, gridBagConstraints);
 
-        UserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        UserName.setForeground(new java.awt.Color(255, 255, 255));
-        UserName.setText("Admin");
+        jLabelAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelAdmin.setText("Admin");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -304,10 +309,10 @@ public class dashboardAdmin extends javax.swing.JFrame {
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(UserName, gridBagConstraints);
+        HomeTabbed21552011235.add(jLabelAdmin, gridBagConstraints);
 
-        UserNamePetugas21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        UserNamePetugas21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        usernameAdmin21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        usernameAdmin21552011235.setForeground(new java.awt.Color(255, 255, 255));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -317,7 +322,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         gridBagConstraints.ipady = 60;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(UserNamePetugas21552011235, gridBagConstraints);
+        HomeTabbed21552011235.add(usernameAdmin21552011235, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -793,11 +798,11 @@ public class dashboardAdmin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new dashboardAdmin().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+////            public void run() {
+////                new dashboardAdmin().setVisible(true);
+////            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -828,8 +833,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel TabRiwayatBtn21552011235;
     private javax.swing.JLabel TabTentangBtn21552011235;
     private javax.swing.JPanel TentangTabbed21552011235;
-    private javax.swing.JLabel UserName;
-    public static final javax.swing.JLabel UserNamePetugas21552011235 = new javax.swing.JLabel();
     private javax.swing.JPanel header21552011235;
     private javax.swing.JPanel homePanel21552011235;
     private javax.swing.JPanel iconMenu;
@@ -845,12 +848,14 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelAdmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPanel21552011235;
     private javax.swing.JPanel menu21552011235;
     private javax.swing.JPanel riwayatPanel21552011235;
     private javax.swing.JPanel sidebar21552011235;
     private javax.swing.JPanel tentangPanel21552011235;
+    public static final javax.swing.JLabel usernameAdmin21552011235 = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 
     private static class color {

@@ -6,8 +6,6 @@
 package bendahara;
 import petugas.*;
 import java.awt.Color;
-import transaksi.pageTransaksi;
-import transaksi.stokMenu;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -25,9 +23,14 @@ public class dashboardBendahara extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardBendahara() {
+    public dashboardBendahara(String username) {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        usernameBendahara21552011235.setText(username);
+    }
+
+    dashboardBendahara() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -269,8 +272,8 @@ public class dashboardBendahara extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
         HomeTabbed21552011235.add(UserName, gridBagConstraints);
 
-        UserNamePetugas21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        UserNamePetugas21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        usernameBendahara21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        usernameBendahara21552011235.setForeground(new java.awt.Color(255, 255, 255));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -280,7 +283,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
         gridBagConstraints.ipady = 60;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(UserNamePetugas21552011235, gridBagConstraints);
+        HomeTabbed21552011235.add(usernameBendahara21552011235, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -619,11 +622,11 @@ public class dashboardBendahara extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new dashboardBendahara().setVisible(true);
-            }
-        });
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new dashboardBendahara().setVisible(true);
+//            }
+//        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -649,7 +652,6 @@ public class dashboardBendahara extends javax.swing.JFrame {
     private javax.swing.JLabel TabTentangBtn21552011235;
     private javax.swing.JPanel TentangTabbed21552011235;
     private javax.swing.JLabel UserName;
-    public static final javax.swing.JLabel UserNamePetugas21552011235 = new javax.swing.JLabel();
     private javax.swing.JPanel header21552011235;
     private javax.swing.JPanel homePanel21552011235;
     private javax.swing.JPanel iconMenu;
@@ -666,6 +668,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
     private javax.swing.JPanel menu21552011235;
     private javax.swing.JPanel sidebar21552011235;
     private javax.swing.JPanel tentangPanel21552011235;
+    public static final javax.swing.JLabel usernameBendahara21552011235 = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 
     private static class color {

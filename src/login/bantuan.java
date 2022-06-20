@@ -8,16 +8,9 @@ package login;
 //import static petugas.dashboardPetugas.UserNamePetugas21552011235;
 import com.mysql.jdbc.Connection;
 import koneksi.*;
-import transaksi.*;
 import java.awt.Color;
-//import java.awt.HeadlessException;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.sql.Statement;
 import javax.swing.JLabel;
-//import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-//import koneksi.koneksi;
 
 /**
  *

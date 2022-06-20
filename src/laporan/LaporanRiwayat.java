@@ -5,7 +5,7 @@
  */
 package laporan;
 
-import transaksi.*;
+//import transaksi.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.sql.Connection;
@@ -480,7 +480,7 @@ public class LaporanRiwayat extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
-        new admin.dashboardAdmin2().setVisible(true);
+        new admin.dashboardAdmin().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBack21552011235MouseClicked
 

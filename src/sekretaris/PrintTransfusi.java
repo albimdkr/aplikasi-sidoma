@@ -6,7 +6,6 @@
 package sekretaris;
 
 import petugas.*;
-import transaksi.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.sql.Connection;
