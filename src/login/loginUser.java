@@ -57,34 +57,12 @@ public class loginUser extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     
     private void login(){
-//        try{
-//            java.sql.Connection connect = koneksi.getKoneksi();
-//            Statement sttmnt = connect.createStatement();
-//            String query = "SELECT * FROM `admin` WHERE `username` = '"+txtusernameAdmin21552011235.getText()+"' && `password`= '"+txtpasswordAdmin21552011235.getText()+"' ";
-//
-//            ResultSet rs = sttmnt.executeQuery(query);
-//            if(rs.next()){
-//                JOptionPane.showMessageDialog(null, "Login Success");
-//                userName.setText(rs.getString(2));
-//                new admin.dashboardAdmin().setVisible(true);
-//                dispose();
-//            }else{
-//                JOptionPane.showMessageDialog(null, "Username atau Password Salah");
-//                txtusernameAdmin21552011235.setText(null);
-//                txtpasswordAdmin21552011235.setText(null);
-//            }
-//            
-//        }catch(SQLException | HeadlessException e ){
-//            System.out.println(e);
-//        }
-        
-        
         String username = txtusername21552011235.getText();
         String password = txtpasswordPetugas21552011235.getText();
         String role = jComboBoxRoleUser21552011235.getSelectedItem().toString();
         
         if (username.equals("")|| password.equals("")||role.equals("Select")){
-            JOptionPane.showMessageDialog(null, "Username atau Password Salah");
+            JOptionPane.showMessageDialog(null, "Username atau Password anda Salah");
         } else {
             try{
             con = (Connection) koneksi.getKoneksi();
@@ -100,12 +78,12 @@ public class loginUser extends javax.swing.JFrame {
                     dashboardAdmin adm = new admin.dashboardAdmin(un);
                     adm.setVisible(true);
                     //setVisible(false);
+                    //JOptionPane.showMessageDialog(null, "Login Berhasil");
                     dispose();
                     }
                 if(role.equalsIgnoreCase("Sekretaris")&& s1.equalsIgnoreCase("Sekretaris")){
                     dashboardSekretaris skr = new sekretaris.dashboardSekretaris(un);
                     skr.setVisible(true);
-                    //setVisible(false);
                     dispose();
                     }
                 if(role.equalsIgnoreCase("Bendahara")&& s1.equalsIgnoreCase("Bendahara")){
@@ -113,6 +91,7 @@ public class loginUser extends javax.swing.JFrame {
                     bdr.setVisible(true);
                     //setVisible(false);
                     dispose();
+                    JOptionPane.showMessageDialog(null, "Login Berhasil");
                     }
                 if(role.equalsIgnoreCase("Petugas")&& s1.equalsIgnoreCase("Petugas")){
                     dashboardPetugas ptgs = new petugas.dashboardPetugas(un);
