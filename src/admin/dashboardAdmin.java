@@ -23,15 +23,12 @@ public class dashboardAdmin extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardAdmin(String username) {
+    public dashboardAdmin() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        usernameAdmin21552011235.setText(username);
+        //usernameAdmin21552011235.setText(username);
     }
 
-    public dashboardAdmin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
 
@@ -60,9 +57,9 @@ public class dashboardAdmin extends javax.swing.JFrame {
         FormPanel21552011235 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         BtnForm21552011235 = new javax.swing.JLabel();
-        riwayatPanel21552011235 = new javax.swing.JPanel();
+        laporanPanel21552011235 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        BtnRiwayatTransfusi21552011235 = new javax.swing.JLabel();
+        BtnLaporani21552011235 = new javax.swing.JLabel();
         tentangPanel21552011235 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         BtnTentang21552011235 = new javax.swing.JLabel();
@@ -216,31 +213,31 @@ public class dashboardAdmin extends javax.swing.JFrame {
 
         sidebar21552011235.add(FormPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
 
-        riwayatPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        riwayatPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        laporanPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
+        laporanPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-20.png"))); // NOI18N
-        riwayatPanel21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        laporanPanel21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnRiwayatTransfusi21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnRiwayatTransfusi21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnRiwayatTransfusi21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnRiwayatTransfusi21552011235.setText("Riwayat Transfusi");
-        BtnRiwayatTransfusi21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnLaporani21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnLaporani21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        BtnLaporani21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnLaporani21552011235.setText("Laporan");
+        BtnLaporani21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnRiwayatTransfusi21552011235MouseClicked(evt);
+                BtnLaporani21552011235MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnRiwayatTransfusi21552011235MouseEntered(evt);
+                BtnLaporani21552011235MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnRiwayatTransfusi21552011235MouseExited(evt);
+                BtnLaporani21552011235MouseExited(evt);
             }
         });
-        riwayatPanel21552011235.add(BtnRiwayatTransfusi21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        laporanPanel21552011235.add(BtnLaporani21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(riwayatPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
+        sidebar21552011235.add(laporanPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
 
         tentangPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
         tentangPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -647,7 +644,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnLogout21552011235MouseEntered
 
     private void BtnLogout21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseClicked
-        new login.selamatDatang().setVisible(true);
+        new login.loginUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 
@@ -727,17 +724,17 @@ public class dashboardAdmin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_TabFormDataPendonor21552011235MouseClicked
 
-    private void BtnRiwayatTransfusi21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRiwayatTransfusi21552011235MouseExited
-        changecolor(riwayatPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnRiwayatTransfusi21552011235MouseExited
+    private void BtnLaporani21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporani21552011235MouseExited
+        changecolor(laporanPanel21552011235, new Color (32,83,117));
+    }//GEN-LAST:event_BtnLaporani21552011235MouseExited
 
-    private void BtnRiwayatTransfusi21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRiwayatTransfusi21552011235MouseEntered
-        changecolor(riwayatPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnRiwayatTransfusi21552011235MouseEntered
+    private void BtnLaporani21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporani21552011235MouseEntered
+        changecolor(laporanPanel21552011235, new Color (32,108,151));
+    }//GEN-LAST:event_BtnLaporani21552011235MouseEntered
 
-    private void BtnRiwayatTransfusi21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRiwayatTransfusi21552011235MouseClicked
+    private void BtnLaporani21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporani21552011235MouseClicked
         jTabbedPanel21552011235.setSelectedIndex(2);
-    }//GEN-LAST:event_BtnRiwayatTransfusi21552011235MouseClicked
+    }//GEN-LAST:event_BtnLaporani21552011235MouseClicked
 
     /**
      * @param args the command line arguments
@@ -808,10 +805,10 @@ public class dashboardAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BtnForm21552011235;
     private javax.swing.JLabel BtnHome21552011235;
+    private javax.swing.JLabel BtnLaporani21552011235;
     private javax.swing.JLabel BtnLogout21552011235;
     private javax.swing.JPanel BtnMax21552011235;
     private javax.swing.JPanel BtnMin21552011235;
-    private javax.swing.JLabel BtnRiwayatTransfusi21552011235;
     private javax.swing.JLabel BtnTentang21552011235;
     private javax.swing.JPanel DaftarMenuTabbed21552011235;
     private javax.swing.JPanel Dashboardview21552011235;
@@ -851,8 +848,8 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAdmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPanel21552011235;
+    private javax.swing.JPanel laporanPanel21552011235;
     private javax.swing.JPanel menu21552011235;
-    private javax.swing.JPanel riwayatPanel21552011235;
     private javax.swing.JPanel sidebar21552011235;
     private javax.swing.JPanel tentangPanel21552011235;
     public static final javax.swing.JLabel usernameAdmin21552011235 = new javax.swing.JLabel();

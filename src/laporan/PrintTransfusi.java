@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sekretaris;
+package laporan;
 
+import sekretaris.*;
+import admin.*;
 import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -26,28 +28,29 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintKeuangan extends javax.swing.JFrame {
+public class PrintTransfusi extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public PrintKeuangan() {
+    public PrintTransfusi() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        //TimeJSpinner();
-        //tanggal();
         
+        //koneksi DB
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
-         
+        
         tableData21552011235.setModel(table);
-        table.addColumn("No. Uang");
-        table.addColumn("Tanggal");
-        table.addColumn("Nominal Uang");
-        table.addColumn("Keterangan");
-        table.addColumn("Status");
-        //table.addColumn("Waktu");
+        table.addColumn("Tanggal Transaksi");
+        table.addColumn("ID Transaksi");
+        table.addColumn("Kode Menu");
+        table.addColumn("Nama Menu");
+        table.addColumn("Harga");
+        table.addColumn("Jumlah");
+        table.addColumn("Total Harga");
+        
         tampilData();
     }
     
@@ -58,23 +61,26 @@ public class PrintKeuangan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `data_keuangan`";
+        String query = "SELECT * FROM `transaksi` ";
         
         try{
-            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
+            Connection connect = koneksi.getKoneksi();//memanggil koneksi
             Statement sttmnt = connect.createStatement();//membuat statement
             ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
             
             while (rslt.next()){
                 //menampung data sementara
-                    String no_uang = rslt.getString("no_uang");
-                    String tanggal = rslt.getString("tanggal");
-                    String nominal_uang = rslt.getString("nominal_uang");
-                    String keterangan_uang = rslt.getString("keterangan");
-                    String status_uang = rslt.getString("status");
-                    //String waktu_uang = rslt.getString("waktu");
+                   
+                    String tanggal = rslt.getString("tgl_transaksi");
+                    String id = rslt.getString("id_transaksi");
+                    String kode = rslt.getString("kode_menu");
+                    String nama = rslt.getString("nama_menu");
+                    String harga = rslt.getString("harga");
+                    String jumlah = rslt.getString("jumlah_menu");
+                    String total = rslt.getString("total_harga");
+                    
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang}; //,waktu_uang
+                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -84,7 +90,6 @@ public class PrintKeuangan extends javax.swing.JFrame {
         }catch(SQLException e){
             System.out.println(e);
         }
-       
     }
     
     private void cari(){
@@ -208,7 +213,7 @@ public class PrintKeuangan extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Keuangan");
+        DaftarMenu.setText("Print Data Transfusi");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -459,14 +464,46 @@ public class PrintKeuangan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -503,7 +540,7 @@ public class PrintKeuangan extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrintKeuangan().setVisible(true);
+                new PrintTransfusi().setVisible(true);
             }
         });
     }

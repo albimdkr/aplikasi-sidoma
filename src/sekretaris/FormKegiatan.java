@@ -6,7 +6,7 @@
 package sekretaris;
 
 //import com.toedter.calendar.JDateChooser;
-import petugas.*;
+import sekretaris.*;
 import java.awt.Color;
 //import java.awt.Dimension;
 import java.awt.HeadlessException;
@@ -40,6 +40,7 @@ import koneksi.koneksi;
  */
 public class FormKegiatan extends javax.swing.JFrame {
     DefaultTableModel table = new DefaultTableModel();
+    //private Object sekretaris;
     /**
      * Creates new form daftarMenu
      */
@@ -741,19 +742,6 @@ public class FormKegiatan extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
-        new sekretaris.dashboardSekretaris().setVisible(true);
-        dispose();
-    }//GEN-LAST:event_BtnBack21552011235MouseClicked
-
-    private void BtnBack21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseEntered
-        changecolor(PanelBack21552011235, new Color (255,24,24));
-    }//GEN-LAST:event_BtnBack21552011235MouseEntered
-
-    private void BtnBack21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseExited
-        changecolor(PanelBack21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnBack21552011235MouseExited
-
     private void BtnEdit21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEdit21552011235MouseClicked
         editData();
     }//GEN-LAST:event_BtnEdit21552011235MouseClicked
@@ -877,6 +865,19 @@ public class FormKegiatan extends javax.swing.JFrame {
     private void jComboBoxPerijinanKetua21552011235InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jComboBoxPerijinanKetua21552011235InputMethodTextChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxPerijinanKetua21552011235InputMethodTextChanged
+
+    private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
+        new sekretaris.dashboardSekretaris().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnBack21552011235MouseClicked
+
+    private void BtnBack21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseEntered
+        changecolor(PanelBack21552011235, new Color (255,24,24));
+    }//GEN-LAST:event_BtnBack21552011235MouseEntered
+
+    private void BtnBack21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseExited
+        changecolor(PanelBack21552011235, new Color (32,83,117));
+    }//GEN-LAST:event_BtnBack21552011235MouseExited
     
    
     /**
@@ -1163,7 +1164,7 @@ public class FormKegiatan extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new FormKegiatan().setVisible(true);
+            
         });
     }
 

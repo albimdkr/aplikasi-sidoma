@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sekretaris;
+package laporan;
 
+import admin.*;
+import sekretaris.*;
 import petugas.*;
+import login.loginUser;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.sql.Connection;
@@ -26,13 +29,13 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintPetugas extends javax.swing.JFrame {
+public class PrintKegiatan extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public PrintPetugas() {
+    public PrintKegiatan() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         //tanggal();
@@ -41,14 +44,14 @@ public class PrintPetugas extends javax.swing.JFrame {
         koneksi.getKoneksi();
          
         tableData21552011235.setModel(table);
-        table.addColumn("Id Petugas");
-        table.addColumn("Nama");
-        table.addColumn("Jenis Kelamin");
-        table.addColumn("No Telp");
-        table.addColumn("Gmail");
-        table.addColumn("Alamat");
-        table.addColumn("Jabatan");
-        table.addColumn("Tanggal Daftar");
+        table.addColumn("No. Kegiatan");
+        table.addColumn("Nama Kegiatan");
+        table.addColumn("Tanggal Kegiatan");
+        table.addColumn("Lokasi");
+        table.addColumn("Keterangan");
+        table.addColumn("Kuota Pendonor");
+        table.addColumn("Jumlah Petugas");
+        table.addColumn("Perijinan Ketua");
         tampilData();
     }
     
@@ -60,7 +63,7 @@ public class PrintPetugas extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `data_petugas`";
+        String query = "SELECT * FROM `data_kegiatan`";
         
         try{
             java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -69,18 +72,18 @@ public class PrintPetugas extends javax.swing.JFrame {
             
             while (rslt.next()){
                 //menampung data sementara
-                    String id_petugas = rslt.getString("id_petugas");
-                    String nama = rslt.getString("nama");
-                    String jk = rslt.getString("jenis_kelamin");
-                    String no_telp = rslt.getString("no_telp");
-                    String gmail = rslt.getString("gmail");
-                    String alamatpetugas = rslt.getString("alamat");
-                    String jabatan = rslt.getString("jabatan");
-                    String tanggal_daftar = rslt.getString("tanggal_daftar");
-                    
+                
+                    String no_kegiatan = rslt.getString("no_kegiatan");
+                    String nama_kegiatan = rslt.getString("nama_kegiatan");
+                    String tanggal_kegiatan = rslt.getString("tanggal_kegiatan");
+                    String lokasi = rslt.getString("lokasi");
+                    String keterangan = rslt.getString("keterangan");
+                    String kuota_pendonor = rslt.getString("kuota_pendonor");
+                    String jumlah_petugas = rslt.getString("jumlah_petugas");
+                    String perijinan_ketua = rslt.getString("perijinan_ketua");
                     
                 //masukan semua data kedalam array
-                String[] data = {id_petugas,nama,jk,no_telp,gmail,alamatpetugas,jabatan,tanggal_daftar};
+                String[] data = {no_kegiatan,nama_kegiatan,tanggal_kegiatan,lokasi,keterangan,kuota_pendonor,jumlah_petugas,perijinan_ketua};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -100,15 +103,15 @@ public class PrintPetugas extends javax.swing.JFrame {
         }
         
       String cari = txtFieldCari21552011235.getText();
-      String query = "SELECT * FROM `data_petugas` WHERE "
-                + "`id_petugas` LIKE '%"+cari+"%' OR"
-                + "`nama`  LIKE '%"+cari+"%' OR "
-                + "`jenis_kelamin` LIKE '%"+cari+"%' OR"
-                + "`no_telp` LIKE '%"+cari+"%' OR"
-                + "`gmail` LIKE '%"+cari+"%' OR"
-                + "`alamat` LIKE '%"+cari+"%' OR"
-                + "`jabatan` LIKE '%"+cari+"%' OR"
-                + "`tanggal_daftar` LIKE '%"+cari+"%'  ";
+      String query = "SELECT * FROM `data_kegiatan` WHERE "
+                + "`no_kegiatan` LIKE '%"+cari+"%' OR"
+                + "`nama_kegiatan`  LIKE '%"+cari+"%' OR "
+                + "`tanggal_kegiatan` LIKE '%"+cari+"%' OR"
+                + "`lokasi` LIKE '%"+cari+"%' OR"
+                + "`keterangan` LIKE '%"+cari+"%' OR"
+                + "`kuota_pendonor` LIKE '%"+cari+"%' OR"
+                + "`jumlah_petugas` LIKE '%"+cari+"%' OR"
+                + "`perijinan_ketua` LIKE '%"+cari+"%'  ";
                 
        try{
            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -116,16 +119,16 @@ public class PrintPetugas extends javax.swing.JFrame {
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
-                    String id_petugas = rslt.getString("id_petugas");
-                    String nama = rslt.getString("nama");
-                    String jk = rslt.getString("jenis_kelamin");
-                    String no_telp = rslt.getString("no_telp");
-                    String gmail = rslt.getString("gmail");
-                    String alamatpetugas = rslt.getString("alamat");
-                    String jabatan = rslt.getString("jabatan");
-                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    String no_kegiatan = rslt.getString("no_kegiatan");
+                    String nama_kegiatan = rslt.getString("nama_kegiatan");
+                    String tanggal_kegiatan = rslt.getString("tanggal_kegiatan");
+                    String lokasi = rslt.getString("lokasi");
+                    String keterangan = rslt.getString("keterangan");
+                    String kuota_pendonor = rslt.getString("kuota_pendonor");
+                    String jumlah_petugas = rslt.getString("jumlah_petugas");
+                    String perijinan_ketua = rslt.getString("perijinan_ketua");
                     
-                String[] data = {id_petugas,nama,jk,no_telp,gmail,alamatpetugas,jabatan,tanggal_daftar};
+                String[] data = {no_kegiatan,tanggal_kegiatan,nama_kegiatan,lokasi,keterangan,kuota_pendonor,jumlah_petugas,perijinan_ketua};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -137,11 +140,6 @@ public class PrintPetugas extends javax.swing.JFrame {
     }
   }
     
-    
-    
-    
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -214,7 +212,7 @@ public class PrintPetugas extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Petugas");
+        DaftarMenu.setText("Print Data Kegiatan");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -465,13 +463,13 @@ public class PrintPetugas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -541,7 +539,7 @@ public class PrintPetugas extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrintPetugas().setVisible(true);
+                new PrintKegiatan().setVisible(true);
             }
         });
     }

@@ -6,7 +6,7 @@
 package sekretaris;
 
 //import com.toedter.calendar.JDateChooser;
-import petugas.*;
+import sekretaris.*;
 import java.awt.Color;
 //import java.awt.Dimension;
 import java.awt.HeadlessException;

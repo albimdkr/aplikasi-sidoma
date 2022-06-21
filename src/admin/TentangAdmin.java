@@ -58,6 +58,8 @@ public class TentangAdmin extends javax.swing.JFrame {
         txt3 = new javax.swing.JLabel();
         txt1 = new javax.swing.JLabel();
         txt = new javax.swing.JLabel();
+        txt13 = new javax.swing.JLabel();
+        txt14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,8 +127,8 @@ public class TentangAdmin extends javax.swing.JFrame {
         txt10.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt10.setForeground(new java.awt.Color(255, 255, 255));
         txt10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt10.setText("1. Mengelola Data Keuangan PDDM.");
-        jPanel3.add(txt10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 410, 40));
+        txt10.setText("3.  Menerima Laporan.");
+        jPanel3.add(txt10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 410, 40));
 
         txt9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt9.setForeground(new java.awt.Color(255, 255, 255));
@@ -183,6 +185,18 @@ public class TentangAdmin extends javax.swing.JFrame {
         txt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt.setText("untuk menempuh Ujian Akhir Semester Algoritma dan pemrograman II.");
         jPanel3.add(txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 610, 560, 40));
+
+        txt13.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txt13.setForeground(new java.awt.Color(255, 255, 255));
+        txt13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt13.setText("1. Mengelola Data User.");
+        jPanel3.add(txt13, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 410, 40));
+
+        txt14.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txt14.setForeground(new java.awt.Color(255, 255, 255));
+        txt14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt14.setText("2. Mengizinkan Kegiatan Donor.");
+        jPanel3.add(txt14, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 410, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -1286,6 +1300,8 @@ public class TentangAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel txt10;
     private javax.swing.JLabel txt11;
     private javax.swing.JLabel txt12;
+    private javax.swing.JLabel txt13;
+    private javax.swing.JLabel txt14;
     private javax.swing.JLabel txt2;
     private javax.swing.JLabel txt3;
     private javax.swing.JLabel txt4;

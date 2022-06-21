@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package sekretaris;
-import petugas.*;
+
+import sekretaris.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
@@ -23,16 +24,17 @@ public class dashboardSekretaris extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardSekretaris(String username) {
+    public dashboardSekretaris() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        usernameSekretaris21552011235.setText(username);
+        //usernameSekretaris21552011235.setText();
     }
 
-    dashboardSekretaris() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-  
+
+
+
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -811,7 +813,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnLogout21552011235MouseEntered
 
     private void BtnLogout21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseClicked
-        new login.selamatDatang().setVisible(true);
+        new login.loginUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 
@@ -874,12 +876,12 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabUserBtn21552011235MouseEntered
 
     private void TabUserBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabUserBtn21552011235MouseClicked
-        new sekretaris.PrintUser().setVisible(true);
+        new laporan.PrintUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabUserBtn21552011235MouseClicked
 
     private void TabKegiatantBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKegiatantBtn21552011235MouseClicked
-        new sekretaris.PrintKegiatan().setVisible(true);
+        new laporan.PrintKegiatan().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabKegiatantBtn21552011235MouseClicked
 
@@ -892,7 +894,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabKegiatantBtn21552011235MouseExited
 
     private void TabPetugastBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabPetugastBtn21552011235MouseClicked
-        new sekretaris.PrintPetugas().setVisible(true);
+        new laporan.PrintPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabPetugastBtn21552011235MouseClicked
 
@@ -905,7 +907,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabPetugastBtn21552011235MouseExited
 
     private void TabPendonorBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabPendonorBtn21552011235MouseClicked
-        new sekretaris.PrintPendonor().setVisible(true);
+        new laporan.PrintPendonor().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabPendonorBtn21552011235MouseClicked
 
@@ -918,7 +920,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabPendonorBtn21552011235MouseExited
 
     private void TabPasienBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabPasienBtn21552011235MouseClicked
-        new sekretaris.PrintPasien().setVisible(true);
+        new laporan.PrintPasien().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabPasienBtn21552011235MouseClicked
 
@@ -931,7 +933,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabPasienBtn21552011235MouseExited
 
     private void TabTransfusiBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTransfusiBtn21552011235MouseClicked
-        new sekretaris.PrintTransfusi().setVisible(true);
+        new laporan.PrintTransfusi().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabTransfusiBtn21552011235MouseClicked
 
@@ -944,7 +946,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabTransfusiBtn21552011235MouseExited
 
     private void TabKeuanganBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganBtn21552011235MouseClicked
-        new sekretaris.PrintKeuangan().setVisible(true);
+        new laporan.PrintKeuangan().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabKeuanganBtn21552011235MouseClicked
 
@@ -1012,11 +1014,11 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new dashboardSekretaris().setVisible(true);
-//            }
-//        });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new dashboardSekretaris().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sekretaris;
+package laporan;
 
+import sekretaris.*;
+import admin.*;
 import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -26,13 +28,13 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintPendonor extends javax.swing.JFrame {
+public class PrintPetugas extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-   public PrintPendonor() {
+    public PrintPetugas() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         //tanggal();
@@ -41,21 +43,14 @@ public class PrintPendonor extends javax.swing.JFrame {
         koneksi.getKoneksi();
          
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Daftar");
-        table.addColumn("No. Pendonor");
+        table.addColumn("Id Petugas");
         table.addColumn("Nama");
         table.addColumn("Jenis Kelamin");
-        table.addColumn("Tanggal Lahir");
-        table.addColumn("No.Telp");
+        table.addColumn("No Telp");
         table.addColumn("Gmail");
-        table.addColumn("Golongan Darah");
-        table.addColumn("Usia");
-        table.addColumn("Berat Badan");
         table.addColumn("Alamat");
-        table.addColumn("Hemoglobin");
-        table.addColumn("Riwayat Penyakit");
-        table.addColumn("Jumlah Transfusi");
-        table.addColumn("Tanggal terakhir transfusi");
+        table.addColumn("Jabatan");
+        table.addColumn("Tanggal Daftar");
         tampilData();
     }
     
@@ -67,7 +62,7 @@ public class PrintPendonor extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `data_pendonor`";
+        String query = "SELECT * FROM `data_petugas`";
         
         try{
             java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -76,25 +71,18 @@ public class PrintPendonor extends javax.swing.JFrame {
             
             while (rslt.next()){
                 //menampung data sementara
-                    String tanggal_daftar = rslt.getString("tanggal_daftar");
-                    String no_pendonor = rslt.getString("no_pendonor");
+                    String id_petugas = rslt.getString("id_petugas");
                     String nama = rslt.getString("nama");
-                    String jenis_kelamin = rslt.getString("jenis_kelamin");
-                    String tanggal_lahir = rslt.getString("tanggal_lahir");
+                    String jk = rslt.getString("jenis_kelamin");
                     String no_telp = rslt.getString("no_telp");
                     String gmail = rslt.getString("gmail");
-                    String golongan_darah = rslt.getString("golongan_darah");
-                    String usia = rslt.getString("usia");
-                    String berat_badan = rslt.getString("berat_badan");
-                    String alamatpendonor = rslt.getString("alamat");
-                    String hemoglobin = rslt.getString("hemoglobin");
-                    String riwayat_penyakit = rslt.getString("riwayat_penyakit");
-                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
-                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String alamatpetugas = rslt.getString("alamat");
+                    String jabatan = rslt.getString("jabatan");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
                     
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
+                String[] data = {id_petugas,nama,jk,no_telp,gmail,alamatpetugas,jabatan,tanggal_daftar};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -114,22 +102,15 @@ public class PrintPendonor extends javax.swing.JFrame {
         }
         
       String cari = txtFieldCari21552011235.getText();
-      String query = "SELECT * FROM `data_pendonor` WHERE "
-                + "`tanggal_daftar` LIKE '%"+cari+"%' OR"
-                + "`no_pendonor`  LIKE '%"+cari+"%' OR "
-                + "`nama` LIKE '%"+cari+"%' OR"
+      String query = "SELECT * FROM `data_petugas` WHERE "
+                + "`id_petugas` LIKE '%"+cari+"%' OR"
+                + "`nama`  LIKE '%"+cari+"%' OR "
                 + "`jenis_kelamin` LIKE '%"+cari+"%' OR"
-                + "`tanggal_lahir` LIKE '%"+cari+"%' OR"
                 + "`no_telp` LIKE '%"+cari+"%' OR"
                 + "`gmail` LIKE '%"+cari+"%' OR"
-                + "`golongan_darah` LIKE '%"+cari+"%' OR"
-                + "`usia` LIKE '%"+cari+"%' OR"
-                + "`berat_badan` LIKE '%"+cari+"%' OR"
                 + "`alamat` LIKE '%"+cari+"%' OR"
-                + "`hemoglobin` LIKE '%"+cari+"%' OR"
-                + "`riwayat_penyakit` LIKE '%"+cari+"%' OR"
-                + "`jumlah_transfusi` LIKE '%"+cari+"%' OR"
-                + "`tanggal_terakhir_transfusi` LIKE '%"+cari+"%' ";
+                + "`jabatan` LIKE '%"+cari+"%' OR"
+                + "`tanggal_daftar` LIKE '%"+cari+"%'  ";
                 
        try{
            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -137,25 +118,16 @@ public class PrintPendonor extends javax.swing.JFrame {
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
-                //menampung data sementara
-                    String tanggal_daftar = rslt.getString("tanggal_daftar");
-                    String no_pendonor = rslt.getString("no_pendonor");
+                    String id_petugas = rslt.getString("id_petugas");
                     String nama = rslt.getString("nama");
-                    String jenis_kelamin = rslt.getString("jenis_kelamin");
-                    String tanggal_lahir = rslt.getString("tanggal_lahir");
+                    String jk = rslt.getString("jenis_kelamin");
                     String no_telp = rslt.getString("no_telp");
                     String gmail = rslt.getString("gmail");
-                    String golongan_darah = rslt.getString("golongan_darah");
-                    String usia = rslt.getString("usia");
-                    String berat_badan = rslt.getString("berat_badan");
-                    String alamatpendonor = rslt.getString("alamat");
-                    String hemoglobin = rslt.getString("hemoglobin");
-                    String riwayat_penyakit = rslt.getString("riwayat_penyakit");
-                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
-                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String alamatpetugas = rslt.getString("alamat");
+                    String jabatan = rslt.getString("jabatan");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
                     
-                //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
+                String[] data = {id_petugas,nama,jk,no_telp,gmail,alamatpetugas,jabatan,tanggal_daftar};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -244,7 +216,7 @@ public class PrintPendonor extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Pendonor");
+        DaftarMenu.setText("Print Data Petugas");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -378,9 +350,9 @@ public class PrintPendonor extends javax.swing.JFrame {
                 BtnPrint21552011235MouseExited(evt);
             }
         });
-        PanelPrint21552011235.add(BtnPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 50));
+        PanelPrint21552011235.add(BtnPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 50));
 
-        jPanel3.add(PanelPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 1330, 50));
+        jPanel3.add(PanelPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 1010, 50));
 
         tableData21552011235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -396,7 +368,7 @@ public class PrintPendonor extends javax.swing.JFrame {
         tableData21552011235.setSelectionBackground(new java.awt.Color(64, 49, 33));
         jScrollPane1.setViewportView(tableData21552011235);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 1330, 340));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 340));
 
         txtFieldCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldCari21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -495,13 +467,13 @@ public class PrintPendonor extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintPendonor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintPendonor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintPendonor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintPendonor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPetugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -571,7 +543,7 @@ public class PrintPendonor extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrintPendonor().setVisible(true);
+                new PrintPetugas().setVisible(true);
             }
         });
     }

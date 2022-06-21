@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sekretaris;
+package laporan;
 
+import sekretaris.*;
+import admin.*;
 import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -26,31 +28,39 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintTransfusi extends javax.swing.JFrame {
+public class PrintPasien extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public PrintTransfusi() {
+    public PrintPasien() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        //tanggal();
         
-        //koneksi DB
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
-        
+         
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Transaksi");
-        table.addColumn("ID Transaksi");
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Jumlah");
-        table.addColumn("Total Harga");
-        
+        table.addColumn("Tanggal Daftar");
+        table.addColumn("No. Pasien");
+        table.addColumn("Nama");
+        table.addColumn("Jenis Kelamin");
+        table.addColumn("Tanggal Lahir");
+        table.addColumn("No.Telp");
+        table.addColumn("Gmail");
+        table.addColumn("Golongan Darah");
+        table.addColumn("Usia");
+        table.addColumn("Berat Badan");
+        table.addColumn("Alamat");
+        table.addColumn("Kondisi");
+        table.addColumn("Penyakit");
+        table.addColumn("Total menerima labu");
+        table.addColumn("Tanggal terakhir transfusi");
         tampilData();
     }
+    
     
     private void tampilData(){
         //untuk mengahapus baris setelah input
@@ -59,26 +69,34 @@ public class PrintTransfusi extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `transaksi` ";
+        String query = "SELECT * FROM `data_pasien`";
         
         try{
-            Connection connect = koneksi.getKoneksi();//memanggil koneksi
+            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
             Statement sttmnt = connect.createStatement();//membuat statement
             ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
             
             while (rslt.next()){
                 //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    String no_pasien = rslt.getString("no_pasien");
+                    String nama = rslt.getString("nama");
+                    String jenis_kelamin = rslt.getString("jenis_kelamin");
+                    String tanggal_lahir = rslt.getString("tanggal_lahir");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmail = rslt.getString("gmail");
+                    String golongan_darah = rslt.getString("golongan_darah");
+                    String usia = rslt.getString("usia");
+                    String berat_badan = rslt.getString("berat_badan");
+                    String alamatpendonor = rslt.getString("alamat");
+                    String kondisipasien = rslt.getString("kondisi");
+                    String penyakit = rslt.getString("penyakit");
+                    String total_menerima_labu = rslt.getString("total_menerima_labu");
+                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {tanggal_daftar,no_pasien,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,kondisipasien,penyakit,total_menerima_labu,tanggal_terakhir_transfusi};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -88,6 +106,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
         }catch(SQLException e){
             System.out.println(e);
         }
+       
     }
     
     private void cari(){
@@ -96,43 +115,59 @@ public class PrintTransfusi extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String cari = txtFieldCari21552011235.getText();
-        
-        String query = "SELECT * FROM `transaksi` WHERE "
-                + "`kode_menu`  LIKE '%"+cari+"%' OR "
-                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
-                + "`id_transaksi` LIKE '%"+cari+"%' OR"
-                + "`nama_menu` LIKE '%"+cari+"%' ";
+      String cari = txtFieldCari21552011235.getText();
+      String query = "SELECT * FROM `data_pasien` WHERE "
+                + "`tanggal_daftar` LIKE '%"+cari+"%' OR"
+                + "`no_pasien`  LIKE '%"+cari+"%' OR "
+                + "`nama` LIKE '%"+cari+"%' OR"
+                + "`jenis_kelamin` LIKE '%"+cari+"%' OR"
+                + "`tanggal_lahir` LIKE '%"+cari+"%' OR"
+                + "`no_telp` LIKE '%"+cari+"%' OR"
+                + "`gmail` LIKE '%"+cari+"%' OR"
+                + "`golongan_darah` LIKE '%"+cari+"%' OR"
+                + "`usia` LIKE '%"+cari+"%' OR"
+                + "`berat_badan` LIKE '%"+cari+"%' OR"
+                + "`alamat` LIKE '%"+cari+"%' OR"
+                + "`kondisi` LIKE '%"+cari+"%' OR"
+                + "`penyakit` LIKE '%"+cari+"%' OR"
+                + "`total_menerima_labu` LIKE '%"+cari+"%' OR"
+                + "`tanggal_terakhir_transfusi` LIKE '%"+cari+"%' ";
                 
        try{
-           Connection connect = koneksi.getKoneksi();//memanggil koneksi
+           java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
            Statement sttmnt = connect.createStatement();//membuat statement
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
                 //menampung data sementara
-                   
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    String no_pendonor = rslt.getString("no_pendonor");
+                    String nama = rslt.getString("nama");
+                    String jenis_kelamin = rslt.getString("jenis_kelamin");
+                    String tanggal_lahir = rslt.getString("tanggal_lahir");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmail = rslt.getString("gmail");
+                    String golongan_darah = rslt.getString("golongan_darah");
+                    String usia = rslt.getString("usia");
+                    String berat_badan = rslt.getString("berat_badan");
+                    String alamatpendonor = rslt.getString("alamat");
+                    String kondisipasien = rslt.getString("kondisi");
+                    String penyakit = rslt.getString("penyakit");
+                    String total_menerima_labu = rslt.getString("total_menerima_labu");
+                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,kondisipasien,penyakit,total_menerima_labu,tanggal_terakhir_transfusi};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
                 tableData21552011235.setModel(table);
-           
-        
+                
     }catch(SQLException e){
            System.out.println(e);
     }
-    }
+  }
     
     
     
@@ -211,7 +246,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Transfusi");
+        DaftarMenu.setText("Print Data Pasien");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -345,9 +380,9 @@ public class PrintTransfusi extends javax.swing.JFrame {
                 BtnPrint21552011235MouseExited(evt);
             }
         });
-        PanelPrint21552011235.add(BtnPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 50));
+        PanelPrint21552011235.add(BtnPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1330, 50));
 
-        jPanel3.add(PanelPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 1010, 50));
+        jPanel3.add(PanelPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 1330, 50));
 
         tableData21552011235.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -363,7 +398,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
         tableData21552011235.setSelectionBackground(new java.awt.Color(64, 49, 33));
         jScrollPane1.setViewportView(tableData21552011235);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 340));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 1330, 340));
 
         txtFieldCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldCari21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -462,13 +497,13 @@ public class PrintTransfusi extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPasien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPasien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPasien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintPasien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -538,7 +573,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrintTransfusi().setVisible(true);
+                new PrintPasien().setVisible(true);
             }
         });
     }

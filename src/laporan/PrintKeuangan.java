@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sekretaris;
+package laporan;
 
+import sekretaris.*;
+import admin.*;
 import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -26,32 +28,30 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintKegiatan extends javax.swing.JFrame {
+public class PrintKeuangan extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public PrintKegiatan() {
+    public PrintKeuangan() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
+        //TimeJSpinner();
         //tanggal();
         
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
          
         tableData21552011235.setModel(table);
-        table.addColumn("No. Kegiatan");
-        table.addColumn("Nama Kegiatan");
-        table.addColumn("Tanggal Kegiatan");
-        table.addColumn("Lokasi");
+        table.addColumn("No. Uang");
+        table.addColumn("Tanggal");
+        table.addColumn("Nominal Uang");
         table.addColumn("Keterangan");
-        table.addColumn("Kuota Pendonor");
-        table.addColumn("Jumlah Petugas");
-        table.addColumn("Perijinan Ketua");
+        table.addColumn("Status");
+        //table.addColumn("Waktu");
         tampilData();
     }
-    
     
     private void tampilData(){
         //untuk mengahapus baris setelah input
@@ -60,7 +60,7 @@ public class PrintKegiatan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `data_kegiatan`";
+        String query = "SELECT * FROM `data_keuangan`";
         
         try{
             java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -69,18 +69,14 @@ public class PrintKegiatan extends javax.swing.JFrame {
             
             while (rslt.next()){
                 //menampung data sementara
-                
-                    String no_kegiatan = rslt.getString("no_kegiatan");
-                    String nama_kegiatan = rslt.getString("nama_kegiatan");
-                    String tanggal_kegiatan = rslt.getString("tanggal_kegiatan");
-                    String lokasi = rslt.getString("lokasi");
-                    String keterangan = rslt.getString("keterangan");
-                    String kuota_pendonor = rslt.getString("kuota_pendonor");
-                    String jumlah_petugas = rslt.getString("jumlah_petugas");
-                    String perijinan_ketua = rslt.getString("perijinan_ketua");
-                    
+                    String no_uang = rslt.getString("no_uang");
+                    String tanggal = rslt.getString("tanggal");
+                    String nominal_uang = rslt.getString("nominal_uang");
+                    String keterangan_uang = rslt.getString("keterangan");
+                    String status_uang = rslt.getString("status");
+                    //String waktu_uang = rslt.getString("waktu");
                 //masukan semua data kedalam array
-                String[] data = {no_kegiatan,nama_kegiatan,tanggal_kegiatan,lokasi,keterangan,kuota_pendonor,jumlah_petugas,perijinan_ketua};
+                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang}; //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -99,44 +95,49 @@ public class PrintKegiatan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-      String cari = txtFieldCari21552011235.getText();
-      String query = "SELECT * FROM `data_kegiatan` WHERE "
-                + "`no_kegiatan` LIKE '%"+cari+"%' OR"
-                + "`nama_kegiatan`  LIKE '%"+cari+"%' OR "
-                + "`tanggal_kegiatan` LIKE '%"+cari+"%' OR"
-                + "`lokasi` LIKE '%"+cari+"%' OR"
-                + "`keterangan` LIKE '%"+cari+"%' OR"
-                + "`kuota_pendonor` LIKE '%"+cari+"%' OR"
-                + "`jumlah_petugas` LIKE '%"+cari+"%' OR"
-                + "`perijinan_ketua` LIKE '%"+cari+"%'  ";
+        String cari = txtFieldCari21552011235.getText();
+        
+        String query = "SELECT * FROM `transaksi` WHERE "
+                + "`kode_menu`  LIKE '%"+cari+"%' OR "
+                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
+                + "`id_transaksi` LIKE '%"+cari+"%' OR"
+                + "`nama_menu` LIKE '%"+cari+"%' ";
                 
        try{
-           java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
+           Connection connect = koneksi.getKoneksi();//memanggil koneksi
            Statement sttmnt = connect.createStatement();//membuat statement
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
-                    String no_kegiatan = rslt.getString("no_kegiatan");
-                    String nama_kegiatan = rslt.getString("nama_kegiatan");
-                    String tanggal_kegiatan = rslt.getString("tanggal_kegiatan");
-                    String lokasi = rslt.getString("lokasi");
-                    String keterangan = rslt.getString("keterangan");
-                    String kuota_pendonor = rslt.getString("kuota_pendonor");
-                    String jumlah_petugas = rslt.getString("jumlah_petugas");
-                    String perijinan_ketua = rslt.getString("perijinan_ketua");
+                //menampung data sementara
+                   
+                    String tanggal = rslt.getString("tgl_transaksi");
+                    String id = rslt.getString("id_transaksi");
+                    String kode = rslt.getString("kode_menu");
+                    String nama = rslt.getString("nama_menu");
+                    String harga = rslt.getString("harga");
+                    String jumlah = rslt.getString("jumlah_menu");
+                    String total = rslt.getString("total_harga");
                     
-                String[] data = {no_kegiatan,tanggal_kegiatan,nama_kegiatan,lokasi,keterangan,kuota_pendonor,jumlah_petugas,perijinan_ketua};
+                //masukan semua data kedalam array
+                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
                 tableData21552011235.setModel(table);
-                
+           
+        
     }catch(SQLException e){
            System.out.println(e);
     }
-  }
+    }
     
+    
+    
+    
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -209,7 +210,7 @@ public class PrintKegiatan extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Kegiatan");
+        DaftarMenu.setText("Print Data Keuangan");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -460,46 +461,14 @@ public class PrintKegiatan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintKegiatan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -534,15 +503,13 @@ public class PrintKegiatan extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PrintKegiatan().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new PrintKeuangan().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnBack21552011235;
+    public javax.swing.JLabel BtnBack21552011235;
     private javax.swing.JLabel BtnCari21552011235;
     private javax.swing.JLabel BtnCari77174756;
     private javax.swing.JLabel BtnPrint21552011235;

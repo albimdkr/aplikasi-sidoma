@@ -23,15 +23,13 @@ public class dashboardBendahara extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardBendahara(String username) {
+    public dashboardBendahara() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        usernameBendahara21552011235.setText(username);
+        //usernameBendahara21552011235.setText(username);
     }
 
-    dashboardBendahara() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -521,7 +519,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnLogout21552011235MouseEntered
 
     private void BtnLogout21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseClicked
-        new login.selamatDatang().setVisible(true);
+        new login.loginUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 

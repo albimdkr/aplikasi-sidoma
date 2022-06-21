@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package petugas;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
@@ -22,15 +23,14 @@ public class dashboardPetugas extends javax.swing.JFrame {
      * Creates new form Dashboard
      */
     boolean a= true;
-    public dashboardPetugas(String username) {
+    public dashboardPetugas() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        usernamePetugas21552011235.setText(username);
+        //usernamePetugas21552011235.setText(username);
     }
 
-    dashboardPetugas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
+    
 
 
     /**
@@ -637,7 +637,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnLogout21552011235MouseEntered
 
     private void BtnLogout21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseClicked
-        new login.selamatDatang().setVisible(true);
+        new login.loginUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 
@@ -772,11 +772,11 @@ public class dashboardPetugas extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new dashboardPetugas().setVisible(true);
-//            }
-//        });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new dashboardPetugas().setVisible(true);
+            }
+        });
   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

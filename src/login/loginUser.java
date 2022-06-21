@@ -6,10 +6,11 @@
 package login;
 
 //import static petugas.dashboardPetugas.UserNamePetugas21552011235;
-import admin.dashboardAdmin;
+import static admin.dashboardAdmin.usernameAdmin21552011235;
+import static sekretaris.dashboardSekretaris.usernameSekretaris21552011235;
+import static petugas.dashboardPetugas.usernamePetugas21552011235;
+import static bendahara.dashboardBendahara.usernameBendahara21552011235;
 import com.mysql.jdbc.Connection;
-//import koneksi.*;
-//import transaksi.*;
 import java.awt.Color;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
@@ -20,6 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import koneksi.koneksi;
+import admin.dashboardAdmin;
 import sekretaris.dashboardSekretaris;
 import bendahara.dashboardBendahara;
 import petugas.dashboardPetugas;
@@ -75,29 +77,41 @@ public class loginUser extends javax.swing.JFrame {
                 String s1 = rs.getString("role");
                 String un = rs.getString("username");
                 if(role.equalsIgnoreCase("Admin")&& s1.equalsIgnoreCase("Admin")){
-                    dashboardAdmin adm = new admin.dashboardAdmin(un);
-                    adm.setVisible(true);
-                    //setVisible(false);
-                    //JOptionPane.showMessageDialog(null, "Login Berhasil");
+//                    dashboardAdmin adm = new admin.dashboardAdmin(un);
+//                    adm.setVisible(true);
+//                    setVisible(false);
+//                    dispose();
+                    new admin.dashboardAdmin().setVisible(true);
                     dispose();
+                    usernameAdmin21552011235.setText(rs.getString(2));
+                    
                     }
                 if(role.equalsIgnoreCase("Sekretaris")&& s1.equalsIgnoreCase("Sekretaris")){
-                    dashboardSekretaris skr = new sekretaris.dashboardSekretaris(un);
-                    skr.setVisible(true);
+//                    dashboardSekretaris skr = new sekretaris.dashboardSekretaris(un);
+//                    skr.setVisible(true);
+//                    setVisible(false);
+//                    dispose();
+                    new sekretaris.dashboardSekretaris().setVisible(true);
                     dispose();
+                    usernameSekretaris21552011235.setText(rs.getString(2));
                     }
                 if(role.equalsIgnoreCase("Bendahara")&& s1.equalsIgnoreCase("Bendahara")){
-                    dashboardBendahara bdr = new bendahara.dashboardBendahara(un);
-                    bdr.setVisible(true);
-                    //setVisible(false);
+//                    dashboardBendahara bdr = new bendahara.dashboardBendahara(un);
+//                    bdr.setVisible(true);
+//                    setVisible(false);
+//                    dispose();
+                    new bendahara.dashboardBendahara().setVisible(true);
                     dispose();
-                    JOptionPane.showMessageDialog(null, "Login Berhasil");
+                    usernameBendahara21552011235.setText(rs.getString(2));
                     }
                 if(role.equalsIgnoreCase("Petugas")&& s1.equalsIgnoreCase("Petugas")){
-                    dashboardPetugas ptgs = new petugas.dashboardPetugas(un);
-                    ptgs.setVisible(true);
-                    //setVisible(false);
-                    dispose();
+//                    dashboardPetugas ptgs = new petugas.dashboardPetugas(un);
+//                    ptgs.setVisible(true);
+//                    setVisible(false);
+//                    dispose();
+                   new petugas.dashboardPetugas().setVisible(true);
+                   dispose();
+                   usernamePetugas21552011235.setText(rs.getString(2));
                     }
                 } else {
                 JOptionPane.showMessageDialog(null, "Username atau Password Salah!!!");

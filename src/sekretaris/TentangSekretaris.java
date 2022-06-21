@@ -5,7 +5,7 @@
  */
 package sekretaris;
 
-import petugas.*;
+import sekretaris.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JFrame;
