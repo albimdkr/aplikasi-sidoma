@@ -21,10 +21,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import koneksi.koneksi;
-import admin.dashboardAdmin;
-import sekretaris.dashboardSekretaris;
-import bendahara.dashboardBendahara;
-import petugas.dashboardPetugas;
+//import admin.dashboardAdmin;
+//import sekretaris.dashboardSekretaris;
+//import bendahara.dashboardBendahara;
+//import petugas.dashboardPetugas;
 
 /**
  *
@@ -41,6 +41,7 @@ public class loginUser extends javax.swing.JFrame {
         Connection con;
         PreparedStatement pst;
         ResultSet rs;
+    //private Object usernameAdmin21552011235;
     
         
 
@@ -151,6 +152,9 @@ public class loginUser extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        sidoma = new javax.swing.JLabel();
+        sidoma3 = new javax.swing.JLabel();
+        sidoma2 = new javax.swing.JLabel();
         disable = new javax.swing.JLabel();
         show = new javax.swing.JLabel();
         langkop = new javax.swing.JLabel();
@@ -160,6 +164,7 @@ public class loginUser extends javax.swing.JFrame {
         jComboBoxRoleUser21552011235 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
+        sidoma1 = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -236,6 +241,27 @@ public class loginUser extends javax.swing.JFrame {
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/clrredLOGIN.png"))); // NOI18N
         jpanelPetugas21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 300, 40));
 
+        sidoma.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma.setText("MAJALAYA");
+        jpanelPetugas21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 36));
+
+        sidoma3.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma3.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma3.setText("PDDM");
+        jpanelPetugas21552011235.add(sidoma3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 120, 36));
+
+        sidoma2.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma2.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
+        jpanelPetugas21552011235.add(sidoma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 120, 100));
+
         disable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/eyewhite20.png"))); // NOI18N
         disable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -292,6 +318,13 @@ public class loginUser extends javax.swing.JFrame {
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
         jpanelPetugas21552011235.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 510, 440));
+
+        sidoma1.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma1.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma1.setText("MAJALAYA");
+        jpanelPetugas21552011235.add(sidoma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 36));
 
         getContentPane().add(jpanelPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
@@ -400,6 +433,10 @@ public class loginUser extends javax.swing.JFrame {
     private javax.swing.JPanel jpanelPetugas21552011235;
     private javax.swing.JLabel langkop;
     private javax.swing.JLabel show;
+    private javax.swing.JLabel sidoma;
+    private javax.swing.JLabel sidoma1;
+    private javax.swing.JLabel sidoma2;
+    private javax.swing.JLabel sidoma3;
     private javax.swing.JPasswordField txtpasswordPetugas21552011235;
     private javax.swing.JTextField txtusername21552011235;
     // End of variables declaration//GEN-END:variables

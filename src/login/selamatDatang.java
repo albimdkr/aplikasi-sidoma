@@ -48,6 +48,9 @@ public class selamatDatang extends javax.swing.JFrame {
         BtnBantuan21552011235 = new javax.swing.JLabel();
         versi = new javax.swing.JLabel();
         LoadingValue = new javax.swing.JLabel();
+        sidoma3 = new javax.swing.JLabel();
+        sidoma2 = new javax.swing.JLabel();
+        sidoma1 = new javax.swing.JLabel();
         LoadingBar = new javax.swing.JProgressBar();
         Developed1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -101,8 +104,8 @@ public class selamatDatang extends javax.swing.JFrame {
         sidoma.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sidoma.setForeground(new java.awt.Color(255, 255, 255));
         sidoma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        sidoma.setText("SIDOMA");
-        jpanelLogin21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
+        sidoma.setText("MAJALAYA");
+        jpanelLogin21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 36));
 
         panelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
         panelLogin21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -166,6 +169,27 @@ public class selamatDatang extends javax.swing.JFrame {
         LoadingValue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoadingValue.setText("0%");
         jpanelLogin21552011235.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 40, 36));
+
+        sidoma3.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma3.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma3.setText("PDDM");
+        jpanelLogin21552011235.add(sidoma3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 120, 36));
+
+        sidoma2.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma2.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
+        jpanelLogin21552011235.add(sidoma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 120, 100));
+
+        sidoma1.setBackground(new java.awt.Color(0, 0, 0));
+        sidoma1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        sidoma1.setForeground(new java.awt.Color(255, 255, 255));
+        sidoma1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sidoma1.setText("SIDOMA");
+        jpanelLogin21552011235.add(sidoma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
 
         LoadingBar.setBackground(new java.awt.Color(255, 0, 0));
         jpanelLogin21552011235.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 530, 10));
@@ -320,6 +344,9 @@ public class selamatDatang extends javax.swing.JFrame {
     private javax.swing.JPanel panelBantuan21552011235;
     private javax.swing.JPanel panelLogin21552011235;
     private javax.swing.JLabel sidoma;
+    private javax.swing.JLabel sidoma1;
+    private javax.swing.JLabel sidoma2;
+    private javax.swing.JLabel sidoma3;
     private javax.swing.JLabel versi;
     // End of variables declaration//GEN-END:variables
 

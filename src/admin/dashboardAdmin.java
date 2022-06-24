@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package admin;
-import petugas.*;
+
+import admin.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
@@ -26,7 +27,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     public dashboardAdmin() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        //usernameAdmin21552011235.setText(username);
+        //usernameAdmin21552011235.setText();
     }
 
 
@@ -57,9 +58,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
         FormPanel21552011235 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         BtnForm21552011235 = new javax.swing.JLabel();
-        laporanPanel21552011235 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        BtnLaporani21552011235 = new javax.swing.JLabel();
         tentangPanel21552011235 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         BtnTentang21552011235 = new javax.swing.JLabel();
@@ -69,25 +67,19 @@ public class dashboardAdmin extends javax.swing.JFrame {
         jTabbedPanel21552011235 = new javax.swing.JTabbedPane();
         HomeTabbed21552011235 = new javax.swing.JPanel();
         IconUser = new javax.swing.JLabel();
-        jLabelAdmin = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        UserName = new javax.swing.JLabel();
         DaftarMenuTabbed21552011235 = new javax.swing.JPanel();
         PanelDaftarmenu21552011235 = new javax.swing.JPanel();
         TabHomePanelDataPendonor = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        TabFormDataPendonor21552011235 = new javax.swing.JLabel();
-        TabHomePanelTrasnfusi21552011235 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        TabFormBtnTransfusi21552011235 = new javax.swing.JLabel();
-        TabFormPanelPasien21552011235 = new javax.swing.JPanel();
+        TabFormAddUser21552011235 = new javax.swing.JLabel();
+        TabFormPanelLaporanKegiatan21552011235 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        TabFormPasien21552011235 = new javax.swing.JLabel();
-        RiwayatTabbed21552011235 = new javax.swing.JPanel();
-        PanelRiwayat21552011235 = new javax.swing.JPanel();
-        TabRiwayatBtn21552011235 = new javax.swing.JLabel();
+        TabFormLaporanKegiatan21552011235 = new javax.swing.JLabel();
         TentangTabbed21552011235 = new javax.swing.JPanel();
         PanelTentang21552011235 = new javax.swing.JPanel();
         TabTentangBtn21552011235 = new javax.swing.JLabel();
@@ -213,32 +205,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
 
         sidebar21552011235.add(FormPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
 
-        laporanPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        laporanPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-20.png"))); // NOI18N
-        laporanPanel21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
-
-        BtnLaporani21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnLaporani21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnLaporani21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnLaporani21552011235.setText("Laporan");
-        BtnLaporani21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnLaporani21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnLaporani21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnLaporani21552011235MouseExited(evt);
-            }
-        });
-        laporanPanel21552011235.add(BtnLaporani21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
-
-        sidebar21552011235.add(laporanPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
-
         tentangPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
         tentangPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -263,7 +229,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         });
         tentangPanel21552011235.add(BtnTentang21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(tentangPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 270, 50));
+        sidebar21552011235.add(tentangPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
 
         Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
@@ -294,32 +260,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(51, 270, 0, 0);
         HomeTabbed21552011235.add(IconUser, gridBagConstraints);
-
-        jLabelAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabelAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelAdmin.setText("Admin");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 43;
-        gridBagConstraints.ipady = 10;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(jLabelAdmin, gridBagConstraints);
-
-        usernameAdmin21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        usernameAdmin21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 160;
-        gridBagConstraints.ipady = 60;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(usernameAdmin21552011235, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -369,158 +309,97 @@ public class dashboardAdmin extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(43, 270, 0, 0);
         HomeTabbed21552011235.add(jLabel6, gridBagConstraints);
 
+        usernameAdmin21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        usernameAdmin21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 160;
+        gridBagConstraints.ipady = 60;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(67, 6, 0, 0);
+        HomeTabbed21552011235.add(usernameAdmin21552011235, gridBagConstraints);
+
+        UserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        UserName.setForeground(new java.awt.Color(255, 255, 255));
+        UserName.setText("Admin");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 62;
+        gridBagConstraints.ipady = 10;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(67, 6, 0, 0);
+        HomeTabbed21552011235.add(UserName, gridBagConstraints);
+
         jTabbedPanel21552011235.addTab("", HomeTabbed21552011235);
 
         DaftarMenuTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        DaftarMenuTabbed21552011235.setLayout(new java.awt.GridBagLayout());
+        DaftarMenuTabbed21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PanelDaftarmenu21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelDaftarmenu21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelDaftarmenu21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        DaftarMenuTabbed21552011235.add(PanelDaftarmenu21552011235, gridBagConstraints);
+        DaftarMenuTabbed21552011235.add(PanelDaftarmenu21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         TabHomePanelDataPendonor.setBackground(new java.awt.Color(17, 43, 60));
         TabHomePanelDataPendonor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         TabHomePanelDataPendonor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-96.png"))); // NOI18N
-        TabHomePanelDataPendonor.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 70, -1));
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-96.png"))); // NOI18N
+        TabHomePanelDataPendonor.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -10, 90, 90));
 
-        TabFormDataPendonor21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabFormDataPendonor21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormDataPendonor21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormDataPendonor21552011235.setText("Pendonor");
-        TabFormDataPendonor21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabFormDataPendonor21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabFormAddUser21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TabFormAddUser21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormAddUser21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormAddUser21552011235.setText("Form Add User");
+        TabFormAddUser21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabFormAddUser21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonor21552011235MouseClicked(evt);
+                TabFormAddUser21552011235MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonor21552011235MouseEntered(evt);
+                TabFormAddUser21552011235MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonor21552011235MouseExited(evt);
+                TabFormAddUser21552011235MouseExited(evt);
             }
         });
-        TabHomePanelDataPendonor.add(TabFormDataPendonor21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
+        TabHomePanelDataPendonor.add(TabFormAddUser21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 230));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(132, 101, 169, 0);
-        DaftarMenuTabbed21552011235.add(TabHomePanelDataPendonor, gridBagConstraints);
+        DaftarMenuTabbed21552011235.add(TabHomePanelDataPendonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 132, 210, 230));
 
-        TabHomePanelTrasnfusi21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        TabHomePanelTrasnfusi21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelTrasnfusi21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        TabFormPanelLaporanKegiatan21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        TabFormPanelLaporanKegiatan21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        TabFormPanelLaporanKegiatan21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-heart-with-pulse-96.png"))); // NOI18N
-        TabHomePanelTrasnfusi21552011235.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 80, 80));
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-history-96.png"))); // NOI18N
+        TabFormPanelLaporanKegiatan21552011235.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 100, 100));
 
-        TabFormBtnTransfusi21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabFormBtnTransfusi21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormBtnTransfusi21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormBtnTransfusi21552011235.setText("Transfusi");
-        TabFormBtnTransfusi21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabFormLaporanKegiatan21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TabFormLaporanKegiatan21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormLaporanKegiatan21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormLaporanKegiatan21552011235.setText("Laporan Kegiatan");
+        TabFormLaporanKegiatan21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormBtnTransfusi21552011235MouseClicked(evt);
+                TabFormLaporanKegiatan21552011235MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormBtnTransfusi21552011235MouseEntered(evt);
+                TabFormLaporanKegiatan21552011235MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormBtnTransfusi21552011235MouseExited(evt);
+                TabFormLaporanKegiatan21552011235MouseExited(evt);
             }
         });
-        TabHomePanelTrasnfusi21552011235.add(TabFormBtnTransfusi21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
+        TabFormPanelLaporanKegiatan21552011235.add(TabFormLaporanKegiatan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 230));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(132, 102, 169, 60);
-        DaftarMenuTabbed21552011235.add(TabHomePanelTrasnfusi21552011235, gridBagConstraints);
-
-        TabFormPanelPasien21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        TabFormPanelPasien21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabFormPanelPasien21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-stethoscope-96.png"))); // NOI18N
-        TabFormPanelPasien21552011235.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 100, 100));
-
-        TabFormPasien21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabFormPasien21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormPasien21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormPasien21552011235.setText("Pasien");
-        TabFormPasien21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormPasien21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormPasien21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormPasien21552011235MouseExited(evt);
-            }
-        });
-        TabFormPanelPasien21552011235.add(TabFormPasien21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(132, 99, 169, 0);
-        DaftarMenuTabbed21552011235.add(TabFormPanelPasien21552011235, gridBagConstraints);
+        DaftarMenuTabbed21552011235.add(TabFormPanelLaporanKegiatan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 130, 210, 230));
 
         jTabbedPanel21552011235.addTab("", DaftarMenuTabbed21552011235);
-
-        RiwayatTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        RiwayatTabbed21552011235.setLayout(new java.awt.GridBagLayout());
-
-        PanelRiwayat21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelRiwayat21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelRiwayat21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        TabRiwayatBtn21552011235.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        TabRiwayatBtn21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabRiwayatBtn21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabRiwayatBtn21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-96.png"))); // NOI18N
-        TabRiwayatBtn21552011235.setText("Riwayat Transfusi");
-        TabRiwayatBtn21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabRiwayatBtn21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabRiwayatBtn21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabRiwayatBtn21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabRiwayatBtn21552011235MouseExited(evt);
-            }
-        });
-        PanelRiwayat21552011235.add(TabRiwayatBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 200));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(120, 130, 152, 74);
-        RiwayatTabbed21552011235.add(PanelRiwayat21552011235, gridBagConstraints);
-
-        jTabbedPanel21552011235.addTab("", RiwayatTabbed21552011235);
 
         TentangTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
         TentangTabbed21552011235.setLayout(new java.awt.GridBagLayout());
@@ -657,7 +536,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnForm21552011235MouseClicked
 
     private void BtnTentang21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(3);
+        jTabbedPanel21552011235.setSelectedIndex(2);
     }//GEN-LAST:event_BtnTentang21552011235MouseClicked
 
     private void TabTentangBtn21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseExited
@@ -673,68 +552,31 @@ public class dashboardAdmin extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_TabTentangBtn21552011235MouseClicked
 
-    private void TabRiwayatBtn21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabRiwayatBtn21552011235MouseExited
-        changecolor(PanelRiwayat21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabRiwayatBtn21552011235MouseExited
+    private void TabFormLaporanKegiatan21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormLaporanKegiatan21552011235MouseExited
+        changecolor(TabFormPanelLaporanKegiatan21552011235, new Color (17,43,60));
+    }//GEN-LAST:event_TabFormLaporanKegiatan21552011235MouseExited
 
-    private void TabRiwayatBtn21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabRiwayatBtn21552011235MouseEntered
-        changecolor(PanelRiwayat21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabRiwayatBtn21552011235MouseEntered
+    private void TabFormLaporanKegiatan21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormLaporanKegiatan21552011235MouseEntered
+        changecolor(TabFormPanelLaporanKegiatan21552011235, new Color (32,108,151));
+    }//GEN-LAST:event_TabFormLaporanKegiatan21552011235MouseEntered
 
-    private void TabRiwayatBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabRiwayatBtn21552011235MouseClicked
-        new petugas.RiwayatTransfusi().setVisible(true);
-        dispose();
-    }//GEN-LAST:event_TabRiwayatBtn21552011235MouseClicked
-
-    private void TabFormPasien21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasien21552011235MouseExited
-        changecolor(TabFormPanelPasien21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormPasien21552011235MouseExited
-
-    private void TabFormPasien21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasien21552011235MouseEntered
-        changecolor(TabFormPanelPasien21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormPasien21552011235MouseEntered
-
-    private void TabFormPasien21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasien21552011235MouseClicked
+    private void TabFormLaporanKegiatan21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormLaporanKegiatan21552011235MouseClicked
         new petugas.FormPasien().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabFormPasien21552011235MouseClicked
+    }//GEN-LAST:event_TabFormLaporanKegiatan21552011235MouseClicked
 
-    private void TabFormBtnTransfusi21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormBtnTransfusi21552011235MouseExited
-        changecolor(TabHomePanelTrasnfusi21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormBtnTransfusi21552011235MouseExited
-
-    private void TabFormBtnTransfusi21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormBtnTransfusi21552011235MouseEntered
-        changecolor(TabHomePanelTrasnfusi21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormBtnTransfusi21552011235MouseEntered
-
-    private void TabFormBtnTransfusi21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormBtnTransfusi21552011235MouseClicked
-        //// click to form transfusi
-    }//GEN-LAST:event_TabFormBtnTransfusi21552011235MouseClicked
-
-    private void TabFormDataPendonor21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseExited
+    private void TabFormAddUser21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormAddUser21552011235MouseExited
         changecolor(TabHomePanelDataPendonor, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormDataPendonor21552011235MouseExited
+    }//GEN-LAST:event_TabFormAddUser21552011235MouseExited
 
-    private void TabFormDataPendonor21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseEntered
+    private void TabFormAddUser21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormAddUser21552011235MouseEntered
         changecolor(TabHomePanelDataPendonor, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormDataPendonor21552011235MouseEntered
+    }//GEN-LAST:event_TabFormAddUser21552011235MouseEntered
 
-    private void TabFormDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseClicked
+    private void TabFormAddUser21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormAddUser21552011235MouseClicked
         new petugas.FormPendonor().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabFormDataPendonor21552011235MouseClicked
-
-    private void BtnLaporani21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporani21552011235MouseExited
-        changecolor(laporanPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnLaporani21552011235MouseExited
-
-    private void BtnLaporani21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporani21552011235MouseEntered
-        changecolor(laporanPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnLaporani21552011235MouseEntered
-
-    private void BtnLaporani21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLaporani21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(2);
-    }//GEN-LAST:event_BtnLaporani21552011235MouseClicked
+    }//GEN-LAST:event_TabFormAddUser21552011235MouseClicked
 
     /**
      * @param args the command line arguments
@@ -805,7 +647,6 @@ public class dashboardAdmin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BtnForm21552011235;
     private javax.swing.JLabel BtnHome21552011235;
-    private javax.swing.JLabel BtnLaporani21552011235;
     private javax.swing.JLabel BtnLogout21552011235;
     private javax.swing.JPanel BtnMax21552011235;
     private javax.swing.JPanel BtnMin21552011235;
@@ -818,18 +659,14 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel Logo;
     private javax.swing.JPanel PanelDaftarmenu21552011235;
     private javax.swing.JPanel PanelLogout21552011235;
-    private javax.swing.JPanel PanelRiwayat21552011235;
     private javax.swing.JPanel PanelTentang21552011235;
-    private javax.swing.JPanel RiwayatTabbed21552011235;
-    private javax.swing.JLabel TabFormBtnTransfusi21552011235;
-    private javax.swing.JLabel TabFormDataPendonor21552011235;
-    private javax.swing.JPanel TabFormPanelPasien21552011235;
-    private javax.swing.JLabel TabFormPasien21552011235;
+    private javax.swing.JLabel TabFormAddUser21552011235;
+    private javax.swing.JLabel TabFormLaporanKegiatan21552011235;
+    private javax.swing.JPanel TabFormPanelLaporanKegiatan21552011235;
     private javax.swing.JPanel TabHomePanelDataPendonor;
-    private javax.swing.JPanel TabHomePanelTrasnfusi21552011235;
-    private javax.swing.JLabel TabRiwayatBtn21552011235;
     private javax.swing.JLabel TabTentangBtn21552011235;
     private javax.swing.JPanel TentangTabbed21552011235;
+    private javax.swing.JLabel UserName;
     private javax.swing.JPanel header21552011235;
     private javax.swing.JPanel homePanel21552011235;
     private javax.swing.JPanel iconMenu;
@@ -840,15 +677,11 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabelAdmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPanel21552011235;
-    private javax.swing.JPanel laporanPanel21552011235;
     private javax.swing.JPanel menu21552011235;
     private javax.swing.JPanel sidebar21552011235;
     private javax.swing.JPanel tentangPanel21552011235;
@@ -861,19 +694,4 @@ public class dashboardAdmin extends javax.swing.JFrame {
         }
     }
 
-    private static class Jpanel {
-
-        public Jpanel() {
-        }
-
-        private void setbackground(color rand) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-    }
-
-    private static class jTabbedPanel {
-
-        public jTabbedPanel() {
-        }
-    }
 }
