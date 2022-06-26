@@ -561,7 +561,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_TabFormLaporanKegiatan21552011235MouseEntered
 
     private void TabFormLaporanKegiatan21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormLaporanKegiatan21552011235MouseClicked
-        new petugas.FormPasien().setVisible(true);
+        new transfusi.FormPasien().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabFormLaporanKegiatan21552011235MouseClicked
 

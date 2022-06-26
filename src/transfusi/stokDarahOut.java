@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package donor;
+package transfusi;
 
+import donor.*;
 import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,13 +22,13 @@ import koneksi.koneksi;
  *
  * @author albin
  */
-public class stokDarah extends javax.swing.JFrame {
+public class stokDarahOut extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public stokDarah() {
+    public stokDarahOut() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         
@@ -412,7 +413,7 @@ public class stokDarah extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
-        new donor.FormPendonor().setVisible(true);
+        new transfusi.FormPasien().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBack21552011235MouseClicked
 
@@ -474,17 +475,17 @@ public class stokDarah extends javax.swing.JFrame {
 
     private void tableData21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableData21552011235MouseClicked
         int row = tableData21552011235.getSelectedRow();
-        FormPendonor donor = new FormPendonor();
+        FormPasien transfusi = new FormPasien();
 
         String id = table.getValueAt(row, 0).toString();
-        donor.txtFieldIdDarah21552011235.setText(id);
+        transfusi.txtFieldIdDarah21552011235.setText(id);
 
         String golongan_darah = table.getValueAt(row, 1).toString();
-        donor.txtFieldGolonganDarah21552011235.setText(golongan_darah);
+        transfusi.txtFieldGolonganDarah21552011235.setText(golongan_darah);
     
-        donor.setVisible(true);
-        donor.pack();
-        donor.setDefaultCloseOperation(FormPendonor.DISPOSE_ON_CLOSE);
+        transfusi.setVisible(true);
+        transfusi.pack();
+        transfusi.setDefaultCloseOperation(FormPasien.DISPOSE_ON_CLOSE);
         dispose();
     }//GEN-LAST:event_tableData21552011235MouseClicked
 
@@ -505,14 +506,110 @@ public class stokDarah extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(stokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(stokDarahOut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(stokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(stokDarahOut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(stokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(stokDarahOut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(stokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(stokDarahOut.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -549,7 +646,7 @@ public class stokDarah extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new stokDarah().setVisible(true);
+                new stokDarahOut().setVisible(true);
             }
         });
     }

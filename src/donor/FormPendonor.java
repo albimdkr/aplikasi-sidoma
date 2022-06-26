@@ -922,7 +922,7 @@ public class FormPendonor extends javax.swing.JFrame {
         BtnDarah21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BtnDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnDarah21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnDarah21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-24.png"))); // NOI18N
+        BtnDarah21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-48.png"))); // NOI18N
         BtnDarah21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnDarah21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -935,9 +935,9 @@ public class FormPendonor extends javax.swing.JFrame {
                 BtnDarah21552011235MouseExited(evt);
             }
         });
-        PanelDarah21552011235.add(BtnDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 120));
+        PanelDarah21552011235.add(BtnDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 150));
 
-        jPanel3.add(PanelDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 160, 70, 120));
+        jPanel3.add(PanelDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 70, 150));
 
         PanelCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelCari21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -995,22 +995,22 @@ public class FormPendonor extends javax.swing.JFrame {
         line19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         line19.setForeground(new java.awt.Color(255, 255, 255));
         line19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        line19.setText("______");
-        jPanel3.add(line19, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 260, 60, 20));
+        line19.setText("_________________");
+        jPanel3.add(line19, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 260, 160, 20));
 
         line22.setBackground(new java.awt.Color(255, 255, 255));
         line22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         line22.setForeground(new java.awt.Color(255, 255, 255));
         line22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         line22.setText("______");
-        jPanel3.add(line22, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 210, 60, 20));
+        jPanel3.add(line22, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 60, 20));
 
         line20.setBackground(new java.awt.Color(255, 255, 255));
         line20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         line20.setForeground(new java.awt.Color(255, 255, 255));
         line20.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         line20.setText("__________");
-        jPanel3.add(line20, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 90, 20));
+        jPanel3.add(line20, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 180, 90, 20));
 
         txtFieldIdDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldIdDarah21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -1018,7 +1018,7 @@ public class FormPendonor extends javax.swing.JFrame {
         txtFieldIdDarah21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFieldIdDarah21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldIdDarah21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldIdDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, 60, 50));
+        jPanel3.add(txtFieldIdDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 60, 50));
 
         tanggalLahir1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tanggalLahir1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1037,25 +1037,25 @@ public class FormPendonor extends javax.swing.JFrame {
                 txtFieldGolonganDarah21552011235ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtFieldGolonganDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 90, 50));
+        jPanel3.add(txtFieldGolonganDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 90, 50));
 
         golDarah2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah2.setForeground(new java.awt.Color(255, 255, 255));
         golDarah2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         golDarah2.setText("Jumlah Labu");
-        jPanel3.add(golDarah2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, 100, 50));
+        jPanel3.add(golDarah2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 100, 50));
 
         golDarah3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah3.setForeground(new java.awt.Color(255, 255, 255));
         golDarah3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         golDarah3.setText("Gol_darah");
-        jPanel3.add(golDarah3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 100, 30));
+        jPanel3.add(golDarah3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 120, 100, 30));
 
         golDarah4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah4.setForeground(new java.awt.Color(255, 255, 255));
         golDarah4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         golDarah4.setText("ID");
-        jPanel3.add(golDarah4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 150, 40, 30));
+        jPanel3.add(golDarah4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 120, 40, 30));
 
         txtFieldJumlahLabu21552011235.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldJumlahLabu21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -1063,7 +1063,7 @@ public class FormPendonor extends javax.swing.JFrame {
         txtFieldJumlahLabu21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFieldJumlahLabu21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldJumlahLabu21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldJumlahLabu21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 230, 60, 50));
+        jPanel3.add(txtFieldJumlahLabu21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 160, 50));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
@@ -1278,7 +1278,7 @@ public class FormPendonor extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCari77174756MouseExited
 
     private void BtnDarah21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseClicked
-        new stokDarah().setVisible(true);
+        new stokDarahIn().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnDarah21552011235MouseClicked
 
