@@ -574,7 +574,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_TabFormAddUser21552011235MouseEntered
 
     private void TabFormAddUser21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormAddUser21552011235MouseClicked
-        new petugas.FormPendonor().setVisible(true);
+        new admin.FormAddUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabFormAddUser21552011235MouseClicked
 

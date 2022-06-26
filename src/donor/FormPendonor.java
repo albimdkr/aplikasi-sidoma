@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package petugas;
+package donor;
 
 //import com.toedter.calendar.JDateChooser;
+import petugas.*;
 import java.awt.Color;
 //import java.awt.Dimension;
 import java.awt.HeadlessException;
@@ -72,13 +73,14 @@ public class FormPendonor extends javax.swing.JFrame {
         table.addColumn("Tanggal Lahir");
         table.addColumn("No.Telp");
         table.addColumn("Gmail");
+        table.addColumn("ID darah");
         table.addColumn("Golongan Darah");
         table.addColumn("Usia");
         table.addColumn("Berat Badan");
         table.addColumn("Alamat");
         table.addColumn("Hemoglobin");
         table.addColumn("Riwayat Penyakit");
-        table.addColumn("Jumlah Transfusi");
+        table.addColumn("Total Donor");
         table.addColumn("Tanggal terakhir transfusi");
         tampilData();
     }
@@ -113,12 +115,12 @@ public class FormPendonor extends javax.swing.JFrame {
                     String alamatpendonor = rslt.getString("alamat");
                     String hemoglobin = rslt.getString("hemoglobin");
                     String riwayat_penyakit = rslt.getString("riwayat_penyakit");
-                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
-                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String total_donor = rslt.getString("total_donor");
+                    String tanggal_terakhir_donor = rslt.getString("tanggal_terakhir_donor");
                     
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,total_donor,tanggal_terakhir_donor};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -140,14 +142,17 @@ public class FormPendonor extends javax.swing.JFrame {
           jDateChooserTanggalLahir.setCalendar(null);
           txtFieldNoTelp21552011235.setText(null);
           txtFieldAkunGmail21552011235.setText(null);
-          jComboBoxGolDarah.setSelectedIndex(0);
+          txtFieldGolonganDarah21552011235.setText(null);
+          //jComboBoxGolDarah.setSelectedIndex(0);
           txtFieldUsia21552011235.setText(null);
           txtFieldBeratBadan21552011235.setText(null);
           txtFieldAlamat21552011235.setText(null);
           jComboBoxHemoglobin.setSelectedIndex(0);
           txtFieldRiwayatPenyakit21552011235.setText(null);
-          txtFieldJumlahTransfusi21552011235.setText(null);
-          jDateChooserTerakhirTransfusi.setCalendar(null);
+          txtFieldTotalDonor21552011235.setText(null);
+          txtFieldIdDarah21552011235.setText(null);
+          txtFieldJumlahLabu21552011235.setText(null);
+          jDateChooserTerakhirDonor.setCalendar(null);
     }
     
     
@@ -155,6 +160,7 @@ public class FormPendonor extends javax.swing.JFrame {
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal_daftar = date.format(jDateTanggalDaftar21552011235.getDate());
         //String no_pendonor = 
+        String id_darah = txtFieldIdDarah21552011235.getText();
         String nama = txtFieldNamaPendonor21552011235.getText();
         String jk;
         if (jRadioButtonLakiLaki21552011235.isSelected()){
@@ -166,22 +172,25 @@ public class FormPendonor extends javax.swing.JFrame {
         String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
-        String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
+        String golongan_darah = txtFieldGolonganDarah21552011235.getText();
+        String jumlah_labu = txtFieldJumlahLabu21552011235.getText();
+        //String id_darah = txtFieldDarah21552011235.getText();
+        //String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
         String usia = txtFieldUsia21552011235.getText();
         String berat_badan = txtFieldBeratBadan21552011235.getText();
         String alamatpendonor = txtFieldAlamat21552011235.getText();
         String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
         String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
-        String jumlah_transfusi = txtFieldJumlahTransfusi21552011235.getText();
+        String total_donor = txtFieldTotalDonor21552011235.getText();
         SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_terakhir_transfusi = tgl_tt.format(jDateChooserTerakhirTransfusi.getDate());
+        String tanggal_terakhir_donor = tgl_tt.format(jDateChooserTerakhirDonor.getDate());
         
         
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
-        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar`,no_pendonor,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`jumlah_transfusi`,`tanggal_terakhir_transfusi`) " 
-                     + "VALUES ('"+tanggal_daftar+"',NULL,'"+nama+"','"+jk+"','"+tanggal_lahir+"','"+no_telp+"','"+gmail+"','"+golongan_darah+"','"+usia+"','"+berat_badan+"','"+alamatpendonor+"','"+hemoglobin+"','"+riwayat_penyakit+"','"+jumlah_transfusi+"','"+tanggal_terakhir_transfusi+"')"; 
+        String query = "INSERT INTO `data_pendonor` (`tanggal_daftar`,no_pendonor,`id_darah`,`nama`,`jenis_kelamin`,`tanggal_lahir`,`no_telp`,`gmail`,`golongan_darah`,`jumlah_labu`,`usia`,`berat_badan`,`alamat`,`hemoglobin`,`riwayat_penyakit`,`total_donor`,`tanggal_terakhir_donor`) " 
+                     + "VALUES ('"+tanggal_daftar+"',NULL,'"+id_darah+"','"+nama+"','"+jk+"','"+tanggal_lahir+"','"+no_telp+"','"+gmail+"','"+golongan_darah+"','"+jumlah_labu+"','"+usia+"','"+berat_badan+"','"+alamatpendonor+"','"+hemoglobin+"','"+riwayat_penyakit+"','"+total_donor+"','"+tanggal_terakhir_donor+"')"; 
         
         try{ 
             //menyiapkan statement untuk di eksekusi
@@ -196,9 +205,24 @@ public class FormPendonor extends javax.swing.JFrame {
         }finally{
             tampilData();
             clear();
-            
         }
     }
+    
+//    private void darahMasuk(){
+//        String darah_masuk = "CALL `darah_masuk`()";
+//        
+//        try{
+//            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
+//            Statement sttmnt = connect.createStatement();//membuat statement
+//            ResultSet rslt = sttmnt.executeQuery(darah_masuk);//menjalanakn query\
+//                while(rslt.next()){
+//                    txtFieldJumlahLabu21552011235.setText(rslt.getString(1));
+//                }
+//                
+//        }catch(SQLException e){
+//            System.out.println(e);
+//        }
+//    }
     
     private void tanggal(){
         Date now = new Date();  
@@ -249,20 +273,21 @@ public class FormPendonor extends javax.swing.JFrame {
         String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
-        String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
+        String golongan_darah = txtFieldGolonganDarah21552011235.getText();
+        //String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
         String usia = txtFieldUsia21552011235.getText();
         String berat_badan = txtFieldBeratBadan21552011235.getText();
         String alamatpendonor = txtFieldAlamat21552011235.getText();
         String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
         String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
-        String jumlah_transfusi = txtFieldJumlahTransfusi21552011235.getText();
+        String total_donor = txtFieldTotalDonor21552011235.getText();
         SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_terakhir_transfusi = tgl_tt.format(jDateChooserTerakhirTransfusi.getDate());
+        String tanggal_terakhir_donor = tgl_tt.format(jDateChooserTerakhirDonor.getDate());
         
         if (ok==0){
             String no_pendonor = table.getValueAt(i, 1).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_pendonor` SET `nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`golongan_darah` = '"+golongan_darah+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`hemoglobin` = '"+hemoglobin+"',`riwayat_penyakit` = '"+riwayat_penyakit+"',`jumlah_transfusi` = '"+jumlah_transfusi+"',`tanggal_terakhir_transfusi` = '"+tanggal_terakhir_transfusi+"'"
+            String query = "UPDATE `data_pendonor` SET `nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`golongan_darah` = '"+golongan_darah+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`hemoglobin` = '"+hemoglobin+"',`riwayat_penyakit` = '"+riwayat_penyakit+"',`total_donor` = '"+total_donor+"',`tanggal_terakhir_donor` = '"+tanggal_terakhir_donor+"'"
                 + "WHERE `data_pendonor`.`no_pendonor` = '"+no_pendonor+"';";
             //String sql="delete from tb_barang where kode_part='"+txtKodePart.getText()+"'";
             try {
@@ -277,6 +302,8 @@ public class FormPendonor extends javax.swing.JFrame {
             }
         }   
     }
+    
+  
         
        
     private void cari(){
@@ -300,8 +327,8 @@ public class FormPendonor extends javax.swing.JFrame {
                 + "`alamat` LIKE '%"+cari+"%' OR"
                 + "`hemoglobin` LIKE '%"+cari+"%' OR"
                 + "`riwayat_penyakit` LIKE '%"+cari+"%' OR"
-                + "`jumlah_transfusi` LIKE '%"+cari+"%' OR"
-                + "`tanggal_terakhir_transfusi` LIKE '%"+cari+"%' ";
+                + "`total_donor` LIKE '%"+cari+"%' OR"
+                + "`tanggal_terakhir_donor` LIKE '%"+cari+"%' ";
                 
        try{
            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -323,11 +350,12 @@ public class FormPendonor extends javax.swing.JFrame {
                     String alamatpendonor = rslt.getString("alamat");
                     String hemoglobin = rslt.getString("hemoglobin");
                     String riwayat_penyakit = rslt.getString("riwayat_penyakit");
-                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
-                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String total_donor = rslt.getString("total_donor");
+                    String tanggal_terakhir_donor = rslt.getString("tanggal_terakhir_donor");
+                    
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,total_donor,tanggal_terakhir_donor};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -393,10 +421,8 @@ public class FormPendonor extends javax.swing.JFrame {
         txtFieldAkunGmail21552011235 = new javax.swing.JTextField();
         kondisi = new javax.swing.JLabel();
         kondisi1 = new javax.swing.JLabel();
-        jComboBoxGolDarah = new javax.swing.JComboBox<>();
-        golDarah1 = new javax.swing.JLabel();
         line11 = new javax.swing.JLabel();
-        txtFieldJumlahTransfusi21552011235 = new javax.swing.JTextField();
+        txtFieldTotalDonor21552011235 = new javax.swing.JTextField();
         jumlahTransfusi = new javax.swing.JLabel();
         line13 = new javax.swing.JLabel();
         txtFieldUsia21552011235 = new javax.swing.JTextField();
@@ -407,18 +433,29 @@ public class FormPendonor extends javax.swing.JFrame {
         line15 = new javax.swing.JLabel();
         txtFieldBeratBadan21552011235 = new javax.swing.JTextField();
         BeartBadan = new javax.swing.JLabel();
-        jDateChooserTerakhirTransfusi = new com.toedter.calendar.JDateChooser();
-        tanggalLahir = new javax.swing.JLabel();
+        jDateChooserTerakhirDonor = new com.toedter.calendar.JDateChooser();
         jDateChooserTanggalLahir = new com.toedter.calendar.JDateChooser();
         jDateTanggalDaftar21552011235 = new com.toedter.calendar.JDateChooser();
         line16 = new javax.swing.JLabel();
         txtFieldCari21552011235 = new javax.swing.JTextField();
+        PanelDarah21552011235 = new javax.swing.JPanel();
+        BtnDarah21552011235 = new javax.swing.JLabel();
         PanelCari21552011235 = new javax.swing.JPanel();
-        BtnCari21552011235 = new javax.swing.JLabel();
+        BtnCari77174756 = new javax.swing.JLabel();
         NamaPendonor1 = new javax.swing.JLabel();
         NamaPendonor2 = new javax.swing.JLabel();
         jRadioButtonLakiLaki21552011235 = new javax.swing.JRadioButton();
         jRadioButtonPerempuan21552011235 = new javax.swing.JRadioButton();
+        line19 = new javax.swing.JLabel();
+        line22 = new javax.swing.JLabel();
+        line20 = new javax.swing.JLabel();
+        txtFieldIdDarah21552011235 = new javax.swing.JTextField();
+        tanggalLahir1 = new javax.swing.JLabel();
+        txtFieldGolonganDarah21552011235 = new javax.swing.JTextField();
+        golDarah2 = new javax.swing.JLabel();
+        golDarah3 = new javax.swing.JLabel();
+        golDarah4 = new javax.swing.JLabel();
+        txtFieldJumlahLabu21552011235 = new javax.swing.JTextField();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -522,9 +559,9 @@ public class FormPendonor extends javax.swing.JFrame {
                 BtnAdd21552011235MouseExited(evt);
             }
         });
-        PanelAdd21552011235.add(BtnAdd21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 50));
+        PanelAdd21552011235.add(BtnAdd21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 50));
 
-        jPanel3.add(PanelAdd21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 950, 50));
+        jPanel3.add(PanelAdd21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 610, 50));
 
         NamaPendonor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         NamaPendonor.setForeground(new java.awt.Color(255, 255, 255));
@@ -542,8 +579,8 @@ public class FormPendonor extends javax.swing.JFrame {
         golDarah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         golDarah.setForeground(new java.awt.Color(255, 255, 255));
         golDarah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah.setText("Terakhir Tanggal Transfusi *opsional");
-        jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 250, 30));
+        golDarah.setText("Terakhir Tanggal Donor *opsional");
+        jPanel3.add(golDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 480, 250, 30));
 
         TotalHarga.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalHarga.setForeground(new java.awt.Color(255, 255, 255));
@@ -685,7 +722,7 @@ public class FormPendonor extends javax.swing.JFrame {
                 jComboBoxHemoglobinActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBoxHemoglobin, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 340, 240, 40));
+        jPanel3.add(jComboBoxHemoglobin, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 240, 40));
 
         txtFieldNamaPendonor21552011235.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldNamaPendonor21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -758,22 +795,7 @@ public class FormPendonor extends javax.swing.JFrame {
         kondisi1.setForeground(new java.awt.Color(255, 255, 255));
         kondisi1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         kondisi1.setText("Hemoglobin");
-        jPanel3.add(kondisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 310, 130, 30));
-
-        jComboBoxGolDarah.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBoxGolDarah.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- select --", "O+", "A+", "B+", "AB+", "O-", "A-", "B-", "Rh-null-" }));
-        jComboBoxGolDarah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxGolDarahActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jComboBoxGolDarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, 240, 40));
-
-        golDarah1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        golDarah1.setForeground(new java.awt.Color(255, 255, 255));
-        golDarah1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah1.setText("Golongan Darah");
-        jPanel3.add(golDarah1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 120, 30));
+        jPanel3.add(kondisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, 130, 30));
 
         line11.setBackground(new java.awt.Color(255, 255, 255));
         line11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -782,17 +804,17 @@ public class FormPendonor extends javax.swing.JFrame {
         line11.setText("___________________________");
         jPanel3.add(line11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 260, 20));
 
-        txtFieldJumlahTransfusi21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldJumlahTransfusi21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldJumlahTransfusi21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldJumlahTransfusi21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldJumlahTransfusi21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldJumlahTransfusi21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 260, 40));
+        txtFieldTotalDonor21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldTotalDonor21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldTotalDonor21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldTotalDonor21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldTotalDonor21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldTotalDonor21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 260, 40));
 
         jumlahTransfusi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jumlahTransfusi.setForeground(new java.awt.Color(255, 255, 255));
         jumlahTransfusi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jumlahTransfusi.setText("Jumlah Transfusi ");
+        jumlahTransfusi.setText("Total Donor");
         jPanel3.add(jumlahTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 240, 40));
 
         line13.setBackground(new java.awt.Color(255, 255, 255));
@@ -860,19 +882,13 @@ public class FormPendonor extends javax.swing.JFrame {
         BeartBadan.setText("Berat Badan *Kg");
         jPanel3.add(BeartBadan, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 110, 40));
 
-        jDateChooserTerakhirTransfusi.setDateFormatString("yyyy-MM-dd");
-        jDateChooserTerakhirTransfusi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel3.add(jDateChooserTerakhirTransfusi, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 240, 40));
-
-        tanggalLahir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        tanggalLahir.setForeground(new java.awt.Color(255, 255, 255));
-        tanggalLahir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        tanggalLahir.setText("Tanggal Lahir");
-        jPanel3.add(tanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 120, 120, 30));
+        jDateChooserTerakhirDonor.setDateFormatString("yyyy-MM-dd");
+        jDateChooserTerakhirDonor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel3.add(jDateChooserTerakhirDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 240, 40));
 
         jDateChooserTanggalLahir.setDateFormatString("yyyy-MM-dd");
         jDateChooserTanggalLahir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel3.add(jDateChooserTanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 240, 40));
+        jPanel3.add(jDateChooserTanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 330, 240, 40));
 
         jDateTanggalDaftar21552011235.setDateFormatString("d MMM, yyyy");
         jDateTanggalDaftar21552011235.setEnabled(false);
@@ -889,7 +905,7 @@ public class FormPendonor extends javax.swing.JFrame {
         line16.setForeground(new java.awt.Color(255, 255, 255));
         line16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         line16.setText("_________________");
-        jPanel3.add(line16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 170, 160, 20));
+        jPanel3.add(line16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 170, 180, 20));
 
         txtFieldCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldCari21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -897,30 +913,53 @@ public class FormPendonor extends javax.swing.JFrame {
         txtFieldCari21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtFieldCari21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldCari21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 140, 160, 50));
+        jPanel3.add(txtFieldCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 140, 150, 50));
+
+        PanelDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        PanelDarah21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelDarah21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnDarah21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        BtnDarah21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnDarah21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-24.png"))); // NOI18N
+        BtnDarah21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnDarah21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnDarah21552011235MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BtnDarah21552011235MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BtnDarah21552011235MouseExited(evt);
+            }
+        });
+        PanelDarah21552011235.add(BtnDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 120));
+
+        jPanel3.add(PanelDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 160, 70, 120));
 
         PanelCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
         PanelCari21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelCari21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnCari21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnCari21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnCari21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnCari21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-search-24.png"))); // NOI18N
-        BtnCari21552011235.setText("Cari Data");
-        BtnCari21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnCari21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnCari77174756.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnCari77174756.setForeground(new java.awt.Color(255, 255, 255));
+        BtnCari77174756.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnCari77174756.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-search-24.png"))); // NOI18N
+        BtnCari77174756.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnCari77174756.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnCari21552011235MouseClicked(evt);
+                BtnCari77174756MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnCari21552011235MouseEntered(evt);
+                BtnCari77174756MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnCari21552011235MouseExited(evt);
+                BtnCari77174756MouseExited(evt);
             }
         });
-        PanelCari21552011235.add(BtnCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 50));
+        PanelCari21552011235.add(BtnCari77174756, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 50));
 
         jPanel3.add(PanelCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
 
@@ -951,6 +990,80 @@ public class FormPendonor extends javax.swing.JFrame {
         jRadioButtonPerempuan21552011235.setText("Perempuan");
         jRadioButtonPerempuan21552011235.setActionCommand("");
         jPanel3.add(jRadioButtonPerempuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+
+        line19.setBackground(new java.awt.Color(255, 255, 255));
+        line19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        line19.setForeground(new java.awt.Color(255, 255, 255));
+        line19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        line19.setText("______");
+        jPanel3.add(line19, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 260, 60, 20));
+
+        line22.setBackground(new java.awt.Color(255, 255, 255));
+        line22.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        line22.setForeground(new java.awt.Color(255, 255, 255));
+        line22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        line22.setText("______");
+        jPanel3.add(line22, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 210, 60, 20));
+
+        line20.setBackground(new java.awt.Color(255, 255, 255));
+        line20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        line20.setForeground(new java.awt.Color(255, 255, 255));
+        line20.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        line20.setText("__________");
+        jPanel3.add(line20, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 210, 90, 20));
+
+        txtFieldIdDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldIdDarah21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldIdDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldIdDarah21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldIdDarah21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldIdDarah21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldIdDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 180, 60, 50));
+
+        tanggalLahir1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tanggalLahir1.setForeground(new java.awt.Color(255, 255, 255));
+        tanggalLahir1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        tanggalLahir1.setText("Tanggal Lahir");
+        jPanel3.add(tanggalLahir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 300, 120, 30));
+
+        txtFieldGolonganDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldGolonganDarah21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldGolonganDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldGolonganDarah21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldGolonganDarah21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldGolonganDarah21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtFieldGolonganDarah21552011235.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFieldGolonganDarah21552011235ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtFieldGolonganDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 90, 50));
+
+        golDarah2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        golDarah2.setForeground(new java.awt.Color(255, 255, 255));
+        golDarah2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        golDarah2.setText("Jumlah Labu");
+        jPanel3.add(golDarah2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 240, 100, 50));
+
+        golDarah3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        golDarah3.setForeground(new java.awt.Color(255, 255, 255));
+        golDarah3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        golDarah3.setText("Gol_darah");
+        jPanel3.add(golDarah3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 100, 30));
+
+        golDarah4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        golDarah4.setForeground(new java.awt.Color(255, 255, 255));
+        golDarah4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        golDarah4.setText("ID");
+        jPanel3.add(golDarah4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 150, 40, 30));
+
+        txtFieldJumlahLabu21552011235.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldJumlahLabu21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldJumlahLabu21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldJumlahLabu21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldJumlahLabu21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldJumlahLabu21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldJumlahLabu21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 230, 60, 50));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
@@ -1089,12 +1202,12 @@ public class FormPendonor extends javax.swing.JFrame {
           String gmail = table.getValueAt(baris,6).toString();
           txtFieldAkunGmail21552011235.setText(gmail);
           
-          String golongan_darah = table.getValueAt(baris,7).toString();
-          for (int i = 0; i < jComboBoxGolDarah.getItemCount(); i++ ){
-              if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){
-                  jComboBoxGolDarah.setSelectedIndex(i);   
-              }
-          }
+//          String golongan_darah = table.getValueAt(baris,7).toString();
+//          for (int i = 0; i < jComboBoxGolDarah.getItemCount(); i++ ){
+//              if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){
+//                  jComboBoxGolDarah.setSelectedIndex(i);   
+//              }
+//          }
           
           String usia = table.getValueAt(baris,8).toString();
           txtFieldUsia21552011235.setText(usia);
@@ -1116,8 +1229,8 @@ public class FormPendonor extends javax.swing.JFrame {
           String riwayat_penyakit =  table.getValueAt(baris,12).toString();
           txtFieldRiwayatPenyakit21552011235.setText(riwayat_penyakit);
           
-          String jumlah_transfusi = table.getValueAt(baris,13).toString();
-          txtFieldJumlahTransfusi21552011235.setText(jumlah_transfusi);
+          String total_donor = table.getValueAt(baris,13).toString();
+          txtFieldTotalDonor21552011235.setText(total_donor);
          
 
        
@@ -1136,7 +1249,7 @@ public class FormPendonor extends javax.swing.JFrame {
         }
         //jDateTanggalDaftar21552011235.setDate(convert);
         jDateChooserTanggalLahir.setDate(tanggal_lahir);
-        jDateChooserTerakhirTransfusi.setDate((Date) tanggal_terakhir_transfusi);
+        jDateChooserTerakhirDonor.setDate((Date) tanggal_terakhir_transfusi);
    
     }//GEN-LAST:event_tableDataPendonor21552011235MouseClicked
 
@@ -1144,29 +1257,42 @@ public class FormPendonor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxHemoglobinActionPerformed
 
-    private void jComboBoxGolDarahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxGolDarahActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxGolDarahActionPerformed
-
     private void txtFieldRiwayatPenyakit21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldRiwayatPenyakit21552011235ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFieldRiwayatPenyakit21552011235ActionPerformed
 
-    private void BtnCari21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseClicked
-        cari();
-    }//GEN-LAST:event_BtnCari21552011235MouseClicked
-
-    private void BtnCari21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseEntered
-        changecolor(PanelCari21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnCari21552011235MouseEntered
-
-    private void BtnCari21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari21552011235MouseExited
-        changecolor(PanelCari21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnCari21552011235MouseExited
-
     private void jDateTanggalDaftar21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftar21552011235MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jDateTanggalDaftar21552011235MouseClicked
+
+    private void BtnCari77174756MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari77174756MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCari77174756MouseClicked
+
+    private void BtnCari77174756MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari77174756MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCari77174756MouseEntered
+
+    private void BtnCari77174756MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari77174756MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnCari77174756MouseExited
+
+    private void BtnDarah21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseClicked
+        new stokDarah().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnDarah21552011235MouseClicked
+
+    private void BtnDarah21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnDarah21552011235MouseEntered
+
+    private void BtnDarah21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnDarah21552011235MouseExited
+
+    private void txtFieldGolonganDarah21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldGolonganDarah21552011235ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFieldGolonganDarah21552011235ActionPerformed
     
    
     /**
@@ -1258,6 +1384,70 @@ public class FormPendonor extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
@@ -1270,8 +1460,9 @@ public class FormPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel BtnAdd21552011235;
     private javax.swing.JLabel BtnBack21552011235;
     private javax.swing.JLabel BtnBack77174756;
-    private javax.swing.JLabel BtnCari21552011235;
+    private javax.swing.JLabel BtnCari77174756;
     private javax.swing.JLabel BtnClear21552011235;
+    public javax.swing.JLabel BtnDarah21552011235;
     private javax.swing.JLabel BtnDelete21552011235;
     private javax.swing.JLabel BtnEdit21552011235;
     private javax.swing.JLabel BtnRefresh21552011235;
@@ -1286,6 +1477,7 @@ public class FormPendonor extends javax.swing.JFrame {
     private javax.swing.JPanel PanelBack77174756;
     private javax.swing.JPanel PanelCari21552011235;
     private javax.swing.JPanel PanelClear21552011235;
+    private javax.swing.JPanel PanelDarah21552011235;
     private javax.swing.JPanel PanelDelete21552011235;
     private javax.swing.JPanel PanelEdit21552011235;
     private javax.swing.JPanel PanelRefresh21552011235;
@@ -1296,11 +1488,12 @@ public class FormPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel golDarah;
-    private javax.swing.JLabel golDarah1;
-    private javax.swing.JComboBox<String> jComboBoxGolDarah;
+    private javax.swing.JLabel golDarah2;
+    private javax.swing.JLabel golDarah3;
+    private javax.swing.JLabel golDarah4;
     private javax.swing.JComboBox<String> jComboBoxHemoglobin;
     private com.toedter.calendar.JDateChooser jDateChooserTanggalLahir;
-    private com.toedter.calendar.JDateChooser jDateChooserTerakhirTransfusi;
+    private com.toedter.calendar.JDateChooser jDateChooserTerakhirDonor;
     private com.toedter.calendar.JDateChooser jDateTanggalDaftar21552011235;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -1317,20 +1510,26 @@ public class FormPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel line14;
     private javax.swing.JLabel line15;
     private javax.swing.JLabel line16;
+    private javax.swing.JLabel line19;
+    private javax.swing.JLabel line20;
+    private javax.swing.JLabel line22;
     private javax.swing.JLabel line8;
     private javax.swing.JLabel line9;
     private javax.swing.JLabel noTelp;
     private javax.swing.JTable tableDataPendonor21552011235;
-    private javax.swing.JLabel tanggalLahir;
+    private javax.swing.JLabel tanggalLahir1;
     private javax.swing.JLabel title;
     private javax.swing.JTextField txtFieldAkunGmail21552011235;
     private javax.swing.JTextField txtFieldAlamat21552011235;
     private javax.swing.JTextField txtFieldBeratBadan21552011235;
     private javax.swing.JTextField txtFieldCari21552011235;
-    private javax.swing.JTextField txtFieldJumlahTransfusi21552011235;
+    public javax.swing.JTextField txtFieldGolonganDarah21552011235;
+    public javax.swing.JTextField txtFieldIdDarah21552011235;
+    public javax.swing.JTextField txtFieldJumlahLabu21552011235;
     private javax.swing.JTextField txtFieldNamaPendonor21552011235;
     private javax.swing.JTextField txtFieldNoTelp21552011235;
     private javax.swing.JTextField txtFieldRiwayatPenyakit21552011235;
+    private javax.swing.JTextField txtFieldTotalDonor21552011235;
     private javax.swing.JTextField txtFieldUsia21552011235;
     // End of variables declaration//GEN-END:variables
 

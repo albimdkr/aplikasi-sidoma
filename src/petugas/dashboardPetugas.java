@@ -709,7 +709,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_TabFormDataPendonor21552011235MouseEntered
 
     private void TabFormDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseClicked
-        new petugas.FormPendonor().setVisible(true);
+        new donor.FormPendonor().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabFormDataPendonor21552011235MouseClicked
 
