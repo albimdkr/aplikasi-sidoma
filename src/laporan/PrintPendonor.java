@@ -50,13 +50,14 @@ public class PrintPendonor extends javax.swing.JFrame {
         table.addColumn("Tanggal Lahir");
         table.addColumn("No.Telp");
         table.addColumn("Gmail");
+        table.addColumn("ID darah");
         table.addColumn("Golongan Darah");
         table.addColumn("Usia");
         table.addColumn("Berat Badan");
         table.addColumn("Alamat");
         table.addColumn("Hemoglobin");
         table.addColumn("Riwayat Penyakit");
-        table.addColumn("Jumlah Transfusi");
+        table.addColumn("Total Donor");
         table.addColumn("Tanggal terakhir transfusi");
         tampilData();
     }
@@ -85,18 +86,19 @@ public class PrintPendonor extends javax.swing.JFrame {
                     String tanggal_lahir = rslt.getString("tanggal_lahir");
                     String no_telp = rslt.getString("no_telp");
                     String gmail = rslt.getString("gmail");
+                    String id_darah = rslt.getString("id_darah");
                     String golongan_darah = rslt.getString("golongan_darah");
                     String usia = rslt.getString("usia");
                     String berat_badan = rslt.getString("berat_badan");
                     String alamatpendonor = rslt.getString("alamat");
                     String hemoglobin = rslt.getString("hemoglobin");
                     String riwayat_penyakit = rslt.getString("riwayat_penyakit");
-                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
-                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String total_donor = rslt.getString("total_donor");
+                    String tanggal_terakhir_donor = rslt.getString("tanggal_terakhir_donor");
                     
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,id_darah,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,total_donor,tanggal_terakhir_donor};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -130,8 +132,8 @@ public class PrintPendonor extends javax.swing.JFrame {
                 + "`alamat` LIKE '%"+cari+"%' OR"
                 + "`hemoglobin` LIKE '%"+cari+"%' OR"
                 + "`riwayat_penyakit` LIKE '%"+cari+"%' OR"
-                + "`jumlah_transfusi` LIKE '%"+cari+"%' OR"
-                + "`tanggal_terakhir_transfusi` LIKE '%"+cari+"%' ";
+                + "`total_donor` LIKE '%"+cari+"%' OR"
+                + "`tanggal_terakhir_donor` LIKE '%"+cari+"%' ";
                 
        try{
            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -140,6 +142,7 @@ public class PrintPendonor extends javax.swing.JFrame {
            
            while (rslt.next()){
                 //menampung data sementara
+                //menampung data sementara
                     String tanggal_daftar = rslt.getString("tanggal_daftar");
                     String no_pendonor = rslt.getString("no_pendonor");
                     String nama = rslt.getString("nama");
@@ -147,17 +150,19 @@ public class PrintPendonor extends javax.swing.JFrame {
                     String tanggal_lahir = rslt.getString("tanggal_lahir");
                     String no_telp = rslt.getString("no_telp");
                     String gmail = rslt.getString("gmail");
+                    String id_darah = rslt.getString("id_darah");
                     String golongan_darah = rslt.getString("golongan_darah");
                     String usia = rslt.getString("usia");
                     String berat_badan = rslt.getString("berat_badan");
                     String alamatpendonor = rslt.getString("alamat");
                     String hemoglobin = rslt.getString("hemoglobin");
                     String riwayat_penyakit = rslt.getString("riwayat_penyakit");
-                    String jumlah_transfusi = rslt.getString("jumlah_transfusi");
-                    String tanggal_terakhir_transfusi = rslt.getString("tanggal_terakhir_transfusi");
+                    String total_donor = rslt.getString("total_donor");
+                    String tanggal_terakhir_donor = rslt.getString("tanggal_terakhir_donor");
+                    
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,jumlah_transfusi,tanggal_terakhir_transfusi};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,id_darah,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,total_donor,tanggal_terakhir_donor};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }

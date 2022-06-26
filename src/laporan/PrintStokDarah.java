@@ -28,13 +28,13 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintTransfusi extends javax.swing.JFrame {
+public class PrintStokDarah extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public PrintTransfusi() {
+    public PrintStokDarah() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         
@@ -43,13 +43,9 @@ public class PrintTransfusi extends javax.swing.JFrame {
         koneksi.getKoneksi();
         
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Transaksi");
-        table.addColumn("ID Transaksi");
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Jumlah");
-        table.addColumn("Total Harga");
+        table.addColumn("ID Darah");
+        table.addColumn("Golongan Darah");
+        table.addColumn("Stok");
         
         tampilData();
     }
@@ -61,7 +57,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `transaksi` ";
+        String query = "SELECT * FROM `stok_darah` ";
         
         try{
             Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -71,16 +67,12 @@ public class PrintTransfusi extends javax.swing.JFrame {
             while (rslt.next()){
                 //menampung data sementara
                    
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
-                    
+                    //String tanggal = rslt.getString("tgl_transaksi");
+                    String id = rslt.getString("id_darah");
+                    String golongan_darah = rslt.getString("golongan_darah");
+                    String stok = rslt.getString("stok");
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {id,golongan_darah,stok};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -100,11 +92,10 @@ public class PrintTransfusi extends javax.swing.JFrame {
         
         String cari = txtFieldCari21552011235.getText();
         
-        String query = "SELECT * FROM `transaksi` WHERE "
-                + "`kode_menu`  LIKE '%"+cari+"%' OR "
-                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
-                + "`id_transaksi` LIKE '%"+cari+"%' OR"
-                + "`nama_menu` LIKE '%"+cari+"%' ";
+        String query = "SELECT * FROM `stok_darah` WHERE "
+                + "`id_darah`  LIKE '%"+cari+"%' OR "
+                + "`golongan_darah` LIKE '%"+cari+"%' OR"
+                + "`stok` LIKE '%"+cari+"%' ";
                 
        try{
            Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -114,16 +105,11 @@ public class PrintTransfusi extends javax.swing.JFrame {
            while (rslt.next()){
                 //menampung data sementara
                    
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
-                    
+                    String id = rslt.getString("id_darah");
+                    String golongan_darah = rslt.getString("golongan_darah");
+                    String stok = rslt.getString("stok");
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {id,golongan_darah,stok};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -213,7 +199,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Transfusi");
+        DaftarMenu.setText("Print Stok Darah");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -464,14 +450,78 @@ public class PrintTransfusi extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintStokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintStokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintStokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintStokDarah.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -540,7 +590,7 @@ public class PrintTransfusi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrintTransfusi().setVisible(true);
+                new PrintStokDarah().setVisible(true);
             }
         });
     }

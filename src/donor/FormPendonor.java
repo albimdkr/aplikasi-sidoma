@@ -109,6 +109,7 @@ public class FormPendonor extends javax.swing.JFrame {
                     String tanggal_lahir = rslt.getString("tanggal_lahir");
                     String no_telp = rslt.getString("no_telp");
                     String gmail = rslt.getString("gmail");
+                    String id_darah = rslt.getString("id_darah");
                     String golongan_darah = rslt.getString("golongan_darah");
                     String usia = rslt.getString("usia");
                     String berat_badan = rslt.getString("berat_badan");
@@ -120,7 +121,7 @@ public class FormPendonor extends javax.swing.JFrame {
                     
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,total_donor,tanggal_terakhir_donor};
+                String[] data = {tanggal_daftar,no_pendonor,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,id_darah,golongan_darah,usia,berat_badan,alamatpendonor,hemoglobin,riwayat_penyakit,total_donor,tanggal_terakhir_donor};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -160,7 +161,6 @@ public class FormPendonor extends javax.swing.JFrame {
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal_daftar = date.format(jDateTanggalDaftar21552011235.getDate());
         //String no_pendonor = 
-        String id_darah = txtFieldIdDarah21552011235.getText();
         String nama = txtFieldNamaPendonor21552011235.getText();
         String jk;
         if (jRadioButtonLakiLaki21552011235.isSelected()){
@@ -172,6 +172,7 @@ public class FormPendonor extends javax.swing.JFrame {
         String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
+        String id_darah = txtFieldIdDarah21552011235.getText();
         String golongan_darah = txtFieldGolonganDarah21552011235.getText();
         String jumlah_labu = txtFieldJumlahLabu21552011235.getText();
         //String id_darah = txtFieldDarah21552011235.getText();
@@ -1202,6 +1203,8 @@ public class FormPendonor extends javax.swing.JFrame {
           String gmail = table.getValueAt(baris,6).toString();
           txtFieldAkunGmail21552011235.setText(gmail);
           
+          String golongan_darah = table.getValueAt(baris,7).toString();
+          txtFieldGolonganDarah21552011235.setText(golongan_darah);
 //          String golongan_darah = table.getValueAt(baris,7).toString();
 //          for (int i = 0; i < jComboBoxGolDarah.getItemCount(); i++ ){
 //              if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){

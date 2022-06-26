@@ -647,7 +647,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         });
         PanelPasien21552011235.add(TabPasienBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 240));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-stethoscope-96.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh--96_1.png"))); // NOI18N
         PanelPasien21552011235.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 90));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -664,7 +664,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         TabTransfusiBtn21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TabTransfusiBtn21552011235.setForeground(new java.awt.Color(255, 255, 255));
         TabTransfusiBtn21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabTransfusiBtn21552011235.setText("Transfusi");
+        TabTransfusiBtn21552011235.setText("Stok Darah");
         TabTransfusiBtn21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabTransfusiBtn21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -933,7 +933,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabPasienBtn21552011235MouseExited
 
     private void TabTransfusiBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTransfusiBtn21552011235MouseClicked
-        new laporan.PrintTransfusi().setVisible(true);
+        new laporan.PrintStokDarah().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabTransfusiBtn21552011235MouseClicked
 

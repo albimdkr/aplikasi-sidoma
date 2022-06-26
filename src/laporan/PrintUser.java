@@ -43,13 +43,14 @@ public class PrintUser extends javax.swing.JFrame {
         koneksi.getKoneksi();
         
         tableData21552011235.setModel(table);
-        table.addColumn("Tanggal Transaksi");
-        table.addColumn("ID Transaksi");
-        table.addColumn("Kode Menu");
-        table.addColumn("Nama Menu");
-        table.addColumn("Harga");
-        table.addColumn("Jumlah");
-        table.addColumn("Total Harga");
+        table.addColumn("Id user");
+        table.addColumn("Nama lengkap");
+        table.addColumn("No Telp");
+        table.addColumn("Gmail");
+        table.addColumn("Username");
+        table.addColumn("Password");
+        table.addColumn("Role");
+        table.addColumn("Tanggal Daftar");
         
         tampilData();
     }
@@ -61,7 +62,7 @@ public class PrintUser extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `transaksi` ";
+        String query = "SELECT * FROM `data_user` ";
         
         try{
             Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -71,16 +72,18 @@ public class PrintUser extends javax.swing.JFrame {
             while (rslt.next()){
                 //menampung data sementara
                    
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String id_user = rslt.getString("id_user");
+                    String namaLengkap = rslt.getString("nama");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmailUser = rslt.getString("gmail");
+                    String userName = rslt.getString("username");
+                    String passwordUser = rslt.getString("password");
+                    String role = rslt.getString("role");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
+                    
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {id_user,namaLengkap,no_telp,gmailUser,userName,passwordUser,role,tanggal_daftar};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -100,11 +103,15 @@ public class PrintUser extends javax.swing.JFrame {
         
         String cari = txtFieldCari21552011235.getText();
         
-        String query = "SELECT * FROM `transaksi` WHERE "
-                + "`kode_menu`  LIKE '%"+cari+"%' OR "
-                + "`tgl_transaksi` LIKE '%"+cari+"%' OR"
-                + "`id_transaksi` LIKE '%"+cari+"%' OR"
-                + "`nama_menu` LIKE '%"+cari+"%' ";
+        String query = "SELECT * FROM `data_user` WHERE "
+                + "`id_user` LIKE '%"+cari+"%' OR"
+                + "`nama`  LIKE '%"+cari+"%' OR "
+                + "`no_telp` LIKE '%"+cari+"%' OR"
+                + "`gmail` LIKE '%"+cari+"%' OR"
+                + "`username` LIKE '%"+cari+"%' OR"
+                + "`password` LIKE '%"+cari+"%' OR"
+                + "`role` LIKE '%"+cari+"%' OR"
+                + "`tanggal_daftar` LIKE '%"+cari+"%'  ";
                 
        try{
            Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -114,16 +121,16 @@ public class PrintUser extends javax.swing.JFrame {
            while (rslt.next()){
                 //menampung data sementara
                    
-                    String tanggal = rslt.getString("tgl_transaksi");
-                    String id = rslt.getString("id_transaksi");
-                    String kode = rslt.getString("kode_menu");
-                    String nama = rslt.getString("nama_menu");
-                    String harga = rslt.getString("harga");
-                    String jumlah = rslt.getString("jumlah_menu");
-                    String total = rslt.getString("total_harga");
+                    String id_user = rslt.getString("id_user");
+                    String namaLengkap = rslt.getString("nama");
+                    String no_telp = rslt.getString("no_telp");
+                    String gmailUser = rslt.getString("gmail");
+                    String userName = rslt.getString("username");
+                    String passwordUser = rslt.getString("password");
+                    String role = rslt.getString("role");
+                    String tanggal_daftar = rslt.getString("tanggal_daftar");
                     
-                //masukan semua data kedalam array
-                String[] data = {tanggal,id,kode,nama,harga,jumlah,total};
+                String[] data = {id_user,namaLengkap,no_telp,gmailUser,userName,passwordUser,role,tanggal_daftar};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
