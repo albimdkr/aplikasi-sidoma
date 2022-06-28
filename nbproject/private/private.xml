@@ -3,12 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/admin/FormAddUser.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/petugas/FormPendonor.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/petugas/dashboardPetugas.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/sekretaris/FormPetugas.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/login/loginUser.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/sekretaris/dashboardSekretaris.java</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/donor/FormPendonor.java</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/PrintPendonor.java</file>
         </group>
     </open-files>
 </project-private>

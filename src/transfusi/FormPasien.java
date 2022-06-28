@@ -60,21 +60,22 @@ public class FormPasien extends javax.swing.JFrame {
         koneksi.getKoneksi();
          
         tableDataPasien21552011235.setModel(table);
-        table.addColumn("Tanggal Daftar");
-        table.addColumn("No. Pasien");
-        table.addColumn("Nama");
-        table.addColumn("Jenis Kelamin");
-        table.addColumn("Tanggal Lahir");
-        table.addColumn("No.Telp");
-        table.addColumn("Gmail");
-        table.addColumn("Golongan Darah");
-        table.addColumn("Usia");
-        table.addColumn("Berat Badan");
-        table.addColumn("Alamat");
-        table.addColumn("Kondisi");
-        table.addColumn("Penyakit");
-        table.addColumn("Total menerima labu");
-        table.addColumn("Tanggal terakhir transfusi");
+        table.addColumn("Tanggal Daftar");//0
+        table.addColumn("No. Pasien");//1
+        table.addColumn("Nama");//2
+        table.addColumn("Jenis Kelamin");//3
+        table.addColumn("Tanggal Lahir");//4
+        table.addColumn("No.Telp");//5
+        table.addColumn("Gmail");//6
+        table.addColumn("ID darah");//7
+        table.addColumn("Golongan Darah");//8
+        table.addColumn("Usia");//9
+        table.addColumn("Berat Badan");//10
+        table.addColumn("Alamat");//11
+        table.addColumn("Kondisi");//12
+        table.addColumn("Penyakit");//13
+        table.addColumn("Total menerima labu");//14
+        table.addColumn("Tanggal terakhir transfusi");//15
         tampilData();
     }
     
@@ -102,6 +103,7 @@ public class FormPasien extends javax.swing.JFrame {
                     String tanggal_lahir = rslt.getString("tanggal_lahir");
                     String no_telp = rslt.getString("no_telp");
                     String gmail = rslt.getString("gmail");
+                    String id_darah = rslt.getString("id_darah");
                     String golongan_darah = rslt.getString("golongan_darah");
                     String usia = rslt.getString("usia");
                     String berat_badan = rslt.getString("berat_badan");
@@ -113,7 +115,7 @@ public class FormPasien extends javax.swing.JFrame {
                     
                     
                 //masukan semua data kedalam array
-                String[] data = {tanggal_daftar,no_pasien,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,golongan_darah,usia,berat_badan,alamatpendonor,kondisipasien,penyakit,total_menerima_labu,tanggal_terakhir_transfusi};
+                String[] data = {tanggal_daftar,no_pasien,nama,jenis_kelamin,tanggal_lahir,no_telp,gmail,id_darah,golongan_darah,usia,berat_badan,alamatpendonor,kondisipasien,penyakit,total_menerima_labu,tanggal_terakhir_transfusi};
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -1155,13 +1157,6 @@ public class FormPasien extends javax.swing.JFrame {
           String nama = table.getValueAt(baris,2).toString();
           txtFieldNamaPasien21552011235.setText(nama);
           
-//          String jenis_kelamin = table.getValueAt(baris,3).toString();
-//          if (jenis_kelamin.equals("L")){
-//              jRadioButtonPerempuan21552011235.setSelected(true);
-//          } else {
-//              jRadioButtonLakiLaki21552011235.setSelected(true);
-//          }
-          
             String jenis_kelamin = table.getValueAt(baris,3).toString();
             if (jenis_kelamin.equals("Laki-laki")) {
                 jRadioButtonPerempuan21552011235.setSelected(true);
@@ -1175,34 +1170,32 @@ public class FormPasien extends javax.swing.JFrame {
           String gmail = table.getValueAt(baris,6).toString();
           txtFieldAkunGmail21552011235.setText(gmail);
           
-//          String golongan_darah = table.getValueAt(baris,7).toString();
-//          for (int i = 0; i < jComboBoxGolDarah.getItemCount(); i++ ){
-//              if (jComboBoxGolDarah.getItemAt(i).equalsIgnoreCase(golongan_darah)){
-//                  jComboBoxGolDarah.setSelectedIndex(i);   
-//              }
-//          }
+          String id_darah = table.getValueAt(baris,7).toString();
+          txtFieldIdDarah21552011235.setText(id_darah);
           
-          String usia = table.getValueAt(baris,8).toString();
+          String golongan_darah = table.getValueAt(baris,8).toString();
+          txtFieldGolonganDarah21552011235.setText(golongan_darah);
+          
+          String usia = table.getValueAt(baris,9).toString();
           txtFieldUsia21552011235.setText(usia);
           
-          String berat_badan =  table.getValueAt(baris,9).toString();
+          String berat_badan =  table.getValueAt(baris,10).toString();
           txtFieldBeratBadan21552011235.setText(berat_badan);
           
-          String alamatpendonor =  table.getValueAt(baris,10).toString();
+          String alamatpendonor =  table.getValueAt(baris,11).toString();
           txtFieldAlamat21552011235.setText(alamatpendonor);
           
-          //String hemoglobin =  table.getValueAt(baris,11).toString();
-          String kondisipasien = table.getValueAt(baris,11).toString();
+          String kondisipasien = table.getValueAt(baris,12).toString();
           for (int i = 0; i <jComboBoxKondisi.getItemCount(); i++ ){
               if (jComboBoxKondisi.getItemAt(i).equalsIgnoreCase(kondisipasien)){
                   jComboBoxKondisi.setSelectedIndex(i);
               }
           }
           
-          String penyakit =  table.getValueAt(baris,12).toString();
+          String penyakit =  table.getValueAt(baris,13).toString();
           txtFieldPenyakit21552011235.setText(penyakit);
           
-          String total_menerima_labu = table.getValueAt(baris,13).toString();
+          String total_menerima_labu = table.getValueAt(baris,14).toString();
           txtFieldTotalMenerimaLabu21552011235.setText(total_menerima_labu);
          
 
@@ -1214,7 +1207,7 @@ public class FormPasien extends javax.swing.JFrame {
         try{
             //convert = new SimpleDateFormat("yyyy-MM-dd").parse(tanggal_daftar);
             tanggal_lahir = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,4));
-            tanggal_terakhir_transfusi = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,14));
+            tanggal_terakhir_transfusi = new SimpleDateFormat("yyyy-MM-dd").parse((String)table.getValueAt(baris,15));
         }catch(ParseException e){  
             System.out.println(e);
             Logger.getLogger(FormPasien.class.getName()).log(Level.SEVERE, null, ex);
