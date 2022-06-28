@@ -250,7 +250,9 @@ public class FormPasien extends javax.swing.JFrame {
         String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
         String no_telp = txtFieldNoTelp21552011235.getText();
         String gmail = txtFieldAkunGmail21552011235.getText();
+        String id_darah = txtFieldIdDarah21552011235.getText();
         String golongan_darah = txtFieldGolonganDarah21552011235.getText();
+        String jumlah_labu = txtFieldJumlahLabu21552011235.getText();
         //String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
         String usia = txtFieldUsia21552011235.getText();
         String berat_badan = txtFieldBeratBadan21552011235.getText();
@@ -264,7 +266,7 @@ public class FormPasien extends javax.swing.JFrame {
         if (ok==0){
             String no_pasien = table.getValueAt(i, 1).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_pasien` SET `nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`golongan_darah` = '"+golongan_darah+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`kondisi` = '"+kondisipasien+"',`penyakit` = '"+penyakit+"',`total_menerima_labu` = '"+total_menerima_labu+"',`tanggal_terakhir_transfusi` = '"+tanggal_terakhir_transfusi+"'"
+            String query = "UPDATE `data_pasien` SET `nama` = '"+nama+"',`jenis_kelamin` = '"+jk+"', `tanggal_lahir` = '"+tanggal_lahir+"',`no_telp` = '"+no_telp+"',`gmail` = '"+gmail+"',`id_darah` = '"+id_darah+"',`golongan_darah` = '"+golongan_darah+"',`jumlah_labu` = '"+jumlah_labu+"',`usia` = '"+usia+"',`berat_badan` = '"+berat_badan+"',`alamat` = '"+alamatpendonor+"',`kondisi` = '"+kondisipasien+"',`penyakit` = '"+penyakit+"',`total_menerima_labu` = '"+total_menerima_labu+"',`tanggal_terakhir_transfusi` = '"+tanggal_terakhir_transfusi+"'"
                 + "WHERE `data_pasien`.`no_pasien` = '"+no_pasien+"';";
             //String sql="delete from tb_barang where kode_part='"+txtKodePart.getText()+"'";
             try {

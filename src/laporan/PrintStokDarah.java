@@ -348,7 +348,7 @@ public class PrintStokDarah extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableData21552011235.setSelectionBackground(new java.awt.Color(64, 49, 33));
+        tableData21552011235.setSelectionBackground(new java.awt.Color(255, 0, 0));
         jScrollPane1.setViewportView(tableData21552011235);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 340));
