@@ -251,7 +251,7 @@ public class PrintPendonor extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Pendonor");
+        DaftarMenu.setText("Print Data Donor");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -475,14 +475,14 @@ public class PrintPendonor extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnPrint21552011235MouseEntered
 
     private void BtnPrint21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseClicked
-//      try{
-//            String file = "/laporan/report_barista.jasper";
-//            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
-//            JasperViewer.viewReport(print, false);
-//            
-//        }catch(JRException e){
-//            JOptionPane.showMessageDialog(rootPane, e);
-//        }
+      try{
+            String file = "/laporan/report_donor.jasper";
+            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
+            JasperViewer.viewReport(print, false);
+            
+        }catch(JRException e){
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
     }//GEN-LAST:event_BtnPrint21552011235MouseClicked
 
     /**

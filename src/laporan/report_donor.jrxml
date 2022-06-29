@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="383d0601-c62d-4865-b5c6-584c58f4e621">
-	<property name="ireport.zoom" value="3.7974983358324703"/>
-	<property name="ireport.x" value="221"/>
-	<property name="ireport.y" value="692"/>
+	<property name="ireport.zoom" value="4.594972986357365"/>
+	<property name="ireport.x" value="41"/>
+	<property name="ireport.y" value="983"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -14,9 +14,9 @@
 		</conditionalStyle>
 	</style>
 	<queryString>
-		<![CDATA[SELECT * FROM `data_petugas`]]>
+		<![CDATA[SELECT * FROM `data_pendonor`]]>
 	</queryString>
-	<field name="id_petugas" class="java.lang.Integer">
+	<field name="no_pendonor" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="nama" class="java.lang.String">
@@ -25,19 +25,22 @@
 	<field name="jenis_kelamin" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="no_telp" class="java.lang.Integer">
+	<field name="golongan_darah" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="gmail" class="java.lang.String">
+	<field name="jumlah_labu" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="alamat" class="java.lang.String">
+	<field name="usia" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="jabatan" class="java.lang.String">
+	<field name="hemoglobin" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="tanggal_daftar" class="java.sql.Date">
+	<field name="total_donor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_terakhir_donor" class="java.sql.Date">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<background>
@@ -69,7 +72,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="17" isBold="true"/>
 				</textElement>
-				<text><![CDATA[LAPORAN PETUGAS]]></text>
+				<text><![CDATA[LAPORAN DATA DONOR]]></text>
 			</staticText>
 			<image onErrorType="Icon">
 				<reportElement uuid="448df30b-e000-425f-ad5d-545bbf4d6f39" x="29" y="7" width="133" height="104"/>
@@ -103,130 +106,144 @@
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="18" splitType="Stretch">
+		<band height="57" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c8c77163-32f6-43a7-b428-cfe66ec40a0e" style="Column header" mode="Opaque" x="0" y="0" width="56" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
+				<reportElement uuid="58afa754-6b89-4172-a0fd-0020a21b5864" style="Column header" mode="Opaque" x="-1" y="0" width="51" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ID]]></text>
+				<text><![CDATA[NO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="58afa754-6b89-4172-a0fd-0020a21b5864" style="Column header" mode="Opaque" x="56" y="0" width="126" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="329" y="0" width="97" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GOL DARAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="427" y="0" width="74" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH LABU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="502" y="0" width="117" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HEMOGLOBIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="51" y="0" width="118" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[NAMA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="182" y="0" width="102" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="170" y="0" width="114" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[JENIS KELAMIN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="284" y="0" width="67" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="285" y="0" width="43" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[NO.TELP]]></text>
+				<text><![CDATA[USIA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="351" y="0" width="78" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="620" y="0" width="62" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[GMAIL]]></text>
+				<text><![CDATA[TOTAL DONOR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="429" y="0" width="195" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="683" y="0" width="119" height="56" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[ALAMAT]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="624" y="0" width="79" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[JABATAN]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="703" y="0" width="99" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[TANGGAL DAFTAR]]></text>
+				<text><![CDATA[TANGGAL TERAKHIR DONOR]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="19" splitType="Stretch">
 			<frame>
-				<reportElement uuid="e2cf8b99-ee67-481a-89ed-83fdd58f0545" style="Row" mode="Opaque" x="0" y="0" width="802" height="18"/>
+				<reportElement uuid="e2cf8b99-ee67-481a-89ed-83fdd58f0545" style="Row" mode="Opaque" x="0" y="1" width="802" height="18"/>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="ab7499a6-1291-43ab-9e34-33b37c73101f" style="Detail" positionType="Float" x="0" y="0" width="56" height="18"/>
+					<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="0" y="0" width="50" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="12"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{id_petugas}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{no_pendonor}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="56" y="0" width="126" height="18"/>
-					<textElement textAlignment="Center">
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="182" y="1" width="69" height="17"/>
+					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="170" y="0" width="114" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="251" y="0" width="81" height="18"/>
+					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="427" y="0" width="74" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="12"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{no_telp}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{jumlah_labu}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="332" y="0" width="97" height="18"/>
+					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="502" y="0" width="117" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="12"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{gmail}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{hemoglobin}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="429" y="1" width="195" height="17"/>
+					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="51" y="0" width="118" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="12"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="624" y="1" width="79" height="17"/>
+					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="683" y="0" width="119" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="12"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="703" y="0" width="99" height="18"/>
-					<textElement textAlignment="Center">
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{tanggal_daftar}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{tanggal_terakhir_donor}]]></textFieldExpression>
 				</textField>
 			</frame>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="329" y="1" width="97" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{golongan_darah}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="285" y="1" width="43" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usia}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="620" y="1" width="63" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_donor}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="12" splitType="Stretch">
+		<band height="8" splitType="Stretch">
 			<line>
 				<reportElement uuid="1847918b-8a7c-4580-b74c-9a94f60dd23c" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
 				<graphicElement>
