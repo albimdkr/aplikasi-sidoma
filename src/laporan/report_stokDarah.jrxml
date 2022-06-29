@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="383d0601-c62d-4865-b5c6-584c58f4e621">
-	<property name="ireport.zoom" value="3.797498335832417"/>
-	<property name="ireport.x" value="2506"/>
-	<property name="ireport.y" value="708"/>
+	<property name="ireport.zoom" value="0.8264462809917388"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -14,37 +14,31 @@
 		</conditionalStyle>
 	</style>
 	<queryString>
-		<![CDATA[SELECT * FROM `data_user`]]>
+		<![CDATA[SELECT
+     *,
+     stok_darah.`id_darah` AS stok_darah_id_darah,
+     stok_darah.`golongan_darah` AS stok_darah_golongan_darah,
+     stok_darah.`stok` AS stok_darah_stok
+FROM
+     `stok_darah` stok_darah]]>
 	</queryString>
-	<field name="id_user" class="java.lang.Integer">
+	<field name="id_darah" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="nama" class="java.lang.String">
+	<field name="golongan_darah" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="no_telp" class="java.lang.String">
+	<field name="stok" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="gmail" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="username" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="password" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="role" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="tanggal_daftar" class="java.sql.Date">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
+	<field name="stok_darah_id_darah" class="java.lang.Integer"/>
+	<field name="stok_darah_golongan_darah" class="java.lang.String"/>
+	<field name="stok_darah_stok" class="java.lang.Integer"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="215" splitType="Stretch">
+		<band height="216" splitType="Stretch">
 			<frame>
 				<reportElement uuid="dc6cb079-cc57-4dde-93e7-5521e967486e" mode="Opaque" x="0" y="144" width="812" height="71" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
 			</frame>
@@ -69,7 +63,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="17" isBold="true"/>
 				</textElement>
-				<text><![CDATA[LAPORAN DATA USER ]]></text>
+				<text><![CDATA[LAPORAN STOK DARAH]]></text>
 			</staticText>
 			<image onErrorType="Icon">
 				<reportElement uuid="448df30b-e000-425f-ad5d-545bbf4d6f39" x="29" y="7" width="133" height="104"/>
@@ -105,53 +99,25 @@
 	<columnHeader>
 		<band height="18" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="c8c77163-32f6-43a7-b428-cfe66ec40a0e" style="Column header" mode="Opaque" x="0" y="0" width="65" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<reportElement uuid="c8c77163-32f6-43a7-b428-cfe66ec40a0e" style="Column header" mode="Opaque" x="0" y="0" width="129" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[ID USER]]></text>
+				<text><![CDATA[ID DARAH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="58afa754-6b89-4172-a0fd-0020a21b5864" style="Column header" mode="Opaque" x="65" y="0" width="135" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<reportElement uuid="58afa754-6b89-4172-a0fd-0020a21b5864" style="Column header" mode="Opaque" x="129" y="0" width="520" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[NAMA]]></text>
+				<text><![CDATA[GOLONGAN DARAH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="309" y="0" width="148" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="649" y="0" width="153" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[GMAIL]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="6a9a4565-a7e8-4d20-aec6-11f1e33577b2" style="Column header" mode="Opaque" x="457" y="0" width="124" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[USERNAME]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="1bdec6fc-cfda-4472-9538-fe1ff0b88d3e" style="Column header" mode="Opaque" x="581" y="0" width="113" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[PASSWORD]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="277c65d1-3f77-4bf3-978c-3175e881f6a0" style="Column header" mode="Opaque" x="694" y="0" width="108" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[ROLE]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="58afa754-6b89-4172-a0fd-0020a21b5864" style="Column header" mode="Opaque" x="200" y="0" width="109" height="18" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[NO.TELP]]></text>
+				<text><![CDATA[STOK]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -160,53 +126,25 @@
 			<frame>
 				<reportElement uuid="e2cf8b99-ee67-481a-89ed-83fdd58f0545" style="Row" mode="Opaque" x="0" y="0" width="802" height="18"/>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="ab7499a6-1291-43ab-9e34-33b37c73101f" style="Detail" positionType="Float" x="0" y="0" width="65" height="18"/>
+					<reportElement uuid="ab7499a6-1291-43ab-9e34-33b37c73101f" style="Detail" positionType="Float" x="0" y="0" width="129" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="14"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{id_user}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{id_darah}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="65" y="0" width="135" height="18"/>
+					<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="649" y="0" width="153" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="14"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
-					<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="200" y="0" width="109" height="18"/>
+					<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="129" y="0" width="520" height="18"/>
 					<textElement textAlignment="Center">
 						<font size="14"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{no_telp}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="f92d3670-b66b-4cca-9bf6-ae3a208e59c8" style="Detail" positionType="Float" x="457" y="0" width="124" height="18"/>
-					<textElement textAlignment="Center">
-						<font size="14"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="7647cca1-c1f2-4f93-b515-2250463ec095" style="Detail" positionType="Float" x="581" y="0" width="113" height="18"/>
-					<textElement textAlignment="Center">
-						<font size="14"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="309" y="0" width="148" height="18"/>
-					<textElement textAlignment="Center">
-						<font size="14"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{gmail}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="46eaa423-248c-47b7-9a13-4659537c3f42" style="Detail" positionType="Float" x="694" y="0" width="108" height="18"/>
-					<textElement textAlignment="Center">
-						<font size="14"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{role}]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$F{golongan_darah}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>

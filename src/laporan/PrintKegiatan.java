@@ -436,14 +436,14 @@ public class PrintKegiatan extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnPrint21552011235MouseEntered
 
     private void BtnPrint21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseClicked
-//      try{
-//            String file = "/laporan/report_barista.jasper";
-//            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
-//            JasperViewer.viewReport(print, false);
-//            
-//        }catch(JRException e){
-//            JOptionPane.showMessageDialog(rootPane, e);
-//        }
+      try{
+            String file = "/laporan/report_kegiatan.jasper";
+            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
+            JasperViewer.viewReport(print, false);
+            
+        }catch(JRException e){
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
     }//GEN-LAST:event_BtnPrint21552011235MouseClicked
 
     /**

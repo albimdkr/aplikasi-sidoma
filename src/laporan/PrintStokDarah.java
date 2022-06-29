@@ -159,7 +159,7 @@ public class PrintStokDarah extends javax.swing.JFrame {
         line6 = new javax.swing.JLabel();
         txtFieldCari77174756 = new javax.swing.JTextField();
         PanelPrint21552011235 = new javax.swing.JPanel();
-        BtnPrint21552011235 = new javax.swing.JLabel();
+        BtnPrint77174756 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableData21552011235 = new javax.swing.JTable();
         txtFieldCari21552011235 = new javax.swing.JTextField();
@@ -316,24 +316,24 @@ public class PrintStokDarah extends javax.swing.JFrame {
         PanelPrint21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelPrint21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnPrint21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnPrint21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnPrint21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnPrint21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-print-32.png"))); // NOI18N
-        BtnPrint21552011235.setText("Print");
-        BtnPrint21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnPrint21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnPrint77174756.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnPrint77174756.setForeground(new java.awt.Color(255, 255, 255));
+        BtnPrint77174756.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnPrint77174756.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-print-32.png"))); // NOI18N
+        BtnPrint77174756.setText("Print");
+        BtnPrint77174756.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnPrint77174756.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnPrint21552011235MouseClicked(evt);
+                BtnPrint77174756MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnPrint21552011235MouseEntered(evt);
+                BtnPrint77174756MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnPrint21552011235MouseExited(evt);
+                BtnPrint77174756MouseExited(evt);
             }
         });
-        PanelPrint21552011235.add(BtnPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 50));
+        PanelPrint21552011235.add(BtnPrint77174756, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 50));
 
         jPanel3.add(PanelPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 1010, 50));
 
@@ -414,24 +414,24 @@ public class PrintStokDarah extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnCari77174756MouseClicked
 
-    private void BtnPrint21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseExited
-        changecolor(PanelPrint21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnPrint21552011235MouseExited
+    private void BtnPrint77174756MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint77174756MouseClicked
+      try{
+            String file = "/laporan/report_stokDarah.jasper";
+            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
+            JasperViewer.viewReport(print, false);
+            
+        }catch(JRException e){
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_BtnPrint77174756MouseClicked
 
-    private void BtnPrint21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseEntered
+    private void BtnPrint77174756MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint77174756MouseEntered
         changecolor(PanelPrint21552011235, new Color (64,49,33));
-    }//GEN-LAST:event_BtnPrint21552011235MouseEntered
+    }//GEN-LAST:event_BtnPrint77174756MouseEntered
 
-    private void BtnPrint21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseClicked
-//      try{
-//            String file = "/laporan/report_barista.jasper";
-//            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
-//            JasperViewer.viewReport(print, false);
-//            
-//        }catch(JRException e){
-//            JOptionPane.showMessageDialog(rootPane, e);
-//        }
-    }//GEN-LAST:event_BtnPrint21552011235MouseClicked
+    private void BtnPrint77174756MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint77174756MouseExited
+        changecolor(PanelPrint21552011235, new Color (17,43,60));
+    }//GEN-LAST:event_BtnPrint77174756MouseExited
 
     /**
      * @param args the command line arguments
@@ -599,7 +599,7 @@ public class PrintStokDarah extends javax.swing.JFrame {
     private javax.swing.JLabel BtnBack21552011235;
     private javax.swing.JLabel BtnCari21552011235;
     private javax.swing.JLabel BtnCari77174756;
-    private javax.swing.JLabel BtnPrint21552011235;
+    private javax.swing.JLabel BtnPrint77174756;
     private javax.swing.JLabel DaftarMenu;
     private javax.swing.JPanel Navbar;
     private javax.swing.JPanel PanelBack21552011235;
