@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/report_stokDarah.jrxml</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/PrintKegiatan.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/report_kegiatan.jrxml</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/PrintPasien.java</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/report_pasien.jrxml</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/laporan/PrintKeuangan.java</file>
         </group>
     </open-files>
 </project-private>
