@@ -44,63 +44,67 @@ public class dashboardPetugas extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        header21552011235 = new javax.swing.JPanel();
+        headerKelompok2 = new javax.swing.JPanel();
         iconMenu = new javax.swing.JPanel();
         PanelLogout21552011235 = new javax.swing.JPanel();
         BtnLogout21552011235 = new javax.swing.JLabel();
         BtnMax21552011235 = new javax.swing.JPanel();
         BtnMin21552011235 = new javax.swing.JPanel();
-        menu21552011235 = new javax.swing.JPanel();
-        sidebar21552011235 = new javax.swing.JPanel();
-        homePanel21552011235 = new javax.swing.JPanel();
+        menuKelompok2 = new javax.swing.JPanel();
+        sidebarKelompok2 = new javax.swing.JPanel();
+        homePanelKelompok2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        BtnHome21552011235 = new javax.swing.JLabel();
-        FormPanel21552011235 = new javax.swing.JPanel();
+        BtnHomeKelompok2 = new javax.swing.JLabel();
+        FormPanelKelompok2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        BtnForm21552011235 = new javax.swing.JLabel();
-        riwayatPanel21552011235 = new javax.swing.JPanel();
+        BtnFormKelompok2 = new javax.swing.JLabel();
+        hostoryPanelKelompok2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        BtnRiwayatTransfusi21552011235 = new javax.swing.JLabel();
-        tentangPanel21552011235 = new javax.swing.JPanel();
+        BtnHistoryKelompok2 = new javax.swing.JLabel();
+        aboutPanelKelompok2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        BtnTentang21552011235 = new javax.swing.JLabel();
+        BtnAboutKelompok2 = new javax.swing.JLabel();
         Logo = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        Dashboardview21552011235 = new javax.swing.JPanel();
-        jTabbedPanel21552011235 = new javax.swing.JTabbedPane();
-        HomeTabbed21552011235 = new javax.swing.JPanel();
+        DashboardviewKelompok2 = new javax.swing.JPanel();
+        jTabbedPanelKelompok2 = new javax.swing.JTabbedPane();
+        HomeTabbedKelompok2 = new javax.swing.JPanel();
         IconUser = new javax.swing.JLabel();
         UserName = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        DaftarMenuTabbed21552011235 = new javax.swing.JPanel();
-        PanelDaftarmenu21552011235 = new javax.swing.JPanel();
-        TabHomePanelDataPendonor = new javax.swing.JPanel();
+        FormTabbedKelompok2 = new javax.swing.JPanel();
+        PanelKelompok2 = new javax.swing.JPanel();
+        TabHomePanelDataPendonorKelompok2 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
-        TabFormDataPendonor21552011235 = new javax.swing.JLabel();
-        TabHomePanelStokDarah21552011235 = new javax.swing.JPanel();
+        TabFormDataPendonorKelompok2 = new javax.swing.JLabel();
+        TabHomePanelStokDarahKelompok2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        TabFormStokDarah21552011235 = new javax.swing.JLabel();
-        TabFormPanelPasien21552011235 = new javax.swing.JPanel();
+        TabFormStokDarahKelompok2 = new javax.swing.JLabel();
+        TabFormPanelPasienKelompok2 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        TabFormPasien21552011235 = new javax.swing.JLabel();
-        RiwayatTabbed21552011235 = new javax.swing.JPanel();
-        PanelRiwayat21552011235 = new javax.swing.JPanel();
-        TabRiwayatBtn21552011235 = new javax.swing.JLabel();
-        TentangTabbed21552011235 = new javax.swing.JPanel();
-        PanelTentang21552011235 = new javax.swing.JPanel();
-        TabTentangBtn21552011235 = new javax.swing.JLabel();
+        TabFormPasienKelompok2 = new javax.swing.JLabel();
+        HistoryTabbedKelompok2 = new javax.swing.JPanel();
+        PanelHistoryDonorKelompo2 = new javax.swing.JPanel();
+        TabHistoryDonortBtnKelompok2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        PanelHistoryTransfusiKelompok2 = new javax.swing.JPanel();
+        TaHistoryTransfusitBtnKelompok2 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        AboutTabbedKelompok2 = new javax.swing.JPanel();
+        PanelAboutKelompok2 = new javax.swing.JPanel();
+        TabAboutBtnKelompok2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusTraversalPolicyProvider(true);
 
-        header21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        header21552011235.setPreferredSize(new java.awt.Dimension(800, 50));
-        header21552011235.setLayout(new java.awt.BorderLayout());
+        headerKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        headerKelompok2.setPreferredSize(new java.awt.Dimension(800, 50));
+        headerKelompok2.setLayout(new java.awt.BorderLayout());
 
         iconMenu.setBackground(new java.awt.Color(0, 0, 0));
         iconMenu.setPreferredSize(new java.awt.Dimension(150, 50));
@@ -142,150 +146,150 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnMin21552011235.setLayout(new java.awt.BorderLayout());
         iconMenu.add(BtnMin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        header21552011235.add(iconMenu, java.awt.BorderLayout.LINE_END);
+        headerKelompok2.add(iconMenu, java.awt.BorderLayout.LINE_END);
 
-        getContentPane().add(header21552011235, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(headerKelompok2, java.awt.BorderLayout.PAGE_START);
 
-        menu21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        menu21552011235.setPreferredSize(new java.awt.Dimension(270, 450));
-        menu21552011235.setLayout(new java.awt.BorderLayout());
+        menuKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        menuKelompok2.setPreferredSize(new java.awt.Dimension(270, 450));
+        menuKelompok2.setLayout(new java.awt.BorderLayout());
 
-        sidebar21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        sidebar21552011235.setMinimumSize(new java.awt.Dimension(200, 210));
-        sidebar21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        sidebarKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        sidebarKelompok2.setMinimumSize(new java.awt.Dimension(200, 210));
+        sidebarKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        homePanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        homePanel21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        homePanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        homePanelKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homePanel21552011235MouseClicked(evt);
+                homePanelKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                homePanel21552011235MouseEntered(evt);
+                homePanelKelompok2MouseEntered(evt);
             }
         });
-        homePanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        homePanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-home-24.png"))); // NOI18N
-        homePanel21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        homePanelKelompok2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnHome21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnHome21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnHome21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHome21552011235.setText("Home");
-        BtnHome21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnHomeKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnHomeKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHomeKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnHomeKelompok2.setText("Home");
+        BtnHomeKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnHome21552011235MouseClicked(evt);
+                BtnHomeKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnHome21552011235MouseEntered(evt);
+                BtnHomeKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnHome21552011235MouseExited(evt);
+                BtnHomeKelompok2MouseExited(evt);
             }
         });
-        homePanel21552011235.add(BtnHome21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        homePanelKelompok2.add(BtnHomeKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(homePanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 270, 50));
+        sidebarKelompok2.add(homePanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 270, 50));
 
-        FormPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        FormPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        FormPanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        FormPanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-health-book-20.png"))); // NOI18N
-        FormPanel21552011235.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        FormPanelKelompok2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnForm21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnForm21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnForm21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnForm21552011235.setText("Form");
-        BtnForm21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnFormKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnFormKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnFormKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnFormKelompok2.setText("Form");
+        BtnFormKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnForm21552011235MouseClicked(evt);
+                BtnFormKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnForm21552011235MouseEntered(evt);
+                BtnFormKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnForm21552011235MouseExited(evt);
+                BtnFormKelompok2MouseExited(evt);
             }
         });
-        FormPanel21552011235.add(BtnForm21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        FormPanelKelompok2.add(BtnFormKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(FormPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
+        sidebarKelompok2.add(FormPanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
 
-        riwayatPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        riwayatPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        hostoryPanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        hostoryPanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-20.png"))); // NOI18N
-        riwayatPanel21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        hostoryPanelKelompok2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnRiwayatTransfusi21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnRiwayatTransfusi21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnRiwayatTransfusi21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnRiwayatTransfusi21552011235.setText("Riwayat Transfusi");
-        BtnRiwayatTransfusi21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnHistoryKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnHistoryKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHistoryKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnHistoryKelompok2.setText("History");
+        BtnHistoryKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnRiwayatTransfusi21552011235MouseClicked(evt);
+                BtnHistoryKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnRiwayatTransfusi21552011235MouseEntered(evt);
+                BtnHistoryKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnRiwayatTransfusi21552011235MouseExited(evt);
+                BtnHistoryKelompok2MouseExited(evt);
             }
         });
-        riwayatPanel21552011235.add(BtnRiwayatTransfusi21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        hostoryPanelKelompok2.add(BtnHistoryKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(riwayatPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
+        sidebarKelompok2.add(hostoryPanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
 
-        tentangPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        tentangPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        aboutPanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        aboutPanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-24.png"))); // NOI18N
-        tentangPanel21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        aboutPanelKelompok2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnTentang21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnTentang21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnTentang21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnTentang21552011235.setText("Tentang");
-        BtnTentang21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnAboutKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnAboutKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAboutKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnAboutKelompok2.setText("About");
+        BtnAboutKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnTentang21552011235MouseClicked(evt);
+                BtnAboutKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnTentang21552011235MouseEntered(evt);
+                BtnAboutKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnTentang21552011235MouseExited(evt);
+                BtnAboutKelompok2MouseExited(evt);
             }
         });
-        tentangPanel21552011235.add(BtnTentang21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        aboutPanelKelompok2.add(BtnAboutKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(tentangPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 270, 50));
+        sidebarKelompok2.add(aboutPanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 270, 50));
 
         Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
-        sidebar21552011235.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, -10, 190, 130));
+        sidebarKelompok2.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, -10, 190, 130));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BackLOGO.png"))); // NOI18N
-        sidebar21552011235.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 230, 110));
+        sidebarKelompok2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 230, 110));
 
-        menu21552011235.add(sidebar21552011235, java.awt.BorderLayout.CENTER);
+        menuKelompok2.add(sidebarKelompok2, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(menu21552011235, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(menuKelompok2, java.awt.BorderLayout.LINE_START);
 
-        Dashboardview21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        Dashboardview21552011235.setLayout(new java.awt.GridLayout(1, 0));
+        DashboardviewKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        DashboardviewKelompok2.setLayout(new java.awt.GridLayout(1, 0));
 
-        jTabbedPanel21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        jTabbedPanel21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33)));
-        jTabbedPanel21552011235.setForeground(new java.awt.Color(17, 43, 60));
+        jTabbedPanelKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        jTabbedPanelKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33)));
+        jTabbedPanelKelompok2.setForeground(new java.awt.Color(17, 43, 60));
 
-        HomeTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        HomeTabbed21552011235.setLayout(new java.awt.GridBagLayout());
+        HomeTabbedKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        HomeTabbedKelompok2.setLayout(new java.awt.GridBagLayout());
 
         IconUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-male-user-96.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -294,7 +298,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(51, 270, 0, 0);
-        HomeTabbed21552011235.add(IconUser, gridBagConstraints);
+        HomeTabbedKelompok2.add(IconUser, gridBagConstraints);
 
         UserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         UserName.setForeground(new java.awt.Color(255, 255, 255));
@@ -307,10 +311,10 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(UserName, gridBagConstraints);
+        HomeTabbedKelompok2.add(UserName, gridBagConstraints);
 
-        usernamePetugas21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        usernamePetugas21552011235.setForeground(new java.awt.Color(255, 255, 255));
+        usernamePetugasKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        usernamePetugasKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -320,7 +324,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.ipady = 60;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(73, 14, 0, 0);
-        HomeTabbed21552011235.add(usernamePetugas21552011235, gridBagConstraints);
+        HomeTabbedKelompok2.add(usernamePetugasKelompok2, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -333,7 +337,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 217;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 196, 133, 121);
-        HomeTabbed21552011235.add(jLabel4, gridBagConstraints);
+        HomeTabbedKelompok2.add(jLabel4, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -344,7 +348,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 8;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(28, 196, 0, 121);
-        HomeTabbed21552011235.add(jLabel7, gridBagConstraints);
+        HomeTabbedKelompok2.add(jLabel7, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -355,7 +359,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 312, 0, 0);
-        HomeTabbed21552011235.add(jLabel3, gridBagConstraints);
+        HomeTabbedKelompok2.add(jLabel3, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -368,199 +372,229 @@ public class dashboardPetugas extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 55;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(43, 270, 0, 0);
-        HomeTabbed21552011235.add(jLabel6, gridBagConstraints);
+        HomeTabbedKelompok2.add(jLabel6, gridBagConstraints);
 
-        jTabbedPanel21552011235.addTab("", HomeTabbed21552011235);
+        jTabbedPanelKelompok2.addTab("", HomeTabbedKelompok2);
 
-        DaftarMenuTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        DaftarMenuTabbed21552011235.setLayout(new java.awt.GridBagLayout());
+        FormTabbedKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        FormTabbedKelompok2.setLayout(new java.awt.GridBagLayout());
 
-        PanelDaftarmenu21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelDaftarmenu21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelDaftarmenu21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        DaftarMenuTabbed21552011235.add(PanelDaftarmenu21552011235, gridBagConstraints);
+        FormTabbedKelompok2.add(PanelKelompok2, gridBagConstraints);
 
-        TabHomePanelDataPendonor.setBackground(new java.awt.Color(17, 43, 60));
-        TabHomePanelDataPendonor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelDataPendonor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        TabHomePanelDataPendonorKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        TabHomePanelDataPendonorKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        TabHomePanelDataPendonorKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-96.png"))); // NOI18N
-        TabHomePanelDataPendonor.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 70, -1));
+        TabHomePanelDataPendonorKelompok2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, -1));
 
-        TabFormDataPendonor21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabFormDataPendonor21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormDataPendonor21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormDataPendonor21552011235.setText("Pendonor");
-        TabFormDataPendonor21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabFormDataPendonor21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabFormDataPendonorKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TabFormDataPendonorKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormDataPendonorKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormDataPendonorKelompok2.setText("Pendonor");
+        TabFormDataPendonorKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabFormDataPendonorKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonor21552011235MouseClicked(evt);
+                TabFormDataPendonorKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonor21552011235MouseEntered(evt);
+                TabFormDataPendonorKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonor21552011235MouseExited(evt);
+                TabFormDataPendonorKelompok2MouseExited(evt);
             }
         });
-        TabHomePanelDataPendonor.add(TabFormDataPendonor21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
+        TabHomePanelDataPendonorKelompok2.add(TabFormDataPendonorKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 260));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(132, 101, 169, 0);
-        DaftarMenuTabbed21552011235.add(TabHomePanelDataPendonor, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(100, 30, 108, 0);
+        FormTabbedKelompok2.add(TabHomePanelDataPendonorKelompok2, gridBagConstraints);
 
-        TabHomePanelStokDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        TabHomePanelStokDarah21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelStokDarah21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        TabHomePanelStokDarahKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        TabHomePanelStokDarahKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        TabHomePanelStokDarahKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-heart-with-pulse-96.png"))); // NOI18N
-        TabHomePanelStokDarah21552011235.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 80, 80));
+        TabHomePanelStokDarahKelompok2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 80));
 
-        TabFormStokDarah21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabFormStokDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormStokDarah21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormStokDarah21552011235.setText("Stok Darah");
-        TabFormStokDarah21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabFormStokDarahKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TabFormStokDarahKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormStokDarahKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormStokDarahKelompok2.setText("Stok Darah");
+        TabFormStokDarahKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormStokDarah21552011235MouseClicked(evt);
+                TabFormStokDarahKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormStokDarah21552011235MouseEntered(evt);
+                TabFormStokDarahKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormStokDarah21552011235MouseExited(evt);
+                TabFormStokDarahKelompok2MouseExited(evt);
             }
         });
-        TabHomePanelStokDarah21552011235.add(TabFormStokDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
+        TabHomePanelStokDarahKelompok2.add(TabFormStokDarahKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 260));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(132, 89, 169, 0);
-        DaftarMenuTabbed21552011235.add(TabHomePanelStokDarah21552011235, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(100, 30, 108, 0);
+        FormTabbedKelompok2.add(TabHomePanelStokDarahKelompok2, gridBagConstraints);
 
-        TabFormPanelPasien21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        TabFormPanelPasien21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabFormPanelPasien21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        TabFormPanelPasienKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        TabFormPanelPasienKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        TabFormPanelPasienKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh--96_1.png"))); // NOI18N
-        TabFormPanelPasien21552011235.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 100, 100));
+        TabFormPanelPasienKelompok2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 100, 100));
 
-        TabFormPasien21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabFormPasien21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormPasien21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormPasien21552011235.setText("Pasien");
-        TabFormPasien21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabFormPasienKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TabFormPasienKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormPasienKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormPasienKelompok2.setText("Pasien");
+        TabFormPasienKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormPasien21552011235MouseClicked(evt);
+                TabFormPasienKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormPasien21552011235MouseEntered(evt);
+                TabFormPasienKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormPasien21552011235MouseExited(evt);
+                TabFormPasienKelompok2MouseExited(evt);
             }
         });
-        TabFormPanelPasien21552011235.add(TabFormPasien21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 170));
+        TabFormPanelPasienKelompok2.add(TabFormPasienKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 260));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = -4;
-        gridBagConstraints.ipady = -3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(132, 90, 169, 82);
-        DaftarMenuTabbed21552011235.add(TabFormPanelPasien21552011235, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(100, 30, 108, 20);
+        FormTabbedKelompok2.add(TabFormPanelPasienKelompok2, gridBagConstraints);
 
-        jTabbedPanel21552011235.addTab("", DaftarMenuTabbed21552011235);
+        jTabbedPanelKelompok2.addTab("", FormTabbedKelompok2);
 
-        RiwayatTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        RiwayatTabbed21552011235.setLayout(new java.awt.GridBagLayout());
+        HistoryTabbedKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        HistoryTabbedKelompok2.setLayout(new java.awt.GridBagLayout());
 
-        PanelRiwayat21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelRiwayat21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelRiwayat21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelHistoryDonorKelompo2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelHistoryDonorKelompo2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelHistoryDonorKelompo2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TabRiwayatBtn21552011235.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        TabRiwayatBtn21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabRiwayatBtn21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabRiwayatBtn21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-96.png"))); // NOI18N
-        TabRiwayatBtn21552011235.setText("Riwayat Transfusi");
-        TabRiwayatBtn21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabRiwayatBtn21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabHistoryDonortBtnKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        TabHistoryDonortBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabHistoryDonortBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabHistoryDonortBtnKelompok2.setText("Donor");
+        TabHistoryDonortBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabHistoryDonortBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabRiwayatBtn21552011235MouseClicked(evt);
+                TabHistoryDonortBtnKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabRiwayatBtn21552011235MouseEntered(evt);
+                TabHistoryDonortBtnKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabRiwayatBtn21552011235MouseExited(evt);
+                TabHistoryDonortBtnKelompok2MouseExited(evt);
             }
         });
-        PanelRiwayat21552011235.add(TabRiwayatBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 200));
+        PanelHistoryDonorKelompo2.add(TabHistoryDonortBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 230));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-96.png"))); // NOI18N
+        PanelHistoryDonorKelompo2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 100, 100));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(140, 60, 98, 0);
+        HistoryTabbedKelompok2.add(PanelHistoryDonorKelompo2, gridBagConstraints);
+
+        PanelHistoryTransfusiKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelHistoryTransfusiKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelHistoryTransfusiKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TaHistoryTransfusitBtnKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        TaHistoryTransfusitBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TaHistoryTransfusitBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TaHistoryTransfusitBtnKelompok2.setText("Transfusi");
+        TaHistoryTransfusitBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TaHistoryTransfusitBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TaHistoryTransfusitBtnKelompok2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TaHistoryTransfusitBtnKelompok2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TaHistoryTransfusitBtnKelompok2MouseExited(evt);
+            }
+        });
+        PanelHistoryTransfusiKelompok2.add(TaHistoryTransfusitBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 230));
+
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh--96_1.png"))); // NOI18N
+        PanelHistoryTransfusiKelompok2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 100, 100));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(140, 50, 98, 30);
+        HistoryTabbedKelompok2.add(PanelHistoryTransfusiKelompok2, gridBagConstraints);
+
+        jTabbedPanelKelompok2.addTab("", HistoryTabbedKelompok2);
+
+        AboutTabbedKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        AboutTabbedKelompok2.setLayout(new java.awt.GridBagLayout());
+
+        PanelAboutKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelAboutKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelAboutKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TabAboutBtnKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        TabAboutBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabAboutBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabAboutBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
+        TabAboutBtnKelompok2.setText("About");
+        TabAboutBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabAboutBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabAboutBtnKelompok2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TabAboutBtnKelompok2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TabAboutBtnKelompok2MouseExited(evt);
+            }
+        });
+        PanelAboutKelompok2.add(TabAboutBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 200));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(120, 130, 152, 74);
-        RiwayatTabbed21552011235.add(PanelRiwayat21552011235, gridBagConstraints);
+        AboutTabbedKelompok2.add(PanelAboutKelompok2, gridBagConstraints);
 
-        jTabbedPanel21552011235.addTab("", RiwayatTabbed21552011235);
+        jTabbedPanelKelompok2.addTab("", AboutTabbedKelompok2);
 
-        TentangTabbed21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        TentangTabbed21552011235.setLayout(new java.awt.GridBagLayout());
+        DashboardviewKelompok2.add(jTabbedPanelKelompok2);
 
-        PanelTentang21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelTentang21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelTentang21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        TabTentangBtn21552011235.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        TabTentangBtn21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        TabTentangBtn21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabTentangBtn21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
-        TabTentangBtn21552011235.setText("Tentang");
-        TabTentangBtn21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabTentangBtn21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabTentangBtn21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabTentangBtn21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabTentangBtn21552011235MouseExited(evt);
-            }
-        });
-        PanelTentang21552011235.add(TabTentangBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 200));
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(120, 130, 152, 74);
-        TentangTabbed21552011235.add(PanelTentang21552011235, gridBagConstraints);
-
-        jTabbedPanel21552011235.addTab("", TentangTabbed21552011235);
-
-        Dashboardview21552011235.add(jTabbedPanel21552011235);
-
-        getContentPane().add(Dashboardview21552011235, java.awt.BorderLayout.CENTER);
+        getContentPane().add(DashboardviewKelompok2, java.awt.BorderLayout.CENTER);
 
         setSize(new java.awt.Dimension(975, 589));
         setLocationRelativeTo(null);
@@ -604,29 +638,29 @@ public class dashboardPetugas extends javax.swing.JFrame {
     
     
     
-    private void homePanel21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanel21552011235MouseEntered
+    private void homePanelKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanelKelompok2MouseEntered
         
-    }//GEN-LAST:event_homePanel21552011235MouseEntered
+    }//GEN-LAST:event_homePanelKelompok2MouseEntered
 
-    private void homePanel21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanel21552011235MouseClicked
+    private void homePanelKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanelKelompok2MouseClicked
 
-    }//GEN-LAST:event_homePanel21552011235MouseClicked
+    }//GEN-LAST:event_homePanelKelompok2MouseClicked
 
-    private void BtnHome21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseEntered
-        changecolor(homePanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnHome21552011235MouseEntered
+    private void BtnHomeKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeKelompok2MouseEntered
+        changecolor(homePanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnHomeKelompok2MouseEntered
 
-    private void BtnHome21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseExited
-        changecolor(homePanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnHome21552011235MouseExited
+    private void BtnHomeKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeKelompok2MouseExited
+        changecolor(homePanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnHomeKelompok2MouseExited
 
-    private void BtnTentang21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseEntered
-        changecolor(tentangPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnTentang21552011235MouseEntered
+    private void BtnAboutKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAboutKelompok2MouseEntered
+        changecolor(aboutPanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnAboutKelompok2MouseEntered
 
-    private void BtnTentang21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseExited
-        changecolor(tentangPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnTentang21552011235MouseExited
+    private void BtnAboutKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAboutKelompok2MouseExited
+        changecolor(aboutPanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnAboutKelompok2MouseExited
 
     private void BtnLogout21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseExited
         changecolor(PanelLogout21552011235, new Color (32,83,117));
@@ -641,102 +675,115 @@ public class dashboardPetugas extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 
-    private void BtnHome21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseClicked
-       jTabbedPanel21552011235.setSelectedIndex(0);
-    }//GEN-LAST:event_BtnHome21552011235MouseClicked
+    private void BtnHomeKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeKelompok2MouseClicked
+       jTabbedPanelKelompok2.setSelectedIndex(0);
+    }//GEN-LAST:event_BtnHomeKelompok2MouseClicked
 
-    private void BtnTentang21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(3);
-    }//GEN-LAST:event_BtnTentang21552011235MouseClicked
+    private void BtnAboutKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAboutKelompok2MouseClicked
+        jTabbedPanelKelompok2.setSelectedIndex(3);
+    }//GEN-LAST:event_BtnAboutKelompok2MouseClicked
 
-    private void TabTentangBtn21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseExited
-        changecolor(PanelTentang21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabTentangBtn21552011235MouseExited
+    private void TabAboutBtnKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabAboutBtnKelompok2MouseExited
+        changecolor(PanelAboutKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabAboutBtnKelompok2MouseExited
 
-    private void TabTentangBtn21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseEntered
-        changecolor(PanelTentang21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabTentangBtn21552011235MouseEntered
+    private void TabAboutBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabAboutBtnKelompok2MouseEntered
+        changecolor(PanelAboutKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabAboutBtnKelompok2MouseEntered
 
-    private void TabTentangBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseClicked
-        new petugas.TentangPetugas().setVisible(true);
+    private void TabAboutBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabAboutBtnKelompok2MouseClicked
+        new petugas.AboutPetugas().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabTentangBtn21552011235MouseClicked
+    }//GEN-LAST:event_TabAboutBtnKelompok2MouseClicked
 
-    private void TabRiwayatBtn21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabRiwayatBtn21552011235MouseExited
-        changecolor(PanelRiwayat21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabRiwayatBtn21552011235MouseExited
+    private void TaHistoryTransfusitBtnKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaHistoryTransfusitBtnKelompok2MouseExited
+        changecolor(PanelHistoryTransfusiKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TaHistoryTransfusitBtnKelompok2MouseExited
 
-    private void TabRiwayatBtn21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabRiwayatBtn21552011235MouseEntered
-        changecolor(PanelRiwayat21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabRiwayatBtn21552011235MouseEntered
+    private void TaHistoryTransfusitBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaHistoryTransfusitBtnKelompok2MouseEntered
+        changecolor(PanelHistoryTransfusiKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TaHistoryTransfusitBtnKelompok2MouseEntered
 
-    private void TabRiwayatBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabRiwayatBtn21552011235MouseClicked
-        new petugas.RiwayatTransfusi().setVisible(true);
+    private void TaHistoryTransfusitBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaHistoryTransfusitBtnKelompok2MouseClicked
+        new petugas.HistoryTransfusi().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabRiwayatBtn21552011235MouseClicked
+    }//GEN-LAST:event_TaHistoryTransfusitBtnKelompok2MouseClicked
 
-    private void TabFormPasien21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasien21552011235MouseExited
-        changecolor(TabFormPanelPasien21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormPasien21552011235MouseExited
+    private void TabFormPasienKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasienKelompok2MouseExited
+        changecolor(TabFormPanelPasienKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabFormPasienKelompok2MouseExited
 
-    private void TabFormPasien21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasien21552011235MouseEntered
-        changecolor(TabFormPanelPasien21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormPasien21552011235MouseEntered
+    private void TabFormPasienKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasienKelompok2MouseEntered
+        changecolor(TabFormPanelPasienKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabFormPasienKelompok2MouseEntered
 
-    private void TabFormPasien21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasien21552011235MouseClicked
+    private void TabFormPasienKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormPasienKelompok2MouseClicked
         new transfusi.FormPasien().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabFormPasien21552011235MouseClicked
+    }//GEN-LAST:event_TabFormPasienKelompok2MouseClicked
 
-    private void TabFormStokDarah21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormStokDarah21552011235MouseExited
-        changecolor(TabHomePanelStokDarah21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormStokDarah21552011235MouseExited
+    private void TabFormStokDarahKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormStokDarahKelompok2MouseExited
+        changecolor(TabHomePanelStokDarahKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabFormStokDarahKelompok2MouseExited
 
-    private void TabFormStokDarah21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormStokDarah21552011235MouseEntered
-        changecolor(TabHomePanelStokDarah21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormStokDarah21552011235MouseEntered
+    private void TabFormStokDarahKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormStokDarahKelompok2MouseEntered
+        changecolor(TabHomePanelStokDarahKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabFormStokDarahKelompok2MouseEntered
 
-    private void TabFormStokDarah21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormStokDarah21552011235MouseClicked
+    private void TabFormStokDarahKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormStokDarahKelompok2MouseClicked
         new donor.stokDarahIn().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabFormStokDarah21552011235MouseClicked
+    }//GEN-LAST:event_TabFormStokDarahKelompok2MouseClicked
 
-    private void TabFormDataPendonor21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseExited
-        changecolor(TabHomePanelDataPendonor, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormDataPendonor21552011235MouseExited
+    private void TabFormDataPendonorKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseExited
+        changecolor(TabHomePanelDataPendonorKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseExited
 
-    private void TabFormDataPendonor21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseEntered
-        changecolor(TabHomePanelDataPendonor, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormDataPendonor21552011235MouseEntered
+    private void TabFormDataPendonorKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseEntered
+        changecolor(TabHomePanelDataPendonorKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseEntered
 
-    private void TabFormDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonor21552011235MouseClicked
+    private void TabFormDataPendonorKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseClicked
         new donor.FormPendonor().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabFormDataPendonor21552011235MouseClicked
+    }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseClicked
 
-    private void BtnRiwayatTransfusi21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRiwayatTransfusi21552011235MouseExited
-        changecolor(riwayatPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnRiwayatTransfusi21552011235MouseExited
+    private void BtnHistoryKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHistoryKelompok2MouseExited
+        changecolor(hostoryPanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnHistoryKelompok2MouseExited
 
-    private void BtnRiwayatTransfusi21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRiwayatTransfusi21552011235MouseEntered
-        changecolor(riwayatPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnRiwayatTransfusi21552011235MouseEntered
+    private void BtnHistoryKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHistoryKelompok2MouseEntered
+        changecolor(hostoryPanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnHistoryKelompok2MouseEntered
 
-    private void BtnRiwayatTransfusi21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRiwayatTransfusi21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(2);
-    }//GEN-LAST:event_BtnRiwayatTransfusi21552011235MouseClicked
+    private void BtnHistoryKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHistoryKelompok2MouseClicked
+        jTabbedPanelKelompok2.setSelectedIndex(2);
+    }//GEN-LAST:event_BtnHistoryKelompok2MouseClicked
 
-    private void BtnForm21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnForm21552011235MouseExited
-        changecolor(FormPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnForm21552011235MouseExited
+    private void BtnFormKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnFormKelompok2MouseExited
+        changecolor(FormPanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnFormKelompok2MouseExited
 
-    private void BtnForm21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnForm21552011235MouseEntered
-        changecolor(FormPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnForm21552011235MouseEntered
+    private void BtnFormKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnFormKelompok2MouseEntered
+        changecolor(FormPanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnFormKelompok2MouseEntered
 
-    private void BtnForm21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnForm21552011235MouseClicked
-        jTabbedPanel21552011235.setSelectedIndex(1);
-    }//GEN-LAST:event_BtnForm21552011235MouseClicked
+    private void BtnFormKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnFormKelompok2MouseClicked
+        jTabbedPanelKelompok2.setSelectedIndex(1);
+    }//GEN-LAST:event_BtnFormKelompok2MouseClicked
+
+    private void TabHistoryDonortBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHistoryDonortBtnKelompok2MouseClicked
+        new petugas.HistoryDonor().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_TabHistoryDonortBtnKelompok2MouseClicked
+
+    private void TabHistoryDonortBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHistoryDonortBtnKelompok2MouseEntered
+        changecolor(PanelHistoryDonorKelompo2, new Color (32,108,151));
+    }//GEN-LAST:event_TabHistoryDonortBtnKelompok2MouseEntered
+
+    private void TabHistoryDonortBtnKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHistoryDonortBtnKelompok2MouseExited
+        changecolor(PanelHistoryDonorKelompo2, new Color (17,43,60));
+    }//GEN-LAST:event_TabHistoryDonortBtnKelompok2MouseExited
 
     /**
      * @param args the command line arguments
@@ -781,42 +828,48 @@ public class dashboardPetugas extends javax.swing.JFrame {
   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnForm21552011235;
-    private javax.swing.JLabel BtnHome21552011235;
+    private javax.swing.JPanel AboutTabbedKelompok2;
+    private javax.swing.JLabel BtnAboutKelompok2;
+    private javax.swing.JLabel BtnFormKelompok2;
+    private javax.swing.JLabel BtnHistoryKelompok2;
+    private javax.swing.JLabel BtnHomeKelompok2;
     private javax.swing.JLabel BtnLogout21552011235;
     private javax.swing.JPanel BtnMax21552011235;
     private javax.swing.JPanel BtnMin21552011235;
-    private javax.swing.JLabel BtnRiwayatTransfusi21552011235;
-    private javax.swing.JLabel BtnTentang21552011235;
-    private javax.swing.JPanel DaftarMenuTabbed21552011235;
-    private javax.swing.JPanel Dashboardview21552011235;
-    private javax.swing.JPanel FormPanel21552011235;
-    private javax.swing.JPanel HomeTabbed21552011235;
+    private javax.swing.JPanel DashboardviewKelompok2;
+    private javax.swing.JPanel FormPanelKelompok2;
+    private javax.swing.JPanel FormTabbedKelompok2;
+    private javax.swing.JPanel HistoryTabbedKelompok2;
+    private javax.swing.JPanel HomeTabbedKelompok2;
     private javax.swing.JLabel IconUser;
     private javax.swing.JLabel Logo;
-    private javax.swing.JPanel PanelDaftarmenu21552011235;
+    private javax.swing.JPanel PanelAboutKelompok2;
+    private javax.swing.JPanel PanelHistoryDonorKelompo2;
+    private javax.swing.JPanel PanelHistoryTransfusiKelompok2;
+    private javax.swing.JPanel PanelKelompok2;
     private javax.swing.JPanel PanelLogout21552011235;
-    private javax.swing.JPanel PanelRiwayat21552011235;
-    private javax.swing.JPanel PanelTentang21552011235;
-    private javax.swing.JPanel RiwayatTabbed21552011235;
-    private javax.swing.JLabel TabFormDataPendonor21552011235;
-    private javax.swing.JPanel TabFormPanelPasien21552011235;
-    private javax.swing.JLabel TabFormPasien21552011235;
-    private javax.swing.JLabel TabFormStokDarah21552011235;
-    private javax.swing.JPanel TabHomePanelDataPendonor;
-    private javax.swing.JPanel TabHomePanelStokDarah21552011235;
-    private javax.swing.JLabel TabRiwayatBtn21552011235;
-    private javax.swing.JLabel TabTentangBtn21552011235;
-    private javax.swing.JPanel TentangTabbed21552011235;
+    private javax.swing.JLabel TaHistoryTransfusitBtnKelompok2;
+    private javax.swing.JLabel TabAboutBtnKelompok2;
+    private javax.swing.JLabel TabFormDataPendonorKelompok2;
+    private javax.swing.JPanel TabFormPanelPasienKelompok2;
+    private javax.swing.JLabel TabFormPasienKelompok2;
+    private javax.swing.JLabel TabFormStokDarahKelompok2;
+    private javax.swing.JLabel TabHistoryDonortBtnKelompok2;
+    private javax.swing.JPanel TabHomePanelDataPendonorKelompok2;
+    private javax.swing.JPanel TabHomePanelStokDarahKelompok2;
     private javax.swing.JLabel UserName;
-    private javax.swing.JPanel header21552011235;
-    private javax.swing.JPanel homePanel21552011235;
+    private javax.swing.JPanel aboutPanelKelompok2;
+    private javax.swing.JPanel headerKelompok2;
+    private javax.swing.JPanel homePanelKelompok2;
+    private javax.swing.JPanel hostoryPanelKelompok2;
     private javax.swing.JPanel iconMenu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -825,12 +878,10 @@ public class dashboardPetugas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTabbedPane jTabbedPanel21552011235;
-    private javax.swing.JPanel menu21552011235;
-    private javax.swing.JPanel riwayatPanel21552011235;
-    private javax.swing.JPanel sidebar21552011235;
-    private javax.swing.JPanel tentangPanel21552011235;
-    public static final javax.swing.JLabel usernamePetugas21552011235 = new javax.swing.JLabel();
+    private javax.swing.JTabbedPane jTabbedPanelKelompok2;
+    private javax.swing.JPanel menuKelompok2;
+    private javax.swing.JPanel sidebarKelompok2;
+    public static final javax.swing.JLabel usernamePetugasKelompok2 = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 
     private static class color {
