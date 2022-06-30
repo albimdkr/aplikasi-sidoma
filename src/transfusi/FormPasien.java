@@ -655,7 +655,7 @@ public class FormPasien extends javax.swing.JFrame {
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 1320, 130));
 
         jComboBoxKondisi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBoxKondisi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- select --", "Baik", "Normal", "Drop" }));
+        jComboBoxKondisi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- pilih --", "Baik", "Normal", "Drop" }));
         jComboBoxKondisi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxKondisiActionPerformed(evt);

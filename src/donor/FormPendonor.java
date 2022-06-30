@@ -67,7 +67,7 @@ public class FormPendonor extends javax.swing.JFrame {
         koneksi conn = new koneksi();
         koneksi.getKoneksi();
          
-        tableDataPendonor21552011235.setModel(table);
+        tableDataPendonorKelompok2.setModel(table);
         table.addColumn("Tanggal Daftar");//0
         table.addColumn("No. Pendonor");//1
         table.addColumn("Nama");//2
@@ -90,7 +90,7 @@ public class FormPendonor extends javax.swing.JFrame {
     
     private void tampilData(){
         //untuk mengahapus baris setelah input
-        int row = tableDataPendonor21552011235.getRowCount();
+        int row = tableDataPendonorKelompok2.getRowCount();
         for(int a = 0 ; a < row ; a++){
             table.removeRow(0);
         }
@@ -128,7 +128,7 @@ public class FormPendonor extends javax.swing.JFrame {
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
-                tableDataPendonor21552011235.setModel(table);
+                tableDataPendonorKelompok2.setModel(table);
             
         }catch(SQLException e){
             System.out.println(e);
@@ -140,53 +140,53 @@ public class FormPendonor extends javax.swing.JFrame {
     private void clear(){
           //txtTanggalDaftar21552011235.setCalendar(null);
           //*no_pendonor
-          txtFieldNamaPendonor21552011235.setText(null);
+          txtFieldNamaPendonorKelompok2.setText(null);
           buttonGroup2.clearSelection();
-          jDateChooserTanggalLahir.setCalendar(null);
-          txtFieldNoTelp21552011235.setText(null);
-          txtFieldAkunGmail21552011235.setText(null);
-          txtFieldGolonganDarah21552011235.setText(null);
+          jDateChooserTanggalLahirKelompok2.setCalendar(null);
+          txtFieldNoTelpKelompok2.setText(null);
+          txtFieldAkunGmailKelompok2.setText(null);
+          txtFieldGolonganDarahKelompok2.setText(null);
           //jComboBoxGolDarah.setSelectedIndex(0);
-          txtFieldUsia21552011235.setText(null);
-          txtFieldBeratBadan21552011235.setText(null);
-          txtFieldAlamat21552011235.setText(null);
-          jComboBoxHemoglobin.setSelectedIndex(0);
-          txtFieldRiwayatPenyakit21552011235.setText(null);
-          txtFieldTotalDonor21552011235.setText(null);
-          txtFieldIdDarah21552011235.setText(null);
-          txtFieldJumlahLabu21552011235.setText(null);
-          jDateChooserTerakhirDonor.setCalendar(null);
+          txtFieldUsiaKelompok2.setText(null);
+          txtFieldBeratBadanKelompok2.setText(null);
+          txtFieldAlamatKelompok2.setText(null);
+          jComboBoxHemoglobinKelompok2.setSelectedIndex(0);
+          txtFieldRiwayatPenyakitKelompok2.setText(null);
+          txtFieldTotalDonorKelompok2.setText(null);
+          txtFieldIdDarahKelompok2.setText(null);
+          txtFieldJumlahLabuKelompok2.setText(null);
+          jDateChooserTerakhirDonorKelompok2.setCalendar(null);
     }
     
     
     private void tambahData(){
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_daftar = date.format(jDateTanggalDaftar21552011235.getDate());
+        String tanggal_daftar = date.format(jDateTanggalDaftarKelompok2.getDate());
         //String no_pendonor = 
-        String nama = txtFieldNamaPendonor21552011235.getText();
+        String nama = txtFieldNamaPendonorKelompok2.getText();
         String jk;
-        if (jRadioButtonLakiLaki21552011235.isSelected()){
+        if (jRadioButtonLakiLakiKelompok2.isSelected()){
             jk = "Laki-Laki";
         }else {
             jk = "Perempuan";
         }
         SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
-        String no_telp = txtFieldNoTelp21552011235.getText();
-        String gmail = txtFieldAkunGmail21552011235.getText();
-        String id_darah = txtFieldIdDarah21552011235.getText();
-        String golongan_darah = txtFieldGolonganDarah21552011235.getText();
-        String jumlah_labu = txtFieldJumlahLabu21552011235.getText();
+        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahirKelompok2.getDate());
+        String no_telp = txtFieldNoTelpKelompok2.getText();
+        String gmail = txtFieldAkunGmailKelompok2.getText();
+        String id_darah = txtFieldIdDarahKelompok2.getText();
+        String golongan_darah = txtFieldGolonganDarahKelompok2.getText();
+        String jumlah_labu = txtFieldJumlahLabuKelompok2.getText();
         //String id_darah = txtFieldDarah21552011235.getText();
         //String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
-        String usia = txtFieldUsia21552011235.getText();
-        String berat_badan = txtFieldBeratBadan21552011235.getText();
-        String alamatpendonor = txtFieldAlamat21552011235.getText();
-        String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
-        String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
-        String total_donor = txtFieldTotalDonor21552011235.getText();
+        String usia = txtFieldUsiaKelompok2.getText();
+        String berat_badan = txtFieldBeratBadanKelompok2.getText();
+        String alamatpendonor = txtFieldAlamatKelompok2.getText();
+        String hemoglobin = (String) jComboBoxHemoglobinKelompok2.getSelectedItem();
+        String riwayat_penyakit = txtFieldRiwayatPenyakitKelompok2.getText(); 
+        String total_donor = txtFieldTotalDonorKelompok2.getText();
         SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_terakhir_donor = tgl_tt.format(jDateChooserTerakhirDonor.getDate());
+        String tanggal_terakhir_donor = tgl_tt.format(jDateChooserTerakhirDonorKelompok2.getDate());
         
         
         //panggil koneksi
@@ -229,12 +229,12 @@ public class FormPendonor extends javax.swing.JFrame {
     
     private void tanggal(){
         Date now = new Date();  
-        jDateTanggalDaftar21552011235.setDate(now);    
+        jDateTanggalDaftarKelompok2.setDate(now);    
     }
     
     private void hapusData(){
         //ambill data no pendaftaran
-        int i = tableDataPendonor21552011235.getSelectedRow();
+        int i = tableDataPendonorKelompok2.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
             + "Menghapus Data ?","Konfirmasi Hapus Data Pendonor ", JOptionPane.YES_NO_OPTION);
         
@@ -258,36 +258,36 @@ public class FormPendonor extends javax.swing.JFrame {
     
     
     private void editData(){
-        int i = tableDataPendonor21552011235.getSelectedRow();
+        int i = tableDataPendonorKelompok2.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
             + "Mengedit Data ?","Konfirmasi Edit Pendonor", JOptionPane.YES_NO_OPTION);
         
         //SimpleDateFormat tgl_daftar = new SimpleDateFormat("yyyy-MM-dd");
        // String tanggal_daftar = tgl_daftar.format(jDateTanggalDaftar21552011235.getDate());
         //String no_pendonor = table.getValueAt(i, 1).toString();
-        String nama = txtFieldNamaPendonor21552011235.getText();
+        String nama = txtFieldNamaPendonorKelompok2.getText();
         String jk;
-        if (jRadioButtonLakiLaki21552011235.isSelected()){
+        if (jRadioButtonLakiLakiKelompok2.isSelected()){
             jk = "Laki-Laki";
         }else {
             jk = "Perempuan";
         }
         SimpleDateFormat tgl_lahir = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahir.getDate());
-        String no_telp = txtFieldNoTelp21552011235.getText();
-        String gmail = txtFieldAkunGmail21552011235.getText();
-        String id_darah = txtFieldIdDarah21552011235.getText();
-        String golongan_darah = txtFieldGolonganDarah21552011235.getText();
-        String jumlah_labu = txtFieldJumlahLabu21552011235.getText();
+        String tanggal_lahir = tgl_lahir.format(jDateChooserTanggalLahirKelompok2.getDate());
+        String no_telp = txtFieldNoTelpKelompok2.getText();
+        String gmail = txtFieldAkunGmailKelompok2.getText();
+        String id_darah = txtFieldIdDarahKelompok2.getText();
+        String golongan_darah = txtFieldGolonganDarahKelompok2.getText();
+        String jumlah_labu = txtFieldJumlahLabuKelompok2.getText();
         //String golongan_darah = (String) jComboBoxGolDarah.getSelectedItem();
-        String usia = txtFieldUsia21552011235.getText();
-        String berat_badan = txtFieldBeratBadan21552011235.getText();
-        String alamatpendonor = txtFieldAlamat21552011235.getText();
-        String hemoglobin = (String) jComboBoxHemoglobin.getSelectedItem();
-        String riwayat_penyakit = txtFieldRiwayatPenyakit21552011235.getText(); 
-        String total_donor = txtFieldTotalDonor21552011235.getText();
+        String usia = txtFieldUsiaKelompok2.getText();
+        String berat_badan = txtFieldBeratBadanKelompok2.getText();
+        String alamatpendonor = txtFieldAlamatKelompok2.getText();
+        String hemoglobin = (String) jComboBoxHemoglobinKelompok2.getSelectedItem();
+        String riwayat_penyakit = txtFieldRiwayatPenyakitKelompok2.getText(); 
+        String total_donor = txtFieldTotalDonorKelompok2.getText();
         SimpleDateFormat tgl_tt = new SimpleDateFormat("yyyy-MM-dd");
-        String tanggal_terakhir_donor = tgl_tt.format(jDateChooserTerakhirDonor.getDate());
+        String tanggal_terakhir_donor = tgl_tt.format(jDateChooserTerakhirDonorKelompok2.getDate());
         
         if (ok==0){
             String no_pendonor = table.getValueAt(i, 1).toString();
@@ -312,12 +312,12 @@ public class FormPendonor extends javax.swing.JFrame {
         
        
     private void cari(){
-        int row = tableDataPendonor21552011235.getRowCount();
+        int row = tableDataPendonorKelompok2.getRowCount();
         for(int a = 0 ; a < row ; a++){
             table.removeRow(0);
         }
         
-      String cari = txtFieldCari21552011235.getText();
+      String cari = txtFieldCariKelompok2.getText();
       String query = "SELECT * FROM `data_pendonor` WHERE "
                 + "`tanggal_daftar` LIKE '%"+cari+"%' OR"
                 + "`no_pendonor`  LIKE '%"+cari+"%' OR "
@@ -365,7 +365,7 @@ public class FormPendonor extends javax.swing.JFrame {
                 table.addRow(data);
             }
                 //mengeset nilai yang ditampung agar muncul di table
-                tableDataPendonor21552011235.setModel(table);
+                tableDataPendonorKelompok2.setModel(table);
                 
     }catch(SQLException e){
            System.out.println(e);
@@ -390,77 +390,72 @@ public class FormPendonor extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         Navbar = new javax.swing.JPanel();
-        PanelBack21552011235 = new javax.swing.JPanel();
-        BtnBack21552011235 = new javax.swing.JLabel();
+        PanelBackKelompok2 = new javax.swing.JPanel();
+        BtnBackKelompok2 = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        Navbar1 = new javax.swing.JPanel();
-        PanelBack77174756 = new javax.swing.JPanel();
-        BtnBack77174756 = new javax.swing.JLabel();
-        DaftarMenu1 = new javax.swing.JLabel();
-        PanelAdd21552011235 = new javax.swing.JPanel();
-        BtnAdd21552011235 = new javax.swing.JLabel();
+        PanelAddKelompok2 = new javax.swing.JPanel();
+        BtnAddKelompok2 = new javax.swing.JLabel();
         NamaPendonor = new javax.swing.JLabel();
         line8 = new javax.swing.JLabel();
         golDarah = new javax.swing.JLabel();
         TotalHarga = new javax.swing.JLabel();
-        PanelClear21552011235 = new javax.swing.JPanel();
-        BtnClear21552011235 = new javax.swing.JLabel();
-        PanelRefresh21552011235 = new javax.swing.JPanel();
-        BtnRefresh21552011235 = new javax.swing.JLabel();
-        PanelDelete21552011235 = new javax.swing.JPanel();
-        BtnDelete21552011235 = new javax.swing.JLabel();
-        PanelEdit21552011235 = new javax.swing.JPanel();
-        BtnEdit21552011235 = new javax.swing.JLabel();
+        PanelClearKelompok2 = new javax.swing.JPanel();
+        BtnClearKelompok2 = new javax.swing.JLabel();
+        PanelRefreshKelompok2 = new javax.swing.JPanel();
+        BtnRefreshKelompok2 = new javax.swing.JLabel();
+        PanelDeleteKelompok2 = new javax.swing.JPanel();
+        BtnDeleteKelompok2 = new javax.swing.JLabel();
+        PanelEditKelompok2 = new javax.swing.JPanel();
+        BtnEditKelompok2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableDataPendonor21552011235 = new javax.swing.JTable();
-        jComboBoxHemoglobin = new javax.swing.JComboBox<>();
-        txtFieldNamaPendonor21552011235 = new javax.swing.JTextField();
+        tableDataPendonorKelompok2 = new javax.swing.JTable();
+        jComboBoxHemoglobinKelompok2 = new javax.swing.JComboBox<>();
+        txtFieldNamaPendonorKelompok2 = new javax.swing.JTextField();
         line9 = new javax.swing.JLabel();
-        txtFieldNoTelp21552011235 = new javax.swing.JTextField();
+        txtFieldNoTelpKelompok2 = new javax.swing.JTextField();
         noTelp = new javax.swing.JLabel();
         line10 = new javax.swing.JLabel();
-        txtFieldAlamat21552011235 = new javax.swing.JTextField();
+        txtFieldAlamatKelompok2 = new javax.swing.JTextField();
         alamat = new javax.swing.JLabel();
         line12 = new javax.swing.JLabel();
-        txtFieldAkunGmail21552011235 = new javax.swing.JTextField();
+        txtFieldAkunGmailKelompok2 = new javax.swing.JTextField();
         kondisi = new javax.swing.JLabel();
         kondisi1 = new javax.swing.JLabel();
         line11 = new javax.swing.JLabel();
-        txtFieldTotalDonor21552011235 = new javax.swing.JTextField();
+        txtFieldTotalDonorKelompok2 = new javax.swing.JTextField();
         jumlahTransfusi = new javax.swing.JLabel();
         line13 = new javax.swing.JLabel();
-        txtFieldUsia21552011235 = new javax.swing.JTextField();
+        txtFieldUsiaKelompok2 = new javax.swing.JTextField();
         alamat1 = new javax.swing.JLabel();
         line14 = new javax.swing.JLabel();
-        txtFieldRiwayatPenyakit21552011235 = new javax.swing.JTextField();
+        txtFieldRiwayatPenyakitKelompok2 = new javax.swing.JTextField();
         alamat2 = new javax.swing.JLabel();
         line15 = new javax.swing.JLabel();
-        txtFieldBeratBadan21552011235 = new javax.swing.JTextField();
+        txtFieldBeratBadanKelompok2 = new javax.swing.JTextField();
         BeartBadan = new javax.swing.JLabel();
-        jDateChooserTerakhirDonor = new com.toedter.calendar.JDateChooser();
-        jDateChooserTanggalLahir = new com.toedter.calendar.JDateChooser();
-        jDateTanggalDaftar21552011235 = new com.toedter.calendar.JDateChooser();
+        jDateChooserTerakhirDonorKelompok2 = new com.toedter.calendar.JDateChooser();
+        jDateChooserTanggalLahirKelompok2 = new com.toedter.calendar.JDateChooser();
+        jDateTanggalDaftarKelompok2 = new com.toedter.calendar.JDateChooser();
         line16 = new javax.swing.JLabel();
-        txtFieldCari21552011235 = new javax.swing.JTextField();
-        PanelDarah21552011235 = new javax.swing.JPanel();
-        BtnDarah21552011235 = new javax.swing.JLabel();
-        PanelCari21552011235 = new javax.swing.JPanel();
-        BtnCari77174756 = new javax.swing.JLabel();
+        txtFieldCariKelompok2 = new javax.swing.JTextField();
+        PanelDarahKelompok2 = new javax.swing.JPanel();
+        BtnDarahKelompok2 = new javax.swing.JLabel();
+        PanelCariKelompok2 = new javax.swing.JPanel();
+        BtnCariKelompok2 = new javax.swing.JLabel();
         NamaPendonor1 = new javax.swing.JLabel();
-        NamaPendonor2 = new javax.swing.JLabel();
-        jRadioButtonLakiLaki21552011235 = new javax.swing.JRadioButton();
-        jRadioButtonPerempuan21552011235 = new javax.swing.JRadioButton();
+        jRadioButtonLakiLakiKelompok2 = new javax.swing.JRadioButton();
+        jRadioButtonPerempuanKelompok2 = new javax.swing.JRadioButton();
         line19 = new javax.swing.JLabel();
         line22 = new javax.swing.JLabel();
         line20 = new javax.swing.JLabel();
-        txtFieldIdDarah21552011235 = new javax.swing.JTextField();
+        txtFieldIdDarahKelompok2 = new javax.swing.JTextField();
         tanggalLahir1 = new javax.swing.JLabel();
-        txtFieldGolonganDarah21552011235 = new javax.swing.JTextField();
-        golDarah2 = new javax.swing.JLabel();
-        golDarah3 = new javax.swing.JLabel();
-        golDarah4 = new javax.swing.JLabel();
-        txtFieldJumlahLabu21552011235 = new javax.swing.JTextField();
+        txtFieldGolonganDarahKelompok2 = new javax.swing.JTextField();
+        jumlahlabu = new javax.swing.JLabel();
+        Goldarah = new javax.swing.JLabel();
+        IDdarah = new javax.swing.JLabel();
+        txtFieldJumlahLabuKelompok2 = new javax.swing.JTextField();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -472,28 +467,28 @@ public class FormPendonor extends javax.swing.JFrame {
         Navbar.setBackground(new java.awt.Color(32, 83, 117));
         Navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelBack21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        PanelBack21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelBackKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        PanelBackKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnBack21552011235.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BtnBack21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnBack21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnBack21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
-        BtnBack21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnBack21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnBackKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtnBackKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBackKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnBackKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
+        BtnBackKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnBackKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseClicked(evt);
+                BtnBackKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseEntered(evt);
+                BtnBackKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseExited(evt);
+                BtnBackKelompok2MouseExited(evt);
             }
         });
-        PanelBack21552011235.add(BtnBack21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
+        PanelBackKelompok2.add(BtnBackKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
 
-        Navbar.add(PanelBack21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
+        Navbar.add(PanelBackKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
 
         title.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
@@ -509,64 +504,31 @@ public class FormPendonor extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Navbar1.setBackground(new java.awt.Color(32, 83, 117));
-        Navbar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelAddKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelAddKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelAddKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelBack77174756.setBackground(new java.awt.Color(32, 83, 117));
-        PanelBack77174756.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        BtnBack77174756.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BtnBack77174756.setForeground(new java.awt.Color(255, 255, 255));
-        BtnBack77174756.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnBack77174756.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
-        BtnBack77174756.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnAddKelompok2.setBackground(new java.awt.Color(255, 255, 255));
+        BtnAddKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnAddKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAddKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnAddKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-plus-+-24.png"))); // NOI18N
+        BtnAddKelompok2.setText("Add Data");
+        BtnAddKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAddKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnBack77174756MouseClicked(evt);
+                BtnAddKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnBack77174756MouseEntered(evt);
+                BtnAddKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnBack77174756MouseExited(evt);
+                BtnAddKelompok2MouseExited(evt);
             }
         });
-        PanelBack77174756.add(BtnBack77174756, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
+        PanelAddKelompok2.add(BtnAddKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 50));
 
-        Navbar1.add(PanelBack77174756, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
-
-        DaftarMenu1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        DaftarMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        DaftarMenu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu1.setText("Formulir Pendaftaran Pendonor");
-        Navbar1.add(DaftarMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 420, 60));
-
-        jPanel3.add(Navbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
-
-        PanelAdd21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelAdd21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelAdd21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        BtnAdd21552011235.setBackground(new java.awt.Color(255, 255, 255));
-        BtnAdd21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnAdd21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnAdd21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnAdd21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-plus-+-24.png"))); // NOI18N
-        BtnAdd21552011235.setText("Add Data");
-        BtnAdd21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnAdd21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnAdd21552011235MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnAdd21552011235MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnAdd21552011235MouseExited(evt);
-            }
-        });
-        PanelAdd21552011235.add(BtnAdd21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 50));
-
-        jPanel3.add(PanelAdd21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 610, 50));
+        jPanel3.add(PanelAddKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 610, 50));
 
         NamaPendonor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         NamaPendonor.setForeground(new java.awt.Color(255, 255, 255));
@@ -594,111 +556,111 @@ public class FormPendonor extends javax.swing.JFrame {
         TotalHarga.setToolTipText("");
         jPanel3.add(TotalHarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 60, 40));
 
-        PanelClear21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelClear21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelClear21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelClearKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelClearKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelClearKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnClear21552011235.setBackground(new java.awt.Color(255, 255, 255));
-        BtnClear21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnClear21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnClear21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnClear21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-minus-sign-24.png"))); // NOI18N
-        BtnClear21552011235.setText("Clear Form");
-        BtnClear21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnClear21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnClearKelompok2.setBackground(new java.awt.Color(255, 255, 255));
+        BtnClearKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnClearKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnClearKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnClearKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-minus-sign-24.png"))); // NOI18N
+        BtnClearKelompok2.setText("Clear Form");
+        BtnClearKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnClearKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnClear21552011235MouseClicked(evt);
+                BtnClearKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnClear21552011235MouseEntered(evt);
+                BtnClearKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnClear21552011235MouseExited(evt);
+                BtnClearKelompok2MouseExited(evt);
             }
         });
-        PanelClear21552011235.add(BtnClear21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
+        PanelClearKelompok2.add(BtnClearKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
 
-        jPanel3.add(PanelClear21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 430, 290, 50));
+        jPanel3.add(PanelClearKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 430, 290, 50));
 
-        PanelRefresh21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelRefresh21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelRefresh21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelRefreshKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelRefreshKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelRefreshKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnRefresh21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnRefresh21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnRefresh21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnRefresh21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-available-updates-24.png"))); // NOI18N
-        BtnRefresh21552011235.setText("Refresh");
-        BtnRefresh21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnRefresh21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnRefreshKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnRefreshKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRefreshKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnRefreshKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-available-updates-24.png"))); // NOI18N
+        BtnRefreshKelompok2.setText("Refresh");
+        BtnRefreshKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnRefreshKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnRefresh21552011235MouseClicked(evt);
+                BtnRefreshKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnRefresh21552011235MouseEntered(evt);
+                BtnRefreshKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnRefresh21552011235MouseExited(evt);
+                BtnRefreshKelompok2MouseExited(evt);
             }
         });
-        PanelRefresh21552011235.add(BtnRefresh21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
+        PanelRefreshKelompok2.add(BtnRefreshKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
 
-        jPanel3.add(PanelRefresh21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 240, 290, 50));
+        jPanel3.add(PanelRefreshKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 240, 290, 50));
 
-        PanelDelete21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelDelete21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelDelete21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelDeleteKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelDeleteKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelDeleteKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnDelete21552011235.setBackground(new java.awt.Color(255, 255, 255));
-        BtnDelete21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnDelete21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnDelete21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnDelete21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-trash-24.png"))); // NOI18N
-        BtnDelete21552011235.setText("Delete Data");
-        BtnDelete21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnDelete21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnDeleteKelompok2.setBackground(new java.awt.Color(255, 255, 255));
+        BtnDeleteKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnDeleteKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnDeleteKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnDeleteKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-trash-24.png"))); // NOI18N
+        BtnDeleteKelompok2.setText("Delete Data");
+        BtnDeleteKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnDeleteKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnDelete21552011235MouseClicked(evt);
+                BtnDeleteKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnDelete21552011235MouseEntered(evt);
+                BtnDeleteKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnDelete21552011235MouseExited(evt);
+                BtnDeleteKelompok2MouseExited(evt);
             }
         });
-        PanelDelete21552011235.add(BtnDelete21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
+        PanelDeleteKelompok2.add(BtnDeleteKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
 
-        jPanel3.add(PanelDelete21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 510, 290, 50));
+        jPanel3.add(PanelDeleteKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 510, 290, 50));
 
-        PanelEdit21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelEdit21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelEdit21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelEditKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelEditKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelEditKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnEdit21552011235.setBackground(new java.awt.Color(255, 255, 255));
-        BtnEdit21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnEdit21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnEdit21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnEdit21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-edit-24.png"))); // NOI18N
-        BtnEdit21552011235.setText("Edit Data");
-        BtnEdit21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnEdit21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnEditKelompok2.setBackground(new java.awt.Color(255, 255, 255));
+        BtnEditKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnEditKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnEditKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnEditKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-edit-24.png"))); // NOI18N
+        BtnEditKelompok2.setText("Edit Data");
+        BtnEditKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnEditKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnEdit21552011235MouseClicked(evt);
+                BtnEditKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnEdit21552011235MouseEntered(evt);
+                BtnEditKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnEdit21552011235MouseExited(evt);
+                BtnEditKelompok2MouseExited(evt);
             }
         });
-        PanelEdit21552011235.add(BtnEdit21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
+        PanelEditKelompok2.add(BtnEditKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 50));
 
-        jPanel3.add(PanelEdit21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 340, 290, 50));
+        jPanel3.add(PanelEditKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 340, 290, 50));
 
-        tableDataPendonor21552011235.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-        tableDataPendonor21552011235.setModel(new javax.swing.table.DefaultTableModel(
+        tableDataPendonorKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        tableDataPendonorKelompok2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -709,32 +671,32 @@ public class FormPendonor extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableDataPendonor21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tableDataPendonor21552011235.setSelectionBackground(new java.awt.Color(32, 83, 117));
-        tableDataPendonor21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        tableDataPendonorKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tableDataPendonorKelompok2.setSelectionBackground(new java.awt.Color(32, 83, 117));
+        tableDataPendonorKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tableDataPendonor21552011235MouseClicked(evt);
+                tableDataPendonorKelompok2MouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(tableDataPendonor21552011235);
+        jScrollPane1.setViewportView(tableDataPendonorKelompok2);
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 1320, 130));
 
-        jComboBoxHemoglobin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jComboBoxHemoglobin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- select --", "Baik", "Cukup", "Kurang" }));
-        jComboBoxHemoglobin.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxHemoglobinKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBoxHemoglobinKelompok2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- pilih --", "Baik", "Cukup", "Kurang" }));
+        jComboBoxHemoglobinKelompok2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxHemoglobinActionPerformed(evt);
+                jComboBoxHemoglobinKelompok2ActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBoxHemoglobin, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 240, 40));
+        jPanel3.add(jComboBoxHemoglobinKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 410, 240, 40));
 
-        txtFieldNamaPendonor21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldNamaPendonor21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldNamaPendonor21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldNamaPendonor21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldNamaPendonor21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldNamaPendonor21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 250, 40));
+        txtFieldNamaPendonorKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldNamaPendonorKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldNamaPendonorKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldNamaPendonorKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldNamaPendonorKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldNamaPendonorKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 250, 40));
 
         line9.setBackground(new java.awt.Color(255, 255, 255));
         line9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -743,12 +705,12 @@ public class FormPendonor extends javax.swing.JFrame {
         line9.setText("___________________________");
         jPanel3.add(line9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 260, 20));
 
-        txtFieldNoTelp21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldNoTelp21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldNoTelp21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldNoTelp21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldNoTelp21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldNoTelp21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 250, 40));
+        txtFieldNoTelpKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldNoTelpKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldNoTelpKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldNoTelpKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldNoTelpKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldNoTelpKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 250, 40));
 
         noTelp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         noTelp.setForeground(new java.awt.Color(255, 255, 255));
@@ -763,12 +725,12 @@ public class FormPendonor extends javax.swing.JFrame {
         line10.setText("___________________________");
         jPanel3.add(line10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 250, 20));
 
-        txtFieldAlamat21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldAlamat21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldAlamat21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldAlamat21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldAlamat21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldAlamat21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 250, 40));
+        txtFieldAlamatKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldAlamatKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldAlamatKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldAlamatKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldAlamatKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldAlamatKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 250, 40));
 
         alamat.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         alamat.setForeground(new java.awt.Color(255, 255, 255));
@@ -783,12 +745,12 @@ public class FormPendonor extends javax.swing.JFrame {
         line12.setText("___________________________");
         jPanel3.add(line12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 260, 20));
 
-        txtFieldAkunGmail21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldAkunGmail21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldAkunGmail21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldAkunGmail21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldAkunGmail21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldAkunGmail21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, 260, 40));
+        txtFieldAkunGmailKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldAkunGmailKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldAkunGmailKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldAkunGmailKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldAkunGmailKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldAkunGmailKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, 260, 40));
 
         kondisi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         kondisi.setForeground(new java.awt.Color(255, 255, 255));
@@ -809,12 +771,12 @@ public class FormPendonor extends javax.swing.JFrame {
         line11.setText("___________________________");
         jPanel3.add(line11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 260, 20));
 
-        txtFieldTotalDonor21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldTotalDonor21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldTotalDonor21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldTotalDonor21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldTotalDonor21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldTotalDonor21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 260, 40));
+        txtFieldTotalDonorKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldTotalDonorKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldTotalDonorKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldTotalDonorKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldTotalDonorKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldTotalDonorKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, 260, 40));
 
         jumlahTransfusi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jumlahTransfusi.setForeground(new java.awt.Color(255, 255, 255));
@@ -829,12 +791,12 @@ public class FormPendonor extends javax.swing.JFrame {
         line13.setText("___________");
         jPanel3.add(line13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 100, 20));
 
-        txtFieldUsia21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldUsia21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldUsia21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldUsia21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldUsia21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldUsia21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 100, 40));
+        txtFieldUsiaKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldUsiaKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldUsiaKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldUsiaKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldUsiaKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldUsiaKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 100, 40));
 
         alamat1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         alamat1.setForeground(new java.awt.Color(255, 255, 255));
@@ -849,17 +811,17 @@ public class FormPendonor extends javax.swing.JFrame {
         line14.setText("___________________________");
         jPanel3.add(line14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 250, 20));
 
-        txtFieldRiwayatPenyakit21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldRiwayatPenyakit21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldRiwayatPenyakit21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldRiwayatPenyakit21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldRiwayatPenyakit21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        txtFieldRiwayatPenyakit21552011235.addActionListener(new java.awt.event.ActionListener() {
+        txtFieldRiwayatPenyakitKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldRiwayatPenyakitKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldRiwayatPenyakitKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldRiwayatPenyakitKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldRiwayatPenyakitKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtFieldRiwayatPenyakitKelompok2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFieldRiwayatPenyakit21552011235ActionPerformed(evt);
+                txtFieldRiwayatPenyakitKelompok2ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtFieldRiwayatPenyakit21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 240, 40));
+        jPanel3.add(txtFieldRiwayatPenyakitKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 240, 40));
 
         alamat2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         alamat2.setForeground(new java.awt.Color(255, 255, 255));
@@ -874,12 +836,12 @@ public class FormPendonor extends javax.swing.JFrame {
         line15.setText("___________");
         jPanel3.add(line15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 100, 20));
 
-        txtFieldBeratBadan21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldBeratBadan21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldBeratBadan21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldBeratBadan21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldBeratBadan21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldBeratBadan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 100, 40));
+        txtFieldBeratBadanKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldBeratBadanKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldBeratBadanKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldBeratBadanKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldBeratBadanKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldBeratBadanKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 100, 40));
 
         BeartBadan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BeartBadan.setForeground(new java.awt.Color(255, 255, 255));
@@ -887,23 +849,23 @@ public class FormPendonor extends javax.swing.JFrame {
         BeartBadan.setText("Berat Badan *Kg");
         jPanel3.add(BeartBadan, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 110, 40));
 
-        jDateChooserTerakhirDonor.setDateFormatString("yyyy-MM-dd");
-        jDateChooserTerakhirDonor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel3.add(jDateChooserTerakhirDonor, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 240, 40));
+        jDateChooserTerakhirDonorKelompok2.setDateFormatString("yyyy-MM-dd");
+        jDateChooserTerakhirDonorKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel3.add(jDateChooserTerakhirDonorKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 510, 240, 40));
 
-        jDateChooserTanggalLahir.setDateFormatString("yyyy-MM-dd");
-        jDateChooserTanggalLahir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel3.add(jDateChooserTanggalLahir, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 330, 240, 40));
+        jDateChooserTanggalLahirKelompok2.setDateFormatString("yyyy-MM-dd");
+        jDateChooserTanggalLahirKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel3.add(jDateChooserTanggalLahirKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 330, 240, 40));
 
-        jDateTanggalDaftar21552011235.setDateFormatString("d MMM, yyyy");
-        jDateTanggalDaftar21552011235.setEnabled(false);
-        jDateTanggalDaftar21552011235.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jDateTanggalDaftar21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        jDateTanggalDaftarKelompok2.setDateFormatString("d MMM, yyyy");
+        jDateTanggalDaftarKelompok2.setEnabled(false);
+        jDateTanggalDaftarKelompok2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jDateTanggalDaftarKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jDateTanggalDaftar21552011235MouseClicked(evt);
+                jDateTanggalDaftarKelompok2MouseClicked(evt);
             }
         });
-        jPanel3.add(jDateTanggalDaftar21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 180, 40));
+        jPanel3.add(jDateTanggalDaftarKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 180, 40));
 
         line16.setBackground(new java.awt.Color(255, 255, 255));
         line16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -912,61 +874,62 @@ public class FormPendonor extends javax.swing.JFrame {
         line16.setText("_________________");
         jPanel3.add(line16, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 170, 180, 20));
 
-        txtFieldCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldCari21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldCari21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldCari21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFieldCari21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldCari21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 140, 150, 50));
+        txtFieldCariKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldCariKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldCariKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldCariKelompok2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldCariKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldCariKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 140, 150, 50));
 
-        PanelDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelDarah21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelDarah21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelDarahKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelDarahKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelDarahKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnDarah21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnDarah21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnDarah21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-48.png"))); // NOI18N
-        BtnDarah21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnDarah21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnDarahKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnDarahKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnDarahKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnDarahKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-rh+-48.png"))); // NOI18N
+        BtnDarahKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnDarahKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnDarah21552011235MouseClicked(evt);
+                BtnDarahKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnDarah21552011235MouseEntered(evt);
+                BtnDarahKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnDarah21552011235MouseExited(evt);
+                BtnDarahKelompok2MouseExited(evt);
             }
         });
-        PanelDarah21552011235.add(BtnDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 150));
+        PanelDarahKelompok2.add(BtnDarahKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 150));
 
-        jPanel3.add(PanelDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 70, 150));
+        jPanel3.add(PanelDarahKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 70, 150));
 
-        PanelCari21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        PanelCari21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelCari21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelCariKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelCariKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelCariKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnCari77174756.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnCari77174756.setForeground(new java.awt.Color(255, 255, 255));
-        BtnCari77174756.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnCari77174756.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-search-24.png"))); // NOI18N
-        BtnCari77174756.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnCari77174756.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnCariKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnCariKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnCariKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnCariKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-search-24.png"))); // NOI18N
+        BtnCariKelompok2.setText("Cari Data");
+        BtnCariKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnCariKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnCari77174756MouseClicked(evt);
+                BtnCariKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnCari77174756MouseEntered(evt);
+                BtnCariKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnCari77174756MouseExited(evt);
+                BtnCariKelompok2MouseExited(evt);
             }
         });
-        PanelCari21552011235.add(BtnCari77174756, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 50));
+        PanelCariKelompok2.add(BtnCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 50));
 
-        jPanel3.add(PanelCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
+        jPanel3.add(PanelCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
 
         NamaPendonor1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         NamaPendonor1.setForeground(new java.awt.Color(255, 255, 255));
@@ -974,27 +937,21 @@ public class FormPendonor extends javax.swing.JFrame {
         NamaPendonor1.setText("Nama");
         jPanel3.add(NamaPendonor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 50, 40));
 
-        NamaPendonor2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        NamaPendonor2.setForeground(new java.awt.Color(255, 255, 255));
-        NamaPendonor2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        NamaPendonor2.setText("Nama");
-        jPanel3.add(NamaPendonor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 50, 40));
+        jRadioButtonLakiLakiKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        buttonGroup2.add(jRadioButtonLakiLakiKelompok2);
+        jRadioButtonLakiLakiKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButtonLakiLakiKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonLakiLakiKelompok2.setText("Laki-laki");
+        jRadioButtonLakiLakiKelompok2.setActionCommand("");
+        jPanel3.add(jRadioButtonLakiLakiKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
 
-        jRadioButtonLakiLaki21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        buttonGroup2.add(jRadioButtonLakiLaki21552011235);
-        jRadioButtonLakiLaki21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButtonLakiLaki21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonLakiLaki21552011235.setText("Laki-laki");
-        jRadioButtonLakiLaki21552011235.setActionCommand("");
-        jPanel3.add(jRadioButtonLakiLaki21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, -1, -1));
-
-        jRadioButtonPerempuan21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        buttonGroup2.add(jRadioButtonPerempuan21552011235);
-        jRadioButtonPerempuan21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButtonPerempuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButtonPerempuan21552011235.setText("Perempuan");
-        jRadioButtonPerempuan21552011235.setActionCommand("");
-        jPanel3.add(jRadioButtonPerempuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+        jRadioButtonPerempuanKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        buttonGroup2.add(jRadioButtonPerempuanKelompok2);
+        jRadioButtonPerempuanKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jRadioButtonPerempuanKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonPerempuanKelompok2.setText("Perempuan");
+        jRadioButtonPerempuanKelompok2.setActionCommand("");
+        jPanel3.add(jRadioButtonPerempuanKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
 
         line19.setBackground(new java.awt.Color(255, 255, 255));
         line19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1017,13 +974,13 @@ public class FormPendonor extends javax.swing.JFrame {
         line20.setText("__________");
         jPanel3.add(line20, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 180, 90, 20));
 
-        txtFieldIdDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldIdDarah21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldIdDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldIdDarah21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFieldIdDarah21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldIdDarah21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldIdDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 60, 50));
+        txtFieldIdDarahKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldIdDarahKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldIdDarahKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldIdDarahKelompok2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldIdDarahKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldIdDarahKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldIdDarahKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 60, 50));
 
         tanggalLahir1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         tanggalLahir1.setForeground(new java.awt.Color(255, 255, 255));
@@ -1031,44 +988,44 @@ public class FormPendonor extends javax.swing.JFrame {
         tanggalLahir1.setText("Tanggal Lahir");
         jPanel3.add(tanggalLahir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 300, 120, 30));
 
-        txtFieldGolonganDarah21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldGolonganDarah21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldGolonganDarah21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldGolonganDarah21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFieldGolonganDarah21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldGolonganDarah21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        txtFieldGolonganDarah21552011235.addActionListener(new java.awt.event.ActionListener() {
+        txtFieldGolonganDarahKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldGolonganDarahKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldGolonganDarahKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldGolonganDarahKelompok2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldGolonganDarahKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldGolonganDarahKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtFieldGolonganDarahKelompok2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFieldGolonganDarah21552011235ActionPerformed(evt);
+                txtFieldGolonganDarahKelompok2ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtFieldGolonganDarah21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 90, 50));
+        jPanel3.add(txtFieldGolonganDarahKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 90, 50));
 
-        golDarah2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        golDarah2.setForeground(new java.awt.Color(255, 255, 255));
-        golDarah2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah2.setText("Jumlah Labu");
-        jPanel3.add(golDarah2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 100, 50));
+        jumlahlabu.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jumlahlabu.setForeground(new java.awt.Color(255, 255, 255));
+        jumlahlabu.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jumlahlabu.setText("Jumlah Labu");
+        jPanel3.add(jumlahlabu, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 100, 50));
 
-        golDarah3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        golDarah3.setForeground(new java.awt.Color(255, 255, 255));
-        golDarah3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah3.setText("Gol_darah");
-        jPanel3.add(golDarah3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 120, 100, 30));
+        Goldarah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Goldarah.setForeground(new java.awt.Color(255, 255, 255));
+        Goldarah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Goldarah.setText("Gol_darah");
+        jPanel3.add(Goldarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 120, 100, 30));
 
-        golDarah4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        golDarah4.setForeground(new java.awt.Color(255, 255, 255));
-        golDarah4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        golDarah4.setText("ID");
-        jPanel3.add(golDarah4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 120, 40, 30));
+        IDdarah.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        IDdarah.setForeground(new java.awt.Color(255, 255, 255));
+        IDdarah.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        IDdarah.setText("ID");
+        jPanel3.add(IDdarah, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 120, 40, 30));
 
-        txtFieldJumlahLabu21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldJumlahLabu21552011235.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldJumlahLabu21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldJumlahLabu21552011235.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtFieldJumlahLabu21552011235.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldJumlahLabu21552011235.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldJumlahLabu21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 160, 50));
+        txtFieldJumlahLabuKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldJumlahLabuKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldJumlahLabuKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldJumlahLabuKelompok2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtFieldJumlahLabuKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldJumlahLabuKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldJumlahLabuKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 160, 50));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
@@ -1091,142 +1048,130 @@ public class FormPendonor extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
+    private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
         new petugas.dashboardPetugas().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnBack21552011235MouseClicked
+    }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
-    private void BtnBack21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseEntered
-        changecolor(PanelBack21552011235, new Color (255,24,24));
-    }//GEN-LAST:event_BtnBack21552011235MouseEntered
+    private void BtnBackKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseEntered
+        changecolor(PanelBackKelompok2, new Color (255,24,24));
+    }//GEN-LAST:event_BtnBackKelompok2MouseEntered
 
-    private void BtnBack21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseExited
-        changecolor(PanelBack21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnBack21552011235MouseExited
+    private void BtnBackKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseExited
+        changecolor(PanelBackKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnBackKelompok2MouseExited
 
-    private void BtnEdit21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEdit21552011235MouseClicked
+    private void BtnEditKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEditKelompok2MouseClicked
         editData();
-    }//GEN-LAST:event_BtnEdit21552011235MouseClicked
+    }//GEN-LAST:event_BtnEditKelompok2MouseClicked
 
-    private void BtnEdit21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEdit21552011235MouseEntered
-        changecolor(PanelEdit21552011235, new Color (255,209,36));
-    }//GEN-LAST:event_BtnEdit21552011235MouseEntered
+    private void BtnEditKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEditKelompok2MouseEntered
+        changecolor(PanelEditKelompok2, new Color (255,209,36));
+    }//GEN-LAST:event_BtnEditKelompok2MouseEntered
 
-    private void BtnEdit21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEdit21552011235MouseExited
-        changecolor(PanelEdit21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnEdit21552011235MouseExited
+    private void BtnEditKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnEditKelompok2MouseExited
+        changecolor(PanelEditKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnEditKelompok2MouseExited
 
-    private void BtnBack77174756MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack77174756MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBack77174756MouseClicked
-
-    private void BtnBack77174756MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack77174756MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBack77174756MouseEntered
-
-    private void BtnBack77174756MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack77174756MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnBack77174756MouseExited
-
-    private void BtnAdd21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAdd21552011235MouseClicked
+    private void BtnAddKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAddKelompok2MouseClicked
       tambahData();
-    }//GEN-LAST:event_BtnAdd21552011235MouseClicked
+    }//GEN-LAST:event_BtnAddKelompok2MouseClicked
 
-    private void BtnAdd21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAdd21552011235MouseEntered
-      changecolor(PanelAdd21552011235, new Color (78,159,61));
-    }//GEN-LAST:event_BtnAdd21552011235MouseEntered
+    private void BtnAddKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAddKelompok2MouseEntered
+      changecolor(PanelAddKelompok2, new Color (78,159,61));
+    }//GEN-LAST:event_BtnAddKelompok2MouseEntered
 
-    private void BtnAdd21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAdd21552011235MouseExited
-      changecolor(PanelAdd21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnAdd21552011235MouseExited
+    private void BtnAddKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAddKelompok2MouseExited
+      changecolor(PanelAddKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnAddKelompok2MouseExited
 
-    private void BtnClear21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClear21552011235MouseClicked
+    private void BtnClearKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClearKelompok2MouseClicked
       clear();
-    }//GEN-LAST:event_BtnClear21552011235MouseClicked
+    }//GEN-LAST:event_BtnClearKelompok2MouseClicked
 
-    private void BtnClear21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClear21552011235MouseEntered
-      changecolor(PanelClear21552011235, new Color (246,107,14));
-    }//GEN-LAST:event_BtnClear21552011235MouseEntered
+    private void BtnClearKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClearKelompok2MouseEntered
+      changecolor(PanelClearKelompok2, new Color (246,107,14));
+    }//GEN-LAST:event_BtnClearKelompok2MouseEntered
 
-    private void BtnClear21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClear21552011235MouseExited
-      changecolor(PanelClear21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnClear21552011235MouseExited
+    private void BtnClearKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnClearKelompok2MouseExited
+      changecolor(PanelClearKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnClearKelompok2MouseExited
 
-    private void BtnDelete21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDelete21552011235MouseClicked
+    private void BtnDeleteKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDeleteKelompok2MouseClicked
       hapusData();
-    }//GEN-LAST:event_BtnDelete21552011235MouseClicked
+    }//GEN-LAST:event_BtnDeleteKelompok2MouseClicked
 
-    private void BtnDelete21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDelete21552011235MouseEntered
-      changecolor(PanelDelete21552011235, new Color (255,24,24));
-    }//GEN-LAST:event_BtnDelete21552011235MouseEntered
+    private void BtnDeleteKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDeleteKelompok2MouseEntered
+      changecolor(PanelDeleteKelompok2, new Color (255,24,24));
+    }//GEN-LAST:event_BtnDeleteKelompok2MouseEntered
 
-    private void BtnDelete21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDelete21552011235MouseExited
-      changecolor(PanelDelete21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnDelete21552011235MouseExited
+    private void BtnDeleteKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDeleteKelompok2MouseExited
+      changecolor(PanelDeleteKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnDeleteKelompok2MouseExited
 
-    private void BtnRefresh21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseClicked
+    private void BtnRefreshKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefreshKelompok2MouseClicked
       tampilData();
-    }//GEN-LAST:event_BtnRefresh21552011235MouseClicked
+    }//GEN-LAST:event_BtnRefreshKelompok2MouseClicked
 
-    private void BtnRefresh21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseEntered
-      changecolor(PanelRefresh21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnRefresh21552011235MouseEntered
+    private void BtnRefreshKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefreshKelompok2MouseEntered
+      changecolor(PanelRefreshKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnRefreshKelompok2MouseEntered
 
-    private void BtnRefresh21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseExited
-      changecolor(PanelRefresh21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnRefresh21552011235MouseExited
+    private void BtnRefreshKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefreshKelompok2MouseExited
+      changecolor(PanelRefreshKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnRefreshKelompok2MouseExited
 
-    private void tableDataPendonor21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableDataPendonor21552011235MouseClicked
+    private void tableDataPendonorKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableDataPendonorKelompok2MouseClicked
         // TODO add your handling code here:
-          int baris = tableDataPendonor21552011235.getSelectedRow();
+          int baris = tableDataPendonorKelompok2.getSelectedRow();
           
           //String tanggal_daftar = table.getValueAt(baris,0).toString(); 
           
           //String no_pendonor = table.getValueAt(baris,1).toString();
           String nama = table.getValueAt(baris,2).toString();
-          txtFieldNamaPendonor21552011235.setText(nama);
+          txtFieldNamaPendonorKelompok2.setText(nama);
           
           String jenis_kelamin = table.getValueAt(baris,3).toString();
           if (jenis_kelamin.equals("Laki-laki")){
-              jRadioButtonPerempuan21552011235.setSelected(true);
+              jRadioButtonPerempuanKelompok2.setSelected(true);
           } else {
-              jRadioButtonLakiLaki21552011235.setSelected(true);
+              jRadioButtonLakiLakiKelompok2.setSelected(true);
           }
           
           String no_telp = table.getValueAt(baris,5).toString();
-          txtFieldNoTelp21552011235.setText(no_telp);
+          txtFieldNoTelpKelompok2.setText(no_telp);
           
           String gmail = table.getValueAt(baris,6).toString();
-          txtFieldAkunGmail21552011235.setText(gmail);
+          txtFieldAkunGmailKelompok2.setText(gmail);
           
           String id_darah = table.getValueAt(baris,7).toString();
-          txtFieldIdDarah21552011235.setText(id_darah);
+          txtFieldIdDarahKelompok2.setText(id_darah);
           
           String golongan_darah = table.getValueAt(baris,8).toString();
-          txtFieldGolonganDarah21552011235.setText(golongan_darah);
+          txtFieldGolonganDarahKelompok2.setText(golongan_darah);
           
           String usia = table.getValueAt(baris,9).toString();
-          txtFieldUsia21552011235.setText(usia);
+          txtFieldUsiaKelompok2.setText(usia);
           
           String berat_badan =  table.getValueAt(baris,10).toString();
-          txtFieldBeratBadan21552011235.setText(berat_badan);
+          txtFieldBeratBadanKelompok2.setText(berat_badan);
           
           String alamatpendonor =  table.getValueAt(baris,11).toString();
-          txtFieldAlamat21552011235.setText(alamatpendonor);
+          txtFieldAlamatKelompok2.setText(alamatpendonor);
           
           //String hemoglobin =  table.getValueAt(baris,11).toString();
           String hemoglobin = table.getValueAt(baris,12).toString();
-          for (int i = 0; i <jComboBoxHemoglobin.getItemCount(); i++ ){
-              if (jComboBoxHemoglobin.getItemAt(i).equalsIgnoreCase(hemoglobin)){
-                  jComboBoxHemoglobin.setSelectedIndex(i);
+          for (int i = 0; i <jComboBoxHemoglobinKelompok2.getItemCount(); i++ ){
+              if (jComboBoxHemoglobinKelompok2.getItemAt(i).equalsIgnoreCase(hemoglobin)){
+                  jComboBoxHemoglobinKelompok2.setSelectedIndex(i);
               }
           }
           
           String riwayat_penyakit =  table.getValueAt(baris,13).toString();
-          txtFieldRiwayatPenyakit21552011235.setText(riwayat_penyakit);
+          txtFieldRiwayatPenyakitKelompok2.setText(riwayat_penyakit);
           
           String total_donor = table.getValueAt(baris,14).toString();
-          txtFieldTotalDonor21552011235.setText(total_donor);
+          txtFieldTotalDonorKelompok2.setText(total_donor);
          
 
        
@@ -1244,51 +1189,51 @@ public class FormPendonor extends javax.swing.JFrame {
             Logger.getLogger(FormPendonor.class.getName()).log(Level.SEVERE, null, ex);
         }
         //jDateTanggalDaftar21552011235.setDate(convert);
-        jDateChooserTanggalLahir.setDate(tanggal_lahir);
-        jDateChooserTerakhirDonor.setDate((Date) tanggal_terakhir_transfusi);
+        jDateChooserTanggalLahirKelompok2.setDate(tanggal_lahir);
+        jDateChooserTerakhirDonorKelompok2.setDate((Date) tanggal_terakhir_transfusi);
    
-    }//GEN-LAST:event_tableDataPendonor21552011235MouseClicked
+    }//GEN-LAST:event_tableDataPendonorKelompok2MouseClicked
 
-    private void jComboBoxHemoglobinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHemoglobinActionPerformed
+    private void jComboBoxHemoglobinKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHemoglobinKelompok2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxHemoglobinActionPerformed
+    }//GEN-LAST:event_jComboBoxHemoglobinKelompok2ActionPerformed
 
-    private void txtFieldRiwayatPenyakit21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldRiwayatPenyakit21552011235ActionPerformed
+    private void txtFieldRiwayatPenyakitKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldRiwayatPenyakitKelompok2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFieldRiwayatPenyakit21552011235ActionPerformed
+    }//GEN-LAST:event_txtFieldRiwayatPenyakitKelompok2ActionPerformed
 
-    private void jDateTanggalDaftar21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftar21552011235MouseClicked
+    private void jDateTanggalDaftarKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftarKelompok2MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_jDateTanggalDaftar21552011235MouseClicked
+    }//GEN-LAST:event_jDateTanggalDaftarKelompok2MouseClicked
 
-    private void BtnCari77174756MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari77174756MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnCari77174756MouseClicked
-
-    private void BtnCari77174756MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari77174756MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnCari77174756MouseEntered
-
-    private void BtnCari77174756MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCari77174756MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnCari77174756MouseExited
-
-    private void BtnDarah21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseClicked
+    private void BtnDarahKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarahKelompok2MouseClicked
         new stokDarahIn().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnDarah21552011235MouseClicked
+    }//GEN-LAST:event_BtnDarahKelompok2MouseClicked
 
-    private void BtnDarah21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseEntered
+    private void BtnDarahKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarahKelompok2MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnDarah21552011235MouseEntered
+    }//GEN-LAST:event_BtnDarahKelompok2MouseEntered
 
-    private void BtnDarah21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarah21552011235MouseExited
+    private void BtnDarahKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDarahKelompok2MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnDarah21552011235MouseExited
+    }//GEN-LAST:event_BtnDarahKelompok2MouseExited
 
-    private void txtFieldGolonganDarah21552011235ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldGolonganDarah21552011235ActionPerformed
+    private void txtFieldGolonganDarahKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldGolonganDarahKelompok2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFieldGolonganDarah21552011235ActionPerformed
+    }//GEN-LAST:event_txtFieldGolonganDarahKelompok2ActionPerformed
+
+    private void BtnCariKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCariKelompok2MouseClicked
+        cari();
+    }//GEN-LAST:event_BtnCariKelompok2MouseClicked
+
+    private void BtnCariKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCariKelompok2MouseEntered
+        changecolor(PanelCariKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnCariKelompok2MouseEntered
+
+    private void BtnCariKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCariKelompok2MouseExited
+        changecolor(PanelCariKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnCariKelompok2MouseExited
     
    
     /**
@@ -1453,30 +1398,27 @@ public class FormPendonor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BeartBadan;
-    private javax.swing.JLabel BtnAdd21552011235;
-    private javax.swing.JLabel BtnBack21552011235;
-    private javax.swing.JLabel BtnBack77174756;
-    private javax.swing.JLabel BtnCari77174756;
-    private javax.swing.JLabel BtnClear21552011235;
-    public javax.swing.JLabel BtnDarah21552011235;
-    private javax.swing.JLabel BtnDelete21552011235;
-    private javax.swing.JLabel BtnEdit21552011235;
-    private javax.swing.JLabel BtnRefresh21552011235;
-    private javax.swing.JLabel DaftarMenu1;
+    private javax.swing.JLabel BtnAddKelompok2;
+    private javax.swing.JLabel BtnBackKelompok2;
+    private javax.swing.JLabel BtnCariKelompok2;
+    private javax.swing.JLabel BtnClearKelompok2;
+    public javax.swing.JLabel BtnDarahKelompok2;
+    private javax.swing.JLabel BtnDeleteKelompok2;
+    private javax.swing.JLabel BtnEditKelompok2;
+    private javax.swing.JLabel BtnRefreshKelompok2;
+    private javax.swing.JLabel Goldarah;
+    private javax.swing.JLabel IDdarah;
     private javax.swing.JLabel NamaPendonor;
     private javax.swing.JLabel NamaPendonor1;
-    private javax.swing.JLabel NamaPendonor2;
     private javax.swing.JPanel Navbar;
-    private javax.swing.JPanel Navbar1;
-    private javax.swing.JPanel PanelAdd21552011235;
-    private javax.swing.JPanel PanelBack21552011235;
-    private javax.swing.JPanel PanelBack77174756;
-    private javax.swing.JPanel PanelCari21552011235;
-    private javax.swing.JPanel PanelClear21552011235;
-    private javax.swing.JPanel PanelDarah21552011235;
-    private javax.swing.JPanel PanelDelete21552011235;
-    private javax.swing.JPanel PanelEdit21552011235;
-    private javax.swing.JPanel PanelRefresh21552011235;
+    private javax.swing.JPanel PanelAddKelompok2;
+    private javax.swing.JPanel PanelBackKelompok2;
+    private javax.swing.JPanel PanelCariKelompok2;
+    private javax.swing.JPanel PanelClearKelompok2;
+    private javax.swing.JPanel PanelDarahKelompok2;
+    private javax.swing.JPanel PanelDeleteKelompok2;
+    private javax.swing.JPanel PanelEditKelompok2;
+    private javax.swing.JPanel PanelRefreshKelompok2;
     private javax.swing.JLabel TotalHarga;
     private javax.swing.JLabel alamat;
     private javax.swing.JLabel alamat1;
@@ -1484,19 +1426,17 @@ public class FormPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel background;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel golDarah;
-    private javax.swing.JLabel golDarah2;
-    private javax.swing.JLabel golDarah3;
-    private javax.swing.JLabel golDarah4;
-    private javax.swing.JComboBox<String> jComboBoxHemoglobin;
-    private com.toedter.calendar.JDateChooser jDateChooserTanggalLahir;
-    private com.toedter.calendar.JDateChooser jDateChooserTerakhirDonor;
-    private com.toedter.calendar.JDateChooser jDateTanggalDaftar21552011235;
+    private javax.swing.JComboBox<String> jComboBoxHemoglobinKelompok2;
+    private com.toedter.calendar.JDateChooser jDateChooserTanggalLahirKelompok2;
+    private com.toedter.calendar.JDateChooser jDateChooserTerakhirDonorKelompok2;
+    private com.toedter.calendar.JDateChooser jDateTanggalDaftarKelompok2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButtonLakiLaki21552011235;
-    private javax.swing.JRadioButton jRadioButtonPerempuan21552011235;
+    private javax.swing.JRadioButton jRadioButtonLakiLakiKelompok2;
+    private javax.swing.JRadioButton jRadioButtonPerempuanKelompok2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jumlahTransfusi;
+    private javax.swing.JLabel jumlahlabu;
     private javax.swing.JLabel kondisi;
     private javax.swing.JLabel kondisi1;
     private javax.swing.JLabel line10;
@@ -1512,21 +1452,21 @@ public class FormPendonor extends javax.swing.JFrame {
     private javax.swing.JLabel line8;
     private javax.swing.JLabel line9;
     private javax.swing.JLabel noTelp;
-    private javax.swing.JTable tableDataPendonor21552011235;
+    private javax.swing.JTable tableDataPendonorKelompok2;
     private javax.swing.JLabel tanggalLahir1;
     private javax.swing.JLabel title;
-    private javax.swing.JTextField txtFieldAkunGmail21552011235;
-    private javax.swing.JTextField txtFieldAlamat21552011235;
-    private javax.swing.JTextField txtFieldBeratBadan21552011235;
-    private javax.swing.JTextField txtFieldCari21552011235;
-    public javax.swing.JTextField txtFieldGolonganDarah21552011235;
-    public javax.swing.JTextField txtFieldIdDarah21552011235;
-    public javax.swing.JTextField txtFieldJumlahLabu21552011235;
-    private javax.swing.JTextField txtFieldNamaPendonor21552011235;
-    private javax.swing.JTextField txtFieldNoTelp21552011235;
-    private javax.swing.JTextField txtFieldRiwayatPenyakit21552011235;
-    private javax.swing.JTextField txtFieldTotalDonor21552011235;
-    private javax.swing.JTextField txtFieldUsia21552011235;
+    private javax.swing.JTextField txtFieldAkunGmailKelompok2;
+    private javax.swing.JTextField txtFieldAlamatKelompok2;
+    private javax.swing.JTextField txtFieldBeratBadanKelompok2;
+    private javax.swing.JTextField txtFieldCariKelompok2;
+    public javax.swing.JTextField txtFieldGolonganDarahKelompok2;
+    public javax.swing.JTextField txtFieldIdDarahKelompok2;
+    public javax.swing.JTextField txtFieldJumlahLabuKelompok2;
+    private javax.swing.JTextField txtFieldNamaPendonorKelompok2;
+    private javax.swing.JTextField txtFieldNoTelpKelompok2;
+    private javax.swing.JTextField txtFieldRiwayatPenyakitKelompok2;
+    private javax.swing.JTextField txtFieldTotalDonorKelompok2;
+    private javax.swing.JTextField txtFieldUsiaKelompok2;
     // End of variables declaration//GEN-END:variables
 
    
