@@ -6,7 +6,6 @@
 package login;
 
 //import static petugas.dashboardPetugas.UserNamePetugas21552011235;
-import static admin.dashboardAdmin.usernameAdmin21552011235;
 import static sekretaris.dashboardSekretaris.usernameSekretaris21552011235;
 import static petugas.dashboardPetugas.usernamePetugas21552011235;
 import static bendahara.dashboardBendahara.usernameBendahara21552011235;
@@ -21,6 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import koneksi.koneksi;
+import static admin.dashboardAdmin.usernameAdminKelompok2;
 //import admin.dashboardAdmin;
 //import sekretaris.dashboardSekretaris;
 //import bendahara.dashboardBendahara;
@@ -84,7 +84,7 @@ public class loginUser extends javax.swing.JFrame {
 //                    dispose();
                     new admin.dashboardAdmin().setVisible(true);
                     dispose();
-                    usernameAdmin21552011235.setText(rs.getString(2));
+                    usernameAdminKelompok2.setText(rs.getString(2));
                     
                     }
                 if(role.equalsIgnoreCase("Sekretaris")&& s1.equalsIgnoreCase("Sekretaris")){
