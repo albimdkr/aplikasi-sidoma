@@ -163,7 +163,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         BtnHomeKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnHomeKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnHomeKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHomeKelompok2.setText("Home");
+        BtnHomeKelompok2.setText("Beranda");
         BtnHomeKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnHomeKelompok2MouseClicked(evt);
@@ -215,7 +215,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         BtnAbout21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnAbout21552011235.setForeground(new java.awt.Color(255, 255, 255));
         BtnAbout21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnAbout21552011235.setText("About");
+        BtnAbout21552011235.setText("Tentang");
         BtnAbout21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnAbout21552011235MouseClicked(evt);
@@ -360,7 +360,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         TabFormAddUserKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TabFormAddUserKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         TabFormAddUserKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormAddUserKelompok2.setText("Form Add User");
+        TabFormAddUserKelompok2.setText("Form Tambah User");
         TabFormAddUserKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabFormAddUserKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -427,7 +427,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
         TabAboutBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         TabAboutBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TabAboutBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
-        TabAboutBtnKelompok2.setText("About");
+        TabAboutBtnKelompok2.setText("Tentang");
         TabAboutBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabAboutBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -563,7 +563,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseEntered
 
     private void TabAboutBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabAboutBtnKelompok2MouseClicked
-        new admin.AboutAdmin().setVisible(true);
+        new admin.TentangAdmin().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseClicked
 
@@ -589,7 +589,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_TabFormAddUserKelompok2MouseEntered
 
     private void TabFormAddUserKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormAddUserKelompok2MouseClicked
-        new admin.FormAddUser().setVisible(true);
+        new admin.FormTambahUser().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabFormAddUserKelompok2MouseClicked
 

@@ -20,13 +20,13 @@ import koneksi.koneksi;
  *
  * @author albin
  */
-public class HistoryTransfusi extends javax.swing.JFrame {
+public class RiwayatTransfusi extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public HistoryTransfusi() {
+    public RiwayatTransfusi() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         
@@ -211,7 +211,7 @@ public class HistoryTransfusi extends javax.swing.JFrame {
         History.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         History.setForeground(new java.awt.Color(255, 255, 255));
         History.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        History.setText("History Transfusi");
+        History.setText("Riwayat Transfusi");
         Navbar.add(History, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -396,14 +396,46 @@ public class HistoryTransfusi extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HistoryTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HistoryTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HistoryTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HistoryTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RiwayatTransfusi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -440,7 +472,7 @@ public class HistoryTransfusi extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HistoryTransfusi().setVisible(true);
+                new RiwayatTransfusi().setVisible(true);
             }
         });
     }

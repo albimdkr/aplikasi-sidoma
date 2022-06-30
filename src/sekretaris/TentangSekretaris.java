@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bendahara;
+package sekretaris;
 
 import sekretaris.*;
-import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JFrame;
@@ -16,12 +15,12 @@ import javax.swing.JPanel;
  *
  * @author albin
  */
-public class AboutBendahara extends javax.swing.JFrame {
+public class TentangSekretaris extends javax.swing.JFrame {
 
     /**
      * Creates new form daftarMenu
      */
-    public AboutBendahara() {
+    public TentangSekretaris() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
     }
@@ -50,6 +49,7 @@ public class AboutBendahara extends javax.swing.JFrame {
         txt10 = new javax.swing.JLabel();
         txt9 = new javax.swing.JLabel();
         line7 = new javax.swing.JLabel();
+        txt8 = new javax.swing.JLabel();
         txt6 = new javax.swing.JLabel();
         txt5 = new javax.swing.JLabel();
         txt4 = new javax.swing.JLabel();
@@ -93,7 +93,7 @@ public class AboutBendahara extends javax.swing.JFrame {
         Tentang.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Tentang.setForeground(new java.awt.Color(255, 255, 255));
         Tentang.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tentang.setText("About");
+        Tentang.setText("Tentang");
         Navbar.add(Tentang, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -118,13 +118,13 @@ public class AboutBendahara extends javax.swing.JFrame {
         txt11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt11.setForeground(new java.awt.Color(255, 255, 255));
         txt11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt11.setText("Akses Role Bendahara");
+        txt11.setText("Akses Role Sekretaris");
         jPanel3.add(txt11, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 190, 60));
 
         txt10.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt10.setForeground(new java.awt.Color(255, 255, 255));
         txt10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt10.setText("1. Mengelola Data Keuangan PDDM.");
+        txt10.setText("1. Menambahkan Form Data Kegiatan, Data Petugas.");
         jPanel3.add(txt10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, 410, 40));
 
         txt9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -139,6 +139,12 @@ public class AboutBendahara extends javax.swing.JFrame {
         line7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         line7.setText("____________________________");
         jPanel3.add(line7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 270, 20));
+
+        txt8.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        txt8.setForeground(new java.awt.Color(255, 255, 255));
+        txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt8.setText("2. Print Laporan - laporan.");
+        jPanel3.add(txt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 270, 40));
 
         txt6.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt6.setForeground(new java.awt.Color(255, 255, 255));
@@ -201,7 +207,7 @@ public class AboutBendahara extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
-        new bendahara.dashboardBendahara().setVisible(true);
+        new sekretaris.dashboardSekretaris().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
@@ -210,7 +216,7 @@ public class AboutBendahara extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBackKelompok2MouseEntered
 
     private void BtnBackKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseExited
-        changecolor(PanelBackKelompok2, new Color (45,35,23));
+        changecolor(PanelBackKelompok2, new Color (32,83,117));
     }//GEN-LAST:event_BtnBackKelompok2MouseExited
 
     /**
@@ -230,13 +236,13 @@ public class AboutBendahara extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AboutBendahara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AboutBendahara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AboutBendahara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AboutBendahara.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TentangSekretaris.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -1266,7 +1272,7 @@ public class AboutBendahara extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AboutBendahara().setVisible(true);
+                new TentangSekretaris().setVisible(true);
             }
         });
     }
@@ -1290,6 +1296,7 @@ public class AboutBendahara extends javax.swing.JFrame {
     private javax.swing.JLabel txt4;
     private javax.swing.JLabel txt5;
     private javax.swing.JLabel txt6;
+    private javax.swing.JLabel txt8;
     private javax.swing.JLabel txt9;
     // End of variables declaration//GEN-END:variables
 }

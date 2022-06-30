@@ -189,7 +189,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         BtnHomeKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnHomeKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnHomeKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHomeKelompok2.setText("Home");
+        BtnHomeKelompok2.setText("Beranda");
         BtnHomeKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnHomeKelompok2MouseClicked(evt);
@@ -241,7 +241,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         BtnPrintKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnPrintKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnPrintKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnPrintKelompok2.setText("Page Print");
+        BtnPrintKelompok2.setText("Halaman Print");
         BtnPrintKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnPrintKelompok2MouseClicked(evt);
@@ -267,7 +267,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         BtnAboutKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnAboutKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnAboutKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnAboutKelompok2.setText("About");
+        BtnAboutKelompok2.setText("Tentang");
         BtnAboutKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnAboutKelompok2MouseClicked(evt);
@@ -702,7 +702,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         TabTentangBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         TabTentangBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TabTentangBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
-        TabTentangBtnKelompok2.setText("About");
+        TabTentangBtnKelompok2.setText("Tentang");
         TabTentangBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabTentangBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -838,7 +838,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabTentangBtnKelompok2MouseEntered
 
     private void TabTentangBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtnKelompok2MouseClicked
-        new sekretaris.AboutSekretaris().setVisible(true);
+        new sekretaris.TentangSekretaris().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabTentangBtnKelompok2MouseClicked
 

@@ -159,7 +159,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
         BtnHomeKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnHomeKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnHomeKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHomeKelompok2.setText("Home");
+        BtnHomeKelompok2.setText("Beranda");
         BtnHomeKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnHomeKelompok2MouseClicked(evt);
@@ -211,7 +211,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
         BtnTentangKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnTentangKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnTentangKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnTentangKelompok2.setText("About");
+        BtnTentangKelompok2.setText("tentang");
         BtnTentangKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnTentangKelompok2MouseClicked(evt);
@@ -544,7 +544,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseEntered
 
     private void TabAboutBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabAboutBtnKelompok2MouseClicked
-        new bendahara.AboutBendahara().setVisible(true);
+        new bendahara.TentangBendahara().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseClicked
 

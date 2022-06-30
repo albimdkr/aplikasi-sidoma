@@ -176,7 +176,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnHomeKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnHomeKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnHomeKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHomeKelompok2.setText("Home");
+        BtnHomeKelompok2.setText("Beranda");
         BtnHomeKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnHomeKelompok2MouseClicked(evt);
@@ -228,7 +228,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnHistoryKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnHistoryKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnHistoryKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHistoryKelompok2.setText("History");
+        BtnHistoryKelompok2.setText("Riwayat");
         BtnHistoryKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnHistoryKelompok2MouseClicked(evt);
@@ -254,7 +254,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         BtnAboutKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnAboutKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         BtnAboutKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnAboutKelompok2.setText("About");
+        BtnAboutKelompok2.setText("Tentang");
         BtnAboutKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnAboutKelompok2MouseClicked(evt);
@@ -568,7 +568,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
         TabAboutBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         TabAboutBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TabAboutBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
-        TabAboutBtnKelompok2.setText("About");
+        TabAboutBtnKelompok2.setText("Tentang");
         TabAboutBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabAboutBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -692,7 +692,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseEntered
 
     private void TabAboutBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabAboutBtnKelompok2MouseClicked
-        new petugas.AboutPetugas().setVisible(true);
+        new petugas.TentangPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseClicked
 
@@ -705,7 +705,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_TaHistoryTransfusitBtnKelompok2MouseEntered
 
     private void TaHistoryTransfusitBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TaHistoryTransfusitBtnKelompok2MouseClicked
-        new petugas.HistoryTransfusi().setVisible(true);
+        new petugas.RiwayatTransfusi().setVisible(true);
         dispose();
     }//GEN-LAST:event_TaHistoryTransfusitBtnKelompok2MouseClicked
 
@@ -773,7 +773,7 @@ public class dashboardPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnFormKelompok2MouseClicked
 
     private void TabHistoryDonortBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabHistoryDonortBtnKelompok2MouseClicked
-        new petugas.HistoryDonor().setVisible(true);
+        new petugas.RiwayatDonor().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabHistoryDonortBtnKelompok2MouseClicked
 
