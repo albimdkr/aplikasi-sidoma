@@ -661,7 +661,7 @@ public class FormPasien extends javax.swing.JFrame {
                 jComboBoxKondisiActionPerformed(evt);
             }
         });
-        jPanel3.add(jComboBoxKondisi, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 420, 240, 40));
+        jPanel3.add(jComboBoxKondisi, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, 240, 40));
 
         txtFieldNamaPasienKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldNamaPasienKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -734,7 +734,7 @@ public class FormPasien extends javax.swing.JFrame {
         kondisi1.setForeground(new java.awt.Color(255, 255, 255));
         kondisi1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         kondisi1.setText("Kondisi");
-        jPanel3.add(kondisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 390, 130, 30));
+        jPanel3.add(kondisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 400, 130, 30));
 
         line11.setBackground(new java.awt.Color(255, 255, 255));
         line11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
