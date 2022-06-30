@@ -39,8 +39,8 @@ public class AboutSekretaris extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         Navbar = new javax.swing.JPanel();
-        PanelBack21552011235 = new javax.swing.JPanel();
-        BtnBack21552011235 = new javax.swing.JLabel();
+        PanelBackKelompok2 = new javax.swing.JPanel();
+        BtnBackKelompok2 = new javax.swing.JLabel();
         Tentang = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         line6 = new javax.swing.JLabel();
@@ -67,28 +67,28 @@ public class AboutSekretaris extends javax.swing.JFrame {
         Navbar.setBackground(new java.awt.Color(32, 83, 117));
         Navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelBack21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        PanelBack21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelBackKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        PanelBackKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnBack21552011235.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        BtnBack21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnBack21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnBack21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
-        BtnBack21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnBack21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnBackKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtnBackKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBackKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnBackKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
+        BtnBackKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnBackKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseClicked(evt);
+                BtnBackKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseEntered(evt);
+                BtnBackKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseExited(evt);
+                BtnBackKelompok2MouseExited(evt);
             }
         });
-        PanelBack21552011235.add(BtnBack21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
+        PanelBackKelompok2.add(BtnBackKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
 
-        Navbar.add(PanelBack21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
+        Navbar.add(PanelBackKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 60));
 
         Tentang.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Tentang.setForeground(new java.awt.Color(255, 255, 255));
@@ -206,18 +206,18 @@ public class AboutSekretaris extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
+    private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
         new sekretaris.dashboardSekretaris().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnBack21552011235MouseClicked
+    }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
-    private void BtnBack21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseEntered
-        changecolor(PanelBack21552011235, new Color (255,24,24));
-    }//GEN-LAST:event_BtnBack21552011235MouseEntered
+    private void BtnBackKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseEntered
+        changecolor(PanelBackKelompok2, new Color (255,24,24));
+    }//GEN-LAST:event_BtnBackKelompok2MouseEntered
 
-    private void BtnBack21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseExited
-        changecolor(PanelBack21552011235, new Color (45,35,23));
-    }//GEN-LAST:event_BtnBack21552011235MouseExited
+    private void BtnBackKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseExited
+        changecolor(PanelBackKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnBackKelompok2MouseExited
 
     /**
      * @param args the command line arguments
@@ -766,9 +766,9 @@ public class AboutSekretaris extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnBack21552011235;
+    private javax.swing.JLabel BtnBackKelompok2;
     private javax.swing.JPanel Navbar;
-    private javax.swing.JPanel PanelBack21552011235;
+    private javax.swing.JPanel PanelBackKelompok2;
     private javax.swing.JLabel Tentang;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
