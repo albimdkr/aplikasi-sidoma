@@ -72,8 +72,8 @@ public class bantuan extends javax.swing.JFrame {
     private void initComponents() {
 
         jComboBox1 = new javax.swing.JComboBox<>();
-        jpanelPetugas21552011235 = new javax.swing.JPanel();
-        BtnBack21552011235 = new javax.swing.JLabel();
+        jpanelPetugasKelompok2 = new javax.swing.JPanel();
+        BtnBackKelompok2 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         line = new javax.swing.JLabel();
@@ -92,86 +92,86 @@ public class bantuan extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpanelPetugas21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        jpanelPetugas21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpanelPetugasKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        jpanelPetugasKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnBack21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-forward-32.png"))); // NOI18N
-        BtnBack21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnBack21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnBackKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-forward-32.png"))); // NOI18N
+        BtnBackKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnBackKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseClicked(evt);
+                BtnBackKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnBack21552011235MouseEntered(evt);
+                BtnBackKelompok2MouseEntered(evt);
             }
         });
-        jpanelPetugas21552011235.add(BtnBack21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
+        jpanelPetugasKelompok2.add(BtnBackKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
-        jpanelPetugas21552011235.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 510, 440));
+        jpanelPetugasKelompok2.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 510, 440));
 
         title.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("Bantuan");
-        jpanelPetugas21552011235.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 180, -1));
+        jpanelPetugasKelompok2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 180, -1));
 
         line.setBackground(new java.awt.Color(255, 255, 255));
         line.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         line.setForeground(new java.awt.Color(255, 255, 255));
         line.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         line.setText("____________");
-        jpanelPetugas21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 140, 20));
+        jpanelPetugasKelompok2.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 140, 20));
 
         txt2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txt2.setForeground(new java.awt.Color(255, 255, 255));
         txt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt2.setText("Jika belum terdaftar");
-        jpanelPetugas21552011235.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 420, 36));
+        jpanelPetugasKelompok2.add(txt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 420, 36));
 
         txt3.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt3.setForeground(new java.awt.Color(255, 255, 255));
         txt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt3.setText("Jika anda belum terdaftar di sistem, maka hubungi admin");
-        jpanelPetugas21552011235.add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 420, 36));
+        jpanelPetugasKelompok2.add(txt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 420, 36));
 
         txt1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt1.setForeground(new java.awt.Color(255, 255, 255));
         txt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt1.setText("admin mempunyai hak untuk menambahkan user.");
-        jpanelPetugas21552011235.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 420, 36));
+        jpanelPetugasKelompok2.add(txt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 420, 36));
 
         txt7.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txt7.setForeground(new java.awt.Color(255, 255, 255));
         txt7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt7.setText("Jika sudah terdaftar");
-        jpanelPetugas21552011235.add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 420, 36));
+        jpanelPetugasKelompok2.add(txt7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 420, 36));
 
         txt4.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt4.setForeground(new java.awt.Color(255, 255, 255));
         txt4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt4.setText("Jika anda sudah terdaftar dalam sistem, silahkan login");
-        jpanelPetugas21552011235.add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 420, 36));
+        jpanelPetugasKelompok2.add(txt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 420, 36));
 
         txt8.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt8.setForeground(new java.awt.Color(255, 255, 255));
         txt8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt8.setText("sesuai role yang telah di tentukan oleh admin.");
-        jpanelPetugas21552011235.add(txt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 420, 36));
+        jpanelPetugasKelompok2.add(txt8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 420, 36));
 
         txt6.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt6.setForeground(new java.awt.Color(255, 255, 255));
         txt6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt6.setText("Terima Kasih.");
-        jpanelPetugas21552011235.add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 100, 36));
+        jpanelPetugasKelompok2.add(txt6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 100, 36));
 
         txt5.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         txt5.setForeground(new java.awt.Color(255, 255, 255));
         txt5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt5.setText("SIDOMA v1.0");
-        jpanelPetugas21552011235.add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 110, 36));
+        jpanelPetugasKelompok2.add(txt5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 110, 36));
 
-        getContentPane().add(jpanelPetugas21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
+        getContentPane().add(jpanelPetugasKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
         setSize(new java.awt.Dimension(813, 436));
         setLocationRelativeTo(null);
@@ -179,14 +179,14 @@ public class bantuan extends javax.swing.JFrame {
 
     
     
-    private void BtnBack21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseClicked
+    private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
       new login.selamatDatang().setVisible(true);
       dispose();
-    }//GEN-LAST:event_BtnBack21552011235MouseClicked
+    }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
-    private void BtnBack21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseEntered
+    private void BtnBackKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseEntered
        
-    }//GEN-LAST:event_BtnBack21552011235MouseEntered
+    }//GEN-LAST:event_BtnBackKelompok2MouseEntered
 
     /**
      * @param args the command line arguments
@@ -224,9 +224,9 @@ public class bantuan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JLabel BtnBack21552011235;
+    private javax.swing.JLabel BtnBackKelompok2;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JPanel jpanelPetugas21552011235;
+    private javax.swing.JPanel jpanelPetugasKelompok2;
     private javax.swing.JLabel line;
     private javax.swing.JLabel title;
     private javax.swing.JLabel txt1;

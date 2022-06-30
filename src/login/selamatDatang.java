@@ -36,20 +36,20 @@ public class selamatDatang extends javax.swing.JFrame {
     private void initComponents() {
 
         jComboBox1 = new javax.swing.JComboBox<>();
-        jpanelLogin21552011235 = new javax.swing.JPanel();
-        CloseBtn21552011235 = new javax.swing.JLabel();
+        jpanelLoginKelompok2 = new javax.swing.JPanel();
+        CloseBtnKelompok2 = new javax.swing.JLabel();
         SelamatDatang = new javax.swing.JLabel();
         line = new javax.swing.JLabel();
         Sistem = new javax.swing.JLabel();
         sidoma = new javax.swing.JLabel();
-        panelLogin21552011235 = new javax.swing.JPanel();
-        BtnLogin21552011235 = new javax.swing.JLabel();
-        panelBantuan21552011235 = new javax.swing.JPanel();
-        BtnBantuan21552011235 = new javax.swing.JLabel();
+        panelLoginKelompok2 = new javax.swing.JPanel();
+        BtnLoginKelompok2 = new javax.swing.JLabel();
+        panelBantuanKelompok2 = new javax.swing.JPanel();
+        BtnBantuanKelompok2 = new javax.swing.JLabel();
         versi = new javax.swing.JLabel();
         LoadingValue = new javax.swing.JLabel();
-        sidoma3 = new javax.swing.JLabel();
-        sidoma2 = new javax.swing.JLabel();
+        pddm = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         sidoma1 = new javax.swing.JLabel();
         LoadingBar = new javax.swing.JProgressBar();
         Developed1 = new javax.swing.JLabel();
@@ -65,163 +65,163 @@ public class selamatDatang extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpanelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        jpanelLogin21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpanelLoginKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        jpanelLoginKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CloseBtn21552011235.setBackground(new java.awt.Color(0, 0, 0));
-        CloseBtn21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-close-32.png"))); // NOI18N
-        CloseBtn21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        CloseBtn21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        CloseBtnKelompok2.setBackground(new java.awt.Color(0, 0, 0));
+        CloseBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-close-32.png"))); // NOI18N
+        CloseBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CloseBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CloseBtn21552011235MouseClicked(evt);
+                CloseBtnKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                CloseBtn21552011235MouseEntered(evt);
+                CloseBtnKelompok2MouseEntered(evt);
             }
         });
-        jpanelLogin21552011235.add(CloseBtn21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
+        jpanelLoginKelompok2.add(CloseBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
 
         SelamatDatang.setBackground(new java.awt.Color(255, 255, 255));
         SelamatDatang.setFont(new java.awt.Font("Segoe UI", 1, 42)); // NOI18N
         SelamatDatang.setForeground(new java.awt.Color(255, 255, 255));
         SelamatDatang.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SelamatDatang.setText("Selamat Datang");
-        jpanelLogin21552011235.add(SelamatDatang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
+        jpanelLoginKelompok2.add(SelamatDatang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
 
         line.setBackground(new java.awt.Color(255, 255, 255));
         line.setForeground(new java.awt.Color(255, 255, 255));
         line.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         line.setText("___________");
-        jpanelLogin21552011235.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 80, -1));
+        jpanelLoginKelompok2.add(line, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 80, -1));
 
         Sistem.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         Sistem.setForeground(new java.awt.Color(255, 255, 255));
         Sistem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Sistem.setText("Di Sistem Informasi Donor Darah Majalaya");
-        jpanelLogin21552011235.add(Sistem, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 330, 36));
+        jpanelLoginKelompok2.add(Sistem, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 330, 36));
 
         sidoma.setBackground(new java.awt.Color(0, 0, 0));
         sidoma.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sidoma.setForeground(new java.awt.Color(255, 255, 255));
         sidoma.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sidoma.setText("MAJALAYA");
-        jpanelLogin21552011235.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 36));
+        jpanelLoginKelompok2.add(sidoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 36));
 
-        panelLogin21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        panelLogin21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        panelLogin21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelLoginKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        panelLoginKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        panelLoginKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnLogin21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnLogin21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnLogin21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnLogin21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-login-24.png"))); // NOI18N
-        BtnLogin21552011235.setText("Login");
-        BtnLogin21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnLogin21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnLoginKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnLoginKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnLoginKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnLoginKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-login-24.png"))); // NOI18N
+        BtnLoginKelompok2.setText("Login");
+        BtnLoginKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnLoginKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnLogin21552011235MouseClicked(evt);
+                BtnLoginKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnLogin21552011235MouseEntered(evt);
+                BtnLoginKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnLogin21552011235MouseExited(evt);
+                BtnLoginKelompok2MouseExited(evt);
             }
         });
-        panelLogin21552011235.add(BtnLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
+        panelLoginKelompok2.add(BtnLoginKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
 
-        jpanelLogin21552011235.add(panelLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 280, 50));
+        jpanelLoginKelompok2.add(panelLoginKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 280, 50));
 
-        panelBantuan21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        panelBantuan21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        panelBantuan21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelBantuanKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        panelBantuanKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        panelBantuanKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BtnBantuan21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        BtnBantuan21552011235.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BtnBantuan21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnBantuan21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnBantuan21552011235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-help-24.png"))); // NOI18N
-        BtnBantuan21552011235.setText("Bantuan");
-        BtnBantuan21552011235.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BtnBantuan21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnBantuanKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        BtnBantuanKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnBantuanKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBantuanKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnBantuanKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-help-24.png"))); // NOI18N
+        BtnBantuanKelompok2.setText("Bantuan");
+        BtnBantuanKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnBantuanKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnBantuan21552011235MouseClicked(evt);
+                BtnBantuanKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnBantuan21552011235MouseEntered(evt);
+                BtnBantuanKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnBantuan21552011235MouseExited(evt);
+                BtnBantuanKelompok2MouseExited(evt);
             }
         });
-        panelBantuan21552011235.add(BtnBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
+        panelBantuanKelompok2.add(BtnBantuanKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 50));
 
-        jpanelLogin21552011235.add(panelBantuan21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 280, 50));
+        jpanelLoginKelompok2.add(panelBantuanKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 280, 50));
 
         versi.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         versi.setForeground(new java.awt.Color(255, 255, 255));
         versi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         versi.setText("v1.0");
-        jpanelLogin21552011235.add(versi, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 80, 30));
+        jpanelLoginKelompok2.add(versi, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 80, 30));
 
         LoadingValue.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         LoadingValue.setForeground(new java.awt.Color(255, 255, 255));
         LoadingValue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoadingValue.setText("0%");
-        jpanelLogin21552011235.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 40, 36));
+        jpanelLoginKelompok2.add(LoadingValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 40, 36));
 
-        sidoma3.setBackground(new java.awt.Color(0, 0, 0));
-        sidoma3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        sidoma3.setForeground(new java.awt.Color(255, 255, 255));
-        sidoma3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        sidoma3.setText("PDDM");
-        jpanelLogin21552011235.add(sidoma3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 120, 36));
+        pddm.setBackground(new java.awt.Color(0, 0, 0));
+        pddm.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        pddm.setForeground(new java.awt.Color(255, 255, 255));
+        pddm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pddm.setText("PDDM");
+        jpanelLoginKelompok2.add(pddm, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 120, 36));
 
-        sidoma2.setBackground(new java.awt.Color(0, 0, 0));
-        sidoma2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        sidoma2.setForeground(new java.awt.Color(255, 255, 255));
-        sidoma2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        sidoma2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
-        jpanelLogin21552011235.add(sidoma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 120, 100));
+        logo.setBackground(new java.awt.Color(0, 0, 0));
+        logo.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        logo.setForeground(new java.awt.Color(255, 255, 255));
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
+        jpanelLoginKelompok2.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 120, 100));
 
         sidoma1.setBackground(new java.awt.Color(0, 0, 0));
         sidoma1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         sidoma1.setForeground(new java.awt.Color(255, 255, 255));
         sidoma1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sidoma1.setText("SIDOMA");
-        jpanelLogin21552011235.add(sidoma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
+        jpanelLoginKelompok2.add(sidoma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 36));
 
         LoadingBar.setBackground(new java.awt.Color(255, 0, 0));
-        jpanelLogin21552011235.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 530, 10));
+        jpanelLoginKelompok2.add(LoadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 530, 10));
 
         Developed1.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         Developed1.setForeground(new java.awt.Color(255, 255, 255));
         Developed1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Developed1.setText("Developed By © Kelompok II  2022");
-        jpanelLogin21552011235.add(Developed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 240, 36));
+        jpanelLoginKelompok2.add(Developed1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 240, 36));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/colorRED1234.png"))); // NOI18N
-        jpanelLogin21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 290, 40));
+        jpanelLoginKelompok2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 290, 40));
 
         LoadingLabel.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         LoadingLabel.setForeground(new java.awt.Color(255, 255, 255));
         LoadingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         LoadingLabel.setText("Loading...");
-        jpanelLogin21552011235.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 280, 36));
+        jpanelLoginKelompok2.add(LoadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 280, 36));
 
         hexaBackgorund.setBackground(new java.awt.Color(255, 255, 255));
         hexaBackgorund.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/HEXABACKCONNECT.png"))); // NOI18N
-        jpanelLogin21552011235.add(hexaBackgorund, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 520, 440));
+        jpanelLoginKelompok2.add(hexaBackgorund, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 520, 440));
 
         Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/map-majalaya-logo-FIKS.png"))); // NOI18N
-        jpanelLogin21552011235.add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 250));
+        jpanelLoginKelompok2.add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 250));
 
         image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/linePNG.png"))); // NOI18N
-        jpanelLogin21552011235.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 440));
+        jpanelLoginKelompok2.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 440));
 
-        getContentPane().add(jpanelLogin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
+        getContentPane().add(jpanelLoginKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 813, -1));
 
         setSize(new java.awt.Dimension(813, 438));
         setLocationRelativeTo(null);
@@ -232,39 +232,39 @@ public class selamatDatang extends javax.swing.JFrame {
     }
     
     
-    private void CloseBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseBtn21552011235MouseClicked
+    private void CloseBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseBtnKelompok2MouseClicked
         System.exit(0);
-    }//GEN-LAST:event_CloseBtn21552011235MouseClicked
+    }//GEN-LAST:event_CloseBtnKelompok2MouseClicked
 
-    private void CloseBtn21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseBtn21552011235MouseEntered
+    private void CloseBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseBtnKelompok2MouseEntered
        
-    }//GEN-LAST:event_CloseBtn21552011235MouseEntered
+    }//GEN-LAST:event_CloseBtnKelompok2MouseEntered
 
-    private void BtnLogin21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogin21552011235MouseClicked
+    private void BtnLoginKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginKelompok2MouseClicked
         new login.loginUser().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnLogin21552011235MouseClicked
+    }//GEN-LAST:event_BtnLoginKelompok2MouseClicked
 
-    private void BtnLogin21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogin21552011235MouseEntered
-       changecolor(panelLogin21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnLogin21552011235MouseEntered
+    private void BtnLoginKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginKelompok2MouseEntered
+       changecolor(panelLoginKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnLoginKelompok2MouseEntered
 
-    private void BtnLogin21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogin21552011235MouseExited
-        changecolor(panelLogin21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnLogin21552011235MouseExited
+    private void BtnLoginKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLoginKelompok2MouseExited
+        changecolor(panelLoginKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnLoginKelompok2MouseExited
 
-    private void BtnBantuan21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuan21552011235MouseClicked
+    private void BtnBantuanKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuanKelompok2MouseClicked
         new login.bantuan().setVisible(true);
         dispose();
-    }//GEN-LAST:event_BtnBantuan21552011235MouseClicked
+    }//GEN-LAST:event_BtnBantuanKelompok2MouseClicked
 
-    private void BtnBantuan21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuan21552011235MouseEntered
-        changecolor(panelBantuan21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnBantuan21552011235MouseEntered
+    private void BtnBantuanKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuanKelompok2MouseEntered
+        changecolor(panelBantuanKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnBantuanKelompok2MouseEntered
 
-    private void BtnBantuan21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuan21552011235MouseExited
-         changecolor(panelBantuan21552011235, new Color (17,43,60));
-    }//GEN-LAST:event_BtnBantuan21552011235MouseExited
+    private void BtnBantuanKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBantuanKelompok2MouseExited
+         changecolor(panelBantuanKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_BtnBantuanKelompok2MouseExited
 
     /**
      * @param args the command line arguments
@@ -325,9 +325,9 @@ public class selamatDatang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnBantuan21552011235;
-    private javax.swing.JLabel BtnLogin21552011235;
-    private javax.swing.JLabel CloseBtn21552011235;
+    private javax.swing.JLabel BtnBantuanKelompok2;
+    private javax.swing.JLabel BtnLoginKelompok2;
+    private javax.swing.JLabel CloseBtnKelompok2;
     private javax.swing.JLabel Developed1;
     private javax.swing.JProgressBar LoadingBar;
     private javax.swing.JLabel LoadingLabel;
@@ -339,14 +339,14 @@ public class selamatDatang extends javax.swing.JFrame {
     private javax.swing.JLabel image;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jpanelLogin21552011235;
+    private javax.swing.JPanel jpanelLoginKelompok2;
     private javax.swing.JLabel line;
-    private javax.swing.JPanel panelBantuan21552011235;
-    private javax.swing.JPanel panelLogin21552011235;
+    private javax.swing.JLabel logo;
+    private javax.swing.JPanel panelBantuanKelompok2;
+    private javax.swing.JPanel panelLoginKelompok2;
+    private javax.swing.JLabel pddm;
     private javax.swing.JLabel sidoma;
     private javax.swing.JLabel sidoma1;
-    private javax.swing.JLabel sidoma2;
-    private javax.swing.JLabel sidoma3;
     private javax.swing.JLabel versi;
     // End of variables declaration//GEN-END:variables
 
