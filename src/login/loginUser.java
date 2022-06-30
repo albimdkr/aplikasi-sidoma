@@ -7,7 +7,6 @@ package login;
 
 //import static petugas.dashboardPetugas.UserNamePetugas21552011235;
 import static petugas.dashboardPetugas.usernamePetugas21552011235;
-import static bendahara.dashboardBendahara.usernameBendahara21552011235;
 import com.mysql.jdbc.Connection;
 import java.awt.Color;
 import java.awt.HeadlessException;
@@ -21,6 +20,7 @@ import javax.swing.JPanel;
 import koneksi.koneksi;
 import static admin.dashboardAdmin.usernameAdminKelompok2;
 import static sekretaris.dashboardSekretaris.usernameSekretarisKelompok2;
+import static bendahara.dashboardBendahara.usernameBendaharaKelompok2;
 //import admin.dashboardAdmin;
 //import sekretaris.dashboardSekretaris;
 //import bendahara.dashboardBendahara;
@@ -103,7 +103,7 @@ public class loginUser extends javax.swing.JFrame {
 //                    dispose();
                     new bendahara.dashboardBendahara().setVisible(true);
                     dispose();
-                    usernameBendahara21552011235.setText(rs.getString(2));
+                    usernameBendaharaKelompok2.setText(rs.getString(2));
                     }
                 if(role.equalsIgnoreCase("Petugas")&& s1.equalsIgnoreCase("Petugas")){
 //                    dashboardPetugas ptgs = new petugas.dashboardPetugas(un);
