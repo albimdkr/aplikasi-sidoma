@@ -47,29 +47,29 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        header21552011235 = new javax.swing.JPanel();
+        headerKelompok2 = new javax.swing.JPanel();
         iconMenu = new javax.swing.JPanel();
         PanelLogout21552011235 = new javax.swing.JPanel();
         BtnLogout21552011235 = new javax.swing.JLabel();
         BtnMax21552011235 = new javax.swing.JPanel();
         BtnMin21552011235 = new javax.swing.JPanel();
-        menu21552011235 = new javax.swing.JPanel();
-        sidebar21552011235 = new javax.swing.JPanel();
-        homePanel21552011235 = new javax.swing.JPanel();
+        menuKelompok2 = new javax.swing.JPanel();
+        sidebarKelompok2 = new javax.swing.JPanel();
+        homePanelKelompok2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        BtnHome21552011235 = new javax.swing.JLabel();
-        DataPanel21552011235 = new javax.swing.JPanel();
+        BtnHomeKelompok2 = new javax.swing.JLabel();
+        DataPanelKelompok2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        BtnData21552011235 = new javax.swing.JLabel();
-        pagePrint21552011235 = new javax.swing.JPanel();
+        BtnDataKelompok2 = new javax.swing.JLabel();
+        pagePrintKelompok2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        BtnPrint21552011235 = new javax.swing.JLabel();
-        tentangPanel21552011235 = new javax.swing.JPanel();
+        BtnPrintKelompok2 = new javax.swing.JLabel();
+        aboutPanelKelompok2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        BtnTentang21552011235 = new javax.swing.JLabel();
+        BtnAboutKelompok2 = new javax.swing.JLabel();
         Logo = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        Dashboardview21552011235 = new javax.swing.JPanel();
+        DashboardviewKelompok2 = new javax.swing.JPanel();
         jTabbedPanel21552011235 = new javax.swing.JTabbedPane();
         HomeTabbed21552011235 = new javax.swing.JPanel();
         IconUser = new javax.swing.JLabel();
@@ -115,9 +115,9 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusTraversalPolicyProvider(true);
 
-        header21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        header21552011235.setPreferredSize(new java.awt.Dimension(800, 50));
-        header21552011235.setLayout(new java.awt.BorderLayout());
+        headerKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        headerKelompok2.setPreferredSize(new java.awt.Dimension(800, 50));
+        headerKelompok2.setLayout(new java.awt.BorderLayout());
 
         iconMenu.setBackground(new java.awt.Color(0, 0, 0));
         iconMenu.setPreferredSize(new java.awt.Dimension(150, 50));
@@ -159,143 +159,143 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         BtnMin21552011235.setLayout(new java.awt.BorderLayout());
         iconMenu.add(BtnMin21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        header21552011235.add(iconMenu, java.awt.BorderLayout.LINE_END);
+        headerKelompok2.add(iconMenu, java.awt.BorderLayout.LINE_END);
 
-        getContentPane().add(header21552011235, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(headerKelompok2, java.awt.BorderLayout.PAGE_START);
 
-        menu21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        menu21552011235.setPreferredSize(new java.awt.Dimension(270, 450));
-        menu21552011235.setLayout(new java.awt.BorderLayout());
+        menuKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        menuKelompok2.setPreferredSize(new java.awt.Dimension(270, 450));
+        menuKelompok2.setLayout(new java.awt.BorderLayout());
 
-        sidebar21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        sidebar21552011235.setMinimumSize(new java.awt.Dimension(200, 210));
-        sidebar21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        sidebarKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        sidebarKelompok2.setMinimumSize(new java.awt.Dimension(200, 210));
+        sidebarKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        homePanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        homePanel21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        homePanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        homePanelKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homePanel21552011235MouseClicked(evt);
+                homePanelKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                homePanel21552011235MouseEntered(evt);
+                homePanelKelompok2MouseEntered(evt);
             }
         });
-        homePanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        homePanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-home-24.png"))); // NOI18N
-        homePanel21552011235.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        homePanelKelompok2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnHome21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnHome21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnHome21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnHome21552011235.setText("Home");
-        BtnHome21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnHomeKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnHomeKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHomeKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnHomeKelompok2.setText("Home");
+        BtnHomeKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnHome21552011235MouseClicked(evt);
+                BtnHomeKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnHome21552011235MouseEntered(evt);
+                BtnHomeKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnHome21552011235MouseExited(evt);
+                BtnHomeKelompok2MouseExited(evt);
             }
         });
-        homePanel21552011235.add(BtnHome21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        homePanelKelompok2.add(BtnHomeKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(homePanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 270, 50));
+        sidebarKelompok2.add(homePanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 270, 50));
 
-        DataPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        DataPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        DataPanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        DataPanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-doctors-folder-24.png"))); // NOI18N
-        DataPanel21552011235.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        DataPanelKelompok2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnData21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnData21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnData21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnData21552011235.setText("Data");
-        BtnData21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnDataKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnDataKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnDataKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnDataKelompok2.setText("Data");
+        BtnDataKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnData21552011235MouseClicked(evt);
+                BtnDataKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnData21552011235MouseEntered(evt);
+                BtnDataKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnData21552011235MouseExited(evt);
+                BtnDataKelompok2MouseExited(evt);
             }
         });
-        DataPanel21552011235.add(BtnData21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        DataPanelKelompok2.add(BtnDataKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(DataPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
+        sidebarKelompok2.add(DataPanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 270, -1));
 
-        pagePrint21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        pagePrint21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pagePrintKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        pagePrintKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-print-24.png"))); // NOI18N
-        pagePrint21552011235.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        pagePrintKelompok2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnPrint21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnPrint21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnPrint21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnPrint21552011235.setText("Page Print");
-        BtnPrint21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnPrintKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnPrintKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnPrintKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnPrintKelompok2.setText("Page Print");
+        BtnPrintKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnPrint21552011235MouseClicked(evt);
+                BtnPrintKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnPrint21552011235MouseEntered(evt);
+                BtnPrintKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnPrint21552011235MouseExited(evt);
+                BtnPrintKelompok2MouseExited(evt);
             }
         });
-        pagePrint21552011235.add(BtnPrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        pagePrintKelompok2.add(BtnPrintKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(pagePrint21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
+        sidebarKelompok2.add(pagePrintKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 50));
 
-        tentangPanel21552011235.setBackground(new java.awt.Color(32, 83, 117));
-        tentangPanel21552011235.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        aboutPanelKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        aboutPanelKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-24.png"))); // NOI18N
-        tentangPanel21552011235.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
+        aboutPanelKelompok2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 43, 50));
 
-        BtnTentang21552011235.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnTentang21552011235.setForeground(new java.awt.Color(255, 255, 255));
-        BtnTentang21552011235.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BtnTentang21552011235.setText("Tentang");
-        BtnTentang21552011235.addMouseListener(new java.awt.event.MouseAdapter() {
+        BtnAboutKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BtnAboutKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAboutKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnAboutKelompok2.setText("Tentang");
+        BtnAboutKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BtnTentang21552011235MouseClicked(evt);
+                BtnAboutKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BtnTentang21552011235MouseEntered(evt);
+                BtnAboutKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BtnTentang21552011235MouseExited(evt);
+                BtnAboutKelompok2MouseExited(evt);
             }
         });
-        tentangPanel21552011235.add(BtnTentang21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
+        aboutPanelKelompok2.add(BtnAboutKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 50));
 
-        sidebar21552011235.add(tentangPanel21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 270, 50));
+        sidebarKelompok2.add(aboutPanelKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 270, 50));
 
         Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pddm_100px-removebg-preview.png"))); // NOI18N
-        sidebar21552011235.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, -10, 190, 130));
+        sidebarKelompok2.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, -10, 190, 130));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BackLOGO.png"))); // NOI18N
-        sidebar21552011235.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 230, 110));
+        sidebarKelompok2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 230, 110));
 
-        menu21552011235.add(sidebar21552011235, java.awt.BorderLayout.CENTER);
+        menuKelompok2.add(sidebarKelompok2, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(menu21552011235, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(menuKelompok2, java.awt.BorderLayout.LINE_START);
 
-        Dashboardview21552011235.setBackground(new java.awt.Color(17, 43, 60));
-        Dashboardview21552011235.setLayout(new java.awt.GridLayout(1, 0));
+        DashboardviewKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        DashboardviewKelompok2.setLayout(new java.awt.GridLayout(1, 0));
 
         jTabbedPanel21552011235.setBackground(new java.awt.Color(17, 43, 60));
         jTabbedPanel21552011235.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33), new java.awt.Color(64, 49, 33)));
@@ -726,9 +726,9 @@ public class dashboardSekretaris extends javax.swing.JFrame {
 
         jTabbedPanel21552011235.addTab("", TentangTabbed21552011235);
 
-        Dashboardview21552011235.add(jTabbedPanel21552011235);
+        DashboardviewKelompok2.add(jTabbedPanel21552011235);
 
-        getContentPane().add(Dashboardview21552011235, java.awt.BorderLayout.CENTER);
+        getContentPane().add(DashboardviewKelompok2, java.awt.BorderLayout.CENTER);
 
         setSize(new java.awt.Dimension(975, 589));
         setLocationRelativeTo(null);
@@ -772,37 +772,37 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     
     
     
-    private void homePanel21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanel21552011235MouseEntered
+    private void homePanelKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanelKelompok2MouseEntered
         
-    }//GEN-LAST:event_homePanel21552011235MouseEntered
+    }//GEN-LAST:event_homePanelKelompok2MouseEntered
 
-    private void homePanel21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanel21552011235MouseClicked
+    private void homePanelKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homePanelKelompok2MouseClicked
 
-    }//GEN-LAST:event_homePanel21552011235MouseClicked
+    }//GEN-LAST:event_homePanelKelompok2MouseClicked
 
-    private void BtnHome21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseEntered
-        changecolor(homePanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnHome21552011235MouseEntered
+    private void BtnHomeKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeKelompok2MouseEntered
+        changecolor(homePanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnHomeKelompok2MouseEntered
 
-    private void BtnHome21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseExited
-        changecolor(homePanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnHome21552011235MouseExited
+    private void BtnHomeKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeKelompok2MouseExited
+        changecolor(homePanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnHomeKelompok2MouseExited
 
-    private void BtnData21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnData21552011235MouseEntered
-       changecolor(DataPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnData21552011235MouseEntered
+    private void BtnDataKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDataKelompok2MouseEntered
+       changecolor(DataPanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnDataKelompok2MouseEntered
 
-    private void BtnData21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnData21552011235MouseExited
-        changecolor(DataPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnData21552011235MouseExited
+    private void BtnDataKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDataKelompok2MouseExited
+        changecolor(DataPanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnDataKelompok2MouseExited
 
-    private void BtnTentang21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseEntered
-        changecolor(tentangPanel21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnTentang21552011235MouseEntered
+    private void BtnAboutKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAboutKelompok2MouseEntered
+        changecolor(aboutPanelKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnAboutKelompok2MouseEntered
 
-    private void BtnTentang21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseExited
-        changecolor(tentangPanel21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnTentang21552011235MouseExited
+    private void BtnAboutKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAboutKelompok2MouseExited
+        changecolor(aboutPanelKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnAboutKelompok2MouseExited
 
     private void BtnLogout21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnLogout21552011235MouseExited
         changecolor(PanelLogout21552011235, new Color (32,83,117));
@@ -817,17 +817,17 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_BtnLogout21552011235MouseClicked
 
-    private void BtnHome21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHome21552011235MouseClicked
+    private void BtnHomeKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHomeKelompok2MouseClicked
        jTabbedPanel21552011235.setSelectedIndex(0);
-    }//GEN-LAST:event_BtnHome21552011235MouseClicked
+    }//GEN-LAST:event_BtnHomeKelompok2MouseClicked
 
-    private void BtnData21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnData21552011235MouseClicked
+    private void BtnDataKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnDataKelompok2MouseClicked
         jTabbedPanel21552011235.setSelectedIndex(1);
-    }//GEN-LAST:event_BtnData21552011235MouseClicked
+    }//GEN-LAST:event_BtnDataKelompok2MouseClicked
 
-    private void BtnTentang21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTentang21552011235MouseClicked
+    private void BtnAboutKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnAboutKelompok2MouseClicked
         jTabbedPanel21552011235.setSelectedIndex(3);
-    }//GEN-LAST:event_BtnTentang21552011235MouseClicked
+    }//GEN-LAST:event_BtnAboutKelompok2MouseClicked
 
     private void TabTentangBtn21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseExited
         changecolor(PanelTentang21552011235, new Color (17,43,60));
@@ -838,7 +838,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabTentangBtn21552011235MouseEntered
 
     private void TabTentangBtn21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabTentangBtn21552011235MouseClicked
-        new sekretaris.TentangSekretaris().setVisible(true);
+        new sekretaris.AboutSekretaris().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabTentangBtn21552011235MouseClicked
 
@@ -855,17 +855,17 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_TabKegiatan21552011235MouseClicked
 
-    private void BtnPrint21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseExited
-        changecolor(pagePrint21552011235, new Color (32,83,117));
-    }//GEN-LAST:event_BtnPrint21552011235MouseExited
+    private void BtnPrintKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseExited
+        changecolor(pagePrintKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnPrintKelompok2MouseExited
 
-    private void BtnPrint21552011235MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseEntered
-        changecolor(pagePrint21552011235, new Color (32,108,151));
-    }//GEN-LAST:event_BtnPrint21552011235MouseEntered
+    private void BtnPrintKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseEntered
+        changecolor(pagePrintKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_BtnPrintKelompok2MouseEntered
 
-    private void BtnPrint21552011235MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrint21552011235MouseClicked
+    private void BtnPrintKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseClicked
         jTabbedPanel21552011235.setSelectedIndex(2);
-    }//GEN-LAST:event_BtnPrint21552011235MouseClicked
+    }//GEN-LAST:event_BtnPrintKelompok2MouseClicked
 
     private void TabUserBtn21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabUserBtn21552011235MouseExited
         changecolor(PanelUser21552011235, new Color (17,43,60));
@@ -1022,15 +1022,15 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BtnData21552011235;
-    private javax.swing.JLabel BtnHome21552011235;
+    private javax.swing.JLabel BtnAboutKelompok2;
+    private javax.swing.JLabel BtnDataKelompok2;
+    private javax.swing.JLabel BtnHomeKelompok2;
     private javax.swing.JLabel BtnLogout21552011235;
     private javax.swing.JPanel BtnMax21552011235;
     private javax.swing.JPanel BtnMin21552011235;
-    private javax.swing.JLabel BtnPrint21552011235;
-    private javax.swing.JLabel BtnTentang21552011235;
-    private javax.swing.JPanel Dashboardview21552011235;
-    private javax.swing.JPanel DataPanel21552011235;
+    private javax.swing.JLabel BtnPrintKelompok2;
+    private javax.swing.JPanel DashboardviewKelompok2;
+    private javax.swing.JPanel DataPanelKelompok2;
     private javax.swing.JPanel DataTabbed21552011235;
     private javax.swing.JPanel HomeTabbed21552011235;
     private javax.swing.JLabel IconUser;
@@ -1059,8 +1059,9 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     private javax.swing.JLabel TabUserBtn21552011235;
     private javax.swing.JPanel TentangTabbed21552011235;
     private javax.swing.JLabel UserName;
-    private javax.swing.JPanel header21552011235;
-    private javax.swing.JPanel homePanel21552011235;
+    private javax.swing.JPanel aboutPanelKelompok2;
+    private javax.swing.JPanel headerKelompok2;
+    private javax.swing.JPanel homePanelKelompok2;
     private javax.swing.JPanel iconMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1081,10 +1082,9 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPanel21552011235;
-    private javax.swing.JPanel menu21552011235;
-    private javax.swing.JPanel pagePrint21552011235;
-    private javax.swing.JPanel sidebar21552011235;
-    private javax.swing.JPanel tentangPanel21552011235;
+    private javax.swing.JPanel menuKelompok2;
+    private javax.swing.JPanel pagePrintKelompok2;
+    private javax.swing.JPanel sidebarKelompok2;
     public static final javax.swing.JLabel usernameSekretaris21552011235 = new javax.swing.JLabel();
     // End of variables declaration//GEN-END:variables
 
