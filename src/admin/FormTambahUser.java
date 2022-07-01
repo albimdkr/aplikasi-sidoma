@@ -362,7 +362,7 @@ public class FormTambahUser extends javax.swing.JFrame {
         titleKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         titleKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         titleKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleKelompok2.setText(" Form Add User");
+        titleKelompok2.setText(" Form Tambah User");
         NavbarKelompok2.add(titleKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 390, 60));
 
         jPanelKelompok2.add(NavbarKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));

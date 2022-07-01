@@ -22,10 +22,6 @@ import static admin.dashboardAdmin.usernameAdminKelompok2;
 import static sekretaris.dashboardSekretaris.usernameSekretarisKelompok2;
 import static bendahara.dashboardBendahara.usernameBendaharaKelompok2;
 import static petugas.dashboardPetugas.usernamePetugasKelompok2;
-//import admin.dashboardAdmin;
-//import sekretaris.dashboardSekretaris;
-//import bendahara.dashboardBendahara;
-//import petugas.dashboardPetugas;
 
 /**
  *
@@ -42,7 +38,6 @@ public class loginUser extends javax.swing.JFrame {
         Connection con;
         PreparedStatement pst;
         ResultSet rs;
-    //private Object usernameAdmin21552011235;
     
         
 
@@ -79,38 +74,22 @@ public class loginUser extends javax.swing.JFrame {
                 String s1 = rs.getString("role");
                 String un = rs.getString("username");
                 if(role.equalsIgnoreCase("Admin")&& s1.equalsIgnoreCase("Admin")){
-//                    dashboardAdmin adm = new admin.dashboardAdmin(un);
-//                    adm.setVisible(true);
-//                    setVisible(false);
-//                    dispose();
                     new admin.dashboardAdmin().setVisible(true);
                     dispose();
                     usernameAdminKelompok2.setText(rs.getString(2));
                     
                     }
                 if(role.equalsIgnoreCase("Sekretaris")&& s1.equalsIgnoreCase("Sekretaris")){
-//                    dashboardSekretaris skr = new sekretaris.dashboardSekretaris(un);
-//                    skr.setVisible(true);
-//                    setVisible(false);
-//                    dispose();
                     new sekretaris.dashboardSekretaris().setVisible(true);
                     dispose();
                     usernameSekretarisKelompok2.setText(rs.getString(2));
                     }
                 if(role.equalsIgnoreCase("Bendahara")&& s1.equalsIgnoreCase("Bendahara")){
-//                    dashboardBendahara bdr = new bendahara.dashboardBendahara(un);
-//                    bdr.setVisible(true);
-//                    setVisible(false);
-//                    dispose();
                     new bendahara.dashboardBendahara().setVisible(true);
                     dispose();
                     usernameBendaharaKelompok2.setText(rs.getString(2));
                     }
                 if(role.equalsIgnoreCase("Petugas")&& s1.equalsIgnoreCase("Petugas")){
-//                    dashboardPetugas ptgs = new petugas.dashboardPetugas(un);
-//                    ptgs.setVisible(true);
-//                    setVisible(false);
-//                    dispose();
                    new petugas.dashboardPetugas().setVisible(true);
                    dispose();
                    usernamePetugasKelompok2.setText(rs.getString(2));
@@ -128,13 +107,7 @@ public class loginUser extends javax.swing.JFrame {
       }
     }
        
-       
-            
-//    catch(SQLException | HeadlessException e ){
-//            System.out.println(e);
-//        }
-//    }
-//    
+    
     public void changecolor(JPanel hover, Color rand){
         hover.setBackground(rand);
     }
@@ -446,12 +419,3 @@ public class loginUser extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-
-   
-
-
-    
-
-    
-
-    

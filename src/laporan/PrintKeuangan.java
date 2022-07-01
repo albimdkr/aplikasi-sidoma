@@ -346,14 +346,14 @@ public class PrintKeuangan extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnPrintKelompok2MouseEntered
 
     private void BtnPrintKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseClicked
-//      try{
-//            String file = "/laporan/report_barista.jasper";
-//            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
-//            JasperViewer.viewReport(print, false);
-//            
-//        }catch(JRException e){
-//            JOptionPane.showMessageDialog(rootPane, e);
-//        }
+      try{
+            String file = "/laporan/report_keuangan.jasper";
+            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
+            JasperViewer.viewReport(print, false);
+            
+        }catch(JRException e){
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
     }//GEN-LAST:event_BtnPrintKelompok2MouseClicked
 
     /**

@@ -322,7 +322,7 @@ public class stokDarahIn extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
-        new donor.FormPendonor().setVisible(true);
+        new petugas.dashboardPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
