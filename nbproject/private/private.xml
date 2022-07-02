@@ -4,16 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/bendahara/dashboardBendahara.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/petugas/RiwayatTransfusi.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/bendahara/TentangBendahara.java</file>
             <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/petugas/dashboardPetugas.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/donor/FormPendonor.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/donor/stokDarahIn.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/bendahara/FormKeuangan.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/transfusi/FormPasien.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/sekretaris/TentangSekretaris.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/petugas/RiwayatDonor.java</file>
-            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/petugas/TentangPetugas.java</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/login/loginUser.java</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/sekretaris/dashboardSekretaris.java</file>
+            <file>file:/C:/Users/albin/Documents/NetBeansProjects/aplikasi-sidoma/src/admin/dashboardAdmin.java</file>
         </group>
     </open-files>
 </project-private>

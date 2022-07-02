@@ -329,12 +329,12 @@ public class dashboardPetugas extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("dan data transfusi.");
+        jLabel4.setText("dan monitoring stok darah.");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 8;
-        gridBagConstraints.ipadx = 217;
+        gridBagConstraints.ipadx = 146;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 196, 133, 121);
         HomeTabbedKelompok2.add(jLabel4, gridBagConstraints);

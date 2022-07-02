@@ -408,7 +408,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
         TabAboutBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         TabAboutBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TabAboutBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-info-96.png"))); // NOI18N
-        TabAboutBtnKelompok2.setText("About");
+        TabAboutBtnKelompok2.setText("Tentang");
         TabAboutBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TabAboutBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
