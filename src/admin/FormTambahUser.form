@@ -734,13 +734,12 @@
             <Component class="javax.swing.JComboBox" name="jComboBoxRoleKelompok2">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="6">
+                  <StringArray count="5">
                     <StringItem index="0" value="-- Pilih --"/>
                     <StringItem index="1" value="Admin"/>
                     <StringItem index="2" value="Sekretaris"/>
                     <StringItem index="3" value="Bendahara"/>
                     <StringItem index="4" value="Petugas"/>
-                    <StringItem index="5" value=" "/>
                   </StringArray>
                 </Property>
               </Properties>

@@ -350,7 +350,7 @@ public class RiwayatDonor extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBackKelompok2MouseEntered
 
     private void BtnBackKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseExited
-        changecolor(PanelBackKelompok2, new Color (17,43,60));
+        changecolor(PanelBackKelompok2, new Color (32,83,117));
     }//GEN-LAST:event_BtnBackKelompok2MouseExited
 
     private void BtnRefresh21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefresh21552011235MouseExited

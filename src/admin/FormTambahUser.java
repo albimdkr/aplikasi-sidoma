@@ -618,7 +618,7 @@ public class FormTambahUser extends javax.swing.JFrame {
 
         jPanel3.add(PanelCari21552011235, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
 
-        jComboBoxRoleKelompok2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Pilih --", "Admin", "Sekretaris", "Bendahara", "Petugas", " " }));
+        jComboBoxRoleKelompok2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Pilih --", "Admin", "Sekretaris", "Bendahara", "Petugas" }));
         jComboBoxRoleKelompok2.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
