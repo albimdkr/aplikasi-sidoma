@@ -26,7 +26,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
-import javax.swing.SpinnerDateModel;
+import javax. swing.SpinnerDateModel;
 import javax.swing.table.DefaultTableModel;
 import koneksi.koneksi;
 //import net.sf.jasperreports.engine.JRException;
