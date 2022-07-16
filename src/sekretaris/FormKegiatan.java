@@ -278,6 +278,8 @@ public class FormKegiatan extends javax.swing.JFrame {
 
         buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
+        PanelHelpKelompok2 = new javax.swing.JPanel();
+        BtnHelpKelompok2 = new javax.swing.JLabel();
         Navbar = new javax.swing.JPanel();
         PanelBackKelompok2 = new javax.swing.JPanel();
         BtnBackKelompok2 = new javax.swing.JLabel();
@@ -325,6 +327,29 @@ public class FormKegiatan extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(32, 83, 117));
         jPanel2.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelHelpKelompok2.setBackground(new java.awt.Color(32, 83, 117));
+        PanelHelpKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnHelpKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtnHelpKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        BtnHelpKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnHelpKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-help-48_1.png"))); // NOI18N
+        BtnHelpKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnHelpKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnHelpKelompok2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BtnHelpKelompok2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BtnHelpKelompok2MouseExited(evt);
+            }
+        });
+        PanelHelpKelompok2.add(BtnHelpKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 60));
+
+        jPanel2.add(PanelHelpKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1286, 0, 80, 60));
 
         Navbar.setBackground(new java.awt.Color(32, 83, 117));
         Navbar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -829,6 +854,19 @@ public class FormKegiatan extends javax.swing.JFrame {
     private void BtnBackKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseExited
         changecolor(PanelBackKelompok2, new Color (32,83,117));
     }//GEN-LAST:event_BtnBackKelompok2MouseExited
+
+    private void BtnHelpKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseClicked
+        new sekretaris.PetunjukFormKegiatan().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnHelpKelompok2MouseClicked
+
+    private void BtnHelpKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseEntered
+        changecolor(PanelHelpKelompok2, new Color (50,118,163));
+    }//GEN-LAST:event_BtnHelpKelompok2MouseEntered
+
+    private void BtnHelpKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseExited
+        changecolor(PanelHelpKelompok2, new Color (32,83,117));
+    }//GEN-LAST:event_BtnHelpKelompok2MouseExited
     
    
     /**
@@ -1127,6 +1165,7 @@ public class FormKegiatan extends javax.swing.JFrame {
     private javax.swing.JLabel BtnClearKelompok2;
     private javax.swing.JLabel BtnDeleteKelompok2;
     private javax.swing.JLabel BtnEditKelompok2;
+    private javax.swing.JLabel BtnHelpKelompok2;
     private javax.swing.JLabel BtnRefreshKelompok2;
     private javax.swing.JLabel NamaPendonor1;
     private javax.swing.JPanel Navbar;
@@ -1136,6 +1175,7 @@ public class FormKegiatan extends javax.swing.JFrame {
     private javax.swing.JPanel PanelClearKelompok2;
     private javax.swing.JPanel PanelDeleteKelompok2;
     private javax.swing.JPanel PanelEditKelompok2;
+    private javax.swing.JPanel PanelHelpKelompok2;
     private javax.swing.JPanel PanelRefreshKelompok2;
     private javax.swing.JLabel alamat1;
     private javax.swing.JLabel background;
