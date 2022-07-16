@@ -1261,7 +1261,7 @@ public class FormPendonor extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCariKelompok2MouseExited
 
     private void BtnHelpKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseClicked
-        new petugas.PetunjukDonor().setVisible(true);
+        new donor.PetunjukDonor().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnHelpKelompok2MouseClicked
 
