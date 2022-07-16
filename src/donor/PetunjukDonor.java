@@ -125,13 +125,16 @@ public class PetunjukDonor extends javax.swing.JFrame {
         line15 = new javax.swing.JLabel();
         txt61 = new javax.swing.JLabel();
         txt62 = new javax.swing.JLabel();
+        PanelBackKelompok3 = new javax.swing.JPanel();
+        BtnBackKelompok3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1366, 1500));
 
         jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(17, 43, 60));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 1700));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 1380));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Navbar.setBackground(new java.awt.Color(32, 83, 117));
@@ -843,7 +846,38 @@ public class PetunjukDonor extends javax.swing.JFrame {
         txt62.setText("5. Bila Menemukan Masalah atau Error Pada Form Pendonor, hubungi Admin.");
         jPanel3.add(txt62, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 980, 510, 40));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1580));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 1350, 1270));
+
+        PanelBackKelompok3.setBackground(new java.awt.Color(32, 83, 117));
+        PanelBackKelompok3.setForeground(new java.awt.Color(32, 83, 117));
+        PanelBackKelompok3.setToolTipText("");
+        PanelBackKelompok3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnBackKelompok3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BtnBackKelompok3.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBackKelompok3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnBackKelompok3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
+        BtnBackKelompok3.setText("Kembali Ke Form");
+        BtnBackKelompok3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnBackKelompok3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnBackKelompok3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BtnBackKelompok3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BtnBackKelompok3MouseExited(evt);
+            }
+        });
+        BtnBackKelompok3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                BtnBackKelompok3KeyPressed(evt);
+            }
+        });
+        PanelBackKelompok3.add(BtnBackKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 240, 70));
+
+        jPanel2.add(PanelBackKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1310, 1360, 70));
 
         jScrollPane1.setViewportView(jPanel2);
 
@@ -851,14 +885,14 @@ public class PetunjukDonor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1366, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane1)
         );
 
-        setSize(new java.awt.Dimension(1382, 1639));
+        setSize(new java.awt.Dimension(1394, 1419));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1035,6 +1069,23 @@ public class PetunjukDonor extends javax.swing.JFrame {
     private void BtnRefreshKelompok3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnRefreshKelompok3MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnRefreshKelompok3MouseExited
+
+    private void BtnBackKelompok3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok3MouseClicked
+        new donor.FormPendonor().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_BtnBackKelompok3MouseClicked
+
+    private void BtnBackKelompok3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnBackKelompok3MouseEntered
+
+    private void BtnBackKelompok3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnBackKelompok3MouseExited
+
+    private void BtnBackKelompok3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnBackKelompok3KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnBackKelompok3KeyPressed
 
     /**
      * @param args the command line arguments
@@ -5170,6 +5221,7 @@ public class PetunjukDonor extends javax.swing.JFrame {
     private javax.swing.JLabel BtnAddKelompok2;
     private javax.swing.JLabel BtnAddKelompok3;
     private javax.swing.JLabel BtnBackKelompok2;
+    private javax.swing.JLabel BtnBackKelompok3;
     private javax.swing.JLabel BtnCariKelompok2;
     private javax.swing.JLabel BtnCariKelompok3;
     private javax.swing.JLabel BtnClearKelompok2;
@@ -5184,6 +5236,7 @@ public class PetunjukDonor extends javax.swing.JFrame {
     private javax.swing.JPanel Navbar;
     private javax.swing.JPanel PanelAddKelompok2;
     private javax.swing.JPanel PanelBackKelompok2;
+    private javax.swing.JPanel PanelBackKelompok3;
     private javax.swing.JPanel PanelCariKelompok2;
     private javax.swing.JPanel PanelClearKelompok2;
     private javax.swing.JPanel PanelDarahKelompok2;
