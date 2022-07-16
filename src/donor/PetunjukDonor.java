@@ -564,7 +564,7 @@ public class PetunjukDonor extends javax.swing.JFrame {
         txt44.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt44.setForeground(new java.awt.Color(255, 255, 255));
         txt44.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt44.setText("Fungsiya, ialah untuk menyimpan data kedalam Database. ");
+        txt44.setText("Fungsinya, ialah untuk menyimpan data kedalam Database. ");
         jPanel3.add(txt44, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 170, 390, 20));
 
         PanelEditKelompok2.setBackground(new java.awt.Color(17, 43, 60));
@@ -740,13 +740,13 @@ public class PetunjukDonor extends javax.swing.JFrame {
         txt46.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt46.setForeground(new java.awt.Color(255, 255, 255));
         txt46.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt46.setText("Fungsiya, ialah untuk edit data dari Database. ");
+        txt46.setText("Fungsinya, ialah untuk edit data dari Database. ");
         jPanel3.add(txt46, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 250, 320, 20));
 
         txt47.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt47.setForeground(new java.awt.Color(255, 255, 255));
         txt47.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt47.setText("Fungsiya, ialah untuk mengosongkan form data. ");
+        txt47.setText("Fungsinya, ialah untuk mengosongkan form data. ");
         jPanel3.add(txt47, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 330, 320, 20));
 
         txt48.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -764,13 +764,13 @@ public class PetunjukDonor extends javax.swing.JFrame {
         txt50.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt50.setForeground(new java.awt.Color(255, 255, 255));
         txt50.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt50.setText("Fungsiya, ialah untuk menghapus data dari Database. ");
+        txt50.setText("Fungsinya, ialah untuk menghapus data dari Database. ");
         jPanel3.add(txt50, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 410, 370, 20));
 
         txt51.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt51.setForeground(new java.awt.Color(255, 255, 255));
         txt51.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt51.setText("Fungsiya, ialah untuk mencari data dari Database. ");
+        txt51.setText("Fungsinya, ialah untuk mencari data dari Database. ");
         jPanel3.add(txt51, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 490, 370, 20));
 
         txt52.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -782,7 +782,7 @@ public class PetunjukDonor extends javax.swing.JFrame {
         txt53.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt53.setForeground(new java.awt.Color(255, 255, 255));
         txt53.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt53.setText("Fungsiya, ialah untuk merefresh data dari Database. ");
+        txt53.setText("Fungsinya, ialah untuk merefresh data dari Database. ");
         jPanel3.add(txt53, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 570, 370, 20));
 
         txt54.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
