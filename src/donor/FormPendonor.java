@@ -71,7 +71,7 @@ public class FormPendonor extends javax.swing.JFrame {
         table.addColumn("Tanggal Daftar");//0
         table.addColumn("No. Pendonor");//1
         table.addColumn("Nama");//2
-        table.addColumn("Jenis Kelamin");//3
+        table.addColumn("Jenis  Kelamin");//3
         table.addColumn("Tanggal Lahir");//4
         table.addColumn("No.Telp");//5
         table.addColumn("Gmail");//6
