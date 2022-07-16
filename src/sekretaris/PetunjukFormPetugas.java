@@ -163,7 +163,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         Tentang.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Tentang.setForeground(new java.awt.Color(255, 255, 255));
         Tentang.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tentang.setText("Petunjuk Mengoperasikan Form Keuangan");
+        Tentang.setText("Petunjuk Mengoperasikan Form Petugas");
         Navbar.add(Tentang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 590, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 60));
@@ -219,7 +219,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt21.setForeground(new java.awt.Color(255, 255, 255));
         txt21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt21.setText("Cara Mengisi Form Dan Menyimpan Data Kegiatan.");
+        txt21.setText("Cara Mengisi Form Dan Menyimpan Data Petugas.");
         jPanel3.add(txt21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 440, 60));
 
         line10.setBackground(new java.awt.Color(255, 255, 255));
@@ -250,7 +250,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt27.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt27.setForeground(new java.awt.Color(255, 255, 255));
         txt27.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt27.setText("Cara Mengedit Data Kegiatan.");
+        txt27.setText("Cara Mengedit Data Petugas.");
         jPanel3.add(txt27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 270, 60));
 
         line11.setBackground(new java.awt.Color(255, 255, 255));
@@ -263,7 +263,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt28.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt28.setForeground(new java.awt.Color(255, 255, 255));
         txt28.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt28.setText("1. Klik Data Kegiatan Pada Table yang berada di bawah.");
+        txt28.setText("1. Klik Data Petugas Pada Table yang berada di bawah.");
         jPanel3.add(txt28, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 410, 40));
 
         txt29.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -281,7 +281,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt32.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt32.setForeground(new java.awt.Color(255, 255, 255));
         txt32.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt32.setText("Cara Menghapus Data Kegiatan.");
+        txt32.setText("Cara Menghapus Data Petugas.");
         jPanel3.add(txt32, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 280, 60));
 
         line12.setBackground(new java.awt.Color(255, 255, 255));
@@ -294,7 +294,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt33.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt33.setForeground(new java.awt.Color(255, 255, 255));
         txt33.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt33.setText("1. Klik Data Kegiatan Pada Table yang berada di bawah.");
+        txt33.setText("1. Klik Data Petugas Pada Table yang berada di bawah.");
         jPanel3.add(txt33, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 410, 40));
 
         txt35.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -312,7 +312,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt37.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         txt37.setForeground(new java.awt.Color(255, 255, 255));
         txt37.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt37.setText("Cara Mencari Data Kegiatan.");
+        txt37.setText("Cara Mencari Data Petugas.");
         jPanel3.add(txt37, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 740, 250, 60));
 
         line13.setBackground(new java.awt.Color(255, 255, 255));
@@ -325,7 +325,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt38.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt38.setForeground(new java.awt.Color(255, 255, 255));
         txt38.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt38.setText("1. Masukan No. Kegiatan kedalam text field cari.");
+        txt38.setText("1. Masukan Id Petugas kedalam text field cari.");
         jPanel3.add(txt38, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 800, 520, 40));
 
         txt39.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -718,7 +718,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt57.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt57.setForeground(new java.awt.Color(255, 255, 255));
         txt57.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt57.setText("1. No. Kegiatan akan terisikan secara otomatis.");
+        txt57.setText("1. Id Petugas dan tanggal daftar akan terisikan secara otomatis.");
         jPanel3.add(txt57, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 680, 460, 40));
 
         txt58.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
@@ -737,19 +737,19 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
         txt61.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt61.setForeground(new java.awt.Color(255, 255, 255));
         txt61.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt61.setText("2. Pastikan Pengisian Form Kegiatan dengan benar, tidak ada yang terlewat.");
+        txt61.setText("2. Pastikan Pengisian Form Petugas dengan benar, tidak ada yang terlewat.");
         jPanel3.add(txt61, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 710, 510, 40));
 
         txt62.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt62.setForeground(new java.awt.Color(255, 255, 255));
         txt62.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt62.setText("3. Bila Menemukan Masalah atau Error Pada Form Kegiatan, hubungi admin.");
+        txt62.setText("3. Bila Menemukan Masalah atau Error Pada Form Petugas, hubungi admin.");
         jPanel3.add(txt62, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 740, 530, 40));
 
         txt63.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt63.setForeground(new java.awt.Color(255, 255, 255));
         txt63.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt63.setText("1. Isikan Field Nama Kegiatan, Kuota Pendonor, Tanggal Kegiatan, Keterangan .");
+        txt63.setText("1. Isikan Field Nama, Jenis Kelamin, Jabatan Petugas, No Telepone, Gmail, Alamat.");
         jPanel3.add(txt63, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 560, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 1350, 1270));
