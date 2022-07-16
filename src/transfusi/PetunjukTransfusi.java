@@ -176,7 +176,7 @@ public class PetunjukTransfusi extends javax.swing.JFrame {
         Tentang.setText("Petunjuk Mengoperasikan Form Pasien");
         Navbar.add(Tentang, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 480, 60));
 
-        jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
+        jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 60));
 
         jPanel3.setBackground(new java.awt.Color(17, 43, 60));
         jPanel3.setPreferredSize(new java.awt.Dimension(1366, 768));
