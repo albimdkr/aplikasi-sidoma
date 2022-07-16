@@ -86,8 +86,8 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         TabPetugasKelompok2 = new javax.swing.JLabel();
         PagePrintTabbedKelompok2 = new javax.swing.JPanel();
-        PanelKeuanganKelompok2 = new javax.swing.JPanel();
-        TabKeuanganBtnKelompok2 = new javax.swing.JLabel();
+        PanelKeuanganMasukKelompok2 = new javax.swing.JPanel();
+        TabKeuanganMasukBtnKelompok2 = new javax.swing.JLabel();
         PanelUserKelompok2 = new javax.swing.JPanel();
         TabUserBtnKelompok2 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -106,6 +106,8 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         PanelTransfusiKelompok2 = new javax.swing.JPanel();
         TabTransfusiBtnKelompok2 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        PanelKeuanganKeluarKelompok2 = new javax.swing.JPanel();
+        TabKeuanganKeluarBtnKelompok2 = new javax.swing.JLabel();
         AboutTabbedKelompok2 = new javax.swing.JPanel();
         PanelAboutKelompok2 = new javax.swing.JPanel();
         TabTentangBtnKelompok2 = new javax.swing.JLabel();
@@ -466,36 +468,36 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         PagePrintTabbedKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         PagePrintTabbedKelompok2.setLayout(new java.awt.GridBagLayout());
 
-        PanelKeuanganKelompok2.setBackground(new java.awt.Color(17, 43, 60));
-        PanelKeuanganKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        PanelKeuanganKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PanelKeuanganMasukKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelKeuanganMasukKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelKeuanganMasukKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TabKeuanganBtnKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        TabKeuanganBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
-        TabKeuanganBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabKeuanganBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-money-48.png"))); // NOI18N
-        TabKeuanganBtnKelompok2.setText("Keuangan");
-        TabKeuanganBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabKeuanganBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabKeuanganMasukBtnKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TabKeuanganMasukBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabKeuanganMasukBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabKeuanganMasukBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-money-48.png"))); // NOI18N
+        TabKeuanganMasukBtnKelompok2.setText("Uang Masuk");
+        TabKeuanganMasukBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabKeuanganMasukBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabKeuanganBtnKelompok2MouseClicked(evt);
+                TabKeuanganMasukBtnKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabKeuanganBtnKelompok2MouseEntered(evt);
+                TabKeuanganMasukBtnKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabKeuanganBtnKelompok2MouseExited(evt);
+                TabKeuanganMasukBtnKelompok2MouseExited(evt);
             }
         });
-        PanelKeuanganKelompok2.add(TabKeuanganBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 80));
+        PanelKeuanganMasukKelompok2.add(TabKeuanganMasukBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 80));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridwidth = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(75, 19, 0, 11);
-        PagePrintTabbedKelompok2.add(PanelKeuanganKelompok2, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(80, 20, 0, 0);
+        PagePrintTabbedKelompok2.add(PanelKeuanganMasukKelompok2, gridBagConstraints);
 
         PanelUserKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         PanelUserKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -526,7 +528,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 19, 55, 0);
+        gridBagConstraints.insets = new java.awt.Insets(13, 19, 55, 0);
         PagePrintTabbedKelompok2.add(PanelUserKelompok2, gridBagConstraints);
 
         PanelKegiatanKelompok2.setBackground(new java.awt.Color(17, 43, 60));
@@ -558,7 +560,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 55, 0);
+        gridBagConstraints.insets = new java.awt.Insets(13, 10, 55, 0);
         PagePrintTabbedKelompok2.add(PanelKegiatanKelompok2, gridBagConstraints);
 
         PanelPetugasKelompok2.setBackground(new java.awt.Color(17, 43, 60));
@@ -590,7 +592,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 55, 0);
+        gridBagConstraints.insets = new java.awt.Insets(13, 10, 55, 0);
         PagePrintTabbedKelompok2.add(PanelPetugasKelompok2, gridBagConstraints);
 
         PanelPendonorKelompok2.setBackground(new java.awt.Color(17, 43, 60));
@@ -619,10 +621,10 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         PanelPendonorKelompok2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 90));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 55, 0);
+        gridBagConstraints.insets = new java.awt.Insets(13, 9, 55, 0);
         PagePrintTabbedKelompok2.add(PanelPendonorKelompok2, gridBagConstraints);
 
         PanelPasienKelompok2.setBackground(new java.awt.Color(17, 43, 60));
@@ -651,10 +653,10 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         PanelPasienKelompok2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 90));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 55, 0);
+        gridBagConstraints.insets = new java.awt.Insets(13, 10, 55, 0);
         PagePrintTabbedKelompok2.add(PanelPasienKelompok2, gridBagConstraints);
 
         PanelTransfusiKelompok2.setBackground(new java.awt.Color(17, 43, 60));
@@ -683,11 +685,44 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         PanelTransfusiKelompok2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 90));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 55, 11);
+        gridBagConstraints.insets = new java.awt.Insets(13, 10, 55, 0);
         PagePrintTabbedKelompok2.add(PanelTransfusiKelompok2, gridBagConstraints);
+
+        PanelKeuanganKeluarKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        PanelKeuanganKeluarKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelKeuanganKeluarKelompok2.setMinimumSize(new java.awt.Dimension(320, 80));
+        PanelKeuanganKeluarKelompok2.setPreferredSize(new java.awt.Dimension(320, 80));
+        PanelKeuanganKeluarKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TabKeuanganKeluarBtnKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        TabKeuanganKeluarBtnKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabKeuanganKeluarBtnKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabKeuanganKeluarBtnKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-money-48.png"))); // NOI18N
+        TabKeuanganKeluarBtnKelompok2.setText("Uang Keluar");
+        TabKeuanganKeluarBtnKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabKeuanganKeluarBtnKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabKeuanganKeluarBtnKelompok2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TabKeuanganKeluarBtnKelompok2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TabKeuanganKeluarBtnKelompok2MouseExited(evt);
+            }
+        });
+        PanelKeuanganKeluarKelompok2.add(TabKeuanganKeluarBtnKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 80));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(80, 10, 0, 10);
+        PagePrintTabbedKelompok2.add(PanelKeuanganKeluarKelompok2, gridBagConstraints);
 
         jTabbedPanelKelompok2.addTab("", PagePrintTabbedKelompok2);
 
@@ -945,18 +980,18 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         changecolor(PanelTransfusiKelompok2, new Color (17,43,60));
     }//GEN-LAST:event_TabTransfusiBtnKelompok2MouseExited
 
-    private void TabKeuanganBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganBtnKelompok2MouseClicked
+    private void TabKeuanganMasukBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganMasukBtnKelompok2MouseClicked
         new laporan.PrintKeuanganMasuk().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabKeuanganBtnKelompok2MouseClicked
+    }//GEN-LAST:event_TabKeuanganMasukBtnKelompok2MouseClicked
 
-    private void TabKeuanganBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganBtnKelompok2MouseEntered
-        changecolor(PanelKeuanganKelompok2, new Color (32,108,151));
-    }//GEN-LAST:event_TabKeuanganBtnKelompok2MouseEntered
+    private void TabKeuanganMasukBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganMasukBtnKelompok2MouseEntered
+        changecolor(PanelKeuanganMasukKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabKeuanganMasukBtnKelompok2MouseEntered
 
-    private void TabKeuanganBtnKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganBtnKelompok2MouseExited
-        changecolor(PanelKeuanganKelompok2, new Color (17,43,60));
-    }//GEN-LAST:event_TabKeuanganBtnKelompok2MouseExited
+    private void TabKeuanganMasukBtnKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganMasukBtnKelompok2MouseExited
+        changecolor(PanelKeuanganMasukKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabKeuanganMasukBtnKelompok2MouseExited
 
     private void TabPetugasKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabPetugasKelompok2MouseExited
         changecolor(TabPanelPetugasKelompok2, new Color (17,43,60));
@@ -970,6 +1005,19 @@ public class dashboardSekretaris extends javax.swing.JFrame {
         new sekretaris.FormPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabPetugasKelompok2MouseClicked
+
+    private void TabKeuanganKeluarBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganKeluarBtnKelompok2MouseClicked
+        new laporan.PrintKeuanganKeluar().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_TabKeuanganKeluarBtnKelompok2MouseClicked
+
+    private void TabKeuanganKeluarBtnKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganKeluarBtnKelompok2MouseEntered
+        changecolor(PanelKeuanganKeluarKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabKeuanganKeluarBtnKelompok2MouseEntered
+
+    private void TabKeuanganKeluarBtnKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganKeluarBtnKelompok2MouseExited
+        changecolor(PanelKeuanganKeluarKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabKeuanganKeluarBtnKelompok2MouseExited
 
     /**
      * @param args the command line arguments
@@ -1039,7 +1087,8 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     private javax.swing.JPanel PagePrintTabbedKelompok2;
     private javax.swing.JPanel PanelAboutKelompok2;
     private javax.swing.JPanel PanelKegiatanKelompok2;
-    private javax.swing.JPanel PanelKeuanganKelompok2;
+    private javax.swing.JPanel PanelKeuanganKeluarKelompok2;
+    private javax.swing.JPanel PanelKeuanganMasukKelompok2;
     private javax.swing.JPanel PanelLogout21552011235;
     private javax.swing.JPanel PanelPasienKelompok2;
     private javax.swing.JPanel PanelPendonorKelompok2;
@@ -1049,7 +1098,8 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     private javax.swing.JPanel TabHomePanelKegiatan;
     private javax.swing.JLabel TabKegiatanKelompok2;
     private javax.swing.JLabel TabKegiatantBtnKelompok2;
-    private javax.swing.JLabel TabKeuanganBtnKelompok2;
+    private javax.swing.JLabel TabKeuanganKeluarBtnKelompok2;
+    private javax.swing.JLabel TabKeuanganMasukBtnKelompok2;
     private javax.swing.JPanel TabPanelPetugasKelompok2;
     private javax.swing.JLabel TabPasienBtnKelompok2;
     private javax.swing.JLabel TabPendonorBtnKelompok2;

@@ -353,7 +353,7 @@ public class PrintKegiatan extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnBack21552011235MouseEntered
 
     private void BtnBack21552011235MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBack21552011235MouseExited
-        changecolor(PanelBack21552011235, new Color (17,43,60));
+        changecolor(PanelBack21552011235, new Color (32,83,117));
     }//GEN-LAST:event_BtnBack21552011235MouseExited
 
     private void BtnPrintKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseExited
