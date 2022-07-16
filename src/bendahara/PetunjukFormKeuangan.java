@@ -748,7 +748,7 @@ public class PetunjukFormKeuangan extends javax.swing.JFrame {
         txt63.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         txt63.setForeground(new java.awt.Color(255, 255, 255));
         txt63.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txt63.setText("1. Isikan Field Nominal Uang, Keterangan dan Status.");
+        txt63.setText("1. Isikan Field Keterangan dan nominal uang masuk atau keluar.");
         jPanel3.add(txt63, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 560, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 1350, 1270));
@@ -762,7 +762,7 @@ public class PetunjukFormKeuangan extends javax.swing.JFrame {
         BtnBackKelompok3.setForeground(new java.awt.Color(255, 255, 255));
         BtnBackKelompok3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BtnBackKelompok3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-back-48.png"))); // NOI18N
-        BtnBackKelompok3.setText("Kembali Ke Form");
+        BtnBackKelompok3.setText("Kembali Ke Dashboard");
         BtnBackKelompok3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnBackKelompok3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -780,7 +780,7 @@ public class PetunjukFormKeuangan extends javax.swing.JFrame {
                 BtnBackKelompok3KeyPressed(evt);
             }
         });
-        PanelBackKelompok3.add(BtnBackKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 240, 70));
+        PanelBackKelompok3.add(BtnBackKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 70));
 
         jPanel2.add(PanelBackKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1310, 1380, 70));
 
@@ -802,7 +802,7 @@ public class PetunjukFormKeuangan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
-        new bendahara.FormKeuanganMasuk().setVisible(true);
+        new bendahara.dashboardBendahara().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
@@ -963,7 +963,7 @@ public class PetunjukFormKeuangan extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnRefreshKelompok3MouseExited
 
     private void BtnBackKelompok3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok3MouseClicked
-        new bendahara.FormKeuanganMasuk().setVisible(true);
+        new bendahara.dashboardBendahara().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBackKelompok3MouseClicked
 

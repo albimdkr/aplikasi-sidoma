@@ -72,10 +72,12 @@ public class dashboardBendahara extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         FormTabbedKelompok2 = new javax.swing.JPanel();
         PanelKelompok2 = new javax.swing.JPanel();
-        TabHomePanelDataPendonorKelompok2 = new javax.swing.JPanel();
-        TabFormDataPendonorKelompok2 = new javax.swing.JLabel();
+        TabFormPanelUangMasukrKelompok2 = new javax.swing.JPanel();
+        TabFormDataUangMasukKelompok2 = new javax.swing.JLabel();
         TabHomePanelTrasnfusiKelompok2 = new javax.swing.JPanel();
         TabFormPanelPasienKelompok2 = new javax.swing.JPanel();
+        TabFormPanelUangKeluarKelompok2 = new javax.swing.JPanel();
+        TabFormDataUangKeluarKelompok2 = new javax.swing.JLabel();
         AboutTabbedKelompok2 = new javax.swing.JPanel();
         PanelAboutKelompok2 = new javax.swing.JPanel();
         TabAboutBtnKelompok2 = new javax.swing.JLabel();
@@ -345,37 +347,35 @@ public class dashboardBendahara extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         FormTabbedKelompok2.add(PanelKelompok2, gridBagConstraints);
 
-        TabHomePanelDataPendonorKelompok2.setBackground(new java.awt.Color(17, 43, 60));
-        TabHomePanelDataPendonorKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        TabHomePanelDataPendonorKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        TabFormPanelUangMasukrKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        TabFormPanelUangMasukrKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        TabFormPanelUangMasukrKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TabFormDataPendonorKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        TabFormDataPendonorKelompok2.setForeground(new java.awt.Color(255, 255, 255));
-        TabFormDataPendonorKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TabFormDataPendonorKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-money-96.png"))); // NOI18N
-        TabFormDataPendonorKelompok2.setText("Keuangan");
-        TabFormDataPendonorKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        TabFormDataPendonorKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabFormDataUangMasukKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        TabFormDataUangMasukKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormDataUangMasukKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormDataUangMasukKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-money-96.png"))); // NOI18N
+        TabFormDataUangMasukKelompok2.setText("Uang Masuk");
+        TabFormDataUangMasukKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabFormDataUangMasukKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonorKelompok2MouseClicked(evt);
+                TabFormDataUangMasukKelompok2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonorKelompok2MouseEntered(evt);
+                TabFormDataUangMasukKelompok2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                TabFormDataPendonorKelompok2MouseExited(evt);
+                TabFormDataUangMasukKelompok2MouseExited(evt);
             }
         });
-        TabHomePanelDataPendonorKelompok2.add(TabFormDataPendonorKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 280));
+        TabFormPanelUangMasukrKelompok2.add(TabFormDataUangMasukKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 210));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 4;
-        gridBagConstraints.ipady = -4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(109, 45, 83, 31);
-        FormTabbedKelompok2.add(TabHomePanelDataPendonorKelompok2, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(140, 70, 118, 0);
+        FormTabbedKelompok2.add(TabFormPanelUangMasukrKelompok2, gridBagConstraints);
 
         TabHomePanelTrasnfusiKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         TabHomePanelTrasnfusiKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -394,6 +394,36 @@ public class dashboardBendahara extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         FormTabbedKelompok2.add(TabFormPanelPasienKelompok2, gridBagConstraints);
+
+        TabFormPanelUangKeluarKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        TabFormPanelUangKeluarKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        TabFormPanelUangKeluarKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TabFormDataUangKeluarKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        TabFormDataUangKeluarKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        TabFormDataUangKeluarKelompok2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TabFormDataUangKeluarKelompok2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-money-96.png"))); // NOI18N
+        TabFormDataUangKeluarKelompok2.setText("Uang Keluar");
+        TabFormDataUangKeluarKelompok2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        TabFormDataUangKeluarKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabFormDataUangKeluarKelompok2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TabFormDataUangKeluarKelompok2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                TabFormDataUangKeluarKelompok2MouseExited(evt);
+            }
+        });
+        TabFormPanelUangKeluarKelompok2.add(TabFormDataUangKeluarKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 210));
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(140, 50, 118, 40);
+        FormTabbedKelompok2.add(TabFormPanelUangKeluarKelompok2, gridBagConstraints);
 
         jTabbedPanelKelompok2.addTab("", FormTabbedKelompok2);
 
@@ -548,18 +578,31 @@ public class dashboardBendahara extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_TabAboutBtnKelompok2MouseClicked
 
-    private void TabFormDataPendonorKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseExited
-        changecolor(TabHomePanelDataPendonorKelompok2, new Color (17,43,60));
-    }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseExited
+    private void TabFormDataUangMasukKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataUangMasukKelompok2MouseExited
+        changecolor(TabFormPanelUangMasukrKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabFormDataUangMasukKelompok2MouseExited
 
-    private void TabFormDataPendonorKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseEntered
-        changecolor(TabHomePanelDataPendonorKelompok2, new Color (32,108,151));
-    }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseEntered
+    private void TabFormDataUangMasukKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataUangMasukKelompok2MouseEntered
+        changecolor(TabFormPanelUangMasukrKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabFormDataUangMasukKelompok2MouseEntered
 
-    private void TabFormDataPendonorKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseClicked
+    private void TabFormDataUangMasukKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataUangMasukKelompok2MouseClicked
         new bendahara.FormKeuanganMasuk().setVisible(true);
         dispose();
-    }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseClicked
+    }//GEN-LAST:event_TabFormDataUangMasukKelompok2MouseClicked
+
+    private void TabFormDataUangKeluarKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataUangKeluarKelompok2MouseClicked
+        new bendahara.FormKeuanganKeluar().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_TabFormDataUangKeluarKelompok2MouseClicked
+
+    private void TabFormDataUangKeluarKelompok2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataUangKeluarKelompok2MouseEntered
+        changecolor(TabFormPanelUangKeluarKelompok2, new Color (32,108,151));
+    }//GEN-LAST:event_TabFormDataUangKeluarKelompok2MouseEntered
+
+    private void TabFormDataUangKeluarKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataUangKeluarKelompok2MouseExited
+        changecolor(TabFormPanelUangKeluarKelompok2, new Color (17,43,60));
+    }//GEN-LAST:event_TabFormDataUangKeluarKelompok2MouseExited
 
     /**
      * @param args the command line arguments
@@ -645,9 +688,11 @@ public class dashboardBendahara extends javax.swing.JFrame {
     private javax.swing.JPanel PanelKelompok2;
     private javax.swing.JPanel PanelLogout21552011235;
     private javax.swing.JLabel TabAboutBtnKelompok2;
-    private javax.swing.JLabel TabFormDataPendonorKelompok2;
+    private javax.swing.JLabel TabFormDataUangKeluarKelompok2;
+    private javax.swing.JLabel TabFormDataUangMasukKelompok2;
     private javax.swing.JPanel TabFormPanelPasienKelompok2;
-    private javax.swing.JPanel TabHomePanelDataPendonorKelompok2;
+    private javax.swing.JPanel TabFormPanelUangKeluarKelompok2;
+    private javax.swing.JPanel TabFormPanelUangMasukrKelompok2;
     private javax.swing.JPanel TabHomePanelTrasnfusiKelompok2;
     private javax.swing.JLabel UserName;
     private javax.swing.JPanel aboutPanelKelompok2;
