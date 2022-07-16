@@ -557,7 +557,7 @@ public class dashboardBendahara extends javax.swing.JFrame {
     }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseEntered
 
     private void TabFormDataPendonorKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabFormDataPendonorKelompok2MouseClicked
-        new bendahara.FormKeuangan().setVisible(true);
+        new bendahara.FormKeuanganMasuk().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabFormDataPendonorKelompok2MouseClicked
 

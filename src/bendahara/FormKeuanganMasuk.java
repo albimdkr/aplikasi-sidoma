@@ -43,7 +43,7 @@ import koneksi.koneksi;
  *
  * @author albin
  */
-public class FormKeuangan extends javax.swing.JFrame {
+public class FormKeuanganMasuk extends javax.swing.JFrame {
     DefaultTableModel table = new DefaultTableModel();
     /**
      * Creates new form daftarMenu
@@ -54,18 +54,18 @@ public class FormKeuangan extends javax.swing.JFrame {
         jDateTanggalDaftarKelompok2.setDate(now);    
         }
         
-        private void TimeJSpinner(){
-        Date date = new Date();
-        SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
-        JSpinner spinner = new JSpinner(sm);
-        JSpinner.DateEditor time = new JSpinner.DateEditor(spinner, "HH:mm:ss");
-        jSpinner1.setEditor(time);
-        }
+//        private void TimeJSpinner(){
+//        Date date = new Date();
+//        SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
+//        JSpinner spinner = new JSpinner(sm);
+//        JSpinner.DateEditor time = new JSpinner.DateEditor(spinner, "HH:mm:ss");
+//        jSpinner1.setEditor(time);
+//        }
     
-    public FormKeuangan() {
+    public FormKeuanganMasuk() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
-        TimeJSpinner();
+        //TimeJSpinner();
         tanggal();
         
         koneksi conn = new koneksi();
@@ -74,9 +74,8 @@ public class FormKeuangan extends javax.swing.JFrame {
         tableData.setModel(table);
         table.addColumn("No. Uang");
         table.addColumn("Tanggal");
-        table.addColumn("Nominal Uang");
         table.addColumn("Keterangan");
-        table.addColumn("Status");
+        table.addColumn("Uang Masuk");
         //table.addColumn("Waktu");
         tampilData();
     }
@@ -90,7 +89,7 @@ public class FormKeuangan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `data_keuangan`";
+        String query = "SELECT * FROM `data_keuanganmasuk`";
         
         try{
             java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -101,12 +100,10 @@ public class FormKeuangan extends javax.swing.JFrame {
                 //menampung data sementara
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
-                    String nominal_uang = rslt.getString("nominal_uang");
                     String keterangan_uang = rslt.getString("keterangan");
-                    String status_uang = rslt.getString("status");
-                    //String waktu_uang = rslt.getString("waktu");
+                    String uang_masuk = rslt.getString("uang_masuk");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang}; //,waktu_uang
+                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk}; //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -123,8 +120,7 @@ public class FormKeuangan extends javax.swing.JFrame {
     private void clear(){
           //*id_petugas
           txtFieldKeteranganKelompok2.setText(null);
-          txtFieldNominalKelompok2.setText(null);
-          jComboBoxStatusKelompok2.setSelectedIndex(0);
+          txtFieldUangMasukKelompok2.setText(null);
           //jSpinner1.setText(null);
           //jDateChooserTanggalDaftar.setCalendar(null);
     }
@@ -134,23 +130,16 @@ public class FormKeuangan extends javax.swing.JFrame {
         //String no_uang
         SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal = tgl.format(jDateTanggalDaftarKelompok2.getDate());
-        String nominal_uang = txtFieldNominalKelompok2.getText();
-        String keterangan_uang = txtFieldKeteranganKelompok2.getText();
-        String status_uang = (String) jComboBoxStatusKelompok2.getSelectedItem();
-        
-//        java.util.Date date = new java.util.Date();
-//        Object sqlTime = new java.sql.Time(date.getTime()); 
-        
-//        SimpleDateFormat spinner = new java.util.Date();
-//        Object sqlTime = spinner.format(jSpinner1.getTime());
+        String keterangan = txtFieldKeteranganKelompok2.getText();
+        String uang_masuk = txtFieldUangMasukKelompok2.getText();
        
         
        
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
-        String query = "INSERT INTO `data_keuangan` (`no_uang`,`tanggal`,`nominal_uang`,`keterangan`,`status`) "  //waktu
-                     + "VALUES (NULL,'"+tanggal+"','"+nominal_uang+"','"+keterangan_uang+"','"+status_uang+"')";
+        String query = "INSERT INTO `data_keuanganmasuk` (`no_uang`,`tanggal`,`keterangan`,`uang_masuk`) "  //waktu
+                     + "VALUES (NULL,'"+tanggal+"','"+keterangan+"','"+uang_masuk+"')";
         
         try{ 
             //menyiapkan statement untuk di eksekusi
@@ -180,7 +169,7 @@ public class FormKeuangan extends javax.swing.JFrame {
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "DELETE FROM `data_keuangan` WHERE `data_keuangan`.`no_uang` = "+no_uang+" ";
+            String query = "DELETE FROM `data_keuanganmasuk` WHERE `data_keuanganmasuk`.`no_uang` = "+no_uang+" ";
    
             try {
                 PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
@@ -204,15 +193,14 @@ public class FormKeuangan extends javax.swing.JFrame {
         //String no_uang
         //SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
         //String tanggal = tgl.format(jDateTanggalDaftar21552011235.getDate());
-        String nominal_uang = txtFieldNominalKelompok2.getText();
-        String keterangan_uang = txtFieldKeteranganKelompok2.getText();
-        String status_uang = (String) jComboBoxStatusKelompok2.getSelectedItem();
+        String keterangan = txtFieldKeteranganKelompok2.getText();
+        String uang_masuk = txtFieldUangMasukKelompok2.getText();
         
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_keuangan` SET `nominal_uang` = '"+nominal_uang+"',`keterangan` = '"+keterangan_uang+"', `status` = '"+status_uang+"'"
-                + "WHERE `data_keuangan`.`no_uang` = '"+no_uang+"';";
+            String query = "UPDATE `data_keuanganmasuk` SET `keterangan` = '"+keterangan+"',`uang_masuk` = '"+uang_masuk+"'"
+                + "WHERE `data_keuanganmasuk`.`no_uang` = '"+no_uang+"';";
             
             try {
                 PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
@@ -235,11 +223,11 @@ public class FormKeuangan extends javax.swing.JFrame {
         }
         
       String cari = txtFieldCariKelompok2.getText();
-      String query = "SELECT * FROM `data_keuangan` WHERE "
+      String query = "SELECT * FROM `data_keuanganmasuk` WHERE "
                 + "`no_uang` LIKE '%"+cari+"%' OR"
                 + "`tanggal`  LIKE '%"+cari+"%' OR "
-                + "`keterangan` LIKE '%"+cari+"%' OR"
-                + "`status` LIKE '%"+cari+"%'  ";
+                + "`keterangan` LIKE '%"+cari+"%' ";
+            
                 
        try{
            java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -247,15 +235,12 @@ public class FormKeuangan extends javax.swing.JFrame {
            ResultSet rslt = sttmnt.executeQuery(query);//menjalanakn query
            
            while (rslt.next()){
-                   String no_uang = rslt.getString("no_uang");
+                    String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
-                    String nominal_uang = rslt.getString("nominal_uang");
                     String keterangan_uang = rslt.getString("keterangan");
-                    String status_uang = rslt.getString("status");
-                    //String waktu_uang = rslt.getString("waktu");
-                    
+                    String uang_masuk = rslt.getString("uang_masuk");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang};//waktu_uang
+                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk}; //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -305,19 +290,15 @@ public class FormKeuangan extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tableData = new javax.swing.JTable();
         txtFieldKeteranganKelompok2 = new javax.swing.JTextField();
-        status = new javax.swing.JLabel();
         line16 = new javax.swing.JLabel();
         txtFieldCariKelompok2 = new javax.swing.JTextField();
         PanelCariKelompok2 = new javax.swing.JPanel();
         BtnCariKelompok2 = new javax.swing.JLabel();
-        jComboBoxStatusKelompok2 = new javax.swing.JComboBox<>();
         keterangan = new javax.swing.JLabel();
         jDateTanggalDaftarKelompok2 = new com.toedter.calendar.JDateChooser();
-        waktu = new javax.swing.JLabel();
         line9 = new javax.swing.JLabel();
-        txtFieldNominalKelompok2 = new javax.swing.JTextField();
+        txtFieldUangMasukKelompok2 = new javax.swing.JTextField();
         nominalUang = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
         TotalHarga1 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
@@ -356,7 +337,7 @@ public class FormKeuangan extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         title.setForeground(new java.awt.Color(255, 255, 255));
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title.setText(" Form Keuangan");
+        title.setText(" Form Keuangan Masuk");
         Navbar.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 390, 60));
 
         PanelHelpKelompok2.setBackground(new java.awt.Color(32, 83, 117));
@@ -421,7 +402,7 @@ public class FormKeuangan extends javax.swing.JFrame {
         line8.setForeground(new java.awt.Color(255, 255, 255));
         line8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         line8.setText("______________________________________");
-        jPanel3.add(line8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 290, 350, 20));
+        jPanel3.add(line8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 350, 20));
 
         PanelClearKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         PanelClearKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -559,13 +540,7 @@ public class FormKeuangan extends javax.swing.JFrame {
                 txtFieldKeteranganKelompok2ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtFieldKeteranganKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 340, 40));
-
-        status.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        status.setForeground(new java.awt.Color(255, 255, 255));
-        status.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        status.setText("Status");
-        jPanel3.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 120, 20));
+        jPanel3.add(txtFieldKeteranganKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 340, 40));
 
         line16.setBackground(new java.awt.Color(255, 255, 255));
         line16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -607,21 +582,11 @@ public class FormKeuangan extends javax.swing.JFrame {
 
         jPanel3.add(PanelCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 140, 130, 50));
 
-        jComboBoxStatusKelompok2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Pilih --", "Masuk", "Keluar" }));
-        jComboBoxStatusKelompok2.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jComboBoxStatusKelompok2InputMethodTextChanged(evt);
-            }
-        });
-        jPanel3.add(jComboBoxStatusKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 350, 40));
-
         keterangan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         keterangan.setForeground(new java.awt.Color(255, 255, 255));
         keterangan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         keterangan.setText("Keterangan");
-        jPanel3.add(keterangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 120, 40));
+        jPanel3.add(keterangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 120, 40));
 
         jDateTanggalDaftarKelompok2.setDateFormatString("d MMM, yyyy");
         jDateTanggalDaftarKelompok2.setEnabled(false);
@@ -633,39 +598,25 @@ public class FormKeuangan extends javax.swing.JFrame {
         });
         jPanel3.add(jDateTanggalDaftarKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 250, 40));
 
-        waktu.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        waktu.setForeground(new java.awt.Color(255, 255, 255));
-        waktu.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        waktu.setText("Waktu");
-        waktu.setToolTipText("");
-        jPanel3.add(waktu, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 130, 50, 40));
-
         line9.setBackground(new java.awt.Color(255, 255, 255));
         line9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         line9.setForeground(new java.awt.Color(255, 255, 255));
         line9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         line9.setText("______________________________________");
-        jPanel3.add(line9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 370, 20));
+        jPanel3.add(line9, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 370, 20));
 
-        txtFieldNominalKelompok2.setBackground(new java.awt.Color(17, 43, 60));
-        txtFieldNominalKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        txtFieldNominalKelompok2.setForeground(new java.awt.Color(255, 255, 255));
-        txtFieldNominalKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtFieldNominalKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldNominalKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 350, 40));
+        txtFieldUangMasukKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldUangMasukKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldUangMasukKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldUangMasukKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldUangMasukKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldUangMasukKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 350, 40));
 
         nominalUang.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nominalUang.setForeground(new java.awt.Color(255, 255, 255));
         nominalUang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        nominalUang.setText("Nominal Uang");
-        jPanel3.add(nominalUang, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 120, 40));
-
-        jSpinner1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jSpinner1MouseClicked(evt);
-            }
-        });
-        jPanel3.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 130, 270, 40));
+        nominalUang.setText("Nominal Uang Masuk");
+        jPanel3.add(nominalUang, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 160, 40));
 
         TotalHarga1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalHarga1.setForeground(new java.awt.Color(255, 255, 255));
@@ -773,18 +724,12 @@ public class FormKeuangan extends javax.swing.JFrame {
           int baris = tableData.getSelectedRow();
           
           //String no_uang = table.getValueAt(baris,0).toString();
-          String nominal_uang = table.getValueAt(baris,2).toString();
-          txtFieldNominalKelompok2.setText(nominal_uang);
           
-          String keterangan_uang = table.getValueAt(baris,3).toString();
-          txtFieldKeteranganKelompok2.setText(keterangan_uang);
-
-          String status_uang = table.getValueAt(baris,4).toString();
-          for (int i = 0; i <jComboBoxStatusKelompok2.getItemCount(); i++ ){
-              if (jComboBoxStatusKelompok2.getItemAt(i).equalsIgnoreCase(status_uang)){
-                  jComboBoxStatusKelompok2.setSelectedIndex(i);
-              }
-          }
+          String keterangan = table.getValueAt(baris,2).toString();
+          txtFieldKeteranganKelompok2.setText(keterangan);
+          
+          String uang_masuk = table.getValueAt(baris,3).toString();
+          txtFieldUangMasukKelompok2.setText(uang_masuk);
           
         Date tanggal = null;
         try{
@@ -807,17 +752,9 @@ public class FormKeuangan extends javax.swing.JFrame {
         changecolor(PanelCariKelompok2, new Color (17,43,60));
     }//GEN-LAST:event_BtnCariKelompok2MouseExited
 
-    private void jComboBoxStatusKelompok2InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jComboBoxStatusKelompok2InputMethodTextChanged
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxStatusKelompok2InputMethodTextChanged
-
     private void jDateTanggalDaftarKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftarKelompok2MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jDateTanggalDaftarKelompok2MouseClicked
-
-    private void jSpinner1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSpinner1MouseClicked
-       
-    }//GEN-LAST:event_jSpinner1MouseClicked
 
     private void txtFieldKeteranganKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldKeteranganKelompok2ActionPerformed
         // TODO add your handling code here:
@@ -854,14 +791,1038 @@ public class FormKeuangan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1889,7 +2850,7 @@ public class FormKeuangan extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new FormKeuangan().setVisible(true);
+            new FormKeuanganMasuk().setVisible(true);
         });
     }
 
@@ -1914,24 +2875,20 @@ public class FormKeuangan extends javax.swing.JFrame {
     private javax.swing.JLabel TotalHarga1;
     private javax.swing.JLabel background;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JComboBox<String> jComboBoxStatusKelompok2;
     private com.toedter.calendar.JDateChooser jDateTanggalDaftarKelompok2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JLabel keterangan;
     private javax.swing.JLabel line16;
     private javax.swing.JLabel line8;
     private javax.swing.JLabel line9;
     private javax.swing.JLabel nominalUang;
-    private javax.swing.JLabel status;
     private javax.swing.JTable tableData;
     private javax.swing.JLabel title;
     private javax.swing.JTextField txtFieldCariKelompok2;
     private javax.swing.JTextField txtFieldKeteranganKelompok2;
-    private javax.swing.JTextField txtFieldNominalKelompok2;
-    private javax.swing.JLabel waktu;
+    private javax.swing.JTextField txtFieldUangMasukKelompok2;
     // End of variables declaration//GEN-END:variables
 
    
