@@ -28,13 +28,13 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author albin
  */
-public class PrintKeuangan extends javax.swing.JFrame {
+public class PrintKeuanganMasuk extends javax.swing.JFrame {
      DefaultTableModel table = new DefaultTableModel();
 
     /**
      * Creates new form daftarMenu
      */
-    public PrintKeuangan() {
+    public PrintKeuanganMasuk() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         initComponents();
         //TimeJSpinner();
@@ -46,9 +46,8 @@ public class PrintKeuangan extends javax.swing.JFrame {
         tableDataKelompok2.setModel(table);
         table.addColumn("No. Uang");
         table.addColumn("Tanggal");
-        table.addColumn("Nominal Uang");
         table.addColumn("Keterangan");
-        table.addColumn("Status");
+        table.addColumn("Uang Masuk");
         //table.addColumn("Waktu");
         tampilData();
     }
@@ -60,7 +59,7 @@ public class PrintKeuangan extends javax.swing.JFrame {
             table.removeRow(0);
         }
         
-        String query = "SELECT * FROM `data_keuangan`";
+        String query = "SELECT * FROM `data_keuanganmasuk`";
         
         try{
             java.sql.Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -71,11 +70,10 @@ public class PrintKeuangan extends javax.swing.JFrame {
                 //menampung data sementara
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
-                    String nominal_uang = rslt.getString("nominal_uang");
                     String keterangan_uang = rslt.getString("keterangan");
-                    String status_uang = rslt.getString("status");
-
-                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang}; //,waktu_uang
+                    String uang_masuk = rslt.getString("uang_masuk");
+                //masukan semua data kedalam array
+                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk};  //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -96,12 +94,10 @@ public class PrintKeuangan extends javax.swing.JFrame {
         
         String cari = txtFieldCariKelompok2.getText();
         
-        String query = "SELECT * FROM `data_keuangan` WHERE "
-                + "`no_uang`  LIKE '%"+cari+"%' OR "
-                + "`tanggal` LIKE '%"+cari+"%' OR"
-                + "`nominal_uang` LIKE '%"+cari+"%' OR"
-                + "`keterangan` LIKE '%"+cari+"%' OR"
-                + "`status` LIKE '%"+cari+"%' ";
+      String query = "SELECT * FROM `data_keuanganmasuk` WHERE "
+                + "`no_uang` LIKE '%"+cari+"%' OR"
+                + "`tanggal`  LIKE '%"+cari+"%' OR "
+                + "`keterangan` LIKE '%"+cari+"%' ";
                 
        try{
            Connection connect = koneksi.getKoneksi();//memanggil koneksi
@@ -113,11 +109,10 @@ public class PrintKeuangan extends javax.swing.JFrame {
                 
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
-                    String nominal_uang = rslt.getString("nominal_uang");
                     String keterangan_uang = rslt.getString("keterangan");
-                    String status_uang = rslt.getString("status");
-
-                String[] data = {no_uang,tanggal,nominal_uang,keterangan_uang,status_uang}; //,waktu_uang
+                    String uang_masuk = rslt.getString("uang_masuk");
+                //masukan semua data kedalam array
+                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk};  //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -198,8 +193,8 @@ public class PrintKeuangan extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Keuangan");
-        Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 280, 60));
+        DaftarMenu.setText("Print Data Keuangan Masuk");
+        Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 340, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
 
@@ -347,7 +342,7 @@ public class PrintKeuangan extends javax.swing.JFrame {
 
     private void BtnPrintKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseClicked
       try{
-            String file = "/laporan/report_keuangan.jasper";
+            String file = "/laporan/report_keuanganMasuk.jasper";
             JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
             JasperViewer.viewReport(print, false);
             
@@ -373,14 +368,46 @@ public class PrintKeuangan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PrintKeuangan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrintKeuanganMasuk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -416,7 +443,7 @@ public class PrintKeuangan extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new PrintKeuangan().setVisible(true);
+            new PrintKeuanganMasuk().setVisible(true);
         });
     }
 

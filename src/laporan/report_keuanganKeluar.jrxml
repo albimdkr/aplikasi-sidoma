@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="383d0601-c62d-4865-b5c6-584c58f4e621">
-	<property name="ireport.zoom" value="1.2100000000000433"/>
+	<property name="ireport.zoom" value="1.1000000000000425"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="112"/>
+	<property name="ireport.y" value="52"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -14,7 +14,7 @@
 		</conditionalStyle>
 	</style>
 	<queryString>
-		<![CDATA[SELECT * FROM `data_keuangan`]]>
+		<![CDATA[SELECT * FROM `data_keuanganmasuk`]]>
 	</queryString>
 	<field name="no_uang" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -58,12 +58,12 @@
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="acef31af-c27a-4486-9a6a-3ab4a84efea4" style="Title" mode="Transparent" x="0" y="175" width="802" height="40" forecolor="#000000" backcolor="#FFFFFF"/>
+				<reportElement uuid="acef31af-c27a-4486-9a6a-3ab4a84efea4" style="Title" mode="Transparent" x="0" y="176" width="802" height="40" forecolor="#000000" backcolor="#FFFFFF"/>
 				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="17" isBold="true"/>
 				</textElement>
-				<text><![CDATA[LAPORAN DATA KEUANGAN]]></text>
+				<text><![CDATA[LAPORAN DATA KEUANGAN KELUAR]]></text>
 			</staticText>
 			<image onErrorType="Icon">
 				<reportElement uuid="448df30b-e000-425f-ad5d-545bbf4d6f39" x="29" y="7" width="133" height="104"/>
@@ -99,14 +99,7 @@
 	<columnHeader>
 		<band height="33" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="194" y="0" width="114" height="33" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[NOMINAL UANG]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="309" y="0" width="364" height="33" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="194" y="0" width="435" height="33" forecolor="#FFFFFF" backcolor="#206C97"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -120,18 +113,18 @@
 				<text><![CDATA[NO UANG]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="674" y="0" width="128" height="33" forecolor="#FFFFFF" backcolor="#206C97"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[STATUS]]></text>
-			</staticText>
-			<staticText>
 				<reportElement uuid="58afa754-6b89-4172-a0fd-0020a21b5864" style="Column header" mode="Opaque" x="60" y="0" width="133" height="33" forecolor="#FFFFFF" backcolor="#206C97"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a30ec25f-fd10-45ca-97dd-cdf599290789" style="Column header" mode="Opaque" x="630" y="0" width="172" height="33" forecolor="#FFFFFF" backcolor="#206C97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UANG KELUAR]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -145,18 +138,11 @@
 				<textFieldExpression><![CDATA[$F{no_uang}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="309" y="1" width="364" height="18"/>
+				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="194" y="1" width="435" height="18"/>
 				<textElement textAlignment="Center">
 					<font size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{keterangan}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="674" y="1" width="128" height="18"/>
-				<textElement textAlignment="Center">
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="60" y="1" width="133" height="18"/>
@@ -166,11 +152,11 @@
 				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement uuid="a2f19edd-b80e-4a88-8b77-bf1f852f054d" style="Detail" positionType="Float" x="194" y="1" width="114" height="18"/>
+				<reportElement uuid="fba4823f-42a2-4fe5-a53c-8e7eba18cb21" style="Detail" positionType="Float" x="629" y="1" width="173" height="18"/>
 				<textElement textAlignment="Center">
 					<font size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nominal_uang}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{uang_keluar}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
