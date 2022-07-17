@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="383d0601-c62d-4865-b5c6-584c58f4e621">
-	<property name="ireport.zoom" value="1.000000000000038"/>
-	<property name="ireport.x" value="14"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.zoom" value="1.4641000000000577"/>
+	<property name="ireport.x" value="479"/>
+	<property name="ireport.y" value="187"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -22,17 +22,14 @@
 	<field name="tanggal" class="java.sql.Date">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="nominal_uang" class="java.lang.Integer">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
 	<field name="keterangan" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<field name="status" class="java.lang.String">
+	<field name="uang_masuk" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
-	<variable name="nominal_uang_1" class="java.lang.Integer" calculation="Sum">
-		<variableExpression><![CDATA[$F{nominal_uang}]]></variableExpression>
+	<variable name="uang_masuk_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{uang_masuk}]]></variableExpression>
 	</variable>
 	<background>
 		<band splitType="Stretch"/>
@@ -176,10 +173,26 @@
 	<summary>
 		<band height="100" splitType="Stretch">
 			<textField>
-				<reportElement uuid="3bf530ed-2a61-4b87-b5d8-87647f8f76bf" x="357" y="32" width="100" height="20"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$V{nominal_uang_1}]]></textFieldExpression>
+				<reportElement uuid="3b4e181d-2ce6-4587-99c0-663d1b978838" x="702" y="25" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{uang_masuk_1}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="5eac334b-d571-4675-ac8a-5e8a48d9f8b8" x="519" y="25" width="111" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Uang Masuk : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5eac334b-d571-4675-ac8a-5e8a48d9f8b8" x="683" y="25" width="19" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
 		</band>
 	</summary>
 </jasperReport>
