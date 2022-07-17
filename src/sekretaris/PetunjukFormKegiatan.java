@@ -163,7 +163,7 @@ public class PetunjukFormKegiatan extends javax.swing.JFrame {
         Tentang.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Tentang.setForeground(new java.awt.Color(255, 255, 255));
         Tentang.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tentang.setText("Petunjuk Mengoperasikan Form Keuangan");
+        Tentang.setText("Petunjuk Mengoperasikan Form Kegiatan");
         Navbar.add(Tentang, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 590, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 60));

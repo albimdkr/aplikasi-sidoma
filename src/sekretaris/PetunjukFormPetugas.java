@@ -803,7 +803,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnBackKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok2MouseClicked
-        new sekretaris.FormKegiatan().setVisible(true);
+        new sekretaris.FormPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBackKelompok2MouseClicked
 
@@ -964,7 +964,7 @@ public class PetunjukFormPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnRefreshKelompok3MouseExited
 
     private void BtnBackKelompok3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnBackKelompok3MouseClicked
-        new sekretaris.FormKegiatan().setVisible(true);
+        new sekretaris.FormPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnBackKelompok3MouseClicked
 

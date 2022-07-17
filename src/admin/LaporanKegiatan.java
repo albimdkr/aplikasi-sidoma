@@ -736,7 +736,7 @@ public class LaporanKegiatan extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxPerijinanKetuaKelompok2InputMethodTextChanged
 
     private void BtnHelpKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseClicked
-        new transfusi.PetunjukTransfusi().setVisible(true);
+        new admin.PetunjukLaporanKegiatan().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnHelpKelompok2MouseClicked
 

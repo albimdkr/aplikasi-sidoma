@@ -210,7 +210,7 @@ public class FormPasien extends javax.swing.JFrame {
         //ambill data no pendaftaran
         int i = tableDataKelompok2.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Menghapus Data ?","Konfirmasi Hapus Data Pendonor ", JOptionPane.YES_NO_OPTION);
+            + "Menghapus Data ?","Konfirmasi Hapus Data Pasien ", JOptionPane.YES_NO_OPTION);
         
         if (ok==0){
             String no_pasien = table.getValueAt(i, 1).toString();

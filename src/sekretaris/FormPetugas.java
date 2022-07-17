@@ -880,7 +880,7 @@ public class FormPetugas extends javax.swing.JFrame {
     }//GEN-LAST:event_jDateTanggalDaftarKelompok2MouseClicked
 
     private void BtnHelpKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseClicked
-        new sekretaris.PetunjukFormKegiatan().setVisible(true);
+        new sekretaris.PetunjukFormPetugas().setVisible(true);
         dispose();
     }//GEN-LAST:event_BtnHelpKelompok2MouseClicked
 

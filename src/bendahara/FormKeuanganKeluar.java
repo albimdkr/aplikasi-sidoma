@@ -164,12 +164,12 @@ public class FormKeuanganKeluar extends javax.swing.JFrame {
         //ambill data no pendaftaran
         int i = tableData.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Menghapus Data ?","Konfirmasi Hapus Data Petugas ", JOptionPane.YES_NO_OPTION);
+            + "Menghapus Data ?","Konfirmasi Hapus Data Keuangan Keluar ", JOptionPane.YES_NO_OPTION);
         
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "DELETE FROM `data_keuanganKELUAR` WHERE `data_keuanganKELUAR`.`no_uang` = "+no_uang+" ";
+            String query = "DELETE FROM `data_keuangankeluar` WHERE `data_keuangankeluar`.`no_uang` = "+no_uang+" ";
    
             try {
                 PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
@@ -188,7 +188,7 @@ public class FormKeuanganKeluar extends javax.swing.JFrame {
     private void editData(){
         int i = tableData.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Mengedit Data ?","Konfirmasi Edit Kegiatan", JOptionPane.YES_NO_OPTION);
+            + "Mengedit Data ?","Konfirmasi Edit Data Keuangan Keluar", JOptionPane.YES_NO_OPTION);
         
         //String no_uang
         //SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
@@ -199,7 +199,7 @@ public class FormKeuanganKeluar extends javax.swing.JFrame {
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_keuangankeluar` SET `keterangan` = '"+keterangan+"',`uang_masuk` = '"+uang_keluar+"'"
+            String query = "UPDATE `data_keuangankeluar` SET `keterangan` = '"+keterangan+"',`uang_keluar` = '"+uang_keluar+"'"
                 + "WHERE `data_keuangankeluar`.`no_uang` = '"+no_uang+"';";
             
             try {

@@ -164,7 +164,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         //ambill data no pendaftaran
         int i = tableData.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Menghapus Data ?","Konfirmasi Hapus Data Petugas ", JOptionPane.YES_NO_OPTION);
+            + "Menghapus Data ?","Konfirmasi Hapus Data Keuangan Masuk ", JOptionPane.YES_NO_OPTION);
         
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
@@ -188,7 +188,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
     private void editData(){
         int i = tableData.getSelectedRow();
         int ok = JOptionPane.showConfirmDialog (null," Apakah Anda Yakin Ingin "
-            + "Mengedit Data ?","Konfirmasi Edit Kegiatan", JOptionPane.YES_NO_OPTION);
+            + "Mengedit Data ?","Konfirmasi Edit Data Keuangan Masuk", JOptionPane.YES_NO_OPTION);
         
         //String no_uang
         //SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
