@@ -152,11 +152,18 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
         line = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         line6 = new javax.swing.JLabel();
+        PanelPrintKelompok3 = new javax.swing.JPanel();
+        BtnPrintKelompok3 = new javax.swing.JLabel();
         PanelPrintKelompok2 = new javax.swing.JPanel();
         BtnPrintKelompok2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableDataKelompok2 = new javax.swing.JTable();
         txtFieldCariKelompok2 = new javax.swing.JTextField();
+        line8 = new javax.swing.JLabel();
+        txtFieldNamaPendonorKelompok2 = new javax.swing.JTextField();
+        NamaPendonor1 = new javax.swing.JLabel();
+        jComboBoxHemoglobinKelompok2 = new javax.swing.JComboBox<>();
+        kondisi1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -241,6 +248,31 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
         line6.setText("____________________________");
         jPanel3.add(line6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 270, 20));
 
+        PanelPrintKelompok3.setBackground(new java.awt.Color(17, 43, 60));
+        PanelPrintKelompok3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        PanelPrintKelompok3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnPrintKelompok3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BtnPrintKelompok3.setForeground(new java.awt.Color(255, 255, 255));
+        BtnPrintKelompok3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BtnPrintKelompok3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconOutline/icons8-activity-feed-20.png"))); // NOI18N
+        BtnPrintKelompok3.setText("Set periode");
+        BtnPrintKelompok3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnPrintKelompok3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnPrintKelompok3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BtnPrintKelompok3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BtnPrintKelompok3MouseExited(evt);
+            }
+        });
+        PanelPrintKelompok3.add(BtnPrintKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 50));
+
+        jPanel3.add(PanelPrintKelompok3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 500, 230, 50));
+
         PanelPrintKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         PanelPrintKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         PanelPrintKelompok2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -280,7 +312,7 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
         tableDataKelompok2.setSelectionBackground(new java.awt.Color(64, 49, 33));
         jScrollPane1.setViewportView(tableDataKelompok2);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 340));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 250));
 
         txtFieldCariKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldCariKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -289,6 +321,41 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
         txtFieldCariKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldCariKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel3.add(txtFieldCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 250, 50));
+
+        line8.setBackground(new java.awt.Color(255, 255, 255));
+        line8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        line8.setForeground(new java.awt.Color(255, 255, 255));
+        line8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        line8.setText("___________________________");
+        jPanel3.add(line8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, 260, 20));
+
+        txtFieldNamaPendonorKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldNamaPendonorKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldNamaPendonorKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldNamaPendonorKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldNamaPendonorKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        jPanel3.add(txtFieldNamaPendonorKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 250, 40));
+
+        NamaPendonor1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NamaPendonor1.setForeground(new java.awt.Color(255, 255, 255));
+        NamaPendonor1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        NamaPendonor1.setText("Set Periode Laporan");
+        jPanel3.add(NamaPendonor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, 190, 40));
+
+        jComboBoxHemoglobinKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBoxHemoglobinKelompok2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- pilih --", "Tanggal", "Bulan", "Tahun" }));
+        jComboBoxHemoglobinKelompok2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxHemoglobinKelompok2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jComboBoxHemoglobinKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 510, 240, 40));
+
+        kondisi1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        kondisi1.setForeground(new java.awt.Color(255, 255, 255));
+        kondisi1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        kondisi1.setText("Set Waktu Laporan");
+        jPanel3.add(kondisi1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 130, 30));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -350,6 +417,22 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, e);
         }
     }//GEN-LAST:event_BtnPrintKelompok2MouseClicked
+
+    private void jComboBoxHemoglobinKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHemoglobinKelompok2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxHemoglobinKelompok2ActionPerformed
+
+    private void BtnPrintKelompok3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnPrintKelompok3MouseClicked
+
+    private void BtnPrintKelompok3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok3MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnPrintKelompok3MouseEntered
+
+    private void BtnPrintKelompok3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok3MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnPrintKelompok3MouseExited
 
     /**
      * @param args the command line arguments
@@ -451,17 +534,24 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
     public javax.swing.JLabel BtnBackKelompok2;
     private javax.swing.JLabel BtnCariKelompok2;
     private javax.swing.JLabel BtnPrintKelompok2;
+    private javax.swing.JLabel BtnPrintKelompok3;
     private javax.swing.JLabel DaftarMenu;
+    private javax.swing.JLabel NamaPendonor1;
     private javax.swing.JPanel Navbar;
     private javax.swing.JPanel PanelBackKelompok2;
     private javax.swing.JPanel PanelCariKelompok2;
     private javax.swing.JPanel PanelPrintKelompok2;
+    private javax.swing.JPanel PanelPrintKelompok3;
+    private javax.swing.JComboBox<String> jComboBoxHemoglobinKelompok2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel kondisi1;
     private javax.swing.JLabel line;
     private javax.swing.JLabel line6;
+    private javax.swing.JLabel line8;
     private javax.swing.JTable tableDataKelompok2;
     private javax.swing.JTextField txtFieldCariKelompok2;
+    private javax.swing.JTextField txtFieldNamaPendonorKelompok2;
     // End of variables declaration//GEN-END:variables
 }

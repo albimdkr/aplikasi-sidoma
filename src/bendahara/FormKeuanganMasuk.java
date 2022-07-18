@@ -74,6 +74,8 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         tableData.setModel(table);
         table.addColumn("No. Uang");
         table.addColumn("Tanggal");
+        table.addColumn("Bulan");
+        table.addColumn("Tahun");
         table.addColumn("Keterangan");
         table.addColumn("Uang Masuk");
         //table.addColumn("Waktu");
@@ -100,10 +102,12 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
                 //menampung data sementara
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
+                    String bulan = rslt.getString("bulan");
+                    String tahun = rslt.getString("tahun");
                     String keterangan_uang = rslt.getString("keterangan");
                     String uang_masuk = rslt.getString("uang_masuk");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk}; //,waktu_uang
+                String[] data = {no_uang,tanggal,bulan,tahun,keterangan_uang,uang_masuk}; //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -119,6 +123,8 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
     
     private void clear(){
           //*id_petugas
+          txtFieldBulanKelompok2.setText(null);
+          txtFieldTahunKelompok2.setText(null);
           txtFieldKeteranganKelompok2.setText(null);
           txtFieldUangMasukKelompok2.setText(null);
           //jSpinner1.setText(null);
@@ -130,6 +136,8 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         //String no_uang
         SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
         String tanggal = tgl.format(jDateTanggalDaftarKelompok2.getDate());
+        String bulan = txtFieldBulanKelompok2.getText();
+        String tahun = txtFieldTahunKelompok2.getText();
         String keterangan = txtFieldKeteranganKelompok2.getText();
         String uang_masuk = txtFieldUangMasukKelompok2.getText();
        
@@ -138,8 +146,8 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         //panggil koneksi
         java.sql.Connection connect = koneksi.getKoneksi();
         //query untuk memasukan data
-        String query = "INSERT INTO `data_keuanganmasuk` (`no_uang`,`tanggal`,`keterangan`,`uang_masuk`) "  //waktu
-                     + "VALUES (NULL,'"+tanggal+"','"+keterangan+"','"+uang_masuk+"')";
+        String query = "INSERT INTO `data_keuanganmasuk` (`no_uang`,`tanggal`,`bulan`,`tahun`,`keterangan`,`uang_masuk`) "  //waktu
+                     + "VALUES (NULL,'"+tanggal+"','"+bulan+"','"+tahun+"','"+keterangan+"','"+uang_masuk+"')";
         
         try{ 
             //menyiapkan statement untuk di eksekusi
@@ -193,13 +201,15 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         //String no_uang
         //SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
         //String tanggal = tgl.format(jDateTanggalDaftar21552011235.getDate());
+        String bulan = txtFieldBulanKelompok2.getText();
+        String tahun = txtFieldTahunKelompok2.getText();
         String keterangan = txtFieldKeteranganKelompok2.getText();
         String uang_masuk = txtFieldUangMasukKelompok2.getText();
         
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_keuanganmasuk` SET `keterangan` = '"+keterangan+"',`uang_masuk` = '"+uang_masuk+"'"
+            String query = "UPDATE `data_keuanganmasuk` SET `bulan` = '"+bulan+"',`tahun` = '"+tahun+"',`keterangan` = '"+keterangan+"',`uang_masuk` = '"+uang_masuk+"'"
                 + "WHERE `data_keuanganmasuk`.`no_uang` = '"+no_uang+"';";
             
             try {
@@ -226,6 +236,8 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
       String query = "SELECT * FROM `data_keuanganmasuk` WHERE "
                 + "`no_uang` LIKE '%"+cari+"%' OR"
                 + "`tanggal`  LIKE '%"+cari+"%' OR "
+                + "`bulan`  LIKE '%"+cari+"%' OR "
+                + "`tahun`  LIKE '%"+cari+"%' OR "
                 + "`keterangan` LIKE '%"+cari+"%' ";
             
                 
@@ -237,10 +249,12 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
            while (rslt.next()){
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
+                    String bulan = rslt.getString("bulan");
+                    String tahun = rslt.getString("tahun");
                     String keterangan_uang = rslt.getString("keterangan");
                     String uang_masuk = rslt.getString("uang_masuk");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk}; //,waktu_uang
+                String[] data = {no_uang,tanggal,bulan,tahun,keterangan_uang,uang_masuk}; //,waktu_uang //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -300,6 +314,12 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         txtFieldUangMasukKelompok2 = new javax.swing.JTextField();
         nominalUang = new javax.swing.JLabel();
         TotalHarga1 = new javax.swing.JLabel();
+        line10 = new javax.swing.JLabel();
+        txtFieldBulanKelompok2 = new javax.swing.JTextField();
+        keterangan1 = new javax.swing.JLabel();
+        line11 = new javax.swing.JLabel();
+        txtFieldTahunKelompok2 = new javax.swing.JTextField();
+        keterangan2 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -402,7 +422,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         line8.setForeground(new java.awt.Color(255, 255, 255));
         line8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         line8.setText("______________________________________");
-        jPanel3.add(line8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 350, 20));
+        jPanel3.add(line8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 350, 20));
 
         PanelClearKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         PanelClearKelompok2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
@@ -540,7 +560,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
                 txtFieldKeteranganKelompok2ActionPerformed(evt);
             }
         });
-        jPanel3.add(txtFieldKeteranganKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 340, 40));
+        jPanel3.add(txtFieldKeteranganKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 340, 40));
 
         line16.setBackground(new java.awt.Color(255, 255, 255));
         line16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -586,7 +606,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         keterangan.setForeground(new java.awt.Color(255, 255, 255));
         keterangan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         keterangan.setText("Keterangan");
-        jPanel3.add(keterangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 120, 40));
+        jPanel3.add(keterangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 40));
 
         jDateTanggalDaftarKelompok2.setDateFormatString("d MMM, yyyy");
         jDateTanggalDaftarKelompok2.setEnabled(false);
@@ -603,20 +623,20 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         line9.setForeground(new java.awt.Color(255, 255, 255));
         line9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         line9.setText("______________________________________");
-        jPanel3.add(line9, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 370, 20));
+        jPanel3.add(line9, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, 370, 20));
 
         txtFieldUangMasukKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldUangMasukKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtFieldUangMasukKelompok2.setForeground(new java.awt.Color(255, 255, 255));
         txtFieldUangMasukKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldUangMasukKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
-        jPanel3.add(txtFieldUangMasukKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 350, 40));
+        jPanel3.add(txtFieldUangMasukKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 350, 40));
 
         nominalUang.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nominalUang.setForeground(new java.awt.Color(255, 255, 255));
         nominalUang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         nominalUang.setText("Nominal Uang Masuk");
-        jPanel3.add(nominalUang, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, 160, 40));
+        jPanel3.add(nominalUang, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 160, 40));
 
         TotalHarga1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         TotalHarga1.setForeground(new java.awt.Color(255, 255, 255));
@@ -624,6 +644,56 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         TotalHarga1.setText("Tanggal");
         TotalHarga1.setToolTipText("");
         jPanel3.add(TotalHarga1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 60, 40));
+
+        line10.setBackground(new java.awt.Color(255, 255, 255));
+        line10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        line10.setForeground(new java.awt.Color(255, 255, 255));
+        line10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        line10.setText("______________________________________");
+        jPanel3.add(line10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 350, 20));
+
+        txtFieldBulanKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldBulanKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldBulanKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldBulanKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldBulanKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtFieldBulanKelompok2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFieldBulanKelompok2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtFieldBulanKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 340, 40));
+
+        keterangan1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        keterangan1.setForeground(new java.awt.Color(255, 255, 255));
+        keterangan1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        keterangan1.setText("Bulan");
+        jPanel3.add(keterangan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 120, 40));
+
+        line11.setBackground(new java.awt.Color(255, 255, 255));
+        line11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        line11.setForeground(new java.awt.Color(255, 255, 255));
+        line11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        line11.setText("______________________________________");
+        jPanel3.add(line11, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 350, 20));
+
+        txtFieldTahunKelompok2.setBackground(new java.awt.Color(17, 43, 60));
+        txtFieldTahunKelompok2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtFieldTahunKelompok2.setForeground(new java.awt.Color(255, 255, 255));
+        txtFieldTahunKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        txtFieldTahunKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtFieldTahunKelompok2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFieldTahunKelompok2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtFieldTahunKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, 340, 40));
+
+        keterangan2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        keterangan2.setForeground(new java.awt.Color(255, 255, 255));
+        keterangan2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        keterangan2.setText("Tahun");
+        jPanel3.add(keterangan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 200, 120, 40));
 
         background.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hexa-shape.png"))); // NOI18N
@@ -725,10 +795,16 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
           
           //String no_uang = table.getValueAt(baris,0).toString();
           
-          String keterangan = table.getValueAt(baris,2).toString();
+          String bulan = table.getValueAt(baris,2).toString();
+          txtFieldBulanKelompok2.setText(bulan);
+          
+          String tahun = table.getValueAt(baris,3).toString();
+          txtFieldTahunKelompok2.setText(tahun);
+          
+          String keterangan = table.getValueAt(baris,4).toString();
           txtFieldKeteranganKelompok2.setText(keterangan);
           
-          String uang_masuk = table.getValueAt(baris,3).toString();
+          String uang_masuk = table.getValueAt(baris,5).toString();
           txtFieldUangMasukKelompok2.setText(uang_masuk);
           
         Date tanggal = null;
@@ -772,6 +848,14 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
     private void BtnHelpKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnHelpKelompok2MouseExited
         changecolor(PanelHelpKelompok2, new Color (32,83,117));
     }//GEN-LAST:event_BtnHelpKelompok2MouseExited
+
+    private void txtFieldBulanKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldBulanKelompok2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFieldBulanKelompok2ActionPerformed
+
+    private void txtFieldTahunKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldTahunKelompok2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFieldTahunKelompok2ActionPerformed
     
    
     /**
@@ -2880,14 +2964,20 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel keterangan;
+    private javax.swing.JLabel keterangan1;
+    private javax.swing.JLabel keterangan2;
+    private javax.swing.JLabel line10;
+    private javax.swing.JLabel line11;
     private javax.swing.JLabel line16;
     private javax.swing.JLabel line8;
     private javax.swing.JLabel line9;
     private javax.swing.JLabel nominalUang;
     private javax.swing.JTable tableData;
     private javax.swing.JLabel title;
+    private javax.swing.JTextField txtFieldBulanKelompok2;
     private javax.swing.JTextField txtFieldCariKelompok2;
     private javax.swing.JTextField txtFieldKeteranganKelompok2;
+    private javax.swing.JTextField txtFieldTahunKelompok2;
     private javax.swing.JTextField txtFieldUangMasukKelompok2;
     // End of variables declaration//GEN-END:variables
 
