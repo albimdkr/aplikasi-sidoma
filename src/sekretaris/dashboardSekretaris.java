@@ -1007,7 +1007,7 @@ public class dashboardSekretaris extends javax.swing.JFrame {
     }//GEN-LAST:event_TabPetugasKelompok2MouseClicked
 
     private void TabKeuanganKeluarBtnKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabKeuanganKeluarBtnKelompok2MouseClicked
-        new laporan.PrintKeuanganKeluar1().setVisible(true);
+        new laporan.PrintKeuanganKeluar().setVisible(true);
         dispose();
     }//GEN-LAST:event_TabKeuanganKeluarBtnKelompok2MouseClicked
 
