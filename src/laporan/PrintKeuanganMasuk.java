@@ -314,7 +314,13 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
         txtFieldCariKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldCariKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel3.add(txtFieldCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 250, 50));
+
+        jDateChooserAwalKelompok2.setDateFormatString("d MMM, yyyy");
+        jDateChooserAwalKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         jPanel3.add(jDateChooserAwalKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 260, 40));
+
+        jDateChooserAkhirKelompok2.setDateFormatString("d MMM, yyyy");
+        jDateChooserAkhirKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         jPanel3.add(jDateChooserAkhirKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 520, 260, 40));
 
         NamaPendonor1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
