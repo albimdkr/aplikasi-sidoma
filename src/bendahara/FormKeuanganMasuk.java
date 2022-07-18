@@ -127,8 +127,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
           txtFieldTahunKelompok2.setText(null);
           txtFieldKeteranganKelompok2.setText(null);
           txtFieldUangMasukKelompok2.setText(null);
-          //jSpinner1.setText(null);
-          //jDateChooserTanggalDaftar.setCalendar(null);
+          jDateTanggalDaftarKelompok2.setCalendar(null);
     }
     
     
@@ -309,7 +308,6 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         PanelCariKelompok2 = new javax.swing.JPanel();
         BtnCariKelompok2 = new javax.swing.JLabel();
         keterangan = new javax.swing.JLabel();
-        jDateTanggalDaftarKelompok2 = new com.toedter.calendar.JDateChooser();
         line9 = new javax.swing.JLabel();
         txtFieldUangMasukKelompok2 = new javax.swing.JTextField();
         nominalUang = new javax.swing.JLabel();
@@ -319,6 +317,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         keterangan1 = new javax.swing.JLabel();
         line11 = new javax.swing.JLabel();
         txtFieldTahunKelompok2 = new javax.swing.JTextField();
+        jDateTanggalDaftarKelompok2 = new com.toedter.calendar.JDateChooser();
         keterangan2 = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
@@ -608,16 +607,6 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         keterangan.setText("Keterangan");
         jPanel3.add(keterangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 40));
 
-        jDateTanggalDaftarKelompok2.setDateFormatString("d MMM, yyyy");
-        jDateTanggalDaftarKelompok2.setEnabled(false);
-        jDateTanggalDaftarKelompok2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jDateTanggalDaftarKelompok2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jDateTanggalDaftarKelompok2MouseClicked(evt);
-            }
-        });
-        jPanel3.add(jDateTanggalDaftarKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 250, 40));
-
         line9.setBackground(new java.awt.Color(255, 255, 255));
         line9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         line9.setForeground(new java.awt.Color(255, 255, 255));
@@ -688,6 +677,10 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
             }
         });
         jPanel3.add(txtFieldTahunKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, 340, 40));
+
+        jDateTanggalDaftarKelompok2.setDateFormatString("d MMM, yyyy");
+        jDateTanggalDaftarKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
+        jPanel3.add(jDateTanggalDaftarKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 250, 40));
 
         keterangan2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         keterangan2.setForeground(new java.awt.Color(255, 255, 255));
@@ -827,10 +820,6 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
     private void BtnCariKelompok2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnCariKelompok2MouseExited
         changecolor(PanelCariKelompok2, new Color (17,43,60));
     }//GEN-LAST:event_BtnCariKelompok2MouseExited
-
-    private void jDateTanggalDaftarKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDateTanggalDaftarKelompok2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jDateTanggalDaftarKelompok2MouseClicked
 
     private void txtFieldKeteranganKelompok2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldKeteranganKelompok2ActionPerformed
         // TODO add your handling code here:
