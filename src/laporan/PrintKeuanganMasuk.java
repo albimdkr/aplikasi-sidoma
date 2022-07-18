@@ -58,6 +58,8 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
         tableDataKelompok2.setModel(table);
         table.addColumn("No. Uang");
         table.addColumn("Tanggal");
+        table.addColumn("Bulan");
+        table.addColumn("Tahun");
         table.addColumn("Keterangan");
         table.addColumn("Uang Masuk");
         //table.addColumn("Waktu");
@@ -82,10 +84,12 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
                 //menampung data sementara
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
+                    String bulan = rslt.getString("bulan");
+                    String tahun = rslt.getString("tahun");
                     String keterangan_uang = rslt.getString("keterangan");
                     String uang_masuk = rslt.getString("uang_masuk");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk};  //,waktu_uang
+                String[] data = {no_uang,tanggal,bulan,tahun,keterangan_uang,uang_masuk};  //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -109,6 +113,8 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
       String query = "SELECT * FROM `data_keuanganmasuk` WHERE "
                 + "`no_uang` LIKE '%"+cari+"%' OR"
                 + "`tanggal`  LIKE '%"+cari+"%' OR "
+                + "`bulan`  LIKE '%"+cari+"%' OR "
+                + "`tahun`  LIKE '%"+cari+"%' OR "
                 + "`keterangan` LIKE '%"+cari+"%' ";
                 
        try{
@@ -121,10 +127,12 @@ public class PrintKeuanganMasuk extends javax.swing.JFrame {
                 
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
+                    String bulan = rslt.getString("bulan");
+                    String tahun = rslt.getString("tahun");
                     String keterangan_uang = rslt.getString("keterangan");
                     String uang_masuk = rslt.getString("uang_masuk");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,keterangan_uang,uang_masuk};  //,waktu_uang
+                String[] data = {no_uang,tanggal,bulan,tahun,keterangan_uang,uang_masuk};   //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }

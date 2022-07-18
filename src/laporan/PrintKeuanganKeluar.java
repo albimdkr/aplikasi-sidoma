@@ -10,20 +10,32 @@ import admin.*;
 import petugas.*;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.io.File;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import koneksi.koneksi;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
+import java.util.Date;
+import java.sql.*;
 /**
  *
  * @author albin
@@ -46,8 +58,10 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
         tableDataKelompok2.setModel(table);
         table.addColumn("No. Uang");
         table.addColumn("Tanggal");
+        table.addColumn("Bulan");
+        table.addColumn("Tahun");
         table.addColumn("Keterangan");
-        table.addColumn("Uang Masuk");
+        table.addColumn("Uang Keluar");
         //table.addColumn("Waktu");
         tampilData();
     }
@@ -70,10 +84,12 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
                 //menampung data sementara
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
+                    String bulan = rslt.getString("bulan");
+                    String tahun = rslt.getString("tahun");
                     String keterangan_uang = rslt.getString("keterangan");
                     String uang_keluar = rslt.getString("uang_keluar");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,keterangan_uang,uang_keluar}; //,waktu_uang
+                String[] data = {no_uang,tanggal,bulan,tahun,keterangan_uang,uang_keluar}; //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -97,6 +113,8 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
       String query = "SELECT * FROM `data_keuangankeluar` WHERE "
                 + "`no_uang` LIKE '%"+cari+"%' OR"
                 + "`tanggal`  LIKE '%"+cari+"%' OR "
+                + "`bulan`  LIKE '%"+cari+"%' OR "
+                + "`tahun`  LIKE '%"+cari+"%' OR "
                 + "`keterangan` LIKE '%"+cari+"%' ";
                 
        try{
@@ -109,10 +127,12 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
                 
                     String no_uang = rslt.getString("no_uang");
                     String tanggal = rslt.getString("tanggal");
+                    String bulan = rslt.getString("bulan");
+                    String tahun = rslt.getString("tahun");
                     String keterangan_uang = rslt.getString("keterangan");
                     String uang_keluar = rslt.getString("uang_keluar");
                 //masukan semua data kedalam array
-                String[] data = {no_uang,tanggal,keterangan_uang,uang_keluar};  //,waktu_uang
+                String[] data = {no_uang,tanggal,bulan,tahun,keterangan_uang,uang_keluar};  //,waktu_uang
                 //menambahakan baris sesuai dengan data yang tersimpan diarray
                 table.addRow(data);
             }
@@ -157,6 +177,11 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tableDataKelompok2 = new javax.swing.JTable();
         txtFieldCariKelompok2 = new javax.swing.JTextField();
+        jDateChooserAwalKelompok2 = new com.toedter.calendar.JDateChooser();
+        jDateChooserAkhirKelompok2 = new com.toedter.calendar.JDateChooser();
+        NamaPendonor1 = new javax.swing.JLabel();
+        NamaPendonor2 = new javax.swing.JLabel();
+        NamaPendonor3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -193,7 +218,7 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
         DaftarMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         DaftarMenu.setForeground(new java.awt.Color(255, 255, 255));
         DaftarMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DaftarMenu.setText("Print Data Keuangan Keluar");
+        DaftarMenu.setText("Print Data Keuangan Masuk");
         Navbar.add(DaftarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 340, 60));
 
         jPanel2.add(Navbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1366, 60));
@@ -280,7 +305,7 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
         tableDataKelompok2.setSelectionBackground(new java.awt.Color(64, 49, 33));
         jScrollPane1.setViewportView(tableDataKelompok2);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 340));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 1010, 270));
 
         txtFieldCariKelompok2.setBackground(new java.awt.Color(17, 43, 60));
         txtFieldCariKelompok2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -289,6 +314,26 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
         txtFieldCariKelompok2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         txtFieldCariKelompok2.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel3.add(txtFieldCariKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 250, 50));
+        jPanel3.add(jDateChooserAwalKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 260, 40));
+        jPanel3.add(jDateChooserAkhirKelompok2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 520, 260, 40));
+
+        NamaPendonor1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NamaPendonor1.setForeground(new java.awt.Color(255, 255, 255));
+        NamaPendonor1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        NamaPendonor1.setText("Input Tanggal Akhir Yang Akan Di Print ");
+        jPanel3.add(NamaPendonor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 480, 290, 40));
+
+        NamaPendonor2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NamaPendonor2.setForeground(new java.awt.Color(255, 255, 255));
+        NamaPendonor2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        NamaPendonor2.setText("Sampai Tanggal");
+        jPanel3.add(NamaPendonor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, 110, 40));
+
+        NamaPendonor3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        NamaPendonor3.setForeground(new java.awt.Color(255, 255, 255));
+        NamaPendonor3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        NamaPendonor3.setText("Input Tanggal Awal Yang Akan Di Print ");
+        jPanel3.add(NamaPendonor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 480, 290, 40));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -341,14 +386,36 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnPrintKelompok2MouseEntered
 
     private void BtnPrintKelompok2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnPrintKelompok2MouseClicked
-      try{
-            String file = "/laporan/report_keuanganKeluar.jasper";
-            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
-            JasperViewer.viewReport(print, false);
-            
-        }catch(JRException e){
-            JOptionPane.showMessageDialog(rootPane, e);
-        }
+//      try{
+//            String file = "/laporan/report_keuanganMasuk.jasper";
+//            JasperPrint print = JasperFillManager.fillReport(getClass().getResourceAsStream(file),null,koneksi.getKoneksi());
+//            JasperViewer.viewReport(print, false);
+//            
+//        }catch(JRException e){
+//            JOptionPane.showMessageDialog(rootPane, e);
+//        }
+
+    try{
+        Map<String, Object> parameter = new HashMap <>();
+        parameter.put("awal", jDateChooserAwalKelompok2.getDate());
+        parameter.put("akhir", jDateChooserAkhirKelompok2.getDate());
+        File file = new File ("src/laporan/report_keuanganKeluar.jrxml");
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/db_sidoma","root","");
+        JasperDesign jasperDesign = JRXmlLoader.load(file);;
+        JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameter, con);
+        JasperViewer.viewReport(jasperPrint,false);
+    
+        
+    }    catch (JRException ex) {   
+             Logger.getLogger(PrintKeuanganKeluar.class.getName()).log(Level.SEVERE, null, ex);
+ 
+    }    catch (SQLException ex) {
+             Logger.getLogger(PrintKeuanganKeluar.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (ClassNotFoundException ex) {
+             Logger.getLogger(PrintKeuanganKeluar.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }//GEN-LAST:event_BtnPrintKelompok2MouseClicked
 
     /**
@@ -516,10 +583,15 @@ public class PrintKeuanganKeluar extends javax.swing.JFrame {
     private javax.swing.JLabel BtnCariKelompok2;
     private javax.swing.JLabel BtnPrintKelompok2;
     private javax.swing.JLabel DaftarMenu;
+    private javax.swing.JLabel NamaPendonor1;
+    private javax.swing.JLabel NamaPendonor2;
+    private javax.swing.JLabel NamaPendonor3;
     private javax.swing.JPanel Navbar;
     private javax.swing.JPanel PanelBackKelompok2;
     private javax.swing.JPanel PanelCariKelompok2;
     private javax.swing.JPanel PanelPrintKelompok2;
+    private com.toedter.calendar.JDateChooser jDateChooserAkhirKelompok2;
+    private com.toedter.calendar.JDateChooser jDateChooserAwalKelompok2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
