@@ -65,10 +65,6 @@ FROM
 				</textElement>
 				<text><![CDATA[LAPORAN STOK DARAH]]></text>
 			</staticText>
-			<image onErrorType="Icon">
-				<reportElement uuid="448df30b-e000-425f-ad5d-545bbf4d6f39" x="29" y="7" width="133" height="104"/>
-				<imageExpression><![CDATA["C:\\Users\\albin\\Documents\\NetBeansProjects\\aplikasi-sidoma\\src\\img\\logo-pddm.png"]]></imageExpression>
-			</image>
 			<staticText>
 				<reportElement uuid="acef31af-c27a-4486-9a6a-3ab4a84efea4" style="SubTitle" mode="Transparent" x="182" y="60" width="473" height="20" forecolor="#000000" backcolor="#2D2302"/>
 				<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
@@ -91,6 +87,10 @@ FROM
 				</textElement>
 				<text><![CDATA[PERSAUDARAAN DONOR DARAH MAJALAYA]]></text>
 			</staticText>
+			<image>
+				<reportElement uuid="2fc25b18-694a-4159-8e1a-54a4b5a5d161" x="47" y="8" width="99" height="106"/>
+				<imageExpression><![CDATA["C:\\Users\\albin\\Documents\\aplikasi-sidoma\\src\\img\\logo-pddm.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
