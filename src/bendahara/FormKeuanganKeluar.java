@@ -199,15 +199,15 @@ public class FormKeuanganKeluar extends javax.swing.JFrame {
             + "Mengedit Data ?","Konfirmasi Edit Data Keuangan Keluar", JOptionPane.YES_NO_OPTION);
         
         //String no_uang
-        //SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
-        //String tanggal = tgl.format(jDateTanggalDaftar21552011235.getDate());
+        SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal = tgl.format(jDateTanggalDaftarKelompok2.getDate());
         String keterangan = txtFieldKeteranganKelompok2.getText();
         String uang_keluar = txtFieldUangKeluarKelompok2.getText();
         
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_keuangankeluar` SET `keterangan` = '"+keterangan+"',`uang_keluar` = '"+uang_keluar+"'"
+            String query = "UPDATE `data_keuangankeluar` SET `tanggal` = '"+tanggal+"',`keterangan` = '"+keterangan+"',`uang_keluar` = '"+uang_keluar+"'"
                 + "WHERE `data_keuangankeluar`.`no_uang` = '"+no_uang+"';";
             
             try {

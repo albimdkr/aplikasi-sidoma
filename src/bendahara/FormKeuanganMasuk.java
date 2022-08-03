@@ -198,8 +198,8 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
             + "Mengedit Data ?","Konfirmasi Edit Data Keuangan Masuk", JOptionPane.YES_NO_OPTION);
         
         //String no_uang
-        //SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
-        //String tanggal = tgl.format(jDateTanggalDaftar21552011235.getDate());
+        SimpleDateFormat tgl = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal = tgl.format(jDateTanggalDaftarKelompok2.getDate());
         String bulan = txtFieldBulanKelompok2.getText();
         String tahun = txtFieldTahunKelompok2.getText();
         String keterangan = txtFieldKeteranganKelompok2.getText();
@@ -208,7 +208,7 @@ public class FormKeuanganMasuk extends javax.swing.JFrame {
         if (ok==0){
             String no_uang = table.getValueAt(i, 0).toString();
             java.sql.Connection connect = koneksi.getKoneksi();
-            String query = "UPDATE `data_keuanganmasuk` SET `bulan` = '"+bulan+"',`tahun` = '"+tahun+"',`keterangan` = '"+keterangan+"',`uang_masuk` = '"+uang_masuk+"'"
+            String query = "UPDATE `data_keuanganmasuk` SET `tanggal` = '"+tanggal+"',`bulan` = '"+bulan+"',`tahun` = '"+tahun+"',`keterangan` = '"+keterangan+"',`uang_masuk` = '"+uang_masuk+"'"
                 + "WHERE `data_keuanganmasuk`.`no_uang` = '"+no_uang+"';";
             
             try {
